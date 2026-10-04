@@ -150,8 +150,18 @@ button{font:inherit}
 .google-action:last-child{border-bottom:0}
 .google-action:hover{background:#111313}
 .google-action>strong{font-size:1.55rem;line-height:1.05;margin:.8rem 0}
-.google-action>p{margin:0;color:#777b7c;font-size:.88rem;max-width:360px}
+.google-rating-card>strong{font-size:3.6rem;letter-spacing:-.06em;margin-bottom:.25rem}
+.google-stars{font-size:.92rem;letter-spacing:.12em;color:#f2f2ef}
+.google-action>p{margin:.65rem 0 0;color:#777b7c;font-size:.88rem;max-width:360px}
 .text-link{margin-top:auto;padding-top:1.2rem;color:#dcdedb;font-size:.82rem;font-weight:700}
+.google-review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:1rem;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.google-review-card{min-height:250px;padding:1.4rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#0b0c0c;display:flex;flex-direction:column}
+.google-review-meta{display:flex;align-items:center;justify-content:space-between;gap:1rem;color:#6f7374;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em}
+.google-review-card h3{margin:1.5rem 0 .75rem;font-size:1.05rem}
+.google-review-card p{margin:0;color:#969a9b;font-size:.93rem;line-height:1.65}
+.google-review-card q{color:#f0f1ee;font-weight:800}
+.google-review-card a{margin-top:auto;padding-top:1.5rem;color:#dcdedb;font-size:.78rem;font-weight:800}
+.google-review-note{margin:.85rem 0 0;color:#666a6b;font-size:.72rem;line-height:1.6}
 
 .connect-panel{border:1px solid var(--line);display:grid;grid-template-columns:.8fr 1.2fr;background:#0b0c0c}
 .connect-copy{padding:2rem;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}
@@ -215,6 +225,7 @@ button{font:inherit}
   .offers-grid{grid-template-columns:1fr}
   .google-business-grid{grid-template-columns:1fr}
   .google-map-card{border-right:0;border-bottom:1px solid var(--line)}
+  .google-review-grid{grid-template-columns:1fr 1fr}
   .connect-panel{grid-template-columns:1fr}
   .connect-copy{border-right:0;border-bottom:1px solid var(--line)}
   .contact-grid{align-items:flex-start;flex-direction:column}
@@ -251,6 +262,7 @@ button{font:inherit}
   .service-display{padding:1.3rem}
   .display-footer{flex-direction:column}
   .handyman-grid{grid-template-columns:1fr}
+  .google-review-grid{grid-template-columns:1fr}
   .social-grid{grid-template-columns:1fr}
   .social-link{border-right:0!important;border-bottom:1px solid var(--line)!important}
   .social-link:last-child{border-bottom:0!important}
