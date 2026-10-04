@@ -1,30 +1,36 @@
 # ZoCo-Web
 
-Website for **ZoCo Drain & Sewer LLC** in Vernon, New Jersey.
+Website for **ZoCo Drain & Sewer LLC**, an owner-operated drain cleaning and handyman service in Highland Lakes, New Jersey.
 
 ## Live site
 **https://gryszzz.github.io/ZoCo-Web/**
 
-## Business information used
+## Business information
+- Owner: **Henry Nowinski**
 - Call / text: **973-828-9723**
-- Service area: **Vernon, NJ & surrounding areas**
+- Email: **zoco.drain@gmail.com**
+- Service area: **Highland Lakes, NJ & surrounding areas**
 - HIC: **#13VH14301500**
-- Free consultation / free estimates
+- Digital card: **https://dot.cards/zoco**
+- Instagram: **@zoco_drains**
+- Facebook: **https://www.facebook.com/share/1E54mnJZsT/?mibextid=wwXIfr**
 
 ## Services shown
 - Drain cleaning
-- Camera inspections
-- Sump pump service
-- Root treatment
-- Preventative maintenance
+- Camera inspection
+- Drain maintenance
 - Dryer vent cleaning
-- Annual maintenance plans
+- Handyman / ordinary-maintenance work
+- Painting and small wall repairs
+- Non-structural trim, shelving and hardware installs
+- Gutter cleaning, furniture assembly and closet-system installation
+- Door hardware, storm-door and TV-mount installation
+- Re-grouting, caulking and deck stain / seal work
 
-## Ready to connect
-- Facebook reviews
-- Instagram
-- TikTok
-- Real job photos
-- Future plumbing services
+Handyman work is described as non-structural or ordinary-maintenance work and excludes work that requires a separate licensed trade or permit.
 
-The site does not invent review scores, customer quotes, social URLs, or plumbing services that have not been supplied yet.
+## Current offers
+- 20% off drain cleaning
+- Free camera inspection
+- 15% off service call
+- Offers expire 12/31/2026 and are subject to the terms shown on the site
