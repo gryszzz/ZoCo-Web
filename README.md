@@ -5,13 +5,13 @@ Website for **ZoCo Drain & Sewer LLC** in Vernon, New Jersey.
 ## Live site
 **https://gryszzz.github.io/ZoCo-Web/**
 
-## Current business info
+## Business information used
 - Call / text: **973-828-9723**
 - Service area: **Vernon, NJ & surrounding areas**
 - HIC: **#13VH14301500**
 - Free consultation / free estimates
 
-## Services currently shown
+## Services shown
 - Drain cleaning
 - Camera inspections
 - Sump pump service
@@ -20,4 +20,11 @@ Website for **ZoCo Drain & Sewer LLC** in Vernon, New Jersey.
 - Dryer vent cleaning
 - Annual maintenance plans
 
-The Facebook review area is reserved for real review data when it is connected. The site is also ready to expand with plumbing services later.
+## Ready to connect
+- Facebook reviews
+- Instagram
+- TikTok
+- Real job photos
+- Future plumbing services
+
+The site does not invent review scores, customer quotes, social URLs, or plumbing services that have not been supplied yet.
