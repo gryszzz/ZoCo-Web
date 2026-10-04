@@ -52,6 +52,18 @@ button{font:inherit}
 .service-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.55rem}
 .service-chips span{border:1px solid #303334;background:#0d0f0f;padding:.5rem .7rem;color:#9da1a2;font-size:.67rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
 .hero-actions{display:flex;gap:.75rem;flex-wrap:wrap}
+.quick-connect{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem;margin-top:1.4rem;max-width:760px}
+.quick-tile{min-height:76px;border:1px solid #2d3031;background:linear-gradient(180deg,#111313,#0c0d0d);display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:.7rem;padding:.72rem .78rem;transition:background .18s ease,border-color .18s ease,transform .18s ease}
+.quick-tile:hover{background:#151717;border-color:#454849;transform:translateY(-2px)}
+.quick-logo-mark,.quick-icon{width:34px;height:34px;flex:0 0 auto}
+.quick-logo-mark{border-radius:50%;background-color:#000}
+.quick-icon{display:grid;place-items:center;border:1px solid #333637}
+.quick-icon svg{width:17px;height:17px;fill:none;stroke:#efefec;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.fb-icon svg{fill:#efefec;stroke:none}
+.quick-copy{min-width:0;display:flex;flex-direction:column;line-height:1.15}
+.quick-copy small{font-size:.53rem;color:#6f7374;letter-spacing:.12em}
+.quick-copy strong{margin-top:.28rem;font-size:.72rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.quick-tile>i{font-style:normal;color:#666a6b;font-size:.72rem;align-self:start}
 .button{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:.9rem 1.1rem;border:1px solid transparent;font-size:.84rem;font-weight:800;transition:transform .18s ease,background .18s ease,border-color .18s ease;clip-path:none!important}
 .button:hover{transform:translateY(-2px)}
 .button-primary{background:#f4f4f0;color:#080909;border-color:#f4f4f0}
@@ -69,10 +81,16 @@ button{font:inherit}
 .hero-card-owner strong{font-size:1.55rem}
 .hero-card-owner a{font-size:1rem}
 .hero-card-owner span{margin-top:.45rem;font-size:.82rem;color:#454949}
-.hero-card-links{display:grid;grid-template-columns:1fr;gap:.6rem;margin-top:2rem}
-.hero-card-links a{display:flex;align-items:center;gap:.7rem;border-top:1px solid #b6b9b9;padding-top:.65rem;font-size:.78rem;font-weight:700}
-.hero-card-links svg{width:18px;height:18px;fill:none;stroke:#090a0a;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.hero-card-links a:nth-child(2) svg{fill:#090a0a;stroke:none}
+.hero-card-links{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;margin-top:2rem}
+.hero-card-links a{min-height:76px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:.65rem;border:1px solid rgba(0,0,0,.15);background:rgba(255,255,255,.28);padding:.68rem .7rem;font-size:.76rem;font-weight:700;transition:background .18s ease,transform .18s ease}
+.hero-card-links a:hover{background:rgba(255,255,255,.5);transform:translateY(-1px)}
+.card-link-icon{width:32px;height:32px;border:1px solid rgba(0,0,0,.2);display:grid;place-items:center}
+.card-link-icon svg{width:17px;height:17px;fill:none;stroke:#090a0a;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.facebook-fill svg{fill:#090a0a;stroke:none}
+.hero-card-links a>span:nth-child(2){min-width:0;display:flex;flex-direction:column}
+.hero-card-links small{font-size:.5rem;letter-spacing:.11em;color:#5f6363}
+.hero-card-links strong{margin-top:.23rem;font-size:.68rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hero-card-links i{font-style:normal;color:#6a6e6e;align-self:start}
 
 .hero-bottomline{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #2b2e2f;background:#0a0b0b}
 .hero-bottomline>div{padding:1rem 1.1rem;border-right:1px solid #2b2e2f;display:flex;flex-direction:column;gap:.25rem}
@@ -219,11 +237,14 @@ button{font:inherit}
   .service-chips span{font-size:.61rem;padding:.45rem .55rem}
   .hero-actions{width:100%}
   .hero-actions .button{width:100%}
+  .quick-connect{grid-template-columns:1fr 1fr;width:100%}
+  .quick-tile{min-height:70px}
   .hero-card{padding:1.4rem 1.05rem}
   .hero-card-name{margin:1.8rem 0 1.1rem}
   .hero-card-name strong{font-size:clamp(3.8rem,20vw,5.5rem)}
   .hero-card-name span{font-size:.72rem;letter-spacing:.2em}
   .hero-card-owner strong{font-size:1.3rem}
+  .hero-card-links{grid-template-columns:1fr}
   .hero-bottomline{grid-template-columns:1fr}
   .hero-bottomline>div{border-right:0;border-bottom:1px solid #2b2e2f}
   .hero-bottomline>div:last-child{border-bottom:0}
