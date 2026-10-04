@@ -27,36 +27,12 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
 const services = {
-  drain: {
-    code: 'SERVICE / 01',
-    title: 'Drain Cleaning',
-    description: 'Clear buildup and restore flow in drain and sewer lines.'
-  },
-  camera: {
-    code: 'SERVICE / 02',
-    title: 'Camera Inspections',
-    description: 'Inspect the line to see where a blockage or other problem is located.'
-  },
-  sump: {
-    code: 'SERVICE / 03',
-    title: 'Sump Pump Service',
-    description: 'Visual system checks, pump testing and pit debris removal where included.'
-  },
-  roots: {
-    code: 'SERVICE / 04',
-    title: 'Root Treatment',
-    description: 'Service for root intrusion and maintenance of affected drain or sewer lines.'
-  },
-  maintenance: {
-    code: 'SERVICE / 05',
-    title: 'Preventative Maintenance',
-    description: 'Scheduled inspections and service intended to catch issues before a backup.'
-  },
-  dryer: {
-    code: 'SERVICE / 06',
-    title: 'Dryer Vent Cleaning',
-    description: 'Available during a service visit or as a standalone appointment.'
-  }
+  drain: ['SERVICE / 01', 'Drain Cleaning', 'Clear buildup and restore flow in drain and sewer lines.'],
+  camera: ['SERVICE / 02', 'Camera Inspections', 'Inspect the line to see where a blockage or other problem is located.'],
+  sump: ['SERVICE / 03', 'Sump Pump Service', 'Visual system checks, pump testing and pit debris removal where included.'],
+  roots: ['SERVICE / 04', 'Root Treatment', 'Service for root intrusion and maintenance of affected drain or sewer lines.'],
+  maintenance: ['SERVICE / 05', 'Preventative Maintenance', 'Scheduled inspections and service intended to catch issues before a backup.'],
+  dryer: ['SERVICE / 06', 'Dryer Vent Cleaning', 'Available during a service visit or as a standalone appointment.']
 };
 
 const serviceCode = document.getElementById('serviceCode');
@@ -75,19 +51,17 @@ document.querySelectorAll('.service-tab').forEach((button) => {
 
     button.classList.add('active');
     button.setAttribute('aria-selected', 'true');
-    serviceCode.textContent = item.code;
-    serviceTitle.textContent = item.title;
-    serviceDescription.textContent = item.description;
+    serviceCode.textContent = item[0];
+    serviceTitle.textContent = item[1];
+    serviceDescription.textContent = item[2];
   });
 });
 
 const heroShell = document.querySelector('.hero-shell');
 heroShell?.addEventListener('pointermove', (event) => {
   const rect = heroShell.getBoundingClientRect();
-  const x = ((event.clientX - rect.left) / rect.width) * 100;
-  const y = ((event.clientY - rect.top) / rect.height) * 100;
-  heroShell.style.setProperty('--mx', x + '%');
-  heroShell.style.setProperty('--my', y + '%');
+  heroShell.style.setProperty('--mx', (((event.clientX - rect.left) / rect.width) * 100) + '%');
+  heroShell.style.setProperty('--my', (((event.clientY - rect.top) / rect.height) * 100) + '%');
 });
 
 const sections = [...document.querySelectorAll('main section[id]')];
@@ -95,7 +69,9 @@ const navItems = [...document.querySelectorAll('.nav-links a[href^="#"]')];
 const navObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
-    navItems.forEach((item) => item.classList.toggle('active', item.getAttribute('href') === '#' + entry.target.id));
+    navItems.forEach((item) => {
+      item.classList.toggle('active', item.getAttribute('href') === '#' + entry.target.id);
+    });
   });
 }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
 sections.forEach((section) => navObserver.observe(section));
