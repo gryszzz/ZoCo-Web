@@ -35,9 +35,17 @@ jobs:
           from PIL import Image
           src = Image.open("zoco-logo-v2.webp").convert("RGBA")
           resample = Image.Resampling.LANCZOS
+          src.resize((16, 16), resample).save("favicon-16x16.png", "PNG", optimize=True)
+          src.resize((32, 32), resample).save("favicon-32x32.png", "PNG", optimize=True)
           src.resize((96, 96), resample).save("favicon.png", "PNG", optimize=True)
+          src.resize((180, 180), resample).save("apple-touch-icon.png", "PNG", optimize=True)
           src.resize((192, 192), resample).save("icon-192.png", "PNG", optimize=True)
           src.resize((512, 512), resample).save("icon-512.png", "PNG", optimize=True)
+          src.resize((64, 64), resample).save(
+              "favicon.ico",
+              "ICO",
+              sizes=[(16, 16), (32, 32), (48, 48), (64, 64)],
+          )
 
           # Large Open Graph card for Apple Messages and social link previews.
           canvas = Image.new("RGB", (1200, 630), (9, 10, 10))
