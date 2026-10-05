@@ -24,13 +24,14 @@
   <meta name="twitter:title" content="Drain Cleaning in Sussex & Passaic County NJ | ZoCo" />
   <meta name="twitter:description" content="Owner-operated drain cleaning, camera inspections and home maintenance serving Sussex & Passaic County, NJ." />
   <meta name="twitter:image" content="https://zocodrains.com/social-preview-v2.png" />
+  <meta name="twitter:image:alt" content="ZoCo Drain & Sewer LLC logo" />
   <link rel="canonical" href="https://zocodrains.com/" />
-  <link rel="icon" href="/favicon.ico?v=5" sizes="any" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=5" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=5" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png?v=5" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=5" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=5" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <title>Drain Cleaning in Sussex & Passaic County NJ | ZoCo</title>
@@ -39,35 +40,140 @@
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"HomeAndConstructionBusiness",
-    "@id":"https://zocodrains.com/#business",
-    "name":"ZoCo Drain & Sewer LLC",
-    "founder":{"@type":"Person","name":"Henry Nowinski"},
-    "address":{"@type":"PostalAddress","addressLocality":"Highland Lakes","addressRegion":"NJ","postalCode":"07422","addressCountry":"US"},
-    "identifier":{"@type":"PropertyValue","propertyID":"NJ HIC Registration","value":"13VH14301500"},
-    "telephone":"+1-973-828-9723",
-    "email":"zoco.drain@gmail.com",
-    "areaServed":[{"@type":"AdministrativeArea","name":"Sussex County, New Jersey"},{"@type":"AdministrativeArea","name":"Passaic County, New Jersey"}],
-    "url":"https://zocodrains.com/",
-    "logo":"https://zocodrains.com/zoco-logo-v2.webp",
-    "image":"https://zocodrains.com/zoco-logo-v2.webp",
-    "sameAs":[
-      "https://www.buildzoom.com/contractor/zoco-drain-sewer-llc",
-      "https://www.instagram.com/zoco_drains/",
-      "https://www.facebook.com/share/1E54mnJZsT/?mibextid=wwXIfr",
-      "https://dot.cards/zoco",
-      "https://share.google/6cvZ1xLMxiA6RLx6S"
-    ],
-    "hasMap":"https://share.google/6cvZ1xLMxiA6RLx6S",
-    "description":"Owner-operated drain cleaning, camera inspection, dryer vent cleaning and home maintenance serving Sussex County and Passaic County, New Jersey.",
-    "hasOfferCatalog":{"@type":"OfferCatalog","name":"ZoCo Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Drain Cleaning"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Camera Inspection"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Drain Maintenance"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Dryer Vent Cleaning"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Home Maintenance"}}]}
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
     "@graph":[
+      {
+        "@type":"HomeAndConstructionBusiness",
+        "@id":"https://zocodrains.com/#business",
+        "name":"ZoCo Drain & Sewer LLC",
+        "legalName":"ZoCo Drain & Sewer LLC",
+        "alternateName":"ZoCo",
+        "url":"https://zocodrains.com/",
+        "description":"Owner-operated drain cleaning, camera inspection, dryer vent cleaning and home maintenance serving Sussex County and Passaic County, New Jersey.",
+        "telephone":"+1-973-828-9723",
+        "email":"zoco.drain@gmail.com",
+        "founder":{
+          "@type":"Person",
+          "name":"Henry Nowinski"
+        },
+        "address":{
+          "@type":"PostalAddress",
+          "addressLocality":"Highland Lakes",
+          "addressRegion":"NJ",
+          "postalCode":"07422",
+          "addressCountry":"US"
+        },
+        "areaServed":[
+          {"@type":"AdministrativeArea","name":"Sussex County, New Jersey"},
+          {"@type":"AdministrativeArea","name":"Passaic County, New Jersey"}
+        ],
+        "identifier":{
+          "@type":"PropertyValue",
+          "propertyID":"NJ HIC Registration",
+          "value":"13VH14301500"
+        },
+        "logo":{
+          "@type":"ImageObject",
+          "@id":"https://zocodrains.com/#logo",
+          "url":"https://zocodrains.com/icon-512.png",
+          "contentUrl":"https://zocodrains.com/icon-512.png",
+          "width":512,
+          "height":512,
+          "caption":"ZoCo Drain & Sewer LLC"
+        },
+        "image":{"@id":"https://zocodrains.com/#logo"},
+        "contactPoint":{
+          "@type":"ContactPoint",
+          "telephone":"+1-973-828-9723",
+          "contactType":"customer service",
+          "areaServed":"US-NJ",
+          "availableLanguage":"English"
+        },
+        "sameAs":[
+          "https://www.buildzoom.com/contractor/zoco-drain-sewer-llc",
+          "https://www.instagram.com/zoco_drains/",
+          "https://www.facebook.com/share/1E54mnJZsT/?mibextid=wwXIfr",
+          "https://dot.cards/zoco",
+          "https://share.google/6cvZ1xLMxiA6RLx6S"
+        ],
+        "hasMap":"https://share.google/6cvZ1xLMxiA6RLx6S",
+        "hasOfferCatalog":{
+          "@type":"OfferCatalog",
+          "name":"ZoCo Services",
+          "itemListElement":[
+            {
+              "@type":"Offer",
+              "itemOffered":{
+                "@type":"Service",
+                "name":"Drain Cleaning",
+                "serviceType":"Drain Cleaning",
+                "description":"Clear buildup and restore flow in accessible drain and sewer lines.",
+                "provider":{"@id":"https://zocodrains.com/#business"},
+                "areaServed":[
+                  {"@type":"AdministrativeArea","name":"Sussex County, New Jersey"},
+                  {"@type":"AdministrativeArea","name":"Passaic County, New Jersey"}
+                ]
+              }
+            },
+            {
+              "@type":"Offer",
+              "itemOffered":{
+                "@type":"Service",
+                "name":"Camera Inspection",
+                "serviceType":"Drain Camera Inspection",
+                "description":"Use a drain camera to view accessible line conditions and locate visible trouble areas.",
+                "provider":{"@id":"https://zocodrains.com/#business"},
+                "areaServed":[
+                  {"@type":"AdministrativeArea","name":"Sussex County, New Jersey"},
+                  {"@type":"AdministrativeArea","name":"Passaic County, New Jersey"}
+                ]
+              }
+            },
+            {
+              "@type":"Offer",
+              "itemOffered":{
+                "@type":"Service",
+                "name":"Drain Maintenance",
+                "serviceType":"Drain Maintenance",
+                "description":"Routine service intended to help keep accessible drain lines moving and reduce recurring buildup.",
+                "provider":{"@id":"https://zocodrains.com/#business"},
+                "areaServed":[
+                  {"@type":"AdministrativeArea","name":"Sussex County, New Jersey"},
+                  {"@type":"AdministrativeArea","name":"Passaic County, New Jersey"}
+                ]
+              }
+            },
+            {
+              "@type":"Offer",
+              "itemOffered":{
+                "@type":"Service",
+                "name":"Dryer Vent Cleaning",
+                "serviceType":"Dryer Vent Cleaning",
+                "description":"Clean accessible dryer vent runs to help improve airflow and remove lint buildup.",
+                "provider":{"@id":"https://zocodrains.com/#business"},
+                "areaServed":[
+                  {"@type":"AdministrativeArea","name":"Sussex County, New Jersey"},
+                  {"@type":"AdministrativeArea","name":"Passaic County, New Jersey"}
+                ]
+              }
+            },
+            {
+              "@type":"Offer",
+              "itemOffered":{
+                "@type":"Service",
+                "name":"Home Maintenance",
+                "serviceType":"Home Maintenance",
+                "description":"Small non-structural and ordinary-maintenance jobs around the home.",
+                "provider":{"@id":"https://zocodrains.com/#business"},
+                "areaServed":[
+                  {"@type":"AdministrativeArea","name":"Sussex County, New Jersey"},
+                  {"@type":"AdministrativeArea","name":"Passaic County, New Jersey"}
+                ]
+              }
+            }
+          ]
+        },
+        "mainEntityOfPage":{"@id":"https://zocodrains.com/#webpage"}
+      },
       {
         "@type":"WebSite",
         "@id":"https://zocodrains.com/#website",
@@ -81,10 +187,13 @@
         "@type":"WebPage",
         "@id":"https://zocodrains.com/#webpage",
         "url":"https://zocodrains.com/",
-        "name":"ZoCo Drain & Sewer LLC",
+        "name":"Drain Cleaning in Sussex & Passaic County NJ | ZoCo",
+        "description":"Owner-operated drain cleaning, camera inspections, dryer vent cleaning and home maintenance in Sussex & Passaic County, NJ.",
         "inLanguage":"en-US",
         "isPartOf":{"@id":"https://zocodrains.com/#website"},
-        "about":{"@id":"https://zocodrains.com/#business"}
+        "about":{"@id":"https://zocodrains.com/#business"},
+        "mainEntity":{"@id":"https://zocodrains.com/#business"},
+        "primaryImageOfPage":{"@id":"https://zocodrains.com/#logo"}
       }
     ]
   }
