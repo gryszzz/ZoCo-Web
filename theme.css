@@ -446,3 +446,41 @@ button{font:inherit}
   overflow:hidden;
   background-color:#000!important;
 }
+
+
+/* compact-mobile-hero-bottomline-v23 */
+@media(max-width:620px){
+  .hero-bottomline{
+    grid-template-columns:1fr 1fr!important;
+    border-top:1px solid #26292a;
+  }
+  .hero-bottomline>div{
+    min-width:0;
+    padding:.85rem .9rem!important;
+    border-right:1px solid #26292a!important;
+    border-bottom:0!important;
+    gap:.18rem;
+    align-items:flex-start;
+    text-align:left;
+  }
+  .hero-bottomline>div:first-child{
+    grid-column:1 / -1;
+    border-right:0!important;
+    border-bottom:1px solid #26292a!important;
+  }
+  .hero-bottomline>div:nth-child(2){
+    border-right:1px solid #26292a!important;
+  }
+  .hero-bottomline>div:last-child{
+    border-right:0!important;
+  }
+  .hero-bottomline span{
+    font-size:.52rem;
+    letter-spacing:.16em;
+    line-height:1.2;
+  }
+  .hero-bottomline strong{
+    font-size:.76rem;
+    line-height:1.25;
+  }
+}
