@@ -1,0 +1,9 @@
+{
+  "name": "ZoCo Drain & Sewer LLC",
+  "short_name": "ZoCo",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#090a0a",
+  "theme_color": "#090a0a"
+}
