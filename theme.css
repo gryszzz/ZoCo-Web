@@ -564,3 +564,50 @@ button{font:inherit}
     font-size:.75rem!important;
   }
 }
+
+
+/* simple-even-hero-info-v25 */
+.hero-bottomline{
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.hero-bottomline>div{
+  background:transparent!important;
+}
+.hero-bottomline>div:before{
+  display:none!important;
+}
+
+@media(max-width:620px){
+  .hero-bottomline{
+    margin:0!important;
+    border:0!important;
+    border-top:1px solid rgba(255,255,255,.08)!important;
+    grid-template-columns:1fr!important;
+    background:transparent!important;
+    box-shadow:none!important;
+  }
+  .hero-bottomline>div,
+  .hero-bottomline>div:first-child,
+  .hero-bottomline>div:nth-child(2),
+  .hero-bottomline>div:last-child{
+    grid-column:auto!important;
+    min-height:0;
+    padding:.82rem 1.05rem!important;
+    border-right:0!important;
+    border-bottom:1px solid rgba(255,255,255,.07)!important;
+    background:transparent!important;
+    gap:.18rem;
+  }
+  .hero-bottomline>div:last-child{
+    border-bottom:0!important;
+  }
+  .hero-bottomline span{
+    font-size:.5rem!important;
+    letter-spacing:.15em!important;
+  }
+  .hero-bottomline strong{
+    font-size:.78rem!important;
+    line-height:1.22;
+  }
+}
