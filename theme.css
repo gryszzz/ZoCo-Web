@@ -433,3 +433,16 @@ button{font:inherit}
   font-style:normal;
   margin-left:.1rem;
 }
+
+
+/* header-logo-fix-v21 */
+.logo-image{
+  background-image:url("/logo.webp?v=2")!important;
+  background-size:contain!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+}
+.brand-logo{
+  overflow:hidden;
+  background-color:#000!important;
+}
