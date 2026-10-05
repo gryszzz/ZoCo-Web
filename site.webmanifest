@@ -5,5 +5,19 @@
   "scope": "/",
   "display": "standalone",
   "background_color": "#090a0a",
-  "theme_color": "#090a0a"
+  "theme_color": "#090a0a",
+  "icons": [
+    {
+      "src": "/zoco-logo-v2.webp",
+      "sizes": "any",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/zoco-logo-v2.webp",
+      "sizes": "any",
+      "type": "image/webp",
+      "purpose": "maskable"
+    }
+  ]
 }
