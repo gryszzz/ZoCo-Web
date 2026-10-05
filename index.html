@@ -55,6 +55,30 @@
     "hasOfferCatalog":{"@type":"OfferCatalog","name":"ZoCo Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Drain Cleaning"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Camera Inspection"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Drain Maintenance"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Dryer Vent Cleaning"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Home Maintenance"}}]}
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "@id":"https://zocodrains.com/#website",
+        "url":"https://zocodrains.com/",
+        "name":"ZoCo Drain & Sewer LLC",
+        "alternateName":"ZoCo",
+        "publisher":{"@id":"https://zocodrains.com/#business"}
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://zocodrains.com/#webpage",
+        "url":"https://zocodrains.com/",
+        "name":"ZoCo Drain & Sewer LLC",
+        "isPartOf":{"@id":"https://zocodrains.com/#website"},
+        "about":{"@id":"https://zocodrains.com/#business"}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -230,6 +254,9 @@
             <a href="tel:+19738289723">Call about this service</a>
             <span>973-828-9723</span>
           </div>
+        </div>
+        <div class="hero-actions" style="margin-top:1.25rem">
+          <a class="button button-secondary" href="/drain-cleaning/">Drain cleaning details →</a>
         </div>
       </div>
     </section>
