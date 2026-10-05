@@ -41,6 +41,7 @@ jobs:
           src.resize((180, 180), resample).save("apple-touch-icon.png", "PNG", optimize=True)
           src.resize((192, 192), resample).save("icon-192.png", "PNG", optimize=True)
           src.resize((512, 512), resample).save("icon-512.png", "PNG", optimize=True)
+          src.resize((512, 512), resample).save("zoco-share-logo-v3.png", "PNG", optimize=True)
           src.resize((64, 64), resample).save(
               "favicon.ico",
               "ICO",
