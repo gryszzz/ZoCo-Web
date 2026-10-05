@@ -276,3 +276,62 @@ button{font:inherit}
   .reveal{opacity:1;transform:none;transition:none}
   .button{transition:none}
 }
+
+/* compact-mobile-header-v18 */
+@media(max-width:900px){
+  .header-inner{
+    height:68px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:.75rem;
+  }
+  .brand{
+    min-width:0;
+    flex:0 0 auto;
+  }
+  .brand-logo{
+    width:46px!important;
+    height:46px!important;
+  }
+  .menu-btn{
+    display:block!important;
+    margin-left:auto;
+    min-height:42px;
+    padding:.5rem .78rem!important;
+    font-size:.9rem;
+    line-height:1;
+  }
+  .nav-links{
+    top:68px!important;
+  }
+}
+
+@media(max-width:620px){
+  .page,.header-inner{
+    width:min(var(--max),calc(100% - 1rem));
+  }
+  .header-inner{
+    height:60px;
+  }
+  .brand-logo{
+    width:42px!important;
+    height:42px!important;
+  }
+  .menu-btn{
+    min-height:38px;
+    padding:.42rem .68rem!important;
+    font-size:.86rem;
+  }
+  .nav-links{
+    top:60px!important;
+    left:.5rem!important;
+    right:.5rem!important;
+  }
+  .hero{
+    padding-top:.45rem!important;
+  }
+  .hero-copyblock{
+    padding-top:2.15rem;
+  }
+}
