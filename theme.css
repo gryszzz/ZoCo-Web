@@ -1394,3 +1394,24 @@ button{font:inherit}
     gap:.3rem 1rem;
   }
 }
+
+/* footer-order-v52 */
+.footer-hours-row{
+  margin-top:2rem;
+  display:flex;
+  justify-content:flex-end;
+}
+.footer-bottom{
+  display:block!important;
+  margin-top:1.6rem!important;
+  padding-top:1rem!important;
+  border-top:1px solid #1f2223!important;
+}
+@media(max-width:620px){
+  .footer-hours-row{
+    justify-content:flex-start;
+  }
+  .footer-bottom{
+    display:block!important;
+  }
+}
