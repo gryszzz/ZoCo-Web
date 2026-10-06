@@ -700,3 +700,60 @@ button{font:inherit}
     line-height:1.2;
   }
 }
+
+/* brand-color-social-icons-v28 */
+/* Email */
+.quick-tile[href^="mailto:"] .quick-icon,
+.hero-card-links a[href^="mailto:"] .card-link-icon,
+.social-link[href^="mailto:"] .social-icon{
+  background:#ea4335;
+  border-color:#ea4335;
+}
+.quick-tile[href^="mailto:"] .quick-icon svg,
+.hero-card-links a[href^="mailto:"] .card-link-icon svg,
+.social-link[href^="mailto:"] .social-icon svg{
+  stroke:#fff!important;
+  fill:none!important;
+}
+
+/* Instagram */
+.quick-tile[href*="instagram.com"] .quick-icon,
+.hero-card-links a[href*="instagram.com"] .card-link-icon,
+.social-link[href*="instagram.com"] .social-icon{
+  background:linear-gradient(135deg,#f9ce34 0%,#ee2a7b 48%,#6228d7 100%);
+  border-color:rgba(255,255,255,.22);
+}
+.quick-tile[href*="instagram.com"] .quick-icon svg,
+.hero-card-links a[href*="instagram.com"] .card-link-icon svg,
+.social-link[href*="instagram.com"] .social-icon svg{
+  stroke:#fff!important;
+  fill:none!important;
+}
+
+/* Facebook */
+.quick-tile[href*="facebook.com"] .quick-icon,
+.hero-card-links a[href*="facebook.com"] .card-link-icon,
+.social-link[href*="facebook.com"] .social-icon{
+  background:#1877f2;
+  border-color:#1877f2;
+}
+.quick-tile[href*="facebook.com"] .quick-icon svg,
+.hero-card-links a[href*="facebook.com"] .card-link-icon svg,
+.social-link[href*="facebook.com"] .social-icon svg{
+  fill:#fff!important;
+  stroke:none!important;
+}
+
+/* Footer keeps its compact layout but uses the same brand colors. */
+.footer-link[href^="mailto:"] svg{
+  stroke:#ea4335!important;
+  fill:none!important;
+}
+.footer-link[href*="instagram.com"] svg{
+  stroke:#e4405f!important;
+  fill:none!important;
+}
+.footer-link[href*="facebook.com"] svg{
+  fill:#1877f2!important;
+  stroke:none!important;
+}
