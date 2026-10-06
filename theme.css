@@ -932,3 +932,63 @@ button{font:inherit}
     height:34px!important;
   }
 }
+
+/* hero-owner-contact-cleanup-v36 */
+.hero-card-owner{
+  gap:.45rem;
+  margin-top:1.55rem;
+}
+.hero-card-owner strong{
+  margin-bottom:.1rem;
+}
+.hero-card-call{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:.8rem;
+  min-height:58px;
+  margin-top:1.15rem;
+  padding:.78rem .9rem;
+  border:1px solid rgba(0,0,0,.22);
+  background:#090a0a;
+  color:#fff;
+  text-decoration:none;
+  transition:transform .18s ease, background .18s ease;
+}
+.hero-card-call:hover{
+  transform:translateY(-1px);
+  background:#171919;
+}
+.hero-card-call span{
+  font-size:.62rem;
+  font-weight:800;
+  letter-spacing:.16em;
+  color:#bfc3c3;
+}
+.hero-card-call strong{
+  font-size:.92rem;
+  letter-spacing:.01em;
+}
+.hero-card-call i{
+  font-style:normal;
+  font-size:1rem;
+  color:#cfd2d2;
+}
+.hero-card-call + .hero-card-links{
+  margin-top:.65rem;
+}
+@media(max-width:620px){
+  .hero-card-owner{
+    margin-top:1.25rem;
+  }
+  .hero-card-call{
+    min-height:56px;
+    margin-top:.95rem;
+    padding:.72rem .82rem;
+  }
+  .hero-card-call strong{
+    font-size:.88rem;
+  }
+}
