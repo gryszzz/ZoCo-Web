@@ -1220,3 +1220,47 @@ button{font:inherit}
     top: .18rem;
   }
 }
+
+/* uniform-hero-contact-type-v41 */
+/* One typography system for Call, Email, Instagram, Facebook, and Digital Card. */
+.hero-card-call-copy small,
+.hero-card-links small{
+  font-size:.58rem!important;
+  font-weight:800!important;
+  letter-spacing:.15em!important;
+  line-height:1.15!important;
+  color:#5f6363!important;
+}
+
+.hero-card-call-copy strong,
+.hero-card-links strong{
+  margin-top:.22rem!important;
+  font-size:.80rem!important;
+  font-weight:800!important;
+  line-height:1.2!important;
+  letter-spacing:0!important;
+  color:#090a0a!important;
+}
+
+.hero-card-call-copy,
+.hero-card-links a>span:nth-child(2){
+  gap:0!important;
+  justify-content:center!important;
+}
+
+.hero-card-links i,
+.hero-card-call i{
+  align-self:center!important;
+}
+
+@media(max-width:620px){
+  .hero-card-call-copy small,
+  .hero-card-links small{
+    font-size:.58rem!important;
+  }
+
+  .hero-card-call-copy strong,
+  .hero-card-links strong{
+    font-size:.80rem!important;
+  }
+}
