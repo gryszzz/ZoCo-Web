@@ -1015,3 +1015,98 @@ button{font:inherit}
     text-align:center;
   }
 }
+
+/* call-tile-darker-dogs-v38 */
+/* Make the call action visually match the other contact tiles. */
+.hero-card-call{
+  grid-template-columns:auto minmax(0,1fr) auto;
+  justify-content:stretch;
+  min-height:68px;
+  border:1px solid rgba(0,0,0,.15);
+  background:rgba(255,255,255,.28);
+  color:#090a0a;
+  gap:.72rem;
+  padding:.72rem .78rem;
+}
+.hero-card-call:hover{
+  background:rgba(255,255,255,.44);
+}
+.hero-card-call-icon{
+  width:32px;
+  height:32px;
+  display:grid;
+  place-items:center;
+  flex:0 0 32px;
+}
+.hero-card-call-icon svg{
+  width:18px;
+  height:18px;
+  fill:none;
+  stroke:#34a853;
+  stroke-width:1.9;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.hero-card-call-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:.14rem;
+  min-width:0;
+}
+.hero-card-call-copy small{
+  color:#5c6262;
+  font-size:.62rem;
+  font-weight:800;
+  letter-spacing:.16em;
+}
+.hero-card-call-copy strong{
+  color:#090a0a;
+  font-size:.88rem;
+  line-height:1.2;
+}
+.hero-card-call i{
+  color:#5f6565;
+}
+
+/* Bring the dog artwork forward on both layouts without competing with the wordmark. */
+.hero-card-dogs{
+  opacity:.72;
+  filter:contrast(1.18) saturate(1.08) brightness(.86);
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 88%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 0%,#000 88%,transparent 100%);
+}
+
+@media(min-width:901px){
+  .hero-card-call{
+    width:min(100%,360px);
+    margin-left:auto;
+    margin-right:auto;
+    grid-template-columns:auto minmax(0,1fr) auto;
+    justify-content:stretch;
+    text-align:left;
+  }
+  .hero-card-call span,
+  .hero-card-call strong,
+  .hero-card-call i{
+    text-align:left;
+  }
+  .hero-card-call i{
+    text-align:right;
+  }
+}
+
+@media(max-width:620px){
+  .hero-card-dogs{
+    opacity:.76;
+    filter:contrast(1.2) saturate(1.1) brightness(.84);
+  }
+  .hero-card-call{
+    min-height:64px;
+    padding:.7rem .78rem;
+  }
+  .hero-card-call-icon{
+    width:34px;
+    height:34px;
+  }
+}
