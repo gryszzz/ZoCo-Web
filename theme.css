@@ -1138,3 +1138,31 @@ button{font:inherit}
     min-height:82px;
   }
 }
+
+/* center-desktop-primary-hero-v40 */
+@media(min-width:901px){
+  .hero-copyblock > .hero-eyebrow,
+  .hero-copyblock > h1,
+  .hero-copyblock > .hero-text{
+    width:100%;
+    text-align:center;
+  }
+
+  .hero-copyblock > .hero-text{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .hero-actions{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+  }
+
+  .hero-actions .button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  }
+}
