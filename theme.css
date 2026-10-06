@@ -1257,3 +1257,10 @@ button{font:inherit}
   border-radius:50%;
   background:transparent url("/zoco-logo-v2.webp") center/contain no-repeat!important;
 }
+
+/* remove-owner-operated-box-v43 */
+.hero-card-mark{
+  border:0!important;
+  padding:0!important;
+  background:transparent!important;
+}
