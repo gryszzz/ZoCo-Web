@@ -127,11 +127,11 @@ button{font:inherit}
 .handyman-section{background:var(--paper);color:#0a0b0b}
 .handyman-section .kicker{color:#6d7070!important}
 .handyman-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--lineLight);border-left:1px solid var(--lineLight)}
-.scope-card{min-height:300px;background:#fafaf8;border-right:1px solid var(--lineLight);border-bottom:1px solid var(--lineLight);padding:1.4rem;overflow:hidden}
-.scope-card-image{display:block;width:calc(100% + 2.8rem);height:150px;object-fit:cover;object-position:center 64%;margin:-1.4rem -1.4rem 1rem;border-bottom:1px solid var(--lineLight)}
-.scope-card>span{font-size:.62rem;color:#858989;letter-spacing:.12em}
-.scope-card h3{margin:1rem 0 .5rem;font-size:1.08rem}
-.scope-card p{margin:0;color:#5d6161;font-size:.9rem}
+.scope-card{min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 72px;grid-template-rows:auto auto auto;align-content:start;gap:0 .85rem;background:#fafaf8;border-right:1px solid var(--lineLight);border-bottom:1px solid var(--lineLight);padding:1.1rem}
+.scope-card-image{grid-column:2;grid-row:1 / span 2;display:block;width:72px;height:72px;object-fit:cover;object-position:center;margin:0;border:1px solid var(--lineLight)}
+.scope-card>span{grid-column:1;grid-row:1;font-size:.62rem;color:#858989;letter-spacing:.12em}
+.scope-card h3{grid-column:1;grid-row:2;margin:.65rem 0 .55rem;font-size:1.08rem}
+.scope-card p{grid-column:1/-1;grid-row:3;margin:0;color:#5d6161;font-size:.9rem}
 .scope-note{margin-top:1rem;border:1px solid var(--lineLight);padding:1rem 1.2rem;background:#fff;display:grid;grid-template-columns:180px 1fr;gap:1rem}
 .scope-note strong{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
 .scope-note p{margin:0;color:#5c6060;font-size:.84rem}
@@ -258,6 +258,8 @@ button{font:inherit}
   .service-display{padding:1.3rem}
   .display-footer{flex-direction:column}
   .handyman-grid{grid-template-columns:1fr}
+  .scope-card{grid-template-columns:minmax(0,1fr) 60px;gap:0 .7rem;padding:1rem}
+  .scope-card-image{width:60px;height:60px}
   .google-review-grid{grid-template-columns:1fr}
   .social-grid{grid-template-columns:1fr}
   .connect-copy{padding:1.25rem 1rem}
