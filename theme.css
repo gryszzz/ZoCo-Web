@@ -127,9 +127,10 @@ button{font:inherit}
 .handyman-section{background:var(--paper);color:#0a0b0b}
 .handyman-section .kicker{color:#6d7070!important}
 .handyman-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--lineLight);border-left:1px solid var(--lineLight)}
-.scope-card{min-height:230px;background:#fafaf8;border-right:1px solid var(--lineLight);border-bottom:1px solid var(--lineLight);padding:1.4rem}
+.scope-card{min-height:300px;background:#fafaf8;border-right:1px solid var(--lineLight);border-bottom:1px solid var(--lineLight);padding:1.4rem;overflow:hidden}
+.scope-card-image{display:block;width:calc(100% + 2.8rem);height:150px;object-fit:cover;object-position:center 64%;margin:-1.4rem -1.4rem 1rem;border-bottom:1px solid var(--lineLight)}
 .scope-card>span{font-size:.62rem;color:#858989;letter-spacing:.12em}
-.scope-card h3{margin:2.2rem 0 .5rem;font-size:1.08rem}
+.scope-card h3{margin:1rem 0 .5rem;font-size:1.08rem}
 .scope-card p{margin:0;color:#5d6161;font-size:.9rem}
 .scope-note{margin-top:1rem;border:1px solid var(--lineLight);padding:1rem 1.2rem;background:#fff;display:grid;grid-template-columns:180px 1fr;gap:1rem}
 .scope-note strong{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
