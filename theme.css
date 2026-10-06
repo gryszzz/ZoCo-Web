@@ -757,3 +757,56 @@ button{font:inherit}
   fill:#1877f2!important;
   stroke:none!important;
 }
+
+/* transparent-brand-icons-v29 */
+/* Keep icon containers transparent; color only the actual logo marks. */
+.quick-tile[href^="mailto:"] .quick-icon,
+.quick-tile[href*="instagram.com"] .quick-icon,
+.quick-tile[href*="facebook.com"] .quick-icon,
+.hero-card-links a[href^="mailto:"] .card-link-icon,
+.hero-card-links a[href*="instagram.com"] .card-link-icon,
+.hero-card-links a[href*="facebook.com"] .card-link-icon,
+.social-link[href^="mailto:"] .social-icon,
+.social-link[href*="instagram.com"] .social-icon,
+.social-link[href*="facebook.com"] .social-icon{
+  background:transparent!important;
+}
+
+/* Preserve the existing subtle frame rather than a colored tile. */
+.quick-tile[href^="mailto:"] .quick-icon,
+.quick-tile[href*="instagram.com"] .quick-icon,
+.quick-tile[href*="facebook.com"] .quick-icon,
+.social-link[href^="mailto:"] .social-icon,
+.social-link[href*="instagram.com"] .social-icon,
+.social-link[href*="facebook.com"] .social-icon{
+  border-color:#333637!important;
+}
+.hero-card-links a[href^="mailto:"] .card-link-icon,
+.hero-card-links a[href*="instagram.com"] .card-link-icon,
+.hero-card-links a[href*="facebook.com"] .card-link-icon{
+  border-color:rgba(0,0,0,.2)!important;
+}
+
+/* Email mark */
+.quick-tile[href^="mailto:"] .quick-icon svg,
+.hero-card-links a[href^="mailto:"] .card-link-icon svg,
+.social-link[href^="mailto:"] .social-icon svg{
+  stroke:#ea4335!important;
+  fill:none!important;
+}
+
+/* Instagram mark */
+.quick-tile[href*="instagram.com"] .quick-icon svg,
+.hero-card-links a[href*="instagram.com"] .card-link-icon svg,
+.social-link[href*="instagram.com"] .social-icon svg{
+  stroke:#e4405f!important;
+  fill:none!important;
+}
+
+/* Facebook mark */
+.quick-tile[href*="facebook.com"] .quick-icon svg,
+.hero-card-links a[href*="facebook.com"] .card-link-icon svg,
+.social-link[href*="facebook.com"] .social-icon svg{
+  fill:#1877f2!important;
+  stroke:none!important;
+}
