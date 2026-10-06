@@ -1354,3 +1354,42 @@ button{font:inherit}
     padding-right:1.4rem!important;
   }
 }
+
+/* stack-footer-hours-v51 */
+.footer-hours{
+  display:grid;
+  grid-template-columns:minmax(92px,auto) minmax(90px,auto);
+  gap:.28rem 1rem;
+  color:#747879;
+  font-size:.72rem;
+  line-height:1.35;
+  min-width:230px;
+}
+.footer-hours>strong{
+  grid-column:1 / -1;
+  margin-bottom:.18rem;
+  color:#a6aaab;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.footer-hours>span{
+  display:contents;
+}
+.footer-hours b{
+  font-weight:700;
+  color:#8e9293;
+}
+.footer-hours em{
+  font-style:normal;
+  text-align:right;
+  color:#747879;
+}
+@media(max-width:620px){
+  .footer-hours{
+    width:100%;
+    max-width:280px;
+    grid-template-columns:minmax(100px,1fr) auto;
+    gap:.3rem 1rem;
+  }
+}
