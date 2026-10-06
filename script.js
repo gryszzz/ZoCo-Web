@@ -31,15 +31,16 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
 const services = {
-  drain: ['SERVICE / 01', 'Drain Cleaning', 'Clear buildup and restore flow in accessible drain and sewer lines.'],
-  camera: ['SERVICE / 02', 'Camera Inspection', 'Use a drain camera to view accessible line conditions and locate visible trouble areas.'],
-  maintenance: ['SERVICE / 03', 'Drain Maintenance', 'Routine drain service intended to help keep accessible lines moving and reduce recurring buildup.'],
-  dryer: ['SERVICE / 04', 'Dryer Vent Cleaning', 'Clean accessible dryer vent runs to help improve airflow and remove lint buildup.']
+  drain: ['SERVICE / 01', 'Drain Cleaning', 'Clear buildup and restore flow in accessible drain and sewer lines.', '/assets/services/drain-cleaning.jpg', 'Powered drain snake clearing a pipe through a cleanout.'],
+  camera: ['SERVICE / 02', 'Camera Inspection', 'Use a drain camera to view accessible line conditions and locate visible trouble areas.', '/assets/services/camera-inspection.jpg', 'Technician feeding an inspection camera into a drain line while viewing the pipe interior.'],
+  maintenance: ['SERVICE / 03', 'Drain Maintenance', 'Routine drain service intended to help keep accessible lines moving and reduce recurring buildup.', '/assets/services/drain-maintenance.jpg', 'Technician checking and maintaining residential under-sink drain piping.'],
+  dryer: ['SERVICE / 04', 'Dryer Vent Cleaning', 'Clean accessible dryer vent runs to help improve airflow and remove lint buildup.', '/assets/services/dryer-vent-cleaning.jpg', 'Rotary brush removing lint from a metal dryer vent duct.']
 };
 
 const serviceCode = document.getElementById('serviceCode');
 const serviceTitle = document.getElementById('serviceTitle');
 const serviceDescription = document.getElementById('serviceDescription');
+const serviceImage = document.getElementById('serviceImage');
 
 document.querySelectorAll('.service-tab').forEach((button) => {
   button.addEventListener('click', () => {
@@ -56,6 +57,8 @@ document.querySelectorAll('.service-tab').forEach((button) => {
     serviceCode.textContent = item[0];
     serviceTitle.textContent = item[1];
     serviceDescription.textContent = item[2];
+    serviceImage.alt = item[4];
+    serviceImage.src = item[3];
   });
 });
 

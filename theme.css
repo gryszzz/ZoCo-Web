@@ -113,11 +113,15 @@ button{font:inherit}
 .service-tab:hover{background:#111313}
 .service-tab.active{background:#f2f2ef;color:#090a0a}
 .service-tab.active span{color:#6a6d6e}
-.service-display{min-height:365px;padding:2.2rem;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(circle at 78% 20%,rgba(255,255,255,.045),transparent 28%),#0d0f0f}
+.service-display{min-height:365px;padding:2.2rem;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(220px,.9fr);grid-template-rows:auto 1fr auto;align-items:stretch;gap:1.5rem 2rem;background:radial-gradient(circle at 78% 20%,rgba(255,255,255,.045),transparent 28%),#0d0f0f}
 .display-topline{display:flex;justify-content:space-between;gap:1rem;color:#6e7273;font-size:.64rem;font-weight:800;letter-spacing:.13em}
+.display-topline,.display-footer{grid-column:1/-1}
+.service-copy{grid-column:1;align-self:center}
+.service-art{grid-column:2;grid-row:2;align-self:stretch;min-height:190px;margin:0;overflow:hidden;border:1px solid #292c2d;background:#080909}
+.service-art img{display:block;width:100%;height:100%;min-height:190px;max-height:260px;object-fit:cover;filter:saturate(.9) contrast(1.04)}
 .service-display h3{font-size:clamp(2.5rem,5vw,5rem);line-height:.95;letter-spacing:-.05em;margin:2rem 0 .9rem;max-width:700px}
 .service-display>div:nth-child(2)>p{margin:0;color:#969a9b;font-size:1.05rem;max-width:650px}
-.display-footer{padding-top:1.6rem;margin-top:2.2rem;border-top:1px solid #282b2c;display:flex;justify-content:space-between;gap:1rem;color:#8b8f90;font-size:.8rem}
+.display-footer{padding-top:1.6rem;margin-top:0;border-top:1px solid #282b2c;display:flex;justify-content:space-between;gap:1rem;color:#8b8f90;font-size:.8rem}
 .display-footer a{color:#f3f3ef;font-weight:700}
 
 .handyman-section{background:var(--paper);color:#0a0b0b}
@@ -1310,4 +1314,16 @@ button{font:inherit}
   .hero-card-name{
     margin-top:9.4rem!important;
   }
+}
+
+@media(max-width:900px){
+  .service-display{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto minmax(190px,auto) auto}
+  .service-art{grid-column:1;grid-row:3}
+  .service-art img{height:240px;max-height:240px}
+}
+
+@media(max-width:620px){
+  .service-display{grid-template-rows:auto auto minmax(180px,auto) auto;padding:1.3rem;gap:1rem}
+  .service-art{min-height:180px}
+  .service-art img{height:205px;min-height:180px;max-height:205px}
 }
