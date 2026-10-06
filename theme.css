@@ -862,3 +862,73 @@ button{font:inherit}
     gap:.7rem;
   }
 }
+
+/* dogs-card-logo-v33 */
+.hero-card{
+  overflow:hidden;
+  isolation:isolate;
+}
+.hero-card:before{
+  z-index:3;
+}
+.hero-card-dogs{
+  position:absolute;
+  z-index:0;
+  top:3.4rem;
+  left:1rem;
+  right:1rem;
+  height:255px;
+  background:url("/zoco-dogs-watermark.png") center top/contain no-repeat;
+  opacity:.48;
+  mix-blend-mode:multiply;
+  pointer-events:none;
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 72%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 0%,#000 72%,transparent 100%);
+}
+.hero-card-top,
+.hero-card-name,
+.hero-card-rule,
+.hero-card-owner,
+.hero-card-links{
+  position:relative;
+  z-index:2;
+}
+.card-link-logo{
+  width:32px;
+  height:32px;
+  display:block;
+  flex:0 0 32px;
+  border-radius:50%;
+  background-color:#000!important;
+  background-size:contain!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+}
+.social-logo{
+  width:40px!important;
+  height:40px!important;
+  display:block!important;
+  border-radius:50%;
+  background-color:#000!important;
+  background-size:contain!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+}
+@media(max-width:620px){
+  .hero-card-dogs{
+    top:3.1rem;
+    left:.55rem;
+    right:.55rem;
+    height:235px;
+    opacity:.52;
+  }
+  .card-link-logo{
+    width:34px;
+    height:34px;
+    flex-basis:34px;
+  }
+  .social-logo{
+    width:34px!important;
+    height:34px!important;
+  }
+}
