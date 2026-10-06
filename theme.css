@@ -1264,3 +1264,11 @@ button{font:inherit}
     font-size:.80rem!important;
   }
 }
+
+/* fix-contact-digital-card-logo-v42 */
+/* social-icon's background reset was wiping the shared logo-image background. */
+.social-link[href*="dot.cards"] .social-logo{
+  border:0!important;
+  border-radius:50%;
+  background:transparent url("/zoco-logo-v2.webp") center/contain no-repeat!important;
+}
