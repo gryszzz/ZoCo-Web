@@ -878,7 +878,7 @@ button{font:inherit}
   left:1rem;
   right:1rem;
   height:255px;
-  background:url("/zoco-dogs-watermark.png") center top/contain no-repeat;
+  background:url("/zoco-dogs-watermark.png?v=2") center top/contain no-repeat;
   opacity:.48;
   mix-blend-mode:multiply;
   pointer-events:none;
