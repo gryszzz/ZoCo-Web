@@ -1110,3 +1110,31 @@ button{font:inherit}
     height:34px;
   }
 }
+
+/* equal-hero-link-boxes-v39 */
+.hero-card-links{
+  align-items:stretch;
+  grid-auto-rows:1fr;
+}
+.hero-card-links > a{
+  height:100%;
+  min-height:76px;
+  box-sizing:border-box;
+  align-self:stretch;
+}
+@media(min-width:901px){
+  .hero-card-links{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .hero-card-links > a{
+    min-height:76px;
+  }
+}
+@media(max-width:620px){
+  .hero-card-links{
+    grid-template-columns:1fr;
+  }
+  .hero-card-links > a{
+    min-height:82px;
+  }
+}
