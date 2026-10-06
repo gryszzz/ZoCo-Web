@@ -819,3 +819,30 @@ button{font:inherit}
   border:0!important;
   background:transparent!important;
 }
+
+/* footer-hours-v31 */
+.footer-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1.25rem;
+  flex-wrap:wrap;
+}
+.footer-hours{
+  color:#747879;
+  font-size:.75rem;
+}
+.footer-hours strong{
+  color:#a6aaab;
+  font-weight:800;
+}
+@media(max-width:620px){
+  .footer-bottom{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:.55rem;
+  }
+  .footer-hours{
+    line-height:1.5;
+  }
+}
