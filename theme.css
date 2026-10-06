@@ -846,3 +846,19 @@ button{font:inherit}
     line-height:1.5;
   }
 }
+
+/* hero-primary-actions-v32 */
+@media(min-width:621px){
+  .hero-actions{
+    width:min(100%,520px);
+  }
+  .hero-actions .button{
+    flex:1 1 0;
+    min-width:0;
+  }
+}
+@media(max-width:620px){
+  .hero-actions{
+    gap:.7rem;
+  }
+}
