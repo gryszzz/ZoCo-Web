@@ -1335,3 +1335,22 @@ button{font:inherit}
     margin-top:1rem;
   }
 }
+
+/* service-area-only-v49 */
+.hero-bottomline{
+  grid-template-columns:1fr!important;
+}
+.hero-bottomline>div{
+  border-right:0!important;
+  border-bottom:0!important;
+  text-align:center!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+@media(min-width:901px){
+  .hero-bottomline>div:first-child,
+  .hero-bottomline>div:last-child{
+    padding-left:1.4rem!important;
+    padding-right:1.4rem!important;
+  }
+}
