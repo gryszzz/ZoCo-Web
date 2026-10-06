@@ -611,3 +611,63 @@ button{font:inherit}
     line-height:1.22;
   }
 }
+
+/* desktop-hero-spacing-v26 */
+@media(min-width:901px){
+  .hero-copyblock{
+    padding:4.25rem 3.25rem 3.5rem;
+  }
+
+  .hero-actions{
+    gap:.65rem;
+  }
+
+  .quick-connect{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:.65rem;
+    max-width:700px;
+    margin-top:1.25rem;
+  }
+
+  .quick-tile{
+    min-height:68px;
+    padding:.72rem .9rem;
+    gap:.8rem;
+  }
+
+  .quick-copy strong{
+    font-size:.75rem;
+  }
+
+  .hero-card{
+    padding:2rem 1.75rem;
+  }
+
+  .hero-card-links{
+    gap:.65rem;
+    margin-top:1.65rem;
+  }
+
+  .hero-card-links a{
+    min-height:68px;
+    padding:.72rem .78rem;
+    gap:.72rem;
+  }
+
+  .hero-bottomline{
+    grid-template-columns:1.3fr .85fr .85fr;
+  }
+
+  .hero-bottomline>div{
+    padding:1rem 1.4rem!important;
+    gap:.24rem;
+  }
+
+  .hero-bottomline>div:first-child{
+    padding-left:3.25rem!important;
+  }
+
+  .hero-bottomline>div:last-child{
+    padding-right:1.75rem!important;
+  }
+}
