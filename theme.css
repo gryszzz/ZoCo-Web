@@ -1166,3 +1166,57 @@ button{font:inherit}
     text-align:center;
   }
 }
+
+/* hero dog crop / label spacing v40 */
+
+/* DESKTOP: show more of the dogs, move top labels upward */
+@media (min-width: 901px) {
+  .hero-card-top{
+    position: relative;
+    z-index: 3;
+  }
+
+  .hero-card-top span:first-child{
+    position: relative;
+    top: -10px;
+  }
+
+  .hero-card-top .hero-card-mark{
+    position: relative;
+    top: -10px;
+  }
+
+  .hero-card-dogs{
+    top: 2.55rem;
+    height: 285px;
+    opacity: .82;
+    filter: contrast(1.22) saturate(1.08) brightness(.82);
+    background-position: center top;
+  }
+}
+
+/* PHONE: move ZOCO / subtitle lower so it sits on the gray pipe area */
+@media (max-width: 620px) {
+  .hero-card-dogs{
+    top: 2.8rem;
+    height: 240px;
+    opacity: .82;
+    filter: contrast(1.22) saturate(1.08) brightness(.82);
+    background-position: center top;
+  }
+
+  .hero-card-name{
+    position: relative;
+    margin-top: 8.95rem;
+  }
+
+  .hero-card-name strong{
+    position: relative;
+    top: .28rem;
+  }
+
+  .hero-card-name span{
+    position: relative;
+    top: .18rem;
+  }
+}
