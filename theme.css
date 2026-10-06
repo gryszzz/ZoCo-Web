@@ -1264,3 +1264,36 @@ button{font:inherit}
   padding:0!important;
   background:transparent!important;
 }
+
+/* pin-card-labels-clean-v47 */
+/* Keep both location/owner labels at the true top edge of the business card. */
+.hero-card-top{
+  position:absolute!important;
+  top:1.7rem!important;
+  left:1.75rem!important;
+  right:1.75rem!important;
+  z-index:5!important;
+  width:auto!important;
+  margin:0!important;
+  transform:none!important;
+}
+
+/* OWNER OPERATED is text only — no box treatment of any kind. */
+.hero-card-mark{
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+  padding:0!important;
+  margin:0!important;
+  border-radius:0!important;
+  clip-path:none!important;
+}
+
+@media(max-width:620px){
+  .hero-card-top{
+    top:1.4rem!important;
+    left:1.05rem!important;
+    right:1.05rem!important;
+  }
+}
