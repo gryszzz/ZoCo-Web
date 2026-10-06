@@ -810,3 +810,12 @@ button{font:inherit}
   fill:#1877f2!important;
   stroke:none!important;
 }
+
+/* remove-social-icon-boxes-v30 */
+/* Remove the small gray frames around contact/social marks while preserving icon sizing/alignment. */
+.quick-icon,
+.card-link-icon,
+.social-icon{
+  border:0!important;
+  background:transparent!important;
+}
