@@ -1167,12 +1167,16 @@ button{font:inherit}
   }
 }
 
-/* desktop-card-labels-at-top-v43 */
+/* desktop-card-labels-and-wordmark-spacing-v44 */
 @media (min-width: 901px) {
   .hero-card-top{
     position: relative;
     z-index: 3;
-    top: -2.8rem;
+    top: -3.1rem;
+  }
+
+  .hero-card-name{
+    margin-top: 4.2rem;
   }
 }
 
