@@ -1167,7 +1167,7 @@ button{font:inherit}
   }
 }
 
-/* desktop-card-labels-and-wordmark-spacing-v44 */
+/* desktop-card-wordmark-spacing-v45 */
 @media (min-width: 901px) {
   .hero-card-top{
     position: relative;
@@ -1176,7 +1176,7 @@ button{font:inherit}
   }
 
   .hero-card-name{
-    margin-top: 4.2rem;
+    margin-top: 5.2rem;
   }
 }
 
