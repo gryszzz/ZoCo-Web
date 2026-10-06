@@ -671,3 +671,32 @@ button{font:inherit}
     padding-right:1.75rem!important;
   }
 }
+
+/* desktop-info-rail-fix-v27 */
+@media(min-width:901px){
+  /* Keep the decorative inset frame out of the info rail. */
+  .hero-shell:before{
+    bottom:96px;
+  }
+
+  .hero-bottomline{
+    min-height:92px;
+  }
+
+  .hero-bottomline>div{
+    min-height:92px;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    gap:.38rem;
+    padding-top:1.15rem!important;
+    padding-bottom:1.15rem!important;
+  }
+
+  .hero-bottomline span,
+  .hero-bottomline strong{
+    position:relative;
+    z-index:1;
+    line-height:1.2;
+  }
+}
