@@ -1167,32 +1167,12 @@ button{font:inherit}
   }
 }
 
-/* hero dog crop / label spacing v40 */
-
-/* DESKTOP: show more of the dogs, move top labels upward */
+/* desktop-card-labels-at-top-v43 */
 @media (min-width: 901px) {
   .hero-card-top{
     position: relative;
     z-index: 3;
-  }
-
-  .hero-card-top span:first-child{
-    position: relative;
-    top: -10px;
-  }
-
-  .hero-card-top .hero-card-mark{
-    position: relative;
-    top: -10px;
-  }
-
-  .hero-card-dogs{
-    top: 2.55rem;
-    height: 285px;
-    opacity: .9;
-    filter: contrast(1.22) saturate(1.08) brightness(.82);
-    background-position: center top;
-    background-size: 118% auto;
+    top: -2.8rem;
   }
 }
 
