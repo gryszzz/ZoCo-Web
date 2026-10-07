@@ -1533,28 +1533,38 @@ body:before{
 .area-contact p{max-width:700px;color:#333838;line-height:1.7}
 @media(max-width:700px){.area-page{padding:1rem 0 3rem}.area-hero{padding:2rem 1.25rem}.area-hero>p{font-size:.96rem}.area-counties,.area-lower{grid-template-columns:1fr}.area-county{padding:1.15rem}.area-town-list span{font-size:.78rem}}
 
-/* link-logo-size-standardization-v78 */
+/* standard-brand-link-icons-v79 */
 /* Enlarge site link marks uniformly; the ZoCo Business Card artwork stays untouched. */
 .quick-icon svg,
 .card-link-icon svg,
 .social-icon svg{
-  width:21px;
-  height:21px;
+  width:24px;
+  height:24px;
 }
 .footer-link svg{
-  width:17px;
-  height:17px;
+  width:19px;
+  height:19px;
 }
 .google-review-link .google-g{
-  width:20px;
-  height:20px;
-  flex-basis:20px;
+  width:22px;
+  height:22px;
+  flex-basis:22px;
 }
 @media(max-width:620px){
   .quick-icon svg,
   .card-link-icon svg,
   .social-icon svg{
-    width:19px;
-    height:19px;
+    width:22px;
+    height:22px;
   }
+}
+.social-icon svg.google-g{
+  width:23px;
+  height:23px;
+  fill:none;
+  stroke:none;
+}
+.hero-card-call-icon svg{
+  width:22px;
+  height:22px;
 }
