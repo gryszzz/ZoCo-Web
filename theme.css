@@ -1461,3 +1461,15 @@ button{font:inherit}
 .tips-bottom .button-secondary{border-color:#3b3e3f;background:#111313;color:#fff}
 @media(max-width:800px){.tips-toc{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.tips-page{padding:1rem 0 3rem}.tips-hero{padding:2rem 1.25rem}.tips-hero>p{font-size:.96rem}.tips-toc{gap:.5rem;margin:1rem 0 2.5rem}.tips-toc a{min-height:112px;padding:.8rem}.tips-toc strong{font-size:.9rem}.tips-section-heading{display:block}.tips-section-heading p{margin-top:.55rem}.tip-guide{padding:1.1rem}.tip-guide-header{grid-template-columns:42px minmax(0,1fr);gap:.75rem}.tip-index{width:38px;height:38px}.tip-guide p,.tip-guide li{font-size:.94rem}}
+
+/* horizontal-header-wordmark */
+.brand-logo{display:none!important}
+.brand{gap:0!important;min-width:0!important}
+.brand-copy{flex-direction:row!important;align-items:baseline;gap:.65rem;white-space:nowrap}
+.brand-copy strong{font-size:1.38rem;letter-spacing:.02em;text-transform:uppercase}
+.brand-copy span{margin-top:0;font-size:.66rem;letter-spacing:.12em}
+@media(max-width:620px){
+  .brand-copy{display:flex!important;gap:.45rem}
+  .brand-copy strong{font-size:1.16rem}
+  .brand-copy span{font-size:.52rem;letter-spacing:.08em}
+}
