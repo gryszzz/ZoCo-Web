@@ -1719,3 +1719,25 @@ body:before{
   .tip-guide .tip-deck{font-size:.84rem;line-height:1.45}
   .tip-guide-content{padding:0 1rem 1rem}
 }
+
+/* header-navigation-spacing-v88 */
+@media(min-width:1101px){
+  .nav-links{
+    display:flex!important;
+    justify-content:space-between;
+    gap:clamp(.55rem,1vw,1rem);
+  }
+  .nav-links a{
+    padding:.45rem .18rem;
+    font-size:clamp(.7rem,.72vw,.78rem)!important;
+  }
+}
+@media(max-width:900px){
+  .nav-links{gap:.35rem}
+  .nav-links a{
+    padding:.72rem .75rem!important;
+    border-bottom:1px solid #222626;
+    font-size:.9rem!important;
+  }
+  .nav-links a:last-child{border-bottom:0}
+}
