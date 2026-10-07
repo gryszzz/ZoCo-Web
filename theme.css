@@ -73,10 +73,9 @@ button{font:inherit}
 .hero-card:before{content:"";position:absolute;inset:14px;border:1px solid rgba(0,0,0,.13);pointer-events:none}
 .hero-card-top{display:flex;justify-content:space-between;gap:1rem;align-items:center;font-size:.63rem;font-weight:800;letter-spacing:.12em}
 .hero-card-mark{border:1px solid #8f9393;padding:.35rem .45rem}
-.hero-card-name{margin:2.2rem 0 1.3rem}
+.hero-card-name{margin:2.2rem 0 3rem}
 .hero-card-name strong{display:block;font-size:clamp(4rem,7vw,6.2rem);line-height:.82;letter-spacing:.06em}
 .hero-card-name span{display:block;margin-top:.55rem;font-size:.83rem;font-weight:700;letter-spacing:.28em}
-.hero-card-rule{height:1px;background:#6d7171;width:72%;margin-bottom:1.7rem}
 .hero-card-owner{display:flex;flex-direction:column;gap:.34rem}
 .hero-card-owner strong{font-size:1.55rem}
 .hero-card-owner a{font-size:1rem}
@@ -244,7 +243,7 @@ button{font:inherit}
   .quick-connect{grid-template-columns:1fr 1fr;width:100%}
   .quick-tile{min-height:70px}
   .hero-card{padding:1.4rem 1.05rem}
-  .hero-card-name{margin:1.8rem 0 1.1rem}
+  .hero-card-name{margin:1.8rem 0 2.8rem}
   .hero-card-name strong{font-size:clamp(3.8rem,20vw,5.5rem)}
   .hero-card-name span{font-size:.72rem;letter-spacing:.2em}
   .hero-card-owner strong{font-size:1.3rem}
@@ -896,7 +895,6 @@ button{font:inherit}
 }
 .hero-card-top,
 .hero-card-name,
-.hero-card-rule,
 .hero-card-owner,
 .hero-card-links{
   position:relative;
