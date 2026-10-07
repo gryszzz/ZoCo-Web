@@ -2070,3 +2070,18 @@ body:before{
     transform:none!important;
   }
 }
+
+
+/* mobile-quick-actions-safe-zone-v104 */
+@media(max-width:620px){
+  .hero{
+    padding-top:5.75rem!important;
+  }
+  .floating-quick-actions{
+    top:88px!important;
+    right:0!important;
+    bottom:auto!important;
+    transform:none!important;
+    gap:.38rem!important;
+  }
+}
