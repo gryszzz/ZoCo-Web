@@ -67,6 +67,26 @@
           {"@type":"AdministrativeArea","name":"Sussex County, New Jersey"},
           {"@type":"AdministrativeArea","name":"Passaic County, New Jersey"}
         ],
+        "openingHoursSpecification":[
+          {
+            "@type":"OpeningHoursSpecification",
+            "dayOfWeek":[
+              "https://schema.org/Monday",
+              "https://schema.org/Tuesday",
+              "https://schema.org/Wednesday",
+              "https://schema.org/Thursday",
+              "https://schema.org/Friday"
+            ],
+            "opens":"08:00",
+            "closes":"18:00"
+          },
+          {
+            "@type":"OpeningHoursSpecification",
+            "dayOfWeek":"https://schema.org/Saturday",
+            "opens":"08:00",
+            "closes":"14:00"
+          }
+        ],
         "identifier":{
           "@type":"PropertyValue",
           "propertyID":"NJ HIC Registration",
@@ -86,7 +106,10 @@
           "@type":"ContactPoint",
           "telephone":"+1-973-828-9723",
           "contactType":"customer service",
-          "areaServed":"US-NJ",
+          "areaServed":[
+            {"@type":"AdministrativeArea","name":"Sussex County, New Jersey"},
+            {"@type":"AdministrativeArea","name":"Passaic County, New Jersey"}
+          ],
           "availableLanguage":"English"
         },
         "sameAs":[
