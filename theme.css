@@ -1990,3 +1990,22 @@ body:before{
     min-height:72px!important;
   }
 }
+
+
+/* mobile-floating-actions-position-v100 */
+@media(max-width:620px){
+  .floating-quick-actions{
+    top:58%!important;
+    right:0!important;
+    bottom:auto!important;
+    transform:translateY(-50%)!important;
+    gap:.38rem!important;
+  }
+  .floating-quick-action{
+    width:46px!important;
+    max-width:46px!important;
+    min-height:44px!important;
+    padding:.55rem!important;
+    border-radius:10px 0 0 10px!important;
+  }
+}
