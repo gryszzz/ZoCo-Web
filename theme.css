@@ -1625,7 +1625,7 @@ body:before{
   display:none!important;
 }
 
-/* themed-contact-social-marks-v83 */
+/* themed-contact-social-marks-v84: match the monochrome ZoCo logo */
 .quick-tile[href^="mailto:"] .quick-icon,
 .quick-tile[href*="instagram.com"] .quick-icon,
 .quick-tile[href*="facebook.com"] .quick-icon,
@@ -1652,21 +1652,21 @@ body:before{
 .hero-card-links a[href^="mailto:"] .card-link-icon svg,
 .social-link[href^="mailto:"] .social-icon svg,
 .footer-link[href^="mailto:"] svg{
-  stroke:#d77770!important;
+  stroke:#f2f2ef!important;
   stroke-width:2.1;
 }
 .quick-tile[href*="instagram.com"] .quick-icon svg,
 .hero-card-links a[href*="instagram.com"] .card-link-icon svg,
 .social-link[href*="instagram.com"] .social-icon svg,
 .footer-link[href*="instagram.com"] svg{
-  stroke:#d985a7!important;
+  stroke:#f2f2ef!important;
   stroke-width:2.1;
 }
 .quick-tile[href*="facebook.com"] .quick-icon svg,
 .hero-card-links a[href*="facebook.com"] .card-link-icon svg,
 .social-link[href*="facebook.com"] .social-icon svg,
 .footer-link[href*="facebook.com"] svg{
-  fill:#83a9e8!important;
+  fill:#f2f2ef!important;
   stroke:none!important;
 }
 .quick-tile[href^="mailto:"]:hover .quick-icon,
