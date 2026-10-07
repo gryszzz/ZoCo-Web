@@ -1311,13 +1311,13 @@ button{font:inherit}
 /* Keep the top labels fixed while nudging the ZOCO wordmark and everything below it downward. */
 @media(min-width:901px){
   .hero-card-name{
-    margin-top:7.35rem!important;
+    margin-top:8.35rem!important;
   }
 }
 
 @media(max-width:620px){
   .hero-card-name{
-    margin-top:9.4rem!important;
+    margin-top:10.4rem!important;
   }
 }
 
