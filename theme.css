@@ -1473,3 +1473,15 @@ button{font:inherit}
   .brand-copy strong{font-size:1.16rem}
   .brand-copy span{font-size:.52rem;letter-spacing:.08em}
 }
+
+/* soft-monochrome-page-background */
+body:before{
+  background-image:
+    radial-gradient(ellipse at 12% 12%,rgba(245,246,244,.13),transparent 38%),
+    radial-gradient(ellipse at 87% 40%,rgba(167,173,174,.13),transparent 42%),
+    radial-gradient(ellipse at 52% 86%,rgba(255,255,255,.075),transparent 45%),
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:100% 100%,100% 100%,100% 100%,48px 48px,48px 48px;
+  mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.8) 58%,transparent 100%);
+}
