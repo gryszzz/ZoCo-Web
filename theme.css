@@ -1876,3 +1876,40 @@ body:before{
 @media(prefers-reduced-motion:reduce){
   .floating-quick-action{transition:none}
 }
+
+
+/* floating-quick-actions-desktop-fix-v96 */
+@media(min-width:621px){
+  .floating-quick-actions{
+    top:68%!important;
+    right:0!important;
+    width:auto!important;
+    max-width:none!important;
+    transform:translateY(-50%)!important;
+  }
+  .floating-quick-action{
+    box-sizing:border-box!important;
+    width:auto!important;
+    max-width:190px!important;
+    min-width:0!important;
+    min-height:42px!important;
+    padding:.58rem .72rem!important;
+    gap:.5rem!important;
+    border-radius:9px 0 0 9px!important;
+    font-size:.68rem!important;
+    line-height:1.1!important;
+    white-space:nowrap!important;
+  }
+  .floating-action-icon{
+    width:21px!important;
+    height:21px!important;
+    flex-basis:21px!important;
+  }
+  .floating-review-action .floating-action-icon{
+    font-size:1.05rem!important;
+  }
+  .floating-action-icon svg{
+    width:18px!important;
+    height:18px!important;
+  }
+}
