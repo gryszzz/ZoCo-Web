@@ -1619,3 +1619,8 @@ body:before{
 .hero-gridline{
   display:none!important;
 }
+
+/* remove-henry-card-inset-frame-v82 */
+.home-page .hero-card:before{
+  display:none!important;
+}
