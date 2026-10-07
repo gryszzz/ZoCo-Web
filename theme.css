@@ -127,8 +127,8 @@ button{font:inherit}
 .handyman-section{background:var(--paper);color:#0a0b0b}
 .handyman-section .kicker{color:#6d7070!important}
 .handyman-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--lineLight);border-left:1px solid var(--lineLight)}
-.scope-card{min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 72px;grid-template-rows:auto auto auto;align-content:start;gap:0 .85rem;background:#fafaf8;border-right:1px solid var(--lineLight);border-bottom:1px solid var(--lineLight);padding:1.1rem}
-.scope-card-image{grid-column:2;grid-row:1 / span 2;display:block;width:72px;height:72px;object-fit:cover;object-position:center;margin:0;border:1px solid var(--lineLight)}
+.scope-card{min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 96px;grid-template-rows:auto auto auto;align-content:start;gap:0 .85rem;background:#fafaf8;border-right:1px solid var(--lineLight);border-bottom:1px solid var(--lineLight);padding:1.1rem}
+.scope-card-image{grid-column:2;grid-row:1 / span 2;display:block;width:96px;height:64px;object-fit:cover;object-position:center;margin:0;border:1px solid var(--lineLight)}
 .scope-card>span{grid-column:1;grid-row:1;font-size:.62rem;color:#858989;letter-spacing:.12em}
 .scope-card h3{grid-column:1;grid-row:2;margin:.65rem 0 .55rem;font-size:1.08rem}
 .scope-card p{grid-column:1/-1;grid-row:3;margin:0;color:#5d6161;font-size:.9rem}
