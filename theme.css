@@ -2048,3 +2048,14 @@ body:before{
     overflow:auto!important;
   }
 }
+
+/* mobile-floating-actions-top-right-v102 */
+@media(max-width:620px){
+  .floating-quick-actions{
+    top:92px!important;
+    right:0!important;
+    bottom:auto!important;
+    transform:none!important;
+    gap:.38rem!important;
+  }
+}
