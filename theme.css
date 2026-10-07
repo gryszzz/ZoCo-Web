@@ -259,7 +259,7 @@ button{font:inherit}
   .display-footer{flex-direction:column}
   .handyman-grid{grid-template-columns:1fr}
   .scope-card{grid-template-columns:minmax(0,1fr) 84px;gap:0 .7rem;padding:1rem}
-  .scope-card-image{width:84px;height:84px}
+  .scope-card-image{width:84px;height:63px}
   .google-review-grid{grid-template-columns:1fr}
   .social-grid{grid-template-columns:1fr}
   .connect-copy{padding:1.25rem 1rem}
