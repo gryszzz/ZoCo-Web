@@ -1624,3 +1624,65 @@ body:before{
 .home-page .hero-card:before{
   display:none!important;
 }
+
+/* themed-contact-social-marks-v83 */
+.quick-tile[href^="mailto:"] .quick-icon,
+.quick-tile[href*="instagram.com"] .quick-icon,
+.quick-tile[href*="facebook.com"] .quick-icon,
+.social-link[href^="mailto:"] .social-icon,
+.social-link[href*="instagram.com"] .social-icon,
+.social-link[href*="facebook.com"] .social-icon{
+  width:40px;
+  height:40px;
+  border:1px solid rgba(255,255,255,.1)!important;
+  border-radius:50%;
+  background:rgba(255,255,255,.055)!important;
+  transition:background .18s ease,transform .18s ease;
+}
+.hero-card-links a[href^="mailto:"] .card-link-icon,
+.hero-card-links a[href*="instagram.com"] .card-link-icon,
+.hero-card-links a[href*="facebook.com"] .card-link-icon{
+  width:36px;
+  height:36px;
+  border:1px solid rgba(9,10,10,.1)!important;
+  border-radius:50%;
+  background:rgba(9,10,10,.055)!important;
+}
+.quick-tile[href^="mailto:"] .quick-icon svg,
+.hero-card-links a[href^="mailto:"] .card-link-icon svg,
+.social-link[href^="mailto:"] .social-icon svg,
+.footer-link[href^="mailto:"] svg{
+  stroke:#d77770!important;
+  stroke-width:2.1;
+}
+.quick-tile[href*="instagram.com"] .quick-icon svg,
+.hero-card-links a[href*="instagram.com"] .card-link-icon svg,
+.social-link[href*="instagram.com"] .social-icon svg,
+.footer-link[href*="instagram.com"] svg{
+  stroke:#d985a7!important;
+  stroke-width:2.1;
+}
+.quick-tile[href*="facebook.com"] .quick-icon svg,
+.hero-card-links a[href*="facebook.com"] .card-link-icon svg,
+.social-link[href*="facebook.com"] .social-icon svg,
+.footer-link[href*="facebook.com"] svg{
+  fill:#83a9e8!important;
+  stroke:none!important;
+}
+.quick-tile[href^="mailto:"]:hover .quick-icon,
+.quick-tile[href*="instagram.com"]:hover .quick-icon,
+.quick-tile[href*="facebook.com"]:hover .quick-icon,
+.social-link[href^="mailto:"]:hover .social-icon,
+.social-link[href*="instagram.com"]:hover .social-icon,
+.social-link[href*="facebook.com"]:hover .social-icon{
+  background:rgba(255,255,255,.09)!important;
+  transform:scale(1.04);
+}
+@media(max-width:620px){
+  .social-link[href^="mailto:"] .social-icon,
+  .social-link[href*="instagram.com"] .social-icon,
+  .social-link[href*="facebook.com"] .social-icon{
+    width:36px;
+    height:36px;
+  }
+}
