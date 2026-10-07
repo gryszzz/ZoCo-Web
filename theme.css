@@ -1423,3 +1423,41 @@ button{font:inherit}
 .hero-card-dogs{
   transform:translateY(1.4rem);
 }
+
+/* expert-tips-page */
+.tips-page{padding:2.4rem 0 5rem}
+.tips-hero{position:relative;overflow:hidden;padding:clamp(2rem,6vw,5rem);border:1px solid #292c2d;background:radial-gradient(circle at 85% 15%,rgba(255,255,255,.08),transparent 30%),linear-gradient(145deg,#121515,#090a0a 72%)}
+.tips-hero:after{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.04);pointer-events:none}
+.tips-eyebrow,.tip-number{color:#9ea3a3;font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.tips-hero h1{max-width:850px;margin:.7rem 0 1rem;font-size:clamp(2.8rem,7vw,5.5rem);line-height:.96;letter-spacing:-.055em}
+.tips-hero h1 span{color:#a3a8a8}
+.tips-hero>p{max-width:690px;color:#b2b6b6;font-size:1.05rem;line-height:1.75}
+.tips-hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.tips-toc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem;margin:1.3rem 0 3.8rem}
+.tips-toc a{min-height:128px;padding:1rem;border:1px solid #292c2d;background:#0d0f0f;transition:background .18s ease,border-color .18s ease,transform .18s ease}
+.tips-toc a:hover{transform:translateY(-2px);border-color:#737879;background:#121515}
+.tips-toc small{display:block;color:#858b8b;font-size:.65rem;font-weight:800;letter-spacing:.14em}
+.tips-toc strong{display:block;margin-top:1.05rem;font-size:1rem;line-height:1.25}
+.tips-section-heading{display:flex;align-items:end;justify-content:space-between;gap:1.5rem;margin:0 0 1rem;padding-bottom:1rem;border-bottom:1px solid #303435}
+.tips-section-heading h2{margin:0;font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.04em}
+.tips-section-heading p{max-width:400px;margin:0;color:#929899;font-size:.9rem}
+.tips-guides{display:grid;gap:1rem}
+.tip-guide{scroll-margin-top:100px;padding:clamp(1.25rem,3.5vw,2.4rem);border:1px solid #292c2d;background:#0d0f0f}
+.tip-guide-header{display:grid;grid-template-columns:60px minmax(0,1fr);gap:1rem;align-items:start;margin-bottom:1.4rem}
+.tip-index{display:grid;place-items:center;width:48px;height:48px;border:1px solid #424748;color:#d9dddd;font-size:.74rem;font-weight:800;letter-spacing:.08em}
+.tip-guide h2{margin:0;font-size:clamp(1.5rem,3.2vw,2.3rem);line-height:1.1;letter-spacing:-.035em}
+.tip-guide .tip-deck{margin:.55rem 0 0;color:#9ca1a1}
+.tip-guide p,.tip-guide li{color:#b7bbbb;font-size:.98rem;line-height:1.78}
+.tip-guide h3{margin:1.5rem 0 .35rem;font-size:1.08rem}
+.tip-guide ul,.tip-guide ol{padding-left:1.25rem}
+.tip-callout{margin:1.2rem 0;padding:1rem 1.1rem;border-left:2px solid #b5b9b9;background:#141717;color:#d0d3d3;line-height:1.7}
+.tip-links{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.3rem;font-size:.9rem;font-weight:750}
+.tip-links a{text-decoration:underline;text-decoration-color:#737979;text-underline-offset:4px}
+.tips-safety{margin-top:1rem;padding:1.2rem 1.4rem;border:1px solid #353a3a;color:#aeb3b3;font-size:.85rem;line-height:1.7}
+.tips-bottom{margin-top:3rem;padding:clamp(1.5rem,4vw,3rem);border:1px solid #373b3c;background:#dfe2e2;color:#090a0a}
+.tips-bottom h2{margin:0 0 .6rem;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.05}
+.tips-bottom p{max-width:680px;color:#343939;line-height:1.7}
+.tips-bottom .tips-hero-actions{margin-top:1rem}
+.tips-bottom .button-secondary{border-color:#3b3e3f;background:#111313;color:#fff}
+@media(max-width:800px){.tips-toc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.tips-page{padding:1rem 0 3rem}.tips-hero{padding:2rem 1.25rem}.tips-hero>p{font-size:.96rem}.tips-toc{gap:.5rem;margin:1rem 0 2.5rem}.tips-toc a{min-height:112px;padding:.8rem}.tips-toc strong{font-size:.9rem}.tips-section-heading{display:block}.tips-section-heading p{margin-top:.55rem}.tip-guide{padding:1.1rem}.tip-guide-header{grid-template-columns:42px minmax(0,1fr);gap:.75rem}.tip-index{width:38px;height:38px}.tip-guide p,.tip-guide li{font-size:.94rem}}
