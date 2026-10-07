@@ -2009,3 +2009,42 @@ body:before{
     border-radius:10px 0 0 10px!important;
   }
 }
+
+
+/* mobile-contact-true-floating-dialog-v101 */
+@media(max-width:620px){
+  .quick-contact-modal{
+    position:fixed!important;
+    inset:0!important;
+    width:100vw!important;
+    height:100dvh!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    padding:24px!important;
+    background:transparent!important;
+  }
+  .quick-contact-modal[hidden]{display:none!important}
+  .quick-contact-backdrop{
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+  }
+  .quick-contact-panel{
+    position:relative!important;
+    z-index:2!important;
+    flex:none!important;
+    width:min(360px,calc(100vw - 48px))!important;
+    max-width:360px!important;
+    min-height:0!important;
+    height:auto!important;
+    max-height:calc(100dvh - 80px)!important;
+    margin:0!important;
+    padding:1.4rem!important;
+    border:1px solid #343839!important;
+    border-radius:18px!important;
+    box-shadow:0 24px 70px rgba(0,0,0,.62)!important;
+    overflow:auto!important;
+  }
+}
