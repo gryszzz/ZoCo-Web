@@ -258,11 +258,10 @@ button{font:inherit}
   .service-display{padding:1.3rem}
   .display-footer{flex-direction:column}
   .handyman-grid{grid-template-columns:1fr}
-  .scope-card{min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 120px;grid-template-rows:auto auto auto;align-content:start;gap:0 .7rem;padding:1rem}
-  .scope-card-image{grid-column:2;grid-row:1 / span 2;display:block;width:100%;max-width:120px;height:80px;justify-self:end;object-fit:cover;object-position:center;margin:0;border:1px solid var(--lineLight)}
-  .scope-card>span{grid-column:1;grid-row:1}
-  .scope-card h3{grid-column:1;grid-row:2;margin:.65rem 0 .55rem}
-  .scope-card p{grid-column:1/-1;grid-row:3}
+  .scope-card{min-height:0;display:block;padding:1rem}
+  .scope-card-image{display:block;width:calc(100% + 2rem);max-width:none;height:120px;object-fit:cover;object-position:center 64%;margin:-1rem -1rem 1rem;border:0;border-bottom:1px solid var(--lineLight)}
+  .scope-card>span{display:block}
+  .scope-card h3{margin:.8rem 0 .5rem}
   .google-review-grid{grid-template-columns:1fr}
   .social-grid{grid-template-columns:1fr}
   .connect-copy{padding:1.25rem 1rem}
