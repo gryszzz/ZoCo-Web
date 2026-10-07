@@ -1963,3 +1963,30 @@ body:before{
     pointer-events:auto!important;
   }
 }
+
+
+/* mobile-contact-modal-match-desktop-v99 */
+@media(max-width:620px){
+  .quick-contact-modal{
+    display:grid!important;
+    place-items:center!important;
+    align-items:center!important;
+    padding:1rem!important;
+  }
+  .quick-contact-modal[hidden]{
+    display:none!important;
+  }
+  .quick-contact-panel{
+    width:min(88vw,390px)!important;
+    max-width:390px!important;
+    padding:1.4rem!important;
+    border-radius:18px!important;
+    margin:0!important;
+  }
+  .quick-contact-actions{
+    grid-template-columns:1fr 1fr!important;
+  }
+  .quick-contact-actions a{
+    min-height:72px!important;
+  }
+}
