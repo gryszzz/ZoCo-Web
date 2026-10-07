@@ -1773,3 +1773,8 @@ body:before{
 .footer-credit{color:inherit;cursor:pointer;text-decoration:none;transition:color .18s ease,text-decoration-color .18s ease}
 .footer-credit:hover,.footer-credit:focus-visible{color:#d6d9d9;text-decoration:underline;text-underline-offset:3px}
 .footer-credit:focus-visible{outline:1px solid #aeb3b3;outline-offset:3px}
+
+/* stack-footer-phone-and-license-v91 */
+.site-footer-phone-stack{display:flex;flex-direction:column;align-items:flex-start;gap:.12rem;margin:.45rem 0 .3rem}
+.site-footer-contact .site-footer-phone{margin-top:0}
+.site-footer-phone-stack .site-footer-license{margin-top:0}
