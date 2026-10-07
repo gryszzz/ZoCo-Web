@@ -1935,3 +1935,31 @@ body:before{
  .quick-contact-actions{grid-template-columns:1fr}
  .quick-contact-actions a{min-height:66px}
 }
+
+
+/* mobile-floating-contact-hit-area-fix-v98 */
+@media(max-width:620px){
+  .floating-quick-actions{
+    z-index:120!important;
+    pointer-events:none!important;
+  }
+  .floating-quick-action{
+    position:relative!important;
+    z-index:121!important;
+    pointer-events:auto!important;
+    touch-action:manipulation;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .floating-contact-action{
+    cursor:pointer;
+  }
+  .quick-contact-modal{
+    z-index:1000!important;
+    pointer-events:auto!important;
+  }
+  .quick-contact-backdrop,
+  .quick-contact-panel,
+  .quick-contact-panel *{
+    pointer-events:auto!important;
+  }
+}
