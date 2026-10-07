@@ -258,8 +258,8 @@ button{font:inherit}
   .service-display{padding:1.3rem}
   .display-footer{flex-direction:column}
   .handyman-grid{grid-template-columns:1fr}
-  .scope-card{grid-template-columns:minmax(0,1fr) 108px;gap:0 .7rem;padding:1rem}
-  .scope-card-image{width:108px;height:72px}
+  .scope-card{grid-template-columns:minmax(0,1fr) 120px;gap:0 .7rem;padding:1rem}
+  .scope-card-image{width:100%;max-width:120px;height:80px;justify-self:end;object-fit:cover}
   .google-review-grid{grid-template-columns:1fr}
   .social-grid{grid-template-columns:1fr}
   .connect-copy{padding:1.25rem 1rem}
