@@ -2075,7 +2075,7 @@ body:before{
 /* mobile-quick-actions-safe-zone-v104 */
 @media(max-width:620px){
   .hero{
-    padding-top:5.75rem!important;
+    padding-top:2rem!important;
   }
   .floating-quick-actions{
     top:88px!important;
