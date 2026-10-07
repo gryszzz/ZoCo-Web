@@ -1778,3 +1778,11 @@ body:before{
 .site-footer-phone-stack{display:flex;flex-direction:column;align-items:flex-start;gap:.12rem;margin:.45rem 0 .3rem}
 .site-footer-contact .site-footer-phone{margin-top:0}
 .site-footer-phone-stack .site-footer-license{margin-top:0}
+
+/* dedicated-handyman-footer-category-v93 */
+.site-footer-nav{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:1000px){
+  .site-footer-layout{grid-template-columns:1fr}
+  .site-footer-nav{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:800px){.site-footer-nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
