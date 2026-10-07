@@ -1417,3 +1417,9 @@ button{font:inherit}
     display:block!important;
   }
 }
+
+/* hero-brand-lockup-position-v62 */
+.hero-card-name,
+.hero-card-dogs{
+  transform:translateY(.8rem);
+}
