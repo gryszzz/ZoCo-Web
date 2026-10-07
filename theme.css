@@ -1474,26 +1474,35 @@ body:before{
   mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.8) 58%,transparent 100%);
 }
 
-/* simple-crossed-wrench-wordmark */
+/* original-logo-horizontal-brand-lockup */
 .brand{
   display:flex!important;
-  width:auto!important;
+  gap:.6rem!important;
+  width:max-content;
   min-width:0!important;
-  padding:0!important;
-  border:0!important;
-  border-radius:0!important;
-  background:transparent!important;
-  gap:.55rem!important;
+  padding:4px 14px 4px 4px!important;
+  border:1px solid rgba(255,255,255,.3)!important;
+  border-radius:999px!important;
+  background:linear-gradient(105deg,#080909 0%,#343839 37%,#aeb3b3 73%,#f2f3f0 100%)!important;
 }
-.brand-tools{display:block;width:55px;height:47px;flex:0 0 55px;overflow:hidden;background:url("/logo.webp") 50% 11%/136px 136px no-repeat;mix-blend-mode:screen}
-.brand-copy{display:flex!important;flex-direction:row!important;align-items:baseline;gap:.55rem;white-space:nowrap;color:#f5f5f2}
-.brand-copy strong{color:#f5f5f2;font-size:1.32rem;letter-spacing:.035em}
-.brand-copy span{margin-top:0;color:#b5baba;font-size:.62rem;letter-spacing:.11em}
+.brand-tools{display:none!important}
+.brand-logo{
+  display:block!important;
+  width:46px!important;
+  height:46px!important;
+  flex:0 0 46px!important;
+  border-radius:50%!important;
+  background:#000 url("/logo.webp") center/contain no-repeat!important;
+  overflow:hidden;
+}
+.brand-copy{display:flex!important;flex-direction:row!important;align-items:baseline;gap:.55rem;white-space:nowrap;color:#101212}
+.brand-copy strong{color:#101212;font-size:1.32rem;letter-spacing:.035em}
+.brand-copy span{margin-top:0;color:#292e2f;font-size:.62rem;letter-spacing:.11em}
 @media(max-width:620px){
-  .brand{gap:.4rem!important}
-  .brand-tools{width:49px;height:42px;flex-basis:49px;background-size:121px 121px;background-position:50% 11%}
-  .brand-copy strong{font-size:1.08rem}
-  .brand-copy span{font-size:.48rem;letter-spacing:.06em}
+  .brand{gap:.45rem!important;padding:3px 10px 3px 3px!important}
+  .brand-logo{width:40px!important;height:40px!important;flex-basis:40px!important}
+  .brand-copy strong{font-size:1.05rem}
+  .brand-copy span{font-size:.48rem;letter-spacing:.065em}
 }
 
 @media(min-width:901px) and (max-width:1100px){
