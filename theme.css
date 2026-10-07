@@ -1768,3 +1768,8 @@ body:before{
   .site-footer-contact .footer-link,.site-footer-nav a{font-size:.82rem}
   .sitewide-footer .footer-hours-row{margin-top:1rem}
 }
+
+/* exponet-labs-footer-credit-v90 */
+.footer-credit{color:inherit;cursor:pointer;text-decoration:none;transition:color .18s ease,text-decoration-color .18s ease}
+.footer-credit:hover,.footer-credit:focus-visible{color:#d6d9d9;text-decoration:underline;text-underline-offset:3px}
+.footer-credit:focus-visible{outline:1px solid #aeb3b3;outline-offset:3px}
