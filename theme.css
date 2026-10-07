@@ -1485,13 +1485,13 @@ body:before{
   background:transparent!important;
   gap:.55rem!important;
 }
-.brand-tools{display:block;width:42px;height:42px;flex:0 0 42px;color:#f2f3f0}
+.brand-tools{display:block;width:50px;height:37px;flex:0 0 50px;background:url("/logo.webp") 50% 15%/108px 108px no-repeat}
 .brand-copy{display:flex!important;flex-direction:row!important;align-items:baseline;gap:.55rem;white-space:nowrap;color:#f5f5f2}
 .brand-copy strong{color:#f5f5f2;font-size:1.32rem;letter-spacing:.035em}
 .brand-copy span{margin-top:0;color:#b5baba;font-size:.62rem;letter-spacing:.11em}
 @media(max-width:620px){
   .brand{gap:.4rem!important}
-  .brand-tools{width:34px;height:34px;flex-basis:34px}
+  .brand-tools{width:43px;height:32px;flex-basis:43px;background-size:94px 94px}
   .brand-copy strong{font-size:1.08rem}
   .brand-copy span{font-size:.48rem;letter-spacing:.06em}
 }
