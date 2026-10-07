@@ -1713,3 +1713,14 @@ body:before{
   .tips-toc small{font-size:.53rem}
   .tips-toc strong{font-size:.82rem}
 }
+
+/* henry-card-social-marks-black-v86 */
+.hero-card-links a[href^="mailto:"] .card-link-icon svg,
+.hero-card-links a[href*="instagram.com"] .card-link-icon svg{
+  stroke:#090a0a!important;
+  fill:none!important;
+}
+.hero-card-links a[href*="facebook.com"] .card-link-icon svg{
+  fill:#090a0a!important;
+  stroke:none!important;
+}
