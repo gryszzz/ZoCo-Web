@@ -1513,3 +1513,31 @@ body:before{
   .brand-copy strong{font-size:1.05rem}
   .brand-copy span{font-size:.48rem;letter-spacing:.065em}
 }
+
+/* service-area-page */
+.area-page{padding:2.4rem 0 5rem}
+.area-hero{padding:clamp(2rem,6vw,5rem);border:1px solid #292c2d;background:radial-gradient(ellipse at 90% 10%,rgba(255,255,255,.13),transparent 34%),linear-gradient(140deg,#0d0f0f,#292d2e 58%,#101212)}
+.area-eyebrow{color:#b8bcbc;font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.area-hero h1{max-width:850px;margin:.7rem 0 1rem;font-size:clamp(2.8rem,7vw,5.5rem);line-height:.96;letter-spacing:-.055em}
+.area-hero h1 span{color:#b3b8b8}
+.area-hero>p{max-width:700px;color:#c2c6c6;font-size:1.05rem;line-height:1.75}
+.area-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.area-summary{margin:1.3rem 0 3rem;padding:1rem 1.25rem;border-left:2px solid #d2d5d4;background:#111414;color:#c2c6c6;line-height:1.7}
+.area-counties{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.area-county{padding:clamp(1.3rem,3vw,2.2rem);border:1px solid #353a3a;background:linear-gradient(150deg,#181b1c,#0b0d0d 72%)}
+.area-county h2{margin:0;font-size:clamp(1.7rem,3.5vw,2.6rem);letter-spacing:-.04em}
+.area-county>p{color:#aab0b0;line-height:1.7}
+.area-town-list{display:flex;flex-wrap:wrap;gap:.55rem;margin:1.3rem 0}
+.area-town-list span{padding:.45rem .7rem;border:1px solid #44494a;border-radius:999px;background:rgba(255,255,255,.035);color:#e0e2e1;font-size:.82rem}
+.area-service-list{display:grid;gap:.55rem;margin-top:1.5rem;padding-top:1rem;border-top:1px solid #373b3c}
+.area-service-list a{display:flex;justify-content:space-between;gap:.75rem;color:#d8dbda;font-size:.9rem}
+.area-service-list a:after{content:"↗";color:#8e9494}
+.area-availability{margin:1.2rem 0 0;color:#9da3a3;font-size:.88rem;line-height:1.7}
+.area-lower{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1rem}
+.area-lower>section{padding:1.4rem;border:1px solid #292c2d;background:#101212}
+.area-lower h2{margin:0 0 .6rem;font-size:1.25rem}
+.area-lower p{color:#adb2b2;line-height:1.75}
+.area-contact{margin-top:2rem;padding:clamp(1.5rem,4vw,3rem);background:#e2e4e2;color:#0a0b0b}
+.area-contact h2{margin:0;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.05}
+.area-contact p{max-width:700px;color:#333838;line-height:1.7}
+@media(max-width:700px){.area-page{padding:1rem 0 3rem}.area-hero{padding:2rem 1.25rem}.area-hero>p{font-size:.96rem}.area-counties,.area-lower{grid-template-columns:1fr}.area-county{padding:1.15rem}.area-town-list span{font-size:.78rem}}
