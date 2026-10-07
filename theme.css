@@ -2085,3 +2085,15 @@ body:before{
     gap:.38rem!important;
   }
 }
+
+
+/* mobile-quick-actions-header-safe-zone-v105 */
+@media(max-width:620px){
+  .floating-quick-actions{
+    top:calc(env(safe-area-inset-top, 0px) + 66px)!important;
+    right:0!important;
+    bottom:auto!important;
+    transform:none!important;
+    gap:.38rem!important;
+  }
+}
