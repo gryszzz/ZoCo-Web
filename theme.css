@@ -1878,6 +1878,7 @@ body:before{
 .google-review-carousel{margin-top:1rem}
 .google-review-controls{display:flex;align-items:center;justify-content:flex-end;gap:1rem;margin-bottom:.65rem}
 .google-review-position{margin-right:auto;color:#85898a;font-size:.72rem;font-variant-numeric:tabular-nums}
+.google-review-source{color:#85898a;font-size:.66rem;font-weight:700;letter-spacing:.06em;white-space:nowrap}
 .google-review-arrows{display:flex;gap:.45rem}
 .google-review-arrow{display:grid;place-items:center;width:2.5rem;height:2.5rem;border:1px solid #343839;background:#101212;color:#f2f2ef;font-size:1.2rem;line-height:1;cursor:pointer;transition:background .18s ease,border-color .18s ease,opacity .18s ease}
 .google-review-arrow:hover:not(:disabled){background:#202323;border-color:#606566}
