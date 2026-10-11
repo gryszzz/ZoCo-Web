@@ -683,3 +683,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #ffa95c!important;outline
   .hero .hero-copyblock h1{font-size:2.2rem!important}
   .hero .hero-actions .button{font-size:.79rem!important}
 }
+
+/* Blend the current logo's black canvas into the photographic hero rather than
+   displaying it as a stark, square black business card. */
+.hero .hero-card-dogs{mix-blend-mode:screen!important}
