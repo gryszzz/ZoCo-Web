@@ -1,0 +1,515 @@
+/*
+ * ZoCo cinematic refresh — visual layer after theme.css
+ * All live services, reviews, promotions, contact details, and locations
+ * remain authored in their existing HTML / JS source.
+ * No trucks, fabricated reviews or licensed plumbing claims.
+ */
+:root{
+  --cinematic-orange:#ff731b;
+  --cinematic-orange-hi:#ff9d42;
+  --cinematic-blue:#14b7ef;
+  --cinematic-steel:#dae2e8;
+  --cinematic-dark:#070b0e;
+}
+html{scroll-padding-top:96px}
+body{
+  background:
+    radial-gradient(ellipse at 85% 0%,rgba(25,125,166,.09),transparent 38%),
+    radial-gradient(ellipse at 12% 43%,rgba(235,91,17,.045),transparent 34%),
+    #080b0e!important;
+}
+body:before{
+  background-image:linear-gradient(rgba(255,255,255,.011) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.011) 1px,transparent 1px)!important;
+  background-size:72px 72px!important;
+}
+a:focus-visible,button:focus-visible{outline:3px solid #ffa95c!important;outline-offset:4px}
+.site-header{
+  background:rgba(5,8,10,.97)!important;
+  border-bottom:1px solid rgba(255,112,29,.5)!important;
+  box-shadow:0 10px 30px rgba(0,0,0,.35),0 1px 8px rgba(255,110,20,.12)!important;
+}
+.brand-logo,.logo-image{
+  background-image:url("/zoco-business-profile-logo-1024.png")!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  background-size:contain!important;
+}
+.brand-logo{
+  border:0!important;
+  box-shadow:none!important;
+  background-color:transparent!important;
+  border-radius:0!important;
+  width:78px!important;
+  height:64px!important;
+  flex:0 0 78px!important;
+}
+.brand-copy strong{font-family:Impact,"Arial Narrow",sans-serif}
+.brand-copy span{color:var(--cinematic-orange-hi)!important}
+.header-call,.button-primary,.button-invert{
+  background:linear-gradient(135deg,#ff9328 0%,#f76c0d 48%,#da4106 100%)!important;
+  color:#fff!important;
+  border:1px solid rgba(255,188,116,.72)!important;
+  border-radius:12px!important;
+  text-shadow:0 1px 1px rgba(0,0,0,.25);
+  box-shadow:0 9px 23px rgba(219,73,10,.28),inset 0 1px rgba(255,255,255,.3)!important;
+}
+.button-secondary,.button-outline-dark{
+  border-color:#ff8637!important;
+  border-radius:12px!important;
+  background:linear-gradient(145deg,#252020,#101419)!important;
+  color:#f9fbfb!important;
+}
+.nav-links a:after{background:#ff8028!important}
+.hero{
+  width:100%!important;
+  max-width:none!important;
+  padding:0!important;
+}
+.hero-shell{
+  position:relative;
+  isolation:isolate;
+  width:100%;
+  border:0!important;
+  border-bottom:2px solid rgba(255,114,23,.72)!important;
+  border-radius:0!important;
+  overflow:hidden;
+  background:linear-gradient(110deg,#0d1013,#091119)!important;
+  box-shadow:0 20px 44px #0008,inset 0 -2px 12px rgba(255,101,0,.15)!important;
+}
+.hero-shell:before{
+  content:"";
+  position:absolute;
+  display:block!important;
+  inset:0;
+  z-index:-1;
+  border:0!important;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,#060a0ef5 4%,#090d12cb 42%,#090d12d9 76%,#091016e9 100%),
+    url("/assets/services/drain-cleaning.jpg") center 48% / cover no-repeat;
+  opacity:.86;
+}
+.hero-shell:after{
+  content:"";
+  pointer-events:none;
+  display:block!important;
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:
+    radial-gradient(ellipse at 24% 48%,rgba(245,97,15,.22),transparent 43%),
+    radial-gradient(ellipse at 97% 56%,rgba(8,168,228,.20),transparent 38%),
+    repeating-linear-gradient(150deg,transparent 0 67px,rgba(255,255,255,.013) 68px,transparent 69px);
+}
+.hero-main{
+  width:min(1300px,calc(100% - 3rem));
+  margin:auto;
+  display:grid!important;
+  grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr)!important;
+  align-items:center;
+  min-height:610px!important;
+  gap:clamp(1rem,2vw,3rem);
+}
+.hero-card{
+  grid-column:1;
+  grid-row:1;
+  display:flex!important;
+  flex-direction:column;
+  justify-content:center;
+  min-width:0;
+  overflow:visible!important;
+  padding:2rem 0!important;
+  min-height:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+.hero-card:before,.hero-card:after{display:none!important}
+.hero-card-top{
+  align-self:center;
+  width:min(100%,460px);
+  justify-content:center;
+  text-align:center;
+  gap:1rem;
+  padding-top:.6rem!important;
+  color:#e6edf1!important;
+}
+.hero-card-top>span{font-size:.68rem!important;letter-spacing:.12em}
+.hero-card-mark{
+  background:rgba(18,20,22,.78)!important;
+  color:#ff9a50!important;
+  border:1px solid rgba(255,124,42,.38)!important;
+  border-radius:999px;
+  padding:.3rem .7rem;
+}
+.hero-card-dogs{
+  display:block!important;
+  position:relative!important;
+  inset:auto!important;
+  transform:none!important;
+  opacity:1!important;
+  width:min(100%,515px)!important;
+  height:auto!important;
+  aspect-ratio:1!important;
+  margin:-.4rem auto -1.3rem!important;
+  background:url("/zoco-business-profile-logo-1024.png") center/contain no-repeat!important;
+  mix-blend-mode:normal!important;
+  mask-image:none!important;
+  -webkit-mask-image:none!important;
+  filter:drop-shadow(0 12px 27px rgba(0,0,0,.67)) drop-shadow(0 0 15px rgba(255,101,20,.15));
+}
+.hero-card-name{display:none!important}
+.hero-card-owner{
+  position:relative;
+  align-items:center!important;
+  text-align:center!important;
+  margin:0!important;
+  z-index:2;
+}
+.hero-card-owner strong{
+  font-weight:900;
+  letter-spacing:.025em;
+  color:#fff!important;
+  font-size:1rem!important;
+}
+.hero-card-owner span{color:#acb7bd!important;font-size:.78rem!important}
+.hero-card-call,.hero-card-links{display:none!important}
+.hero-copyblock{
+  grid-column:2;
+  grid-row:1;
+  padding:clamp(1rem,3vw,3rem)!important;
+  text-align:left!important;
+  align-items:flex-start!important;
+  justify-content:center!important;
+}
+.hero-copyblock:before{border-color:rgba(255,130,43,.58)!important}
+.hero-eyebrow{
+  color:#ff9c4f!important;
+  font-size:.73rem!important;
+  font-weight:900;
+  letter-spacing:.17em!important;
+  margin-bottom:1rem!important;
+}
+.zoco-hero-local{display:block;margin-top:.45rem;color:#bfcbd2;font-size:.7rem}
+.hero h1{
+  font-family:Impact,"Arial Narrow","Franklin Gothic Medium",sans-serif!important;
+  letter-spacing:.016em!important;
+  line-height:.99!important;
+  font-size:clamp(3rem,5.4vw,6.2rem)!important;
+  text-transform:uppercase;
+  color:#f4f8fa!important;
+  text-shadow:0 3px 18px #000b;
+}
+.hero h1 span{
+  display:inline-block;
+  color:#ff7c23!important;
+  text-shadow:0 2px 0 rgba(77,26,0,.75),0 4px 24px #f4772126;
+}
+.hero-text{
+  color:#d7e0e5!important;
+  font-size:1.04rem!important;
+  max-width:590px!important;
+  line-height:1.7!important;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem!important;margin-bottom:1rem}
+.hero-actions .button{min-height:54px;padding:.8rem 1.2rem;white-space:normal}
+.quick-connect{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:.55rem!important;
+  width:100%;
+  margin-top:1.2rem!important;
+}
+.quick-tile{
+  min-width:0;
+  border-radius:10px!important;
+  background:rgba(8,14,18,.73)!important;
+  border-color:rgba(255,140,55,.30)!important;
+  backdrop-filter:blur(6px);
+}
+.quick-tile:hover{border-color:#ff9c48!important}
+.quick-logo-mark{
+  border-radius:3px!important;
+  background-color:transparent!important;
+}
+.hero-bottomline{
+  width:100%!important;
+  padding:0 max(1.5rem,calc((100% - 1300px)/2))!important;
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  background:linear-gradient(90deg,#0b1116,#111820,#0b1116)!important;
+  border-top:1px solid rgba(255,128,48,.45)!important;
+}
+.hero-bottomline>div{
+  display:flex!important;
+  flex-direction:column;
+  gap:.25rem;
+  padding:1rem 1.3rem!important;
+  min-width:0;
+  border-right:1px solid rgba(255,255,255,.1)!important;
+}
+.hero-bottomline>div:last-child{border-right:0!important}
+.hero-bottomline span{
+  color:#ff9f55!important;
+  font-size:.64rem!important;
+  letter-spacing:.17em!important;
+}
+.hero-bottomline strong,.hero-bottomline strong a{color:#eef2f5!important;font-size:.85rem!important}
+.home-page #drain{position:relative;padding-top:4.5rem!important;padding-bottom:4.5rem!important}
+.home-page #drain:before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;
+  pointer-events:none;
+  height:2px;
+  background:linear-gradient(90deg,transparent,#fe7a20,transparent);
+  box-shadow:0 0 18px #f9741b66;
+}
+.section-bar h2{
+  font-family:Impact,"Arial Narrow","Franklin Gothic Medium",sans-serif!important;
+  letter-spacing:.006em!important;
+  text-transform:uppercase;
+}
+.section-bar>p{color:#b8c3c9!important}
+.service-console{display:block!important;overflow:visible!important;border:0!important;background:transparent!important;box-shadow:none!important}
+.service-tabs{
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  gap:clamp(.5rem,1vw,.9rem)!important;
+  padding:0;
+  border:0!important;
+  background:transparent!important;
+}
+.service-tab{
+  display:flex!important;
+  position:relative;
+  isolation:isolate;
+  flex-direction:column;
+  text-align:left;
+  justify-content:flex-end;
+  align-items:flex-start;
+  padding:clamp(.7rem,1vw,1.1rem)!important;
+  min-height:220px;
+  border:1px solid #414a51!important;
+  border-radius:13px!important;
+  background:#151b20!important;
+  color:#f4f6f8!important;
+  overflow:hidden;
+  box-shadow:none!important;
+  transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+.service-tab:before{
+  content:"";
+  position:absolute;
+  inset:0 0 44%;
+  z-index:-1;
+  background-image:linear-gradient(180deg,transparent 30%,#0e141a 100%),url("/assets/services/drain-cleaning.jpg");
+  background-size:cover;
+  background-position:center;
+  filter:saturate(.82) contrast(1.08);
+  opacity:.88;
+}
+.service-tab[data-service="snaking"]:before{background-image:linear-gradient(180deg,transparent 30%,#0e141a 100%),url("/assets/services/drain-cleaning.jpg");background-position:38% 45%}
+.service-tab[data-service="camera"]:before{background-image:linear-gradient(180deg,transparent 30%,#0e141a 100%),url("/assets/services/camera-inspection.jpg")}
+.service-tab[data-service="maintenance"]:before{background-image:linear-gradient(180deg,transparent 30%,#0e141a 100%),url("/assets/services/drain-maintenance.jpg")}
+.service-tab[data-service="dryer"]:before{background-image:linear-gradient(180deg,transparent 30%,#0e141a 100%),url("/assets/services/dryer-vent-cleaning.jpg")}
+.service-tab:after{
+  content:"";
+  position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,transparent 19%,#101519 60%);
+}
+.service-tab span{
+  display:grid!important;place-items:center;
+  margin-bottom:.75rem;
+  width:38px;height:38px;border:2px solid #ff7c20;border-radius:50%;
+  color:#ff9a4c!important;background:#0c1117;
+  font-weight:900;font-size:.65rem!important;
+}
+.service-tab strong{
+  display:block!important;
+  min-height:2.2em;
+  font-family:Impact,"Arial Narrow",sans-serif!important;
+  font-size:clamp(1.05rem,1.7vw,1.5rem)!important;
+  letter-spacing:.025em;
+  line-height:1.12;
+  color:#f8fafb!important;
+  text-transform:uppercase;
+  text-shadow:0 2px 8px #000;
+}
+.service-tab:hover,.service-tab.active{
+  transform:translateY(-3px);
+  border-color:#ff8f39!important;
+  box-shadow:0 0 0 1px #ff852945,0 10px 28px #0008!important;
+}
+.service-tab.active{background:#151b20!important}
+.service-tab.active span{background:#ff791d;color:#101318!important}
+.service-display{
+  margin-top:1rem!important;
+  border:1px solid rgba(255,117,33,.34)!important;
+  border-radius:13px;
+  background:radial-gradient(ellipse at 95% 0%,#ef6f171a,transparent 45%),linear-gradient(130deg,#141b20,#0a0e12)!important;
+  overflow:hidden;
+}
+.service-display .service-art img{object-fit:cover;border-radius:10px}
+.display-topline,.display-footer a{color:#ff9e59!important}
+.home-page .handyman-section{
+  background:linear-gradient(120deg,#131c21,#0a0e12 65%,#1a1613)!important;
+  border-top:1px solid #ff872929;
+  border-bottom:1px solid #ff872929;
+}
+.scope-card{border-color:#344047!important}
+.scope-card:hover{background:#1c242a!important}
+.offer-card,.offer-card.inverse,.google-review-card{
+  box-shadow:0 12px 35px #0005!important;
+  border-radius:13px!important;
+}
+.offer-card{background:linear-gradient(145deg,#152027,#0d1115)!important}
+.offer-card.inverse{background:linear-gradient(145deg,#2c211a,#0f151b)!important}
+.reviews-section{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 90% 20%,#007bb619,transparent 45%),
+    radial-gradient(ellipse at 10% 85%,#d9551d12,transparent 38%),
+    linear-gradient(125deg,#0c1116,#161b20)!important;
+  border-block:1px solid #f47a2929;
+}
+.google-review-card{background:linear-gradient(155deg,#20272b,#0d1216)!important}
+.google-stars{color:#ffa52c!important}
+.zoco-area-teaser{
+  position:relative;
+  overflow:hidden;
+  border-block:1px solid #ff7f245c;
+  background:
+    linear-gradient(110deg,#060b10ec,#0a1219e8),
+    repeating-linear-gradient(128deg,transparent 0 72px,#ffffff0a 72px 73px),
+    url("/assets/services/camera-inspection.jpg") center/cover no-repeat;
+}
+.zoco-area-inner{
+  width:min(var(--max),calc(100% - 2rem));
+  margin:auto;padding:4.5rem 0;
+  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:2.5rem;align-items:center;
+}
+.zoco-area-copy .kicker{margin-bottom:1rem;color:#ff9a4f!important}
+.zoco-area-copy h2{
+  margin:0;
+  font-family:Impact,"Arial Narrow",sans-serif;
+  font-size:clamp(2.6rem,4.8vw,4.8rem);
+  letter-spacing:.01em;
+  line-height:1.03;text-transform:uppercase;
+}
+.zoco-area-copy h2 span{color:#ff8733}
+.zoco-area-copy p{color:#c7d1d8;line-height:1.75;max-width:530px}
+.zoco-area-copy .button{display:inline-flex;margin-top:.6rem;align-items:center;justify-content:center}
+.zoco-county-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.zoco-county{
+  display:flex;flex-direction:column;
+  padding:2rem 1.35rem;
+  min-height:250px;
+  border:1px solid #ff893757;
+  border-radius:15px;
+  background:radial-gradient(ellipse at 15% 20%,#c44c143d,transparent 52%),linear-gradient(145deg,#26211fdd,#101619eb);
+  color:#fff;text-decoration:none;
+  transition:transform .2s,border-color .2s;
+}
+.zoco-county:last-child{background:radial-gradient(ellipse at 85% 0%,#168db62b,transparent 60%),linear-gradient(145deg,#192027ec,#0d1519eb)}
+.zoco-county:hover{border-color:#ffab66;transform:translateY(-4px)}
+.zoco-county small{font-size:.65rem;font-weight:900;letter-spacing:.16em;color:#ff9f5f}
+.zoco-county strong{margin-top:.6rem;font-family:Impact,"Arial Narrow",sans-serif;font-size:clamp(1.6rem,2.7vw,2.8rem);letter-spacing:.025em}
+.zoco-county span{margin-top:auto;font-size:.84rem;line-height:1.6;color:#bdc9ce}
+.zoco-county i{margin-top:.7rem;color:#ff9959;font-style:normal;font-weight:800}
+.connect-panel{border-color:#ff873b3d!important}
+.contact-section{
+  position:relative;
+  border-top:1px solid #ff853e44!important;
+  background:linear-gradient(112deg,#131c22,#090c0e 70%)!important;
+  color:#f7f9fb!important;
+}
+.contact-grid h2{color:#fff!important}
+.site-footer{
+  position:relative;background:#080a0c!important;
+  border-top:1px solid #ff7a2545!important;
+}
+.site-footer-contact{padding-top:6.1rem;position:relative}
+.site-footer-contact:before{
+  content:"";position:absolute;top:0;left:0;
+  display:block;width:128px;height:104px;
+  background:url("/zoco-business-profile-logo-1024.png") top left/contain no-repeat;
+}
+.site-footer-nav h2{color:#ff9650!important}
+.site-footer-nav a:hover{color:#ffab68!important}
+.floating-quick-action{border-color:#ff8c3259!important}
+.area-hero,.tips-hero,.seo-page{
+  background:
+    radial-gradient(ellipse at 85% 4%,#e46a202a,transparent 45%),
+    linear-gradient(132deg,#141b21,#0b1015 75%)!important;
+}
+.area-hero,.tips-hero{
+  border-color:#ff81334f!important;
+  background:
+    radial-gradient(ellipse at 90% 10%,#f4752438,transparent 44%),
+    linear-gradient(145deg,#151e23,#090e13 74%)!important;
+}
+.area-county,.tip-guide,.seo-list a{
+  border-color:#ff8f3438!important;
+  background:linear-gradient(148deg,#182128,#0c1217)!important;
+}
+.area-town-list span{border-color:#c36b393b!important;color:#f5f8fa}
+.area-service-list a:hover,.seo-page a:hover{color:#ff9951!important}
+@media(max-width:1100px){
+  .hero-main{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)!important}
+  .hero h1{font-size:clamp(2.7rem,5.4vw,4.5rem)!important}
+  .service-tab{min-height:188px}
+  .hero-copyblock{padding:1rem!important}
+}
+@media(max-width:900px){
+  .hero-main{display:flex!important;flex-direction:column!important;width:min(100% - 2rem,740px);gap:0}
+  .hero-copyblock{order:1;width:100%;padding:2rem 1rem 2.5rem!important;align-items:center!important;text-align:center!important}
+  .hero-copyblock > .hero-eyebrow,.hero-copyblock > h1,.hero-copyblock > .hero-text{text-align:center!important;margin-inline:auto}
+  .hero h1{font-size:clamp(3.2rem,8vw,5rem)!important}
+  .hero-card{order:0;width:100%;padding:1.3rem 0 .2rem!important}
+  .hero-card-dogs{width:min(90%,380px)!important;margin:-.7rem auto -1.2rem!important}
+  .hero-card-top{justify-content:center}
+  .quick-connect{width:min(100%,560px)}
+  .hero-actions{justify-content:center}
+  .service-tabs{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .service-tab{min-height:200px}
+  .zoco-area-inner{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .brand-logo{width:54px!important;height:54px!important;flex:0 0 54px!important;border-radius:0!important}
+  .hero-main{width:min(100% - 1rem,560px)}
+  .hero-card{padding:1rem .6rem .1rem!important}
+  .hero-card-top{gap:.35rem;flex-wrap:wrap}
+  .hero-card-top>span{font-size:.58rem!important}
+  .hero-card-dogs{height:auto!important;width:min(98%,330px)!important;margin:-.5rem auto -.85rem!important}
+  .hero-copyblock{padding:1.3rem .9rem 2rem!important}
+  .hero h1{font-size:clamp(2.9rem,10.6vw,4.3rem)!important}
+  .hero-eyebrow{font-size:.63rem!important}
+  .hero-text{font-size:.92rem!important}
+  .hero-actions{width:100%;flex-direction:column}
+  .hero-actions .button{width:100%;text-align:center;justify-content:center}
+  .quick-connect{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .quick-tile{min-height:70px;padding:.6rem!important}
+  .quick-tile .quick-copy strong{font-size:.71rem!important}
+  .hero-bottomline{grid-template-columns:1fr!important;padding:.5rem 1rem!important}
+  .hero-bottomline>div{padding:.65rem!important;border-right:0!important;border-bottom:1px solid #ffffff1e!important}
+  .hero-bottomline>div:last-child{border-bottom:0!important}
+  .home-page #drain{padding-top:3rem!important}
+  .service-tabs{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.6rem!important}
+  .service-tab{min-height:163px;padding:.75rem!important}
+  .service-tab strong{font-size:1.08rem!important}
+  .service-tab span{width:32px;height:32px}
+  .service-display{margin-top:.8rem!important}
+  .zoco-area-inner{padding:3rem 0;gap:1.2rem}
+  .zoco-county-cards{grid-template-columns:1fr}
+  .zoco-county{min-height:155px;padding:1.2rem}
+  .zoco-area-copy h2{font-size:clamp(2.55rem,10vw,3.8rem)}
+  .site-footer-contact{padding-top:5.5rem}
+  .site-footer-contact:before{width:110px;height:90px}
+}
+@media(prefers-reduced-motion:reduce){
+  .service-tab,.zoco-county{transition:none!important}
+  .service-tab:hover,.zoco-county:hover{transform:none!important}
+}
+
+/* The selected new logo will replace this known-good existing asset when its binary is uploaded. */

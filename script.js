@@ -82,6 +82,14 @@ const serviceCode = document.getElementById('serviceCode');
 const serviceTitle = document.getElementById('serviceTitle');
 const serviceDescription = document.getElementById('serviceDescription');
 const serviceImage = document.getElementById('serviceImage');
+const serviceLearn = document.getElementById('serviceLearn');
+const serviceRoutes = {
+  drain: '/drain-cleaning/',
+  snaking: '/drain-snaking/',
+  camera: '/camera-inspection/',
+  maintenance: '/drain-maintenance/',
+  dryer: '/dryer-vent-cleaning/'
+};
 const serviceDisplay = document.querySelector('.service-display');
 
 document.querySelectorAll('.service-tab').forEach((button) => {
@@ -101,6 +109,7 @@ document.querySelectorAll('.service-tab').forEach((button) => {
     serviceDescription.textContent = item[2];
     serviceImage.alt = item[4];
     serviceImage.src = item[3];
+    if (serviceLearn) serviceLearn.href = serviceRoutes[button.dataset.service] || '/services/';
     serviceDisplay.dataset.service = button.dataset.service;
   });
 });
