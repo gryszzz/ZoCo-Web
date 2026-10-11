@@ -513,3 +513,173 @@ a:focus-visible,button:focus-visible{outline:3px solid #ffa95c!important;outline
 }
 
 /* The selected new logo will replace this known-good existing asset when its binary is uploaded. */
+
+
+/* Mobile-first brand layout repair — removes the oversized legacy business card,
+   fixes duplicate header words and keeps contact actions reachable. */
+.site-header .header-inner{max-width:1250px}
+.site-header .brand{min-width:0!important;display:flex;align-items:center;flex:none}
+.site-header .brand-copy{display:none!important}
+.site-header .brand-logo{
+  width:92px!important;height:62px!important;flex-basis:92px!important;
+  background-position:left center!important;
+  border:0!important;box-shadow:none!important
+}
+.hero .hero-card-top,.hero .hero-card-owner,.hero .hero-card-name,
+.hero .hero-card-call,.hero .hero-card-links{display:none!important}
+.hero .hero-card{justify-content:center!important;align-items:center!important}
+.hero .hero-card-dogs{
+  max-width:100%!important;
+  background-color:transparent!important;
+  filter:drop-shadow(0 8px 25px #000b)!important
+}
+.hero .hero-eyebrow{max-width:100%!important}
+.hero .hero-copyblock h1{max-width:800px}
+.hero .hero-copyblock .hero-text{max-width:530px!important}
+.hero .hero-actions .button{font-size:.86rem!important;line-height:1.25}
+.hero .hero-card .hero-card-dogs{margin:0 auto!important}
+.hero .hero-shell{overflow:hidden}
+.hero .hero-main{overflow:visible}
+.home-page .hero .hero-copyblock::before{display:none!important}
+@media(min-width:901px){
+  .hero-main{min-height:540px!important}
+  .hero-card-dogs{
+    width:min(100%,530px)!important;
+    margin:auto!important;aspect-ratio:1
+  }
+  .hero-copyblock{
+    padding:clamp(1.4rem,3.5vw,3rem)!important;
+    align-items:flex-start!important;text-align:left!important
+  }
+  .hero-copyblock > .hero-eyebrow,.hero-copyblock > h1,.hero-copyblock > .hero-text{
+    width:100%;text-align:left!important;margin-left:0!important
+  }
+  .hero-actions{justify-content:flex-start!important;margin-left:0!important}
+}
+@media(max-width:900px){
+  .hero-main{width:min(100% - 1.75rem,730px)!important}
+  .hero-card{order:0!important;width:100%!important;min-height:0!important;padding:1.2rem 0 0!important}
+  .hero-card-dogs{
+    width:min(58vw,300px)!important;
+    height:auto!important;aspect-ratio:1!important;
+    max-height:300px!important;
+    margin:0 auto!important
+  }
+  .hero-copyblock{order:1!important;padding:0 1rem 2rem!important;max-width:720px;margin:auto}
+  .hero h1{
+    font-size:clamp(2.45rem,7.5vw,4.8rem)!important;
+    line-height:1.02!important;
+    letter-spacing:-.015em!important;
+    margin:.45rem 0!important
+  }
+  .hero .hero-text{font-size:.95rem!important;line-height:1.57!important;margin:.85rem 0 1.2rem!important}
+  .hero .hero-eyebrow{margin:.5rem 0!important}
+  .hero-actions{margin:0 auto .8rem!important;justify-content:center!important}
+  .quick-connect{margin:1rem auto 0!important}
+}
+@media(max-width:620px){
+  .site-header .header-inner{
+    min-height:66px!important;height:66px!important;
+    width:calc(100% - 1.25rem)!important;
+    grid-template-columns:auto 1fr auto!important;
+    gap:.5rem!important
+  }
+  .site-header .brand{grid-column:1!important;min-width:0!important}
+  .site-header .brand-logo{
+    width:82px!important;height:55px!important;flex:0 0 82px!important;
+    background-size:contain!important;background-position:left center!important;
+    background-color:transparent!important
+  }
+  .site-header .menu-btn{
+    grid-column:3!important;justify-self:end!important;
+    padding:.5rem .75rem!important;font-size:.85rem!important;min-height:42px
+  }
+  .site-header .nav-links{top:66px!important;z-index:99}
+  .home-page .hero{
+    margin:0!important;padding:0!important
+  }
+  .hero .hero-shell{
+    padding-top:.7rem!important;
+    border-radius:0!important;
+  }
+  .hero .hero-main{width:calc(100% - 1.5rem)!important;min-height:0!important;gap:0!important}
+  .hero .hero-card{padding:.35rem 0 0!important}
+  .hero .hero-card-dogs{
+    width:min(51vw,210px)!important;
+    max-width:210px!important;
+    min-height:0!important;
+    height:auto!important;
+    aspect-ratio:1!important;
+    margin:0 auto!important
+  }
+  .hero .hero-copyblock{
+    padding:.25rem .4rem 1.5rem!important;
+    width:100%;
+    display:flex;
+    align-items:center!important;
+    text-align:center!important
+  }
+  .hero .hero-eyebrow{margin:.35rem 0!important;font-size:.64rem!important;letter-spacing:.1em!important}
+  .zoco-hero-local{margin-top:.2rem!important;font-size:.62rem!important;letter-spacing:.08em!important}
+  .hero .hero-copyblock h1{
+    font-size:clamp(2.25rem,9vw,3.45rem)!important;
+    line-height:1.03!important;
+    letter-spacing:.002em!important;
+    margin:.65rem 0 .4rem!important;
+    max-width:100%
+  }
+  .hero .hero-text{
+    margin:.7rem auto 1rem!important;
+    font-size:.86rem!important;
+    line-height:1.53!important;
+    max-width:33rem!important
+  }
+  .hero .hero-actions{
+    width:min(100%,420px)!important;
+    flex-direction:row!important;
+    flex-wrap:wrap;
+    gap:.6rem!important;
+    margin:0 auto!important
+  }
+  .hero .hero-actions .button{
+    min-width:0!important;
+    width:100%!important;
+    min-height:46px!important;
+    border-radius:10px!important;
+    font-size:.85rem!important
+  }
+  .hero .quick-connect{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    width:100%!important;
+    margin:1.2rem auto 0!important;
+    gap:.45rem!important
+  }
+  .hero .quick-tile{min-height:62px!important;padding:.5rem!important}
+  .hero .quick-tile .quick-copy{min-width:0}
+  .hero .quick-tile .quick-copy strong{font-size:.66rem!important;overflow-wrap:anywhere}
+  .hero-bottomline{display:grid!important;grid-template-columns:1fr!important}
+  .floating-quick-actions{
+    top:auto!important;
+    right:7px!important;
+    bottom:calc(env(safe-area-inset-bottom, 0px) + 88px)!important;
+    transform:none!important;
+    width:auto!important;
+    max-width:48px!important;
+    z-index:85!important;
+  }
+  .floating-quick-action{
+    min-height:42px!important;
+    width:45px!important;max-width:45px!important;
+    padding:.48rem!important;border:1px solid rgba(255,116,36,.48)!important;
+    border-radius:12px!important;
+    display:grid!important;place-items:center!important;
+    position:relative;overflow:hidden;
+  }
+  .floating-quick-action>span:last-child{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important}
+}
+@media(max-width:365px){
+  .hero .hero-card-dogs{width:46vw!important}
+  .hero .hero-copyblock h1{font-size:2.2rem!important}
+  .hero .hero-actions .button{font-size:.79rem!important}
+}
