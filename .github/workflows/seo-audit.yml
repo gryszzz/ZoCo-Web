@@ -1,0 +1,17 @@
+name: Validate technical SEO
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  seo-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate sitemap, metadata and structured data
+        run: python3 scripts/check_seo.py
