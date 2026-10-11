@@ -2120,3 +2120,313 @@ body:before{
     gap:.38rem!important;
   }
 }
+
+
+/* ZoCo industrial orange brand refresh — October 2026 */
+/* Presentation only: original business details, service text, reviews, routes and SEO remain authoritative. */
+:root{
+  --zoco-orange:#ff6b16;
+  --zoco-orange-bright:#ff8735;
+  --zoco-orange-dark:#bc3f08;
+  --zoco-silver:#e7ebed;
+  --zoco-electric:#24b8f5;
+  --zoco-ink:#090b0e;
+  --bg:#090b0e;
+  --panel:#111519;
+  --panel2:#151a20;
+  --white:#f7f8f9;
+  --muted:#aeb8c0;
+  --line:#333a40;
+}
+body{
+  background:#090b0e;
+  background-image:radial-gradient(ellipse at 96% 5%,rgba(255,107,22,.055),transparent 36%),linear-gradient(180deg,#090b0e 0%,#101419 57%,#080a0d 100%);
+  color:#f7f8f9;
+}
+body::before{
+  background-image:linear-gradient(rgba(255,255,255,.019) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.019) 1px,transparent 1px);
+  background-size:70px 70px;
+}
+::selection{background:#ff6b16;color:#090b0e}
+:where(a,button):focus-visible{outline:3px solid var(--zoco-orange-bright);outline-offset:3px}
+.site-header{
+  background:rgba(9,11,14,.96)!important;
+  border-bottom:1px solid rgba(255,107,22,.28)!important;
+  box-shadow:0 8px 34px rgba(0,0,0,.36);
+}
+.brand{gap:.8rem}
+.brand-logo{
+  background-image:url("/zoco-business-profile-logo-1024.png")!important;
+  background-size:contain!important;
+  border:1px solid rgba(255,107,22,.34)!important;
+  background-color:#070809!important;
+  box-shadow:0 0 0 3px rgba(255,107,22,.05)!important;
+}
+.brand-copy strong{
+  color:#f8f9fa!important;
+  text-transform:uppercase;
+  font-weight:950;
+  letter-spacing:.075em!important;
+  text-shadow:0 1px 0 #59616a,0 3px 15px rgba(0,0,0,.4);
+}
+.brand-copy span{color:var(--zoco-orange-bright)!important}
+.nav-links a{color:#c5cacf!important}
+.nav-links a:hover,.nav-links a.active{color:#fff!important}
+.nav-links a:after{background:var(--zoco-orange)!important;height:2px}
+.header-call{
+  display:flex!important;justify-content:center!important;align-items:center!important;
+  min-height:49px!important;min-width:168px;
+  border:1px solid #fa7934!important;
+  border-radius:10px!important;
+  background:linear-gradient(145deg,#ff851f,#e64d0a)!important;
+  box-shadow:0 8px 21px rgba(198,66,12,.18),inset 0 1px 0 rgba(255,255,255,.24);
+  padding:.55rem 1rem!important;
+  color:#fff!important;
+  text-align:center;
+  transition:transform .2s,filter .2s;
+}
+.header-call:hover{filter:brightness(1.09);transform:translateY(-2px)}
+.header-call span{color:#fff3e9!important;font-size:.59rem;font-weight:900}
+.header-call strong{color:#fff;font-size:.9rem!important}
+.menu-btn{border-color:#a84c1c!important}
+.kicker,.hero-eyebrow,.data-label,.display-topline,.offer-code,.tips-eyebrow,.area-eyebrow{
+  color:var(--zoco-orange-bright)!important;
+}
+.hero{padding-top:1.25rem!important}
+.hero-shell{
+  border:1px solid rgba(255,107,22,.38)!important;
+  border-radius:14px;
+  background:
+    radial-gradient(ellipse at 22% 8%,rgba(255,116,22,.17),transparent 40%),
+    radial-gradient(ellipse at 90% 55%,rgba(18,139,201,.08),transparent 34%),
+    linear-gradient(130deg,#121416 0%,#080b0f 60%,#12171b 100%)!important;
+  box-shadow:0 12px 44px rgba(0,0,0,.3),0 0 0 4px rgba(255,107,22,.025);
+}
+.hero-main{grid-template-columns:minmax(0,1.04fr) minmax(330px,.96fr)!important;min-height:0!important}
+.hero-copyblock{padding:clamp(2rem,4.5vw,4.4rem)!important;position:relative;isolation:isolate}
+.hero-copyblock::before{
+  content:"";position:absolute;top:16px;left:16px;width:65px;height:65px;
+  border-top:2px solid rgba(255,107,22,.48);border-left:2px solid rgba(255,107,22,.48);
+  pointer-events:none;
+}
+.hero-eyebrow{font-size:.75rem!important;letter-spacing:.16em!important}
+.hero h1{
+  color:#f9fafb!important;
+  font-family:Impact,"Arial Narrow","Franklin Gothic Medium",ui-sans-serif,sans-serif;
+  font-size:clamp(3rem,5.5vw,5.8rem)!important;
+  letter-spacing:.018em!important;line-height:1.04!important;
+  text-transform:uppercase;
+  text-shadow:0 3px 22px rgba(0,0,0,.48);
+}
+.hero h1 span{color:var(--zoco-orange-bright)!important}
+.hero-text{color:#d0d7db!important;font-size:1.01rem!important;line-height:1.75}
+.button{
+  border-radius:9px!important;
+  font-weight:900!important;
+  letter-spacing:.01em;
+  transition:transform .18s ease,filter .18s ease,box-shadow .18s ease!important;
+}
+.button-primary,.button-invert{
+  color:#fff!important;background:linear-gradient(135deg,#ff851e,#e34b09)!important;
+  border:1px solid #ff8d39!important;
+  box-shadow:0 6px 24px rgba(234,79,10,.16),inset 0 1px 0 rgba(255,255,255,.23);
+}
+.button-secondary,.button-outline-dark{
+  color:#fff!important;background:#181d21!important;
+  border:1px solid rgba(255,121,39,.73)!important;
+}
+.button:hover{filter:brightness(1.13);box-shadow:0 10px 24px rgba(225,70,9,.19)}
+.quick-tile{
+  background:rgba(20,24,27,.82)!important;
+  border:1px solid rgba(255,116,31,.25)!important;
+  border-radius:9px;
+}
+.quick-tile:hover{border-color:var(--zoco-orange)!important}
+.quick-tile .quick-copy small,.quick-tile>i{color:var(--zoco-orange-bright)!important}
+.hero-card{
+  background:radial-gradient(ellipse at 50% 12%,rgba(255,117,30,.19),transparent 52%),linear-gradient(160deg,#1b2024,#080b0d 75%)!important;
+  color:#fff!important;
+  border-left:1px solid rgba(255,107,22,.38)!important;
+  padding:clamp(1.5rem,3vw,2.6rem)!important;
+}
+.hero-card-top{position:relative!important;top:auto!important;transform:none!important;color:#bac0c4!important}
+.hero-card-mark{border-color:rgba(255,107,22,.4)!important;color:#ff9d5e!important;background:transparent!important}
+.hero-card-dogs{
+  position:relative!important;inset:auto!important;top:auto!important;
+  left:auto!important;right:auto!important;
+  width:min(100%,400px)!important;height:270px!important;
+  margin:.2rem auto 0!important;
+  background:url("/zoco-business-profile-logo-1024.png") center/contain no-repeat!important;
+  mix-blend-mode:normal!important;opacity:1!important;transform:none!important;
+  -webkit-mask-image:none!important;mask-image:none!important;
+  pointer-events:none;
+}
+.hero-card-name{
+  position:relative!important;z-index:2;
+  margin:0 0 .8rem!important;text-align:center!important;transform:none!important;
+}
+.hero-card-name strong{
+  font-family:Impact,"Arial Narrow",ui-sans-serif,sans-serif;
+  color:#f4f7f8!important;font-size:clamp(2.5rem,4vw,4rem)!important;
+  line-height:.95!important;letter-spacing:.075em!important;
+  text-shadow:0 3px 0 #404a52,0 7px 14px rgba(0,0,0,.7);
+}
+.hero-card-name span{color:#ff8c43!important;letter-spacing:.16em!important;font-size:.76rem!important}
+.hero-card-owner{position:relative;z-index:2;text-align:center;align-items:center}
+.hero-card-owner strong{color:#fff!important;font-size:1.05rem!important}
+.hero-card-owner span{color:#aeb5b9!important}
+.hero-card-call{
+  border:1px solid #ff8440!important;border-radius:10px;
+  background:linear-gradient(125deg,#ff871f,#d94d0b)!important;color:#fff!important;
+}
+.hero-card-call strong,.hero-card-call span,.hero-card-call i{color:#fff!important}
+.hero-card-links{margin-top:1rem!important}
+.hero-card-links a{
+  background:#101518!important;color:#e5e9eb!important;
+  border-color:#343d42!important;border-radius:8px;
+}
+.hero-card-links a:hover{border-color:var(--zoco-orange)!important}
+.hero-bottomline{background:#0d1115!important;border-top:1px solid rgba(255,107,22,.25)!important}
+.hero-bottomline strong,.hero-bottomline a{color:#f8e9df!important}
+.section-bar h2,.connect-copy h2,.contact-grid h2{
+  font-family:Impact,"Arial Narrow","Franklin Gothic Medium",ui-sans-serif,sans-serif;
+  font-weight:850!important;letter-spacing:.012em!important;
+  line-height:1.04!important;text-transform:uppercase;
+}
+.section-bar h2{font-size:clamp(2.1rem,4vw,4rem)!important}
+.section-bar>p{color:#aeb9bf!important}
+.section{padding-block:clamp(3.4rem,6vw,6rem)!important}
+.service-console{
+  border:1px solid rgba(255,107,22,.24)!important;border-radius:13px;overflow:hidden;
+  box-shadow:0 12px 38px rgba(0,0,0,.24);
+}
+.service-tabs{background:#11161b}
+.service-tab{color:#d8dddf!important;border-color:#343a3f!important}
+.service-tab span{color:#ff954d!important}
+.service-tab.active{
+  color:#fff!important;
+  background:linear-gradient(100deg,rgba(255,107,22,.25),#171c21 85%)!important;
+  box-shadow:inset 4px 0 0 var(--zoco-orange);
+}
+.service-tab.active span{color:#ffa769!important}
+.service-display{
+  background:radial-gradient(circle at 90% 15%,rgba(255,117,26,.13),transparent 43%),#101519!important;
+}
+.display-topline{color:#ff944a!important}
+.service-art img{border-radius:8px}
+.display-footer{border-color:#31383e!important}
+.display-footer a{color:#ff984f!important}
+.handyman-section{
+  background:linear-gradient(135deg,#131a1e,#0b1115)!important;color:#f7f8f9!important;
+  border-block:1px solid rgba(255,107,22,.18);
+}
+.handyman-section .kicker,.handyman-section .section-bar.light-mode .kicker{color:#ff9a51!important}
+.handyman-section .section-bar h2{color:#f5f7f9!important}
+.handyman-section .section-bar.light-mode>p{color:#b9c1c6!important}
+.handyman-grid{border-color:#343c42!important;gap:0}
+.scope-card{
+  background:#171c21!important;color:#f6f7f8!important;
+  border-color:#313b42!important;
+}
+.scope-card>span{color:#ff9750!important}
+.scope-card h3{color:#fff!important}
+.scope-card p{color:#c2cbd1!important}
+.scope-card-image{border-color:#354049!important}
+.scope-note{
+  background:#12181d!important;color:#ecf0f2!important;border:1px solid #3c464c!important;
+  border-left:3px solid var(--zoco-orange)!important;
+}
+.scope-note p{color:#b9c5cb!important}
+.offer-card,.offer-card.inverse{
+  color:#fff!important;background:linear-gradient(145deg,#161b1f,#0b0e11)!important;
+  border:1px solid rgba(255,107,22,.3)!important;border-radius:12px;
+}
+.offer-card.inverse{background:linear-gradient(145deg,#291a13,#111518)!important}
+.offer-code,.offer-card.inverse .offer-code{color:#ff9d60!important}
+.offer-value{color:#f5f8f9}
+.offer-card.inverse .offer-value{color:#ff893a!important}
+.offer-card h3{color:#f8f9fa!important}
+.offer-card a,.offer-card.inverse a{color:#ff9d5e!important}
+.offer-terms{border-radius:9px;background:#12171b;color:#afb8be}
+.reviews-section{background:linear-gradient(150deg,#10171b,#090c0f 65%,#1a1411)!important}
+.google-map-card{border-color:rgba(255,107,22,.25)!important;border-radius:12px;overflow:hidden}
+.google-review-card{
+  background:linear-gradient(155deg,#1b2227,#0e1216)!important;
+  border:1px solid #384047!important;border-radius:12px;
+}
+.google-review-card q{color:#f7f8f8!important}
+.google-stars{color:#ffae32!important}
+.google-review-link{color:#ff9855!important}
+.google-review-arrow{border-color:#465058!important}
+.google-review-arrow:not(:disabled):hover{color:#ff9d54!important;border-color:#ff8330!important}
+.connect-panel,.contact-section{
+  background:radial-gradient(ellipse at 100% 20%,rgba(255,109,25,.16),transparent 55%),linear-gradient(140deg,#181b1e,#0d1013)!important;
+  color:#f8f9f9!important;border-top:1px solid rgba(255,107,22,.29);
+}
+.contact-grid h2{color:#fff!important}
+.contact-grid p{color:#c8cfd4!important}
+.site-footer,.sitewide-footer{
+  background:#090c0f!important;color:#eff2f4!important;border-top:1px solid rgba(255,107,22,.26)!important;
+}
+.site-footer-brand{color:#f1f3f5!important;text-transform:uppercase;letter-spacing:.025em}
+.site-footer-brand::before{content:"";display:inline-block;width:4px;height:1.1em;background:var(--zoco-orange);margin-right:.6em;vertical-align:-.15em}
+.site-footer-nav h2{color:#ff9650!important}
+.site-footer-nav a:hover,.site-footer-contact a:hover,.footer-credit:hover{color:#ff9a55!important}
+.footer-credit{color:#ff9650!important}
+.floating-quick-action{
+  border-color:rgba(255,107,22,.47)!important;
+  box-shadow:0 6px 20px rgba(0,0,0,.33);
+}
+.floating-quick-action:hover{border-color:#ff9b54!important}
+.quick-contact-panel{border-color:rgba(255,107,22,.5)!important}
+.quick-contact-kicker{color:#ff9751!important}
+/* Existing service-area, expert-tip and SEO landing pages get the same branded accents. */
+.area-hero,.tips-hero{
+  background:radial-gradient(ellipse at 87% 13%,rgba(255,109,28,.19),transparent 42%),linear-gradient(145deg,#171c21,#0a0e11 76%)!important;
+  border:1px solid rgba(255,107,22,.32)!important;border-radius:14px;
+}
+.area-hero h1,.tips-hero h1,.seo-page h1{
+  font-family:Impact,"Arial Narrow","Franklin Gothic Medium",ui-sans-serif,sans-serif;
+  letter-spacing:.01em!important;
+}
+.area-hero h1 span,.tips-hero h1 span{color:#ff8837!important}
+.area-summary{border-left-color:var(--zoco-orange)!important}
+.area-county,.tip-guide{
+  background:linear-gradient(145deg,#171e23,#0c1115)!important;
+  border:1px solid rgba(255,107,22,.21)!important;border-radius:12px;
+}
+.area-town-list span{border-color:#5d4a3c!important}
+.area-service-list a:hover{color:#ff9650!important}
+.tips-toc a:hover{border-color:#ff8d3d!important}
+.tip-index{color:#ff984d!important;border-color:rgba(255,107,22,.5)!important}
+/* Match user's reduced-motion preferences without affecting existing functional navigation. */
+@media(prefers-reduced-motion:reduce){
+  .header-call,.button,.quick-tile{transition:none!important}
+}
+@media(max-width:1000px){
+  .hero-main{grid-template-columns:1fr!important}
+  .hero-card{border-left:0!important;border-top:1px solid rgba(255,107,22,.3)!important}
+  .hero-copyblock{padding:3rem 2rem!important}
+  .hero-card-dogs{height:260px!important}
+  .hero h1{font-size:clamp(2.6rem,8vw,4.7rem)!important}
+}
+@media(max-width:620px){
+  .site-header .header-inner{min-height:68px!important}
+  .brand-logo{width:48px!important;height:48px!important;flex:0 0 48px!important}
+  .hero{padding-top:1.1rem!important}
+  .hero-shell{border-radius:12px}
+  .hero-copyblock{padding:2.2rem 1.2rem!important}
+  .hero-copyblock::before{width:27px;height:27px;top:9px;left:9px}
+  .hero h1{font-size:clamp(2.55rem,10.4vw,4rem)!important}
+  .hero-text{font-size:.93rem!important}
+  .hero-card{padding:1.6rem 1rem!important}
+  .hero-card-dogs{height:225px!important}
+  .hero-card-name strong{font-size:2.8rem!important}
+  .hero-card-links{grid-template-columns:1fr 1fr}
+  .service-tab.active{box-shadow:inset 0 3px 0 var(--zoco-orange)}
+  .section{padding-block:3.25rem!important}
+  .section-bar h2{font-size:clamp(2rem,9vw,3.3rem)!important}
+  .contact-grid{align-items:stretch!important}
+  .contact-actions .button{min-width:0}
+  .floating-quick-actions{z-index:90}
+}
