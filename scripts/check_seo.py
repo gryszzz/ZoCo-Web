@@ -126,8 +126,12 @@ def main() -> int:
             fail(label, f"canonical must be {url}")
         if meta.h1_count != 1:
             fail(label, f"expected one H1; found {meta.h1_count}")
-        if any("noindex" in directive.lower() for directive in meta.robots):
-            fail(label, "indexable sitemap page has noindex directive")
+        if any(
+            token.strip().lower() in {"noindex", "none"}
+            for directive in meta.robots
+            for token in directive.split(",")
+        ):
+            fail(label, "indexable sitemap page has noindex/none directive")
         if meta.og_urls and (len(meta.og_urls) != 1 or meta.og_urls[0] != url):
             fail(label, "Open Graph URL differs from canonical")
         if not meta.json_ld:
