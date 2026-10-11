@@ -2430,3 +2430,14 @@ body::before{
   .contact-actions .button{min-width:0}
   .floating-quick-actions{z-index:90}
 }
+
+
+/* Keep responsive navigation unobstructed at tablet/mobile widths. */
+@media(max-width:1100px){
+  .header-call{display:none!important}
+  .nav-links.open{border-color:rgba(255,107,22,.45)!important}
+}
+@media(max-width:620px){
+  .brand-copy{display:flex!important}
+  .zoco-hero-local{display:block;margin-top:.45rem;font-size:.64rem;line-height:1.5}
+}
