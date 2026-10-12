@@ -1,0 +1,115 @@
+/* ZoCo County Map + Mobile Drain Services | 2026-10-12
+   Mobile imagery is local and static (no animation or external request).
+   This file intentionally loads after prior brand and layout overrides. */
+
+/* County geometries are based on published NJ county GIS outlines, not sketches.
+   Maintain correct source-aligned shape proportions for both desktop and mobile. */
+body.home-page .zoco-area-showcase__map .county {
+  stroke-linejoin:round !important;
+  stroke-linecap:round !important;
+  vector-effect:non-scaling-stroke;
+}
+body.home-page .zoco-area-showcase__map .county-sussex {
+  stroke:#ff8a33 !important;
+  filter:drop-shadow(0 0 7px rgba(255,114,29,.39));
+}
+body.home-page .zoco-area-showcase__map .county-passaic {
+  stroke:#ebf3fa !important;
+  filter:drop-shadow(0 0 5px rgba(235,245,255,.16));
+}
+body.home-page .zoco-area-showcase__map .county-label {
+  font-family:Impact,"Arial Narrow","Franklin Gothic Medium",sans-serif;
+  font-size:clamp(23px,2.15vw,28px) !important;
+  fill:#fff !important;
+  stroke:#09131d !important;
+  stroke-width:3.2px !important;
+  paint-order:stroke;
+  letter-spacing:.5px;
+}
+@media(max-width:620px) {
+  body.home-page .zoco-area-showcase__map {
+    padding:0 !important;
+    max-width:100% !important;
+    filter:drop-shadow(0 9px 15px rgba(0,0,0,.62)) !important;
+  }
+  body.home-page .zoco-area-showcase__map svg {
+    display:block;
+    width:100%;
+    max-height:340px !important;
+  }
+  body.home-page .zoco-area-showcase__map .county-label {
+    font-size:23px !important;
+    stroke-width:3.4px !important;
+  }
+  body.home-page .zoco-area-showcase__map .county {
+    stroke-width:2.2px !important;
+  }
+}
+
+/* Mobile-only cinematic background behind the four existing service links. */
+@media(max-width:620px) {
+  body.home-page #drain.page.section {
+    position:relative;
+    isolation:isolate;
+    overflow:hidden;
+    background-color:#07131b !important;
+    background-image:
+      radial-gradient(ellipse at 95% 2%,rgba(255,128,42,.21),transparent 48%),
+      linear-gradient(180deg,rgba(5,11,17,.67),rgba(5,13,19,.76) 35%,rgba(5,12,19,.88) 70%,rgba(3,8,14,.96)),
+      url("/assets/brand/zoco-mobile-industrial-hero-photo.avif"),
+      url("/assets/brand/zoco-desktop-industrial-clear.avif") !important;
+    background-size:cover,cover,cover,cover !important;
+    background-position:center,center,center 46%,center !important;
+    background-repeat:no-repeat !important;
+    border-top:1px solid rgba(255,129,47,.44);
+    border-bottom:1px solid rgba(255,129,47,.48);
+    box-shadow:inset 0 16px 24px rgba(0,0,0,.16),
+      inset 0 -24px 36px rgba(1,5,9,.42) !important;
+  }
+  body.home-page #drain.page.section::before {
+    /* Preserve the existing orange top-edge rule rather than covering it. */
+    z-index:2 !important;
+  }
+  body.home-page #drain.page.section::after {
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0 !important;
+    pointer-events:none;
+    opacity:1 !important;
+    background-image:
+      linear-gradient(90deg,rgba(6,16,25,.17),rgba(6,15,23,0) 45%,rgba(4,10,16,.20)),
+      radial-gradient(ellipse at 14% 87%,rgba(255,106,27,.13),transparent 50%) !important;
+    background-size:cover !important;
+    background-position:center !important;
+  }
+  body.home-page #drain .section-bar,
+  body.home-page #drain .service-console {
+    position:relative !important;
+    z-index:1 !important;
+  }
+  body.home-page #drain .section-bar h2 {
+    color:#f8fafb !important;
+    text-shadow:0 4px 17px rgba(0,0,0,.73) !important;
+  }
+  body.home-page #drain .section-bar>p {
+    color:#e1e8ee !important;
+    text-shadow:0 2px 9px rgba(0,0,0,.72) !important;
+    max-width:36rem;
+  }
+  body.home-page #drain .service-tabs {
+    gap:.6rem !important;
+  }
+  body.home-page #drain a.service-tab {
+    background-color:#0a151d !important;
+    border-color:rgba(255,145,61,.54) !important;
+    box-shadow:0 12px 25px rgba(0,0,0,.46),
+      inset 0 1px 0 rgba(255,255,255,.07) !important;
+  }
+  body.home-page #drain a.service-tab .zoco-tab-action {
+    color:#ffae70 !important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  body.home-page #drain a.service-tab {transition:none !important}
+}
