@@ -1,0 +1,296 @@
+/*
+  ZoCo hero contact/button polish — scoped to homepage first fold only.
+  Call = orange primary action. Contact tiles = restrained smoked glass.
+  Pathways = softer deep-water glass. No changes to background/other pages.
+*/
+body.home-page .hero .hero-actions {
+  gap:clamp(.6rem,1vw,.88rem)!important;
+  margin-top:1.05rem!important;
+  margin-bottom:.75rem!important;
+}
+body.home-page .hero .hero-actions .button {
+  box-sizing:border-box;
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  gap:.65rem!important;
+  min-height:51px!important;
+  padding:.69rem 1rem!important;
+  border-radius:14px!important;
+  font-weight:820!important;
+  font-size:clamp(.86rem,1vw,1rem)!important;
+  letter-spacing:.006em!important;
+  line-height:1.15!important;
+  box-shadow:0 6px 17px rgba(0,0,0,.2)!important;
+  transition:transform .2s ease,border-color .2s ease,background-color .2s ease,box-shadow .2s ease!important;
+}
+body.home-page .hero .hero-actions .button-primary {
+  color:#fff!important;
+  border:1px solid rgba(255,197,144,.76)!important;
+  background:linear-gradient(115deg,#f39231 0%,#f57920 55%,#d85017 100%)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.24),0 7px 20px rgba(155,65,18,.22)!important;
+}
+body.home-page .hero .hero-actions .button-secondary {
+  color:#f7f7f7!important;
+  border:1px solid rgba(227,139,79,.65)!important;
+  background:linear-gradient(125deg,rgba(22,32,41,.89),rgba(8,17,26,.93))!important;
+  box-shadow:inset 0 1px 0 rgba(244,192,145,.07),0 7px 18px rgba(0,0,0,.19)!important;
+  backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
+}
+body.home-page .hero .hero-actions .zoco-cta-icon {
+  display:inline-grid;
+  place-items:center;
+  flex:0 0 18px;
+  width:18px;height:18px;
+  opacity:.96;
+}
+body.home-page .hero .hero-actions .zoco-cta-icon svg {
+  display:block;width:18px;height:18px;
+  stroke:currentColor;stroke-width:2;fill:none;
+  stroke-linecap:round;stroke-linejoin:round;
+}
+@media(hover:hover) and (pointer:fine) {
+  body.home-page .hero .hero-actions .button:hover {
+    transform:translateY(-2px)!important;
+  }
+  body.home-page .hero .hero-actions .button-primary:hover {
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.29),0 10px 24px rgba(187,74,15,.3)!important;
+  }
+  body.home-page .hero .hero-actions .button-secondary:hover {
+    border-color:rgba(248,175,118,.9)!important;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.09),0 10px 25px rgba(0,0,0,.31)!important;
+  }
+}
+body.home-page .hero .hero-actions .button:active {
+  transform:translateY(1px) scale(.991)!important;
+}
+body.home-page .hero .hero-actions .button:focus-visible,
+body.home-page .hero .quick-connect .quick-tile:focus-visible {
+  outline:3px solid #bde7ef!important;outline-offset:3px!important;
+}
+
+/* Four owner/contact/social shortcuts become one consistent family. */
+body.home-page .hero .quick-connect {
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:clamp(.5rem,.95vw,.7rem)!important;
+  margin-top:.74rem!important;
+}
+body.home-page .hero .quick-connect .quick-tile {
+  box-sizing:border-box;
+  position:relative;
+  isolation:isolate;
+  display:grid!important;
+  grid-template-columns:40px minmax(0,1fr) 14px!important;
+  align-items:center!important;
+  gap:clamp(.45rem,.75vw,.7rem)!important;
+  min-width:0!important;
+  min-height:66px!important;
+  padding:.72rem .78rem!important;
+  border:1px solid rgba(163,131,112,.33)!important;
+  border-radius:15px!important;
+  color:#f3f6f7!important;
+  background:
+    radial-gradient(circle at 95% 10%,rgba(64,119,146,.13),transparent 44%),
+    linear-gradient(125deg,rgba(11,22,32,.79),rgba(8,18,29,.87))!important;
+  box-shadow:inset 0 1px 0 rgba(213,231,238,.09),
+    0 7px 17px rgba(0,0,0,.23)!important;
+  backdrop-filter:blur(8px) saturate(108%);
+  -webkit-backdrop-filter:blur(8px) saturate(108%);
+  transform:none;
+  text-decoration:none!important;
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease!important;
+}
+body.home-page .hero .quick-connect .quick-tile:hover {
+  border-color:rgba(218,158,118,.65)!important;
+  box-shadow:inset 0 1px 0 rgba(216,234,238,.13),0 11px 23px rgba(0,0,0,.3)!important;
+}
+@media(hover:hover) and (pointer:fine) {
+  body.home-page .hero .quick-connect .quick-tile:hover {transform:translateY(-2px)!important}
+  body.home-page .hero .quick-connect .quick-tile:hover>i{transform:translate(2px,-2px)!important}
+}
+body.home-page .hero .quick-connect .quick-tile:active{
+  transform:scale(.993)!important;
+  border-color:rgba(169,199,214,.59)!important;
+}
+body.home-page .hero .quick-connect .quick-logo-mark,
+body.home-page .hero .quick-connect .quick-icon {
+  position:relative;
+  display:grid!important;place-items:center!important;
+  box-sizing:border-box!important;
+  flex:none!important;
+  width:40px!important;height:40px!important;
+  min-width:40px!important;
+  border-radius:11px!important;
+  border:1px solid rgba(142,170,189,.22)!important;
+  background-color:rgba(13,27,39,.18)!important;
+  box-shadow:inset 0 1px 0 rgba(230,244,250,.065)!important;
+  overflow:hidden;
+  margin:0!important;
+}
+body.home-page .hero .quick-connect .quick-logo-mark {
+  background-image:url("/assets/brand/zoco-mascot-mark.png")!important;
+  background-size:contain!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  border-color:rgba(202,140,102,.28)!important;
+}
+body.home-page .hero .quick-connect .quick-icon svg {
+  width:23px!important;height:23px!important;
+  max-width:23px!important;max-height:23px!important;
+  stroke:#d4e5ed!important;
+  fill:none!important;
+  stroke-width:1.75!important;
+  filter:none!important;
+}
+body.home-page .hero .quick-connect .quick-tile[href*="instagram.com"] .quick-icon svg {
+  stroke:#dc79b6!important;
+}
+body.home-page .hero .quick-connect .quick-tile[href*="facebook.com"] .quick-icon svg {
+  stroke:none!important;
+  fill:#8db6ee!important;
+}
+body.home-page .hero .quick-connect .quick-copy {
+  min-width:0!important;
+  width:100%!important;
+  overflow:hidden!important;
+  text-align:left!important;
+}
+body.home-page .hero .quick-connect .quick-copy small {
+  display:block!important;
+  font-size:clamp(.58rem,.7vw,.68rem)!important;
+  color:#e6a479!important;
+  letter-spacing:.115em!important;
+  line-height:1.25!important;
+  font-weight:790!important;
+  white-space:nowrap!important;
+}
+body.home-page .hero .quick-connect .quick-copy strong {
+  display:block!important;
+  max-width:100%!important;
+  color:#f2f6fa!important;
+  font-size:clamp(.79rem,.87vw,.93rem)!important;
+  font-weight:785!important;
+  line-height:1.3!important;
+  letter-spacing:0!important;
+  white-space:nowrap!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+body.home-page .hero .quick-connect .quick-tile>i {
+  display:block!important;
+  position:static!important;
+  transform:none;
+  margin:0!important;
+  font-size:1.1rem!important;
+  line-height:1!important;
+  color:#e4a273!important;
+  justify-self:end!important;
+  align-self:start!important;
+  font-style:normal!important;
+  transition:transform .18s ease!important;
+}
+
+/* Water rows stay individually rounded and interactive, but look calmer.
+   Keep the existing droplet movement and original page photo underneath. */
+body.home-page .hero .zoco-hero-pathways__card {
+  background:rgba(6,20,33,.43)!important;
+  border-color:rgba(103,164,194,.42)!important;
+  box-shadow:inset 0 1px 0 rgba(198,232,243,.075),
+    0 7px 19px rgba(0,0,0,.23)!important;
+}
+body.home-page .hero .zoco-hero-pathways__card::before {opacity:.67!important}
+body.home-page .hero .zoco-hero-pathways__card::after {opacity:.38!important}
+body.home-page .hero .zoco-hero-pathways__card>.zoco-water-glass-surface{
+  background:radial-gradient(circle at var(--water-x,80%) var(--water-y,50%),
+    rgba(73,143,173,.09),transparent 36%),
+    linear-gradient(110deg,transparent 15%,rgba(110,175,203,.035) 48%,transparent 79%)!important;
+}
+body.home-page .hero .zoco-water-glass-surface::before{opacity:.46!important}
+body.home-page .hero .zoco-water-bead{filter:saturate(.84)}
+body.home-page .hero .zoco-hero-pathways__card:focus:not(:focus-visible){
+  outline:none!important;
+  border-color:rgba(103,164,194,.48)!important;
+}
+@media(hover:hover) and (pointer:fine){
+  body.home-page .hero .zoco-hero-pathways__card:hover{
+    border-color:rgba(143,203,225,.68)!important;
+    box-shadow:inset 0 1px 0 rgba(206,238,247,.13),
+      0 0 16px rgba(32,120,165,.12),
+      0 9px 23px rgba(0,0,0,.32)!important;
+  }
+}
+body.home-page .hero .zoco-hero-pathways__card:focus-visible{
+  border-color:rgba(168,220,238,.85)!important;
+  outline:3px solid #badce9!important;
+  outline-offset:3px!important;
+}
+@media(max-width:660px){
+  body.home-page .hero .hero-actions{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:.56rem!important;
+    margin-top:1rem!important;
+    margin-bottom:.8rem!important;
+  }
+  body.home-page .hero .hero-actions .button{
+    width:100%!important;
+    min-height:50px!important;
+    border-radius:13px!important;
+  }
+  body.home-page .hero .quick-connect{
+    gap:.56rem!important;
+    margin-top:.8rem!important;
+  }
+  body.home-page .hero .quick-connect .quick-tile {
+    grid-template-columns:36px minmax(0,1fr) 11px!important;
+    min-height:66px!important;
+    gap:.42rem!important;
+    padding:.57rem .52rem!important;
+    border-radius:13px!important;
+  }
+  body.home-page .hero .quick-connect .quick-logo-mark,
+  body.home-page .hero .quick-connect .quick-icon{
+    width:36px!important;min-width:36px!important;height:36px!important;
+    border-radius:10px!important;
+  }
+  body.home-page .hero .quick-connect .quick-icon svg{
+    width:21px!important;height:21px!important;
+  }
+  body.home-page .hero .quick-connect .quick-copy small{font-size:.59rem!important}
+  body.home-page .hero .quick-connect .quick-copy strong{font-size:clamp(.75rem,3vw,.85rem)!important}
+  body.home-page .hero .zoco-hero-pathways {
+    padding-top:.45rem!important;
+    gap:.42rem!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__card {
+    border-radius:17px!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__card::before,
+  body.home-page .hero .zoco-hero-pathways__card::after{
+    border-radius:inherit!important;
+  }
+}
+@media(max-width:370px){
+  body.home-page .hero .quick-connect .quick-tile{
+    grid-template-columns:32px minmax(0,1fr) 10px!important;
+    gap:.3rem!important;padding:.52rem .4rem!important;
+  }
+  body.home-page .hero .quick-connect .quick-logo-mark,
+  body.home-page .hero .quick-connect .quick-icon{
+    width:32px!important;min-width:32px!important;height:32px!important;
+  }
+  body.home-page .hero .quick-connect .quick-copy strong{font-size:.72rem!important}
+  body.home-page .hero .quick-connect .quick-copy small{font-size:.54rem!important}
+}
+@media(prefers-reduced-motion:reduce){
+  body.home-page .hero .hero-actions .button,
+  body.home-page .hero .quick-connect .quick-tile,
+  body.home-page .hero .quick-connect .quick-tile>i{
+    transition:none!important;
+  }
+  body.home-page .hero .hero-actions .button:hover,
+  body.home-page .hero .quick-connect .quick-tile:hover,
+  body.home-page .hero .quick-connect .quick-tile:hover>i {
+    transform:none!important;
+  }
+}
