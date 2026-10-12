@@ -279,7 +279,16 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible{
   body.home-page .hero .quick-connect .quick-icon{
     width:32px!important;min-width:32px!important;height:32px!important;
   }
-  body.home-page .hero .quick-connect .quick-copy strong{font-size:.72rem!important}
+  /* On narrow phones, display the complete names instead of truncating. */
+  body.home-page .hero .quick-connect .quick-copy{overflow:visible!important}
+  body.home-page .hero .quick-connect .quick-copy strong{
+    font-size:.72rem!important;
+    line-height:1.15!important;
+    white-space:normal!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    overflow-wrap:anywhere!important;
+  }
   body.home-page .hero .quick-connect .quick-copy small{font-size:.54rem!important}
 }
 @media(prefers-reduced-motion:reduce){
