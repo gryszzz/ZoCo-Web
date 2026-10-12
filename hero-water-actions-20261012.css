@@ -235,13 +235,13 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before{
 /* Center the content GROUP on desktop/tablet while the liquid-glass
    rows and their separators continue spanning the full hero width.
    Do not center/alter the mobile layouts. */
-/* Desktop: restore the original left-side placement, but use compact,
-   rounded individual glass cards rather than long square rails. */
+/* Desktop: center the compact, individually rounded glass cards across
+   the full hero width, without moving them vertically or changing mobile. */
 @media(min-width:951px){
   body.home-page .hero .zoco-hero-pathways{
     width:min(500px,calc(100% - 2.5rem))!important;
     max-width:500px!important;
-    margin-left:clamp(1.5rem,5vw,5rem)!important;
+    margin-left:auto!important;
     margin-right:auto!important;
     transform:none!important;
     gap:.38rem!important;
