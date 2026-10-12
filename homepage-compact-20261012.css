@@ -1,0 +1,278 @@
+/* ZoCo conversion-first homepage refresh | 2026-10-12.
+   Scoped to the homepage; links go to existing real service pages.
+   Preserve authentic Google reviews, Maps embed, owner card and scope note. */
+body.home-page #drain.page.section { padding-block:clamp(2.25rem,3.5vw,3.7rem) !important; }
+body.home-page #drain .section-bar { margin-bottom:1.1rem !important; }
+body.home-page #drain .section-bar>p {max-width:560px;}
+body.home-page #drain .service-console {
+  display:block !important; border:0 !important; background:transparent !important;
+  box-shadow:none !important; padding:0 !important;
+}
+body.home-page #drain .service-tabs {
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:clamp(.6rem,1.1vw,.95rem) !important;
+  border:0 !important;
+  background:transparent !important;
+  align-items:stretch;
+}
+body.home-page #drain a.service-tab {
+  position:relative; display:flex !important;
+  flex-direction:column !important; align-items:flex-start !important;
+  justify-content:flex-end !important; text-decoration:none !important;
+  min-width:0; min-height:198px !important; height:auto !important;
+  padding:clamp(.8rem,1vw,1rem) !important;
+  border:1px solid rgba(255,147,74,.4) !important;
+  border-radius:13px !important; overflow:hidden;
+  background:#121b22 !important; color:#f6f9fa !important;
+  box-shadow:0 9px 20px rgba(0,0,0,.24) !important;
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+  cursor:pointer;
+}
+body.home-page #drain a.service-tab::before {
+  inset:0 0 33% !important;
+  opacity:.96 !important; filter:contrast(1.08) saturate(.95) !important;
+  background-size:cover !important;
+}
+body.home-page #drain a.service-tab::after {
+  background:linear-gradient(180deg,rgba(5,10,14,.02) 8%,rgba(5,10,14,.4) 37%,#0a1319 69%,#091116 100%) !important;
+}
+body.home-page #drain a.service-tab strong {
+  min-height:0 !important; margin:.05rem 0 .34rem !important;
+  color:#fff !important; font-size:clamp(1.15rem,1.7vw,1.5rem) !important;
+  line-height:1.08 !important; text-shadow:0 2px 10px #000 !important;
+}
+body.home-page #drain a.service-tab>span:first-child {
+  width:30px !important; height:30px !important;
+  flex:0 0 30px; margin:0 0 auto !important;
+  background:rgba(9,17,23,.88) !important; color:#ffb16f !important;
+  border:1px solid #ff9042 !important;
+}
+body.home-page #drain a.service-tab .zoco-tab-detail {
+  display:block !important; color:#c4d2dc !important;
+  font-size:.76rem !important; line-height:1.45 !important;
+  font-weight:500 !important; font-style:normal !important;
+}
+body.home-page #drain a.service-tab .zoco-tab-action {
+  display:flex !important; align-items:center; justify-content:space-between;
+  width:100%; gap:.45rem; margin-top:.65rem !important; padding-top:.5rem;
+  border-top:1px solid rgba(255,151,74,.32);
+  color:#ffad67 !important; font-weight:850 !important;
+  font-size:clamp(.66rem,.78vw,.76rem) !important;
+  line-height:1.25 !important; text-transform:uppercase;
+  letter-spacing:.035em !important;
+}
+body.home-page #drain a.service-tab .zoco-tab-action span {
+  display:inline !important; width:auto !important; height:auto !important;
+  min-width:0; margin:0 !important; border:0 !important;
+  background:none !important; color:inherit !important;
+  font:inherit !important; box-shadow:none !important;
+}
+body.home-page #drain a.service-tab:hover,
+body.home-page #drain a.service-tab:focus-visible {
+  transform:translateY(-3px);
+  border-color:#ffa45c !important;
+  box-shadow:0 0 0 2px #ff88383f,0 16px 32px #0008 !important;
+}
+body.home-page #drain a.service-tab:focus-visible {
+  outline:3px solid #ffb16f !important; outline-offset:3px;
+}
+
+/* Real Google reviews are moved directly after services; keep map interactive. */
+body.home-page .reviews-section .page.section {
+  padding-block:clamp(2.3rem,4vw,4.2rem) !important;
+}
+body.home-page .reviews-section {
+  background:
+    radial-gradient(ellipse at 8% 5%,rgba(255,117,34,.20),transparent 42%),
+    radial-gradient(ellipse at 98% 85%,rgba(255,139,70,.10),transparent 49%),
+    linear-gradient(115deg,rgba(5,11,17,.89),rgba(7,14,20,.83) 52%,rgba(5,10,15,.9)),
+    url("/assets/brand/zoco-desktop-industrial-clear.avif") center 55%/cover no-repeat !important;
+}
+body.home-page .reviews-section .google-map-card {
+  height:clamp(270px,30vw,390px) !important;
+}
+body.home-page .reviews-section .google-review-carousel .google-review-card {
+  background:linear-gradient(140deg,rgba(24,36,45,.97),rgba(7,14,20,.98)) !important;
+}
+body.home-page .reviews-section .section-bar {
+  margin-bottom:1.15rem !important;
+}
+
+/* Prominent county map / service-area art, but avoid oversized empty padding. */
+body.home-page .zoco-area-showcase {
+  background:
+    radial-gradient(ellipse at 85% 11%,rgba(255,149,55,.3),transparent 34%),
+    linear-gradient(95deg,rgba(3,9,14,.96),rgba(5,12,18,.79) 48%,rgba(5,13,18,.55)),
+    url("/assets/brand/zoco-desktop-industrial-clear.avif") center 51%/cover no-repeat !important;
+}
+body.home-page .zoco-area-showcase__body {
+  padding-top:clamp(2.25rem,4vw,4.2rem) !important;
+  padding-bottom:clamp(1.3rem,2vw,2.5rem) !important;
+}
+body.home-page .zoco-area-showcase__map {
+  padding:.5rem; border-radius:18px;
+  background:radial-gradient(ellipse at center,rgba(255,118,38,.10),transparent 68%);
+}
+body.home-page .zoco-area-showcase__map .county-passaic {
+  filter:drop-shadow(0 0 7px rgba(233,242,250,.20));
+}
+body.home-page .zoco-area-showcase__county:focus-visible {
+  outline:2px solid #ffaf72; outline-offset:-2px;
+}
+
+/* Compact, cohesive maintenance cards that keep six service categories. */
+body.home-page .handyman-section {
+  background:
+    radial-gradient(ellipse at 93% 8%,rgba(255,119,43,.12),transparent 46%),
+    linear-gradient(100deg,rgba(7,14,19,.91),rgba(9,17,23,.87)),
+    url("/assets/brand/zoco-desktop-industrial-clear.avif") center 60%/cover no-repeat !important;
+}
+body.home-page .handyman-section>.page.section {
+  padding-block:clamp(2.15rem,3.8vw,3.6rem) !important;
+}
+body.home-page .handyman-section .section-bar {
+  margin-bottom:1rem !important;
+}
+body.home-page .handyman-section .section-bar h2 {
+  font-size:clamp(2rem,3.4vw,3.4rem) !important;
+  line-height:1.02 !important;
+}
+body.home-page .handyman-section .handyman-grid {
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:.75rem !important;
+}
+body.home-page .handyman-section .scope-card {
+  min-height:0 !important; padding:.78rem !important;
+  display:flex !important; flex-direction:column;
+  border:1px solid rgba(255,151,79,.24) !important;
+  background:linear-gradient(150deg,rgba(23,34,42,.97),rgba(10,18,24,.97)) !important;
+  box-shadow:0 8px 20px rgba(0,0,0,.22) !important;
+  border-radius:12px !important;
+  transition:border-color .2s ease,transform .2s ease;
+}
+body.home-page .handyman-section .scope-card-image {
+  height:104px !important; min-height:0 !important;
+  width:calc(100% + 1.56rem) !important;
+  margin:-.78rem -.78rem .66rem !important;
+  border-radius:11px 11px 0 0 !important;
+  object-fit:cover !important;
+  filter:contrast(1.07) saturate(.78);
+}
+body.home-page .handyman-section .scope-card>span {
+  display:inline-flex !important; padding:.21rem .42rem !important;
+  margin:0 0 .33rem !important;
+  font-size:.59rem !important; letter-spacing:.07em !important;
+}
+body.home-page .handyman-section .scope-card h3 {
+  font-size:clamp(1.13rem,1.6vw,1.42rem) !important;
+  line-height:1.13 !important; margin:0 0 .35rem !important;
+}
+body.home-page .handyman-section .scope-card p {
+  font-size:.82rem !important; line-height:1.45 !important;
+  margin:0 !important;
+}
+body.home-page .handyman-section .scope-note {
+  display:grid !important;
+  grid-template-columns:auto minmax(0,1fr) !important;
+  align-items:center !important; gap:.85rem !important;
+  margin-top:1rem !important; padding:.78rem 1rem !important;
+}
+body.home-page .handyman-section .scope-note strong {
+  white-space:nowrap; margin:0 !important;
+}
+body.home-page .handyman-section .scope-note p {
+  margin:0 !important; font-size:.78rem !important;
+  line-height:1.45 !important;
+}
+body.home-page .handyman-section .zoco-maintenance-cta {
+  margin-top:.65rem !important; padding:.83rem 1rem !important;
+  gap:.85rem !important; border-radius:10px;
+}
+body.home-page .handyman-section .zoco-maintenance-cta p {
+  font-size:.82rem !important; line-height:1.45 !important;
+}
+body.home-page .handyman-section .zoco-maintenance-cta .button {
+  min-height:44px; font-size:.81rem; padding:.72rem 1rem;
+}
+@media(max-width:980px) {
+  body.home-page #drain .service-tabs {grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+  body.home-page .handyman-section .handyman-grid {grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+}
+@media(max-width:620px) {
+  body.home-page #drain.page.section {padding-block:2.1rem !important;}
+  body.home-page #drain .section-bar {margin-bottom:.8rem !important;}
+  body.home-page #drain .service-tabs {grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:.55rem !important;}
+  body.home-page #drain a.service-tab {
+    padding:.65rem !important; min-height:174px !important;
+    border-radius:10px !important;
+  }
+  body.home-page #drain a.service-tab strong {
+    font-size:clamp(1rem,4.5vw,1.17rem) !important;
+  }
+  body.home-page #drain a.service-tab .zoco-tab-detail {font-size:.66rem !important;}
+  body.home-page #drain a.service-tab .zoco-tab-action {
+    margin-top:.42rem !important; font-size:.62rem !important;
+  }
+  body.home-page #drain a.service-tab>span:first-child {
+    width:26px !important; height:26px !important;
+    flex-basis:26px; font-size:.6rem !important;
+  }
+  body.home-page .reviews-section .page.section {
+    padding-block:2.35rem !important;
+  }
+  body.home-page .reviews-section .google-map-card {height:265px !important;}
+  body.home-page .zoco-area-showcase__body {
+    padding-top:2.15rem !important; padding-bottom:1.1rem !important;
+  }
+  body.home-page .zoco-area-showcase__map {padding:0;}
+  body.home-page .handyman-section>.page.section {
+    padding-block:2.2rem !important;
+  }
+  body.home-page .handyman-section .handyman-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:.55rem !important;
+  }
+  body.home-page .handyman-section .scope-card {
+    padding:.62rem !important; border-radius:10px !important;
+  }
+  body.home-page .handyman-section .scope-card-image {
+    width:calc(100% + 1.24rem) !important;
+    margin:-.62rem -.62rem .5rem !important;
+    height:79px !important; border-radius:9px 9px 0 0 !important;
+  }
+  body.home-page .handyman-section .scope-card>span {
+    padding:.15rem .3rem !important;
+    font-size:.55rem !important; margin-bottom:.23rem !important;
+  }
+  body.home-page .handyman-section .scope-card h3 {
+    font-size:clamp(.98rem,4.1vw,1.2rem) !important;
+    margin-bottom:.23rem !important;
+  }
+  body.home-page .handyman-section .scope-card p {
+    font-size:.73rem !important; line-height:1.37 !important;
+  }
+  body.home-page .handyman-section .scope-note {
+    display:block !important; padding:.75rem !important;
+  }
+  body.home-page .handyman-section .scope-note strong {
+    display:block !important; margin:0 0 .4rem !important;
+  }
+  body.home-page .handyman-section .zoco-maintenance-cta {
+    flex-direction:column !important; align-items:stretch !important; padding:.83rem !important;
+  }
+  body.home-page .handyman-section .zoco-maintenance-cta .button {
+    width:100%; white-space:normal; text-align:center;
+  }
+}
+@media(max-width:345px) {
+  body.home-page #drain .service-tabs,
+  body.home-page .handyman-section .handyman-grid {
+    grid-template-columns:1fr !important;
+  }
+  body.home-page .handyman-section .scope-card-image {height:118px !important;}
+}
+@media(prefers-reduced-motion:reduce) {
+  body.home-page #drain a.service-tab,
+  body.home-page .handyman-section .scope-card {transition:none !important;}
+}

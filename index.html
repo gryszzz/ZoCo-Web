@@ -48,6 +48,7 @@
   <link rel="stylesheet" href="/site-polish.css?v=1" />
   <link rel="stylesheet" href="/header-lockup.css?v=3" />
   <link rel="stylesheet" href="/area-reviews-20261012.css?v=1" />
+  <link rel="stylesheet" href="/homepage-compact-20261012.css?v=1" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -421,164 +422,30 @@
         <p>Explore drain services and see what each visit can involve. Contact Henry directly to confirm the scope and availability.</p>
       </div>
 
-      <div class="service-console reveal">
-        <div class="service-tabs" role="tablist" aria-label="Drain services">
-          <button class="service-tab active" type="button" data-service="snaking" role="tab" aria-selected="true" aria-controls="zoco-service-panel"><span>01</span><strong>Drain Snaking</strong><em class="zoco-tab-detail">Cable clearing</em><b class="zoco-tab-action" aria-hidden="true">SELECT SERVICE ↗</b></button>
-          <button class="service-tab" type="button" data-service="camera" role="tab" aria-selected="false" aria-controls="zoco-service-panel"><span>02</span><strong>Camera Inspection</strong><em class="zoco-tab-detail">Inspect accessible lines</em><b class="zoco-tab-action" aria-hidden="true">SELECT SERVICE ↗</b></button>
-          <button class="service-tab" type="button" data-service="maintenance" role="tab" aria-selected="false" aria-controls="zoco-service-panel"><span>03</span><strong>Drain Maintenance</strong><em class="zoco-tab-detail">Routine drain care</em><b class="zoco-tab-action" aria-hidden="true">SELECT SERVICE ↗</b></button>
-          <button class="service-tab" type="button" data-service="dryer" role="tab" aria-selected="false" aria-controls="zoco-service-panel"><span>04</span><strong>Dryer Vent Cleaning</strong><em class="zoco-tab-detail">Lint and airflow</em><b class="zoco-tab-action" aria-hidden="true">SELECT SERVICE ↗</b></button>
+      <nav class="service-console reveal" aria-label="Explore drain services">
+        <div class="service-tabs">
+          <a class="service-tab" data-service="snaking" href="/drain-snaking/">
+            <span aria-hidden="true">01</span><strong>Drain Snaking</strong>
+            <em class="zoco-tab-detail">Cable clearing</em>
+            <b class="zoco-tab-action">View service details <span aria-hidden="true">↗</span></b>
+          </a>
+          <a class="service-tab" data-service="camera" href="/camera-inspection/">
+            <span aria-hidden="true">02</span><strong>Camera Inspection</strong>
+            <em class="zoco-tab-detail">Inspect accessible lines</em>
+            <b class="zoco-tab-action">View service details <span aria-hidden="true">↗</span></b>
+          </a>
+          <a class="service-tab" data-service="maintenance" href="/drain-maintenance/">
+            <span aria-hidden="true">03</span><strong>Drain Maintenance</strong>
+            <em class="zoco-tab-detail">Routine drain care</em>
+            <b class="zoco-tab-action">View service details <span aria-hidden="true">↗</span></b>
+          </a>
+          <a class="service-tab" data-service="dryer" href="/dryer-vent-cleaning/">
+            <span aria-hidden="true">04</span><strong>Dryer Vent Cleaning</strong>
+            <em class="zoco-tab-detail">Lint and airflow</em>
+            <b class="zoco-tab-action">View service details <span aria-hidden="true">↗</span></b>
+          </a>
         </div>
-
-        <div class="service-display" id="zoco-service-panel" data-service="snaking" role="tabpanel" aria-live="polite">
-          <div class="display-topline">
-            <span id="serviceCode">SERVICE / 01</span>
-            <span class="status-dot">AVAILABLE</span>
-          </div>
-          <div class="service-copy">
-            <h3 id="serviceTitle">Drain Snaking</h3>
-            <p id="serviceDescription">Cable-based clearing for appropriate accessible drain lines and stubborn stoppages.</p>
-          </div>
-          <figure class="service-art">
-            <img id="serviceImage" src="/assets/services/drain-snaking.avif" alt="Professional cable auger and steel drain snake entering a drain cleanout" fetchpriority="high" />
-          </figure>
-          <div class="display-footer">
-            <a href="tel:+19738289723">Call about this service</a>
-            <a class="zoco-service-learn" id="serviceLearn" href="/drain-snaking/">View service details ↗</a>
-            <span>973-828-9723</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="handyman" class="handyman-section">
-      <div class="page section">
-        <div class="section-bar light-mode reveal">
-          <div>
-            <p class="kicker">HOME MAINTENANCE / PRACTICAL LOCAL HELP</p>
-            <h2>Small work. Serious attention.</h2>
-          </div>
-          <p>Home upkeep, hardware, finishes and minor non-structural tasks. Henry confirms the job scope and availability before scheduling.</p>
-        </div>
-
-        <div class="handyman-grid">
-          <article class="scope-card reveal" id="handyman-paint-walls">
-            <img class="scope-card-image" src="/assets/handyman/paint-walls.jpg" alt="Paint roller and wall-patching tools beside a freshly patched wall" loading="lazy" />
-            <span>01</span>
-            <h3>Paint & Walls</h3>
-            <p>Interior / exterior painting, patching small holes, drywall cracks and nail pops.</p>
-          </article>
-          <article class="scope-card reveal" id="handyman-carpentry">
-            <img class="scope-card-image" src="/assets/handyman/carpentry.jpg" alt="Baseboard trim with a measuring tape, carpenter's pencil and caulk gun" loading="lazy" />
-            <span>02</span>
-            <h3>Carpentry</h3>
-            <p>Install trim, baseboards, shelving, curtain rods and cabinet hardware. Non-structural only.</p>
-          </article>
-          <article class="scope-card reveal" id="handyman-general-maintenance">
-            <img class="scope-card-image" src="/assets/handyman/gutter-maintenance.jpg" alt="Roof-level view of leaves in a residential gutter" loading="lazy" />
-            <span>03</span>
-            <h3>General Maintenance</h3>
-            <p>Gutter cleaning, furniture assembly and closet-system installation with no structural changes.</p>
-          </article>
-          <article class="scope-card reveal" id="handyman-hardware">
-            <img class="scope-card-image" src="/assets/handyman/tv-wall-mount.jpg" alt="Technician using a drill and level to install a TV wall mount" loading="lazy" />
-            <span>04</span>
-            <h3>Hardware</h3>
-            <p>Door knobs, deadbolts, storm doors with no reframing, and TV-mount installation.</p>
-          </article>
-          <article class="scope-card reveal" id="handyman-finishes">
-            <img class="scope-card-image" src="/assets/handyman/tile-finishes.jpg" alt="Fresh grout and finishing tools on bathroom tile" loading="lazy" />
-            <span>05</span>
-            <h3>Finishes</h3>
-            <p>Re-grout tile, caulk tubs and windows, and stain or seal decks. Non-structural only.</p>
-          </article>
-          <article class="scope-card reveal" id="handyman-ordinary-maintenance">
-            <img class="scope-card-image" src="/assets/handyman/ordinary-maintenance.jpg?v=2" alt="Maintenance technician installing door hardware with a screwdriver" loading="lazy" />
-            <span>06</span>
-            <h3>Ordinary Maintenance</h3>
-            <p>Minor household fixture and hardware swaps only where the work does not require a separate trade license or permit.</p>
-          </article>
-        </div>
-
-        <div class="scope-note reveal">
-          <strong>Scope note</strong>
-          <p>ZoCo limits handyman work to non-structural or ordinary-maintenance tasks that do not require a separate licensed trade or permit. If a requested job falls outside that scope, it is not offered through the handyman side.</p>
-        </div>
-        <div class="zoco-maintenance-cta reveal">
-          <p>Have a small home maintenance task? Describe what needs attention and Henry can confirm whether it is within ZoCo's offered scope.</p>
-          <a class="button button-secondary" href="sms:+19738289723">Text Henry about maintenance ↗</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="zoco-owner-section" id="owner-card" aria-labelledby="zoco-owner-title">
-      <div class="page">
-        <div class="zoco-owner-heading reveal">
-          <p class="kicker">YOUR LOCAL POINT OF CONTACT</p>
-          <h2 id="zoco-owner-title">Meet the owner behind ZoCo.</h2>
-          <p>Direct communication, clear scheduling, and a local business based in Highland Lakes, NJ.</p>
-        </div>
-        <div class="zoco-owner-card reveal">
-          <div class="zoco-owner-art">
-            <span class="zoco-owner-art-caption">THE PEOPLE &amp; PAWS BEHIND ZOCO</span>
-            <img src="/assets/brand/zoco-mascot-hero.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="ZoCo's two black-and-white dog mascots with orange bandanas, drain snake equipment and blue water" />
-            <span class="zoco-owner-art-location">HIGHLAND LAKES <span aria-hidden="true">·</span> NEW JERSEY</span>
-          </div>
-          <div class="zoco-owner-details">
-            <span class="zoco-owner-label"><span class="zoco-owner-label-dot" aria-hidden="true"></span>OWNER OPERATED <span aria-hidden="true">/</span> LOCAL SERVICE</span>
-            <h3>Henry Nowinski</h3>
-            <p class="zoco-owner-company">ZoCo Drain &amp; Sewer LLC</p>
-            <p class="zoco-owner-location">Serving Sussex &amp; Passaic counties, NJ</p>
-            <div class="zoco-owner-contact-intro">CONNECT DIRECTLY WITH HENRY</div>
-            <div class="zoco-owner-actions" aria-label="Contact Henry">
-              <a class="zoco-owner-action zoco-owner-action-call" href="tel:+19738289723"><span class="zoco-owner-action-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.2 19.2 0 0 1-6-6 19.6 19.6 0 0 1-3-8.5A2 2 0 0 1 4.3 2h3a2 2 0 0 1 2 1.7c.13.96.37 1.9.71 2.8a2 2 0 0 1-.45 2.11L8.3 9.87a16 16 0 0 0 5.84 5.84l1.26-1.26a2 2 0 0 1 2.11-.45c.9.34 1.84.58 2.8.71A2 2 0 0 1 22 16.9z"/></svg></span><span class="zoco-owner-action-text"><strong>Call Henry</strong><small>973-828-9723</small></span><span class="zoco-owner-action-arrow" aria-hidden="true">↗</span></a>
-              <a class="zoco-owner-action zoco-owner-action-texting" href="sms:+19738289723"><span class="zoco-owner-action-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8A8.5 8.5 0 0 1 12.5 20a8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 3.9 8.4 8.4 0 0 1 12.5 3h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg></span><span class="zoco-owner-action-text"><strong>Text for estimate</strong><small>Message directly</small></span><span class="zoco-owner-action-arrow" aria-hidden="true">↗</span></a>
-              <a class="zoco-owner-action zoco-owner-action-secondary" href="mailto:zoco.drain@gmail.com"><span class="zoco-owner-action-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><span class="zoco-owner-action-text"><strong>Send an email</strong><small>Contact ZoCo</small></span><span class="zoco-owner-action-arrow" aria-hidden="true">↗</span></a>
-              <a class="zoco-owner-action zoco-owner-action-secondary" href="https://dot.cards/zoco" target="_blank" rel="noopener noreferrer"><span class="zoco-owner-action-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></span><span class="zoco-owner-action-text"><strong>Digital business card</strong><small>Save Henry's contact</small></span><span class="zoco-owner-action-arrow" aria-hidden="true">↗</span></a>
-            </div>
-            <nav class="zoco-owner-social" aria-label="ZoCo social profiles and service area">
-              <a href="https://www.instagram.com/zoco_drains/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg><span>Instagram</span><span aria-hidden="true">↗</span></a>
-              <a href="https://www.facebook.com/share/1E54mnJZsT/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.3A24 24 0 0 0 15.2 1C12.4 1 10.5 2.7 10.5 5.7V9H8v4h2.5v9"/></svg><span>Facebook</span><span aria-hidden="true">↗</span></a>
-              <a href="/service-area/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Service area</span><span aria-hidden="true">↗</span></a>
-            </nav>
-            <p class="zoco-owner-hic">NJ Home Improvement Contractor Registration <strong>#13VH14301500</strong></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="offers" class="page section">
-      <div class="section-bar reveal">
-        <div>
-          <p class="kicker">CURRENT OFFERS</p>
-          <h2>Coupons</h2>
-        </div>
-        <p>Residential only. Present the offer at the time of service.</p>
-      </div>
-
-      <div class="offers-grid">
-        <article class="offer-card reveal">
-          <span class="offer-code">OFFER / 01</span>
-          <div class="offer-value">20% OFF</div>
-          <h3>Drain Cleaning</h3>
-          <a href="tel:+19738289723">Call to use offer ↗</a>
-        </article>
-        <article class="offer-card inverse reveal">
-          <span class="offer-code">OFFER / 02</span>
-          <div class="offer-value">FREE</div>
-          <h3>Camera Inspection</h3>
-          <a href="tel:+19738289723">Call to use offer ↗</a>
-        </article>
-        <article class="offer-card reveal">
-          <span class="offer-code">OFFER / 03</span>
-          <div class="offer-value">15% OFF</div>
-          <h3>Service Call</h3>
-          <a href="tel:+19738289723">Call to use offer ↗</a>
-        </article>
-      </div>
-
-      <div class="offer-terms reveal">
-        Residential only. Coupons do not stack and must be presented at time of service. Cleanout must be readily accessible for camera service and covers one cleanout up to 120 ft. One per residence. Expires 12/31/2026.
-      </div>
+      </nav>
     </section>
 
     <section id="reviews" class="reviews-section">
@@ -721,6 +588,137 @@
           <span class="county-pin-icon" aria-hidden="true"></span>
           <span><strong>Passaic County</strong><small>Ringwood, West Milford, Wanaque, Wayne and surrounding communities.</small></span>
         </a>
+      </div>
+    </section>
+
+    <section id="handyman" class="handyman-section">
+      <div class="page section">
+        <div class="section-bar light-mode reveal">
+          <div>
+            <p class="kicker">HOME MAINTENANCE / PRACTICAL LOCAL HELP</p>
+            <h2>Small work. Serious attention.</h2>
+          </div>
+          <p>Home upkeep, hardware, finishes and minor non-structural tasks. Henry confirms the job scope and availability before scheduling.</p>
+        </div>
+
+        <div class="handyman-grid">
+          <article class="scope-card reveal" id="handyman-paint-walls">
+            <img class="scope-card-image" src="/assets/handyman/paint-walls.jpg" alt="Paint roller and wall-patching tools beside a freshly patched wall" loading="lazy" />
+            <span>01</span>
+            <h3>Paint & Walls</h3>
+            <p>Painting and small patches for holes, cracks and nail pops.</p>
+          </article>
+          <article class="scope-card reveal" id="handyman-carpentry">
+            <img class="scope-card-image" src="/assets/handyman/carpentry.jpg" alt="Baseboard trim with a measuring tape, carpenter's pencil and caulk gun" loading="lazy" />
+            <span>02</span>
+            <h3>Carpentry</h3>
+            <p>Trim, shelving, curtain rods and cabinet hardware. Non-structural only.</p>
+          </article>
+          <article class="scope-card reveal" id="handyman-general-maintenance">
+            <img class="scope-card-image" src="/assets/handyman/gutter-maintenance.jpg" alt="Roof-level view of leaves in a residential gutter" loading="lazy" />
+            <span>03</span>
+            <h3>General Maintenance</h3>
+            <p>Gutter cleaning, assembly and closet systems. No structural changes.</p>
+          </article>
+          <article class="scope-card reveal" id="handyman-hardware">
+            <img class="scope-card-image" src="/assets/handyman/tv-wall-mount.jpg" alt="Technician using a drill and level to install a TV wall mount" loading="lazy" />
+            <span>04</span>
+            <h3>Hardware</h3>
+            <p>Door hardware, storm doors without reframing and TV mounts.</p>
+          </article>
+          <article class="scope-card reveal" id="handyman-finishes">
+            <img class="scope-card-image" src="/assets/handyman/tile-finishes.jpg" alt="Fresh grout and finishing tools on bathroom tile" loading="lazy" />
+            <span>05</span>
+            <h3>Finishes</h3>
+            <p>Re-grouting, caulking and deck staining or sealing. Non-structural only.</p>
+          </article>
+          <article class="scope-card reveal" id="handyman-ordinary-maintenance">
+            <img class="scope-card-image" src="/assets/handyman/ordinary-maintenance.jpg?v=2" alt="Maintenance technician installing door hardware with a screwdriver" loading="lazy" />
+            <span>06</span>
+            <h3>Ordinary Maintenance</h3>
+            <p>Minor fixture and hardware swaps where no separate trade license or permit is required.</p>
+          </article>
+        </div>
+
+        <div class="scope-note reveal">
+          <strong>Scope note</strong>
+          <p>ZoCo limits handyman work to non-structural or ordinary-maintenance tasks that do not require a separate licensed trade or permit. If a requested job falls outside that scope, it is not offered through the handyman side.</p>
+        </div>
+        <div class="zoco-maintenance-cta reveal">
+          <p>Have a small home maintenance task? Describe what needs attention and Henry can confirm whether it is within ZoCo's offered scope.</p>
+          <a class="button button-secondary" href="sms:+19738289723">Text Henry about maintenance ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="zoco-owner-section" id="owner-card" aria-labelledby="zoco-owner-title">
+      <div class="page">
+        <div class="zoco-owner-heading reveal">
+          <p class="kicker">YOUR LOCAL POINT OF CONTACT</p>
+          <h2 id="zoco-owner-title">Meet the owner behind ZoCo.</h2>
+          <p>Direct communication, clear scheduling, and a local business based in Highland Lakes, NJ.</p>
+        </div>
+        <div class="zoco-owner-card reveal">
+          <div class="zoco-owner-art">
+            <span class="zoco-owner-art-caption">THE PEOPLE &amp; PAWS BEHIND ZOCO</span>
+            <img src="/assets/brand/zoco-mascot-hero.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="ZoCo's two black-and-white dog mascots with orange bandanas, drain snake equipment and blue water" />
+            <span class="zoco-owner-art-location">HIGHLAND LAKES <span aria-hidden="true">·</span> NEW JERSEY</span>
+          </div>
+          <div class="zoco-owner-details">
+            <span class="zoco-owner-label"><span class="zoco-owner-label-dot" aria-hidden="true"></span>OWNER OPERATED <span aria-hidden="true">/</span> LOCAL SERVICE</span>
+            <h3>Henry Nowinski</h3>
+            <p class="zoco-owner-company">ZoCo Drain &amp; Sewer LLC</p>
+            <p class="zoco-owner-location">Serving Sussex &amp; Passaic counties, NJ</p>
+            <div class="zoco-owner-contact-intro">CONNECT DIRECTLY WITH HENRY</div>
+            <div class="zoco-owner-actions" aria-label="Contact Henry">
+              <a class="zoco-owner-action zoco-owner-action-call" href="tel:+19738289723"><span class="zoco-owner-action-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.2 19.2 0 0 1-6-6 19.6 19.6 0 0 1-3-8.5A2 2 0 0 1 4.3 2h3a2 2 0 0 1 2 1.7c.13.96.37 1.9.71 2.8a2 2 0 0 1-.45 2.11L8.3 9.87a16 16 0 0 0 5.84 5.84l1.26-1.26a2 2 0 0 1 2.11-.45c.9.34 1.84.58 2.8.71A2 2 0 0 1 22 16.9z"/></svg></span><span class="zoco-owner-action-text"><strong>Call Henry</strong><small>973-828-9723</small></span><span class="zoco-owner-action-arrow" aria-hidden="true">↗</span></a>
+              <a class="zoco-owner-action zoco-owner-action-texting" href="sms:+19738289723"><span class="zoco-owner-action-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8A8.5 8.5 0 0 1 12.5 20a8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 3.9 8.4 8.4 0 0 1 12.5 3h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg></span><span class="zoco-owner-action-text"><strong>Text for estimate</strong><small>Message directly</small></span><span class="zoco-owner-action-arrow" aria-hidden="true">↗</span></a>
+              <a class="zoco-owner-action zoco-owner-action-secondary" href="mailto:zoco.drain@gmail.com"><span class="zoco-owner-action-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><span class="zoco-owner-action-text"><strong>Send an email</strong><small>Contact ZoCo</small></span><span class="zoco-owner-action-arrow" aria-hidden="true">↗</span></a>
+              <a class="zoco-owner-action zoco-owner-action-secondary" href="https://dot.cards/zoco" target="_blank" rel="noopener noreferrer"><span class="zoco-owner-action-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></span><span class="zoco-owner-action-text"><strong>Digital business card</strong><small>Save Henry's contact</small></span><span class="zoco-owner-action-arrow" aria-hidden="true">↗</span></a>
+            </div>
+            <nav class="zoco-owner-social" aria-label="ZoCo social profiles and service area">
+              <a href="https://www.instagram.com/zoco_drains/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg><span>Instagram</span><span aria-hidden="true">↗</span></a>
+              <a href="https://www.facebook.com/share/1E54mnJZsT/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.3A24 24 0 0 0 15.2 1C12.4 1 10.5 2.7 10.5 5.7V9H8v4h2.5v9"/></svg><span>Facebook</span><span aria-hidden="true">↗</span></a>
+              <a href="/service-area/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Service area</span><span aria-hidden="true">↗</span></a>
+            </nav>
+            <p class="zoco-owner-hic">NJ Home Improvement Contractor Registration <strong>#13VH14301500</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="offers" class="page section">
+      <div class="section-bar reveal">
+        <div>
+          <p class="kicker">CURRENT OFFERS</p>
+          <h2>Coupons</h2>
+        </div>
+        <p>Residential only. Present the offer at the time of service.</p>
+      </div>
+
+      <div class="offers-grid">
+        <article class="offer-card reveal">
+          <span class="offer-code">OFFER / 01</span>
+          <div class="offer-value">20% OFF</div>
+          <h3>Drain Cleaning</h3>
+          <a href="tel:+19738289723">Call to use offer ↗</a>
+        </article>
+        <article class="offer-card inverse reveal">
+          <span class="offer-code">OFFER / 02</span>
+          <div class="offer-value">FREE</div>
+          <h3>Camera Inspection</h3>
+          <a href="tel:+19738289723">Call to use offer ↗</a>
+        </article>
+        <article class="offer-card reveal">
+          <span class="offer-code">OFFER / 03</span>
+          <div class="offer-value">15% OFF</div>
+          <h3>Service Call</h3>
+          <a href="tel:+19738289723">Call to use offer ↗</a>
+        </article>
+      </div>
+
+      <div class="offer-terms reveal">
+        Residential only. Coupons do not stack and must be presented at time of service. Cleanout must be readily accessible for camera service and covers one cleanout up to 120 ft. One per residence. Expires 12/31/2026.
       </div>
     </section>
 
