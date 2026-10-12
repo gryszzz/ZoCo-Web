@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820" role="img" aria-label="Dark industrial drain equipment background">
+<defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#182026"/><stop offset=".42" stop-color="#10181c"/><stop offset="1" stop-color="#0a1016"/></linearGradient>
+<linearGradient id="steel" x2="1"><stop stop-color="#11171a"/><stop offset=".18" stop-color="#46535c"/><stop offset=".3" stop-color="#20282e"/><stop offset=".55" stop-color="#11181c"/><stop offset=".8" stop-color="#465059"/><stop offset="1" stop-color="#11191d"/></linearGradient>
+<linearGradient id="orange" x2="0" y2="1"><stop stop-color="#ff9e42"/><stop offset=".42" stop-color="#db5813"/><stop offset="1" stop-color="#683015"/></linearGradient>
+<radialGradient id="ambient"><stop stop-color="#ff6f19" stop-opacity=".28"/><stop offset="1" stop-color="#ff6f19" stop-opacity="0"/></radialGradient>
+<radialGradient id="blue"><stop stop-color="#10aee3" stop-opacity=".22"/><stop offset="1" stop-color="#10aee3" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="74" height="74" patternUnits="userSpaceOnUse"><path d="M74 0H0V74" fill="none" stroke="#b1c6d0" stroke-opacity=".055" stroke-width="1"/></pattern>
+<pattern id="scratches" width="220" height="120" patternUnits="userSpaceOnUse"><path d="M15 12h50m62 83h49M61 63h32" stroke="#e3edf2" stroke-opacity=".037" stroke-width="1"/></pattern>
+<filter id="blur"><feGaussianBlur stdDeviation="33"/></filter>
+</defs>
+<path fill="url(#bg)" d="M0 0h1600v820H0z"/><path fill="url(#grid)" d="M0 0h1600v820H0z"/><path fill="url(#scratches)" d="M0 0h1600v820H0z"/>
+<ellipse cx="130" cy="250" rx="550" ry="480" fill="url(#ambient)"/>
+<ellipse cx="1450" cy="430" rx="430" ry="370" fill="url(#blue)"/>
+<!-- Structural steel drain downpipe, kept subtle behind text -->
+<g opacity=".39">
+<path d="M102 0v338q0 70 70 70h105" fill="none" stroke="#020405" stroke-width="86" stroke-linecap="round"/>
+<path d="M102 0v338q0 70 70 70h105" fill="none" stroke="url(#steel)" stroke-width="65" stroke-linecap="round"/>
+<path d="M102 0v338q0 70 70 70h105" fill="none" stroke="#9ba8ac" stroke-opacity=".12" stroke-width="3"/>
+<path d="M63 136h78v42H63zm0 160h78v42H63z" fill="url(#steel)" stroke="#62727c" stroke-opacity=".65" stroke-width="2"/>
+<g fill="#8f9da6"><circle cx="78" cy="150" r="4"/><circle cx="123" cy="150" r="4"/><circle cx="78" cy="326" r="4"/><circle cx="123" cy="326" r="4"/></g>
+</g>
+<!-- Pipe end/blue flow graphic, restrained and positioned to the far right -->
+<g opacity=".38">
+<path d="M1625 203h-185q-84 0-84 84v139" fill="none" stroke="#070c0e" stroke-width="96"/>
+<path d="M1625 203h-185q-84 0-84 84v139" fill="none" stroke="url(#steel)" stroke-width="76"/>
+<ellipse cx="1356" cy="427" rx="53" ry="17" fill="#101b22" stroke="#657581" stroke-width="9"/>
+<ellipse cx="1356" cy="430" rx="39" ry="9" fill="#07344c"/>
+<path d="M1326 439q-34 40 3 88t21 92m20-173q58 44 24 90t-18 80" fill="none" stroke="#28adf1" stroke-opacity=".7" stroke-width="6" stroke-linecap="round"/>
+<circle cx="1407" cy="549" r="5" fill="#38d2ff"/><circle cx="1317" cy="570" r="4" fill="#38d2ff"/>
+</g>
+<path d="M0 779h1600" stroke="url(#orange)" stroke-opacity=".62" stroke-width="2"/>
+<path d="M0 785h1600" stroke="#fa661b" stroke-opacity=".12" stroke-width="10" filter="url(#blur)"/>
+</svg>
