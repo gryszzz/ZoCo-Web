@@ -1,0 +1,250 @@
+/* ZoCo county directories: complete official municipal listings + direct contact. */
+body.zoco-county-directory-page{
+  margin:0;color:#f1f6f8;background:#09131a;
+}
+body.zoco-county-directory-page *,
+body.zoco-county-directory-page *::before,
+body.zoco-county-directory-page *::after {box-sizing:border-box}
+body.zoco-county-directory-page .zoco-county-topbar {
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;min-height:87px;
+  background:#070d13;border-bottom:1px solid rgba(255,138,49,.57);
+  padding:.5rem clamp(.8rem,2.2vw,2rem);
+}
+body.zoco-county-directory-page .zoco-county-topbar__brand img {
+  display:block;width:clamp(182px,21vw,255px);
+  height:70px;object-fit:contain;object-position:left center;
+}
+body.zoco-county-directory-page .zoco-county-topbar nav {
+  display:flex;flex-wrap:wrap;align-items:center;gap:clamp(.7rem,2vw,1.7rem);
+}
+body.zoco-county-directory-page .zoco-county-topbar nav a {
+  text-decoration:none;color:#ebf0f4;
+  font-size:.86rem;font-weight:800;white-space:nowrap;
+}
+body.zoco-county-directory-page .zoco-county-topbar nav a:hover {color:#ffb17a}
+body.zoco-county-directory-page .zoco-county-topbar__contact {
+  border:1px solid rgba(255,159,78,.75);
+  padding:.7rem .95rem;border-radius:9px;
+  background:linear-gradient(125deg,#ff912f,#f05b16);
+}
+body.zoco-county-directory-page .zoco-county-topbar__contact:hover {color:white!important;filter:brightness(1.07)}
+body.zoco-county-directory-page a:focus-visible,
+body.zoco-county-directory-page button:focus-visible,
+body.zoco-county-directory-page input:focus-visible {
+  outline:3px solid #ffbd83!important;outline-offset:3px!important;
+}
+body.zoco-county-directory-page .seo-page.zoco-county-page__main {
+  box-sizing:border-box;
+  max-width:1200px!important;width:calc(100% - clamp(2rem,6vw,6rem))!important;
+  padding:clamp(2.4rem,4.5vw,5rem) 0 clamp(3rem,6vw,6rem)!important;
+}
+body.zoco-county-directory-page .zoco-county-breadcrumbs {
+  display:flex;align-items:center;flex-wrap:wrap;gap:.55rem;
+  margin:0 0 1.6rem;color:#aab8c1;font-size:.78rem;letter-spacing:.03em;
+}
+body.zoco-county-directory-page .zoco-county-breadcrumbs a {
+  color:#ffb17f;text-decoration:none;
+}
+body.zoco-county-directory-page .zoco-county-hero {
+  margin:0 0 clamp(1.7rem,3vw,3rem);
+  padding:clamp(1.4rem,4vw,3.1rem);
+  position:relative;isolation:isolate;overflow:hidden;
+  border:1px solid rgba(255,137,53,.45);border-radius:15px;
+  background:
+    radial-gradient(ellipse at 90% 10%,rgba(255,142,46,.15),transparent 45%),
+    linear-gradient(100deg,rgba(5,13,19,.97),rgba(7,19,26,.9) 62%,rgba(7,15,20,.66)),
+    url("/assets/brand/zoco-service-area-sunset.jpg") center/cover no-repeat;
+  box-shadow:0 12px 35px rgba(0,0,0,.35);
+}
+body.zoco-county-directory-page .zoco-county-hero .seo-kicker {
+  color:#ffa15e!important;font-size:.75rem!important;
+  font-weight:850;letter-spacing:.19em;
+  margin:0 0 .75rem;
+}
+body.zoco-county-directory-page .zoco-county-hero h1 {
+  color:#fff!important;
+  font-family:Impact,"Arial Narrow",sans-serif;
+  font-size:clamp(2.7rem,5vw,5.5rem)!important;
+  text-transform:uppercase;line-height:1.02!important;
+  max-width:790px;margin:.25rem 0 1.1rem!important;
+  letter-spacing:.01em;text-shadow:0 3px 12px #0008;
+}
+body.zoco-county-directory-page .zoco-county-hero h1 span{color:#ff9250}
+body.zoco-county-directory-page .zoco-county-hero>p:not(.seo-kicker) {
+  font-size:clamp(.97rem,1.18vw,1.12rem)!important;
+  line-height:1.65;max-width:740px;color:#e5eaf0;
+  margin:0 0 1.3rem;
+}
+body.zoco-county-directory-page .zoco-county-hero .seo-actions {
+  display:flex;flex-wrap:wrap;gap:.82rem;
+  margin:1.25rem 0 0!important;
+}
+body.zoco-county-directory-page .zoco-county-hero .seo-actions a {
+  display:inline-flex!important;align-items:center;justify-content:center;
+  min-height:49px;flex:0 1 auto;padding:.72rem 1.15rem;
+  font-size:.88rem;line-height:1.25;white-space:normal;
+  border-radius:9px;text-align:center;
+}
+body.zoco-county-directory-page .zoco-town-directory {
+  position:relative;
+  border:1px solid rgba(255,152,79,.35);
+  border-radius:16px;overflow:hidden;
+  background:
+    linear-gradient(153deg,rgba(17,30,38,.96),rgba(5,14,22,.98)),
+    url("/assets/brand/zoco-photo-industrial-panel.avif") center/cover no-repeat;
+  box-shadow:0 15px 33px rgba(0,0,0,.28);
+  margin:0 0 clamp(1.7rem,3vw,3rem);
+}
+body.zoco-county-directory-page .zoco-town-directory__top {
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:1.1rem;flex-wrap:wrap;
+  padding:clamp(1.25rem,3vw,2rem);
+  border-bottom:1px solid rgba(255,170,91,.23);
+}
+body.zoco-county-directory-page .zoco-town-directory__eyebrow {
+  color:#ffab74;font-size:.75rem;letter-spacing:.17em;
+  font-weight:850;margin:0 0 .5rem!important;
+}
+body.zoco-county-directory-page .zoco-town-directory h2 {
+  font-family:Impact,"Arial Narrow",sans-serif;
+  color:#fff!important;
+  font-size:clamp(1.9rem,3vw,3.05rem)!important;
+  line-height:1.1;text-transform:uppercase;
+  margin:0!important;
+}
+body.zoco-county-directory-page .zoco-town-directory__top p:not(.zoco-town-directory__eyebrow){
+  color:#c6d5dd;font-size:.88rem;line-height:1.55;
+  max-width:640px;margin:.65rem 0 0;
+}
+body.zoco-county-directory-page .zoco-town-search {
+  display:flex;align-items:center;gap:.65rem;
+  min-width:min(100%,245px);
+  border:1px solid rgba(255,156,78,.5);border-radius:9px;
+  padding:.45rem .68rem;background:rgba(2,8,14,.72);
+}
+body.zoco-county-directory-page .zoco-town-search svg{
+  flex:0 0 19px;width:19px;height:19px;color:#ffad6b;
+}
+body.zoco-county-directory-page .zoco-town-search input {
+  display:block;min-width:0;width:100%;border:0;outline:0!important;
+  padding:.3rem;background:transparent;
+  color:#fff;font:inherit;font-size:.89rem;
+}
+body.zoco-county-directory-page .zoco-town-search input::placeholder{color:#9baab4}
+body.zoco-county-directory-page .zoco-town-directory__list {
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:.65rem;padding:clamp(1rem,2.3vw,1.65rem);
+}
+body.zoco-county-directory-page .zoco-town-directory__list button {
+  display:flex;justify-content:space-between;align-items:center;
+  gap:.55rem;text-align:left;
+  font:750 clamp(.76rem,.95vw,.89rem)/1.35 system-ui,-apple-system,sans-serif;
+  color:#e4edf2;min-height:49px;min-width:0;
+  padding:.65rem .73rem;
+  border:1px solid rgba(192,210,221,.17);border-radius:9px;
+  background:rgba(17,29,38,.9);
+  cursor:pointer;appearance:none;
+  transition:border-color .17s ease,background .17s ease;
+}
+body.zoco-county-directory-page .zoco-town-directory__list button span:last-child {
+  color:#ffa15a;font-size:1.04rem;flex:0 0 auto;
+}
+body.zoco-county-directory-page .zoco-town-directory__list button:hover,
+body.zoco-county-directory-page .zoco-town-directory__list button[aria-pressed="true"] {
+  border-color:#ff9a50;background:rgba(65,39,27,.63);
+}
+body.zoco-county-directory-page .zoco-town-directory__list button[hidden]{display:none!important}
+body.zoco-county-directory-page .zoco-town-directory__empty{
+  padding:0 1.65rem 1rem;color:#e9c09f;margin:0;font-size:.86rem;
+}
+body.zoco-county-directory-page .zoco-town-directory__empty[hidden]{display:none!important}
+body.zoco-county-directory-page .zoco-town-contact{
+  margin:0;padding:1rem clamp(1rem,2.3vw,1.65rem);
+  border-top:1px solid rgba(255,147,66,.33);
+  background:rgba(3,10,15,.92);
+  display:flex;gap:1rem;align-items:center;justify-content:space-between;
+}
+body.zoco-county-directory-page .zoco-town-contact__copy strong {
+  display:block;color:#fff;font-size:1.03rem;
+}
+body.zoco-county-directory-page .zoco-town-contact__copy p {
+  color:#c3d0d8;font-size:.79rem;line-height:1.5;margin:.2rem 0 0;
+}
+body.zoco-county-directory-page .zoco-town-contact__actions {
+  flex:0 0 auto;display:flex;gap:.6rem;
+}
+body.zoco-county-directory-page .zoco-town-contact__actions a {
+  min-height:44px;padding:.7rem 1rem;
+  border-radius:9px;text-align:center;font-size:.79rem;line-height:1.3;
+  font-weight:850;text-decoration:none!important;
+  display:inline-flex;align-items:center;justify-content:center;
+  color:#fff;border:1px solid rgba(255,160,85,.69);
+  background:rgba(15,24,30,.95);
+}
+body.zoco-county-directory-page .zoco-town-contact__actions a:first-child{
+  background:linear-gradient(115deg,#ff9433,#ff6219);
+}
+body.zoco-county-directory-page .zoco-town-directory__note {
+  color:#b6c6d0;font-size:.75rem;line-height:1.55;
+  padding:1.05rem clamp(1rem,2.3vw,1.65rem);
+  border-top:1px solid rgba(255,255,255,.11);margin:0;
+}
+body.zoco-county-directory-page .zoco-town-directory__note a{
+  color:#ffb27a;text-decoration:underline;text-underline-offset:2px;
+}
+body.zoco-county-directory-page .zoco-county-details {
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:1rem;margin:0 0 2rem;
+}
+body.zoco-county-directory-page .zoco-county-details section {
+  padding:clamp(1.2rem,2.4vw,1.75rem);
+  border-radius:12px;border:1px solid rgba(255,159,86,.2);
+  background:linear-gradient(145deg,rgba(19,32,41,.92),rgba(7,15,21,.98));
+}
+body.zoco-county-directory-page .zoco-county-details h2{
+  color:#f5f7f9;font-size:clamp(1.4rem,2.2vw,2.2rem)!important;
+  line-height:1.13;margin:0 0 .85rem!important;
+}
+body.zoco-county-directory-page .zoco-county-details h3{
+  color:#ffaf7b;margin:.7rem 0 .2rem!important;font-size:1.08rem;
+}
+body.zoco-county-directory-page .zoco-county-details p {
+  color:#d3dee5;font-size:.9rem;line-height:1.72;margin:.4rem 0 1rem;
+}
+body.zoco-county-directory-page .seo-links{
+  gap:.85rem;margin-top:1.35rem;display:flex;flex-wrap:wrap;
+}
+body.zoco-county-directory-page .seo-links a{
+  display:inline-flex;min-height:43px;
+  padding:.68rem .86rem;border:1px solid rgba(255,139,55,.36);
+  border-radius:7px;color:#ffb47e;font-size:.83rem;
+  align-items:center;text-decoration:none!important;
+}
+body.zoco-county-directory-page .seo-links a:hover{background:rgba(255,120,35,.1)}
+@media(max-width:950px){
+  body.zoco-county-directory-page .zoco-town-directory__list{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:730px){
+  body.zoco-county-directory-page .zoco-county-details{grid-template-columns:1fr}
+  body.zoco-county-directory-page .zoco-town-directory__list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body.zoco-county-directory-page .zoco-town-directory__top{align-items:stretch}
+  body.zoco-county-directory-page .zoco-town-search{width:100%}
+  body.zoco-county-directory-page .zoco-town-contact{flex-direction:column;align-items:stretch}
+  body.zoco-county-directory-page .zoco-town-contact__actions a{flex:1;min-width:0}
+  body.zoco-county-directory-page .zoco-county-topbar{min-height:76px}
+  body.zoco-county-directory-page .zoco-county-topbar__brand img{width:min(47vw,195px);height:59px}
+  body.zoco-county-directory-page .zoco-county-topbar nav{gap:.6rem}
+  body.zoco-county-directory-page .zoco-county-topbar nav a:not(.zoco-county-topbar__contact){display:none}
+  body.zoco-county-directory-page .zoco-county-hero .seo-actions{flex-direction:column}
+  body.zoco-county-directory-page .zoco-county-hero .seo-actions a{width:100%;max-width:none}
+}
+@media(max-width:390px){
+  body.zoco-county-directory-page .zoco-town-directory__list{gap:.46rem;padding:.73rem}
+  body.zoco-county-directory-page .zoco-town-directory__list button{padding:.6rem .5rem;font-size:.72rem}
+  body.zoco-county-directory-page .zoco-town-contact__actions{flex-wrap:wrap}
+  body.zoco-county-directory-page .zoco-town-contact__actions a{padding:.6rem .7rem}
+}
+@media(prefers-reduced-motion:reduce){
+  body.zoco-county-directory-page .zoco-town-directory__list button{transition:none!important}
+}
