@@ -236,9 +236,13 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before{
    rows and their separators continue spanning the full hero width.
    Do not center/alter the mobile layouts. */
 @media(min-width:661px) {
-  /* Keep the 3 rows centered and trim excessive desktop vertical height.
-     The final blue hairline directly meets the orange section divider. */
+  /* Desktop keeps the slim stacked rows, but within a narrower centered rail.
+     Mobile full-bleed rows use their own breakpoint below. */
   body.home-page .hero .zoco-hero-pathways {
+    width:min(820px, calc(100% - 2.5rem))!important;
+    max-width:820px!important;
+    min-width:0!important;
+    margin-inline:auto!important;
     padding-bottom:0!important;
     row-gap:0!important;
   }
@@ -303,14 +307,14 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before{
     min-width:0!important;
     margin:0!important;
     gap:0!important;
-    padding:.3rem 0 .35rem!important;
+    padding:.3rem 0 0!important;
     border-top:0!important;
     border-bottom:1px solid rgba(238,130,48,.43)!important;
   }
   body.home-page .hero .zoco-hero-pathways__card{
     width:100%!important;
     min-width:0!important;
-    min-height:76px!important;
+    min-height:70px!important;
     margin:0!important;
     border-top:0!important;
     border-left:0!important;
@@ -318,8 +322,8 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before{
     border-bottom:1px solid rgba(111,166,195,.43)!important;
     border-radius:0!important;
     box-shadow:none!important;
-    padding:.48rem 1.08rem!important;
-    gap:.72rem!important;
+    padding:.4rem 1rem!important;
+    gap:.66rem!important;
     background:rgba(6,19,34,.40)!important;
     backdrop-filter:blur(7px) saturate(108%)!important;
     -webkit-backdrop-filter:blur(7px) saturate(108%)!important;
@@ -339,24 +343,24 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before{
     animation-duration:9.6s;
   }
   body.home-page .hero .zoco-hero-pathways__icon{
-    flex:0 0 38px!important;
-    width:38px!important;
-    height:38px!important;
+    flex:0 0 36px!important;
+    width:36px!important;
+    height:36px!important;
     border-radius:9px!important;
     border-color:rgba(100,157,188,.4)!important;
   }
-  body.home-page .hero .zoco-hero-pathways__icon svg{width:20px!important;height:20px!important}
+  body.home-page .hero .zoco-hero-pathways__icon svg{width:19px!important;height:19px!important}
   body.home-page .hero .zoco-hero-pathways__content{gap:.09rem!important;min-width:0!important}
   body.home-page .hero .zoco-hero-pathways__content strong{
-    font-size:clamp(.98rem,4.1vw,1.08rem)!important;
+    font-size:clamp(.94rem,3.98vw,1.05rem)!important;
     line-height:1.13!important;
   }
   body.home-page .hero .zoco-hero-pathways__description{
-    font-size:clamp(.7rem,2.95vw,.78rem)!important;
+    font-size:clamp(.69rem,2.9vw,.77rem)!important;
     line-height:1.22!important;
   }
   body.home-page .hero .zoco-hero-pathways__kicker{
-    font-size:.58rem!important;
+    font-size:.56rem!important;
     line-height:1.13!important;
     letter-spacing:.11em!important;
   }
@@ -379,8 +383,8 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before{
 }
 @media(max-width:365px){
   body.home-page .hero .zoco-hero-pathways__card{
-    min-height:73px!important;
-    padding:.44rem .75rem!important;
+    min-height:68px!important;
+    padding:.37rem .75rem!important;
     gap:.56rem!important;
   }
   body.home-page .hero .zoco-hero-pathways__icon{
