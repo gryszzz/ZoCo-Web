@@ -1,0 +1,179 @@
+/*
+ * ZoCo utility and production QA polish — 2026-10-12
+ * Keep existing page copy, real reviews, owner details and accessibility.
+ * Scoped to crisp desktop photo, distinct snaking image, review strip and footer.
+ */
+
+/* Previous photo-panel was a tiny 2.9 KB AVIF being stretched across
+   large monitors. Use the original high-detail artwork at desktop sizes.
+   The correct portrait photographic hero stays untouched on mobile. */
+@media (min-width: 901px) {
+  :root {
+    --zoco-photo-hero: url("/assets/brand/zoco-desktop-industrial-clear.avif");
+    --zoco-photo-panel: url("/assets/brand/zoco-desktop-industrial-clear.avif");
+  }
+  body.home-page .hero-shell {
+    background-image:
+      linear-gradient(90deg, rgba(4,9,13,.45), rgba(4,9,13,.25) 50%, rgba(4,9,13,.38)),
+      var(--zoco-photo-hero) !important;
+    background-size: cover, cover !important;
+    background-position: center, center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
+/* Different actual imagery for cleaning vs cable snaking. */
+.home-page .service-tab[data-service="snaking"]::before {
+  background-image:
+    linear-gradient(180deg, transparent 48%, #0d151c),
+    url("/assets/services/drain-snaking.avif") !important;
+  background-position: center !important;
+}
+.seo-page .zoco-catalog-grid a:nth-child(2)::before {
+  background-image:
+    linear-gradient(0deg, rgba(7,15,21,.5), transparent 72%),
+    url("/assets/services/drain-snaking.avif") !important;
+  background-position: center !important;
+}
+
+/* More than one genuine Google review visible while keeping the
+   horizontal scroll/snapping track, keyboard access and arrows. */
+.google-review-carousel {
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+.google-review-carousel .google-review-grid {
+  display: flex !important;
+  gap: .9rem !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  padding: .2rem .08rem 1rem !important;
+  scroll-snap-type: x mandatory !important;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,139,55,.42) transparent;
+}
+.google-review-carousel .google-review-card {
+  box-sizing: border-box;
+  flex: 0 0 calc((100% - 2.7rem) / 4) !important;
+  min-width: 0 !important;
+  min-height: 275px;
+  scroll-snap-align: start;
+  border: 1px solid rgba(255,143,61,.27) !important;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(25,34,42,.96), rgba(9,16,21,.98)) !important;
+  box-shadow: 0 9px 23px rgba(0,0,0,.23);
+}
+.google-review-carousel .google-review-card h3 {
+  margin: .9rem 0 .55rem !important;
+  font-size: 1rem;
+}
+.google-review-carousel .google-review-card q {
+  font-weight: 650;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.google-review-carousel .google-review-card .google-review-text {
+  font-size: .87rem;
+  line-height: 1.55;
+}
+.google-review-carousel .google-review-controls {
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-bottom: .9rem;
+}
+.google-review-carousel .google-review-position {
+  font-weight: 750;
+  color: #c7d4dd;
+}
+.google-review-carousel .google-review-arrow {
+  border: 1px solid rgba(255,144,58,.52) !important;
+  border-radius: 9px;
+  background: rgba(19,27,34,.93) !important;
+  color: #f3f6f7;
+}
+.google-review-carousel .google-review-arrow:not(:disabled):hover {
+  border-color: #ffac6b !important;
+  color: #ffb074 !important;
+}
+@media(max-width: 1250px) {
+  .google-review-carousel .google-review-card {
+    flex-basis: calc((100% - 1.8rem) / 3) !important;
+  }
+}
+@media(max-width: 900px) {
+  .google-review-carousel .google-review-card {
+    flex-basis: calc((100% - .9rem) / 2.25) !important;
+    min-height: 275px;
+  }
+}
+@media(max-width: 620px) {
+  .google-review-carousel .google-review-card {
+    flex-basis: min(75%, 325px) !important;
+    min-height: 270px;
+    padding: 1.05rem !important;
+  }
+  .google-review-carousel .google-review-grid {
+    gap: .72rem !important;
+  }
+  .google-review-carousel .google-review-card .google-review-text {
+    font-size: .85rem;
+  }
+}
+@media(max-width: 360px) {
+  .google-review-carousel .google-review-card {
+    flex-basis: 83% !important;
+  }
+}
+
+/* The footer logo used to be positioned absolutely above contact copy.
+   Make it a normal first flex item with actual reserved layout space. */
+.sitewide-footer .site-footer-contact {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  position: relative;
+  padding-top: 0 !important;
+  min-width: 0;
+}
+.sitewide-footer .site-footer-contact::before {
+  content: "" !important;
+  display: block !important;
+  position: static !important;
+  inset: auto !important;
+  width: 112px !important;
+  height: 99px !important;
+  flex: 0 0 99px !important;
+  margin: 0 0 .8rem !important;
+  background-image: url("/assets/brand/zoco-mascot-hero.webp") !important;
+  background-size: contain !important;
+  background-position: left center !important;
+  background-repeat: no-repeat !important;
+  opacity: 1 !important;
+  pointer-events: none;
+}
+.sitewide-footer .site-footer-contact > * {
+  position: relative;
+  z-index: 1;
+  overflow-wrap: anywhere;
+}
+.sitewide-footer .site-footer-brand {
+  display: inline-flex;
+  align-items: center;
+}
+@media(max-width: 620px) {
+  .sitewide-footer .site-footer-contact::before {
+    width: 94px !important;
+    height: 88px !important;
+    flex-basis: 88px !important;
+    margin-bottom: .65rem !important;
+  }
+}
+@media(prefers-reduced-motion: reduce) {
+  .google-review-carousel .google-review-grid {
+    scroll-behavior: auto !important;
+  }
+}
