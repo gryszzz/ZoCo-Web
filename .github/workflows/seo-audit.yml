@@ -17,5 +17,7 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check --quiet Pillow
           python scripts/build_brand_icons.py
+      - name: Package service-area scenic background
+        run: python scripts/build_service_area_photo.py
       - name: Validate sitemap, metadata and structured data
         run: python3 scripts/check_seo.py

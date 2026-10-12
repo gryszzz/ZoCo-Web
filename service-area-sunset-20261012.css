@@ -1,0 +1,188 @@
+/*
+ * ZoCo service-area photography and mobile polish.
+ * Scenic backdrop is illustrative artwork, not a claim that a pictured lake
+ * is within the service area. Build script packages its own local JPG in Pages.
+ */
+body.home-page .zoco-area-teaser.zoco-area-showcase {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-block: 2px solid rgba(255,130,51,.6) !important;
+  background-color:#071017 !important;
+  background-image:
+    radial-gradient(ellipse at 86% 9%,rgba(255,164,64,.17),transparent 35%),
+    linear-gradient(94deg,rgba(2,8,13,.94) 0%,rgba(3,10,15,.82) 39%,rgba(4,12,18,.38) 77%,rgba(3,10,15,.43)),
+    url("/assets/brand/zoco-service-area-sunset.jpg"),
+    url("/assets/brand/zoco-desktop-industrial-clear.avif") !important;
+  background-size:cover,cover,cover,cover !important;
+  background-position:center,center,center 48%,center !important;
+  background-repeat:no-repeat !important;
+}
+body.home-page .zoco-area-teaser.zoco-area-showcase::before {
+  content:"";
+  position:absolute; inset:0; z-index:0; pointer-events:none;
+  background:linear-gradient(to bottom,rgba(2,7,11,.14),transparent 43%,rgba(2,7,11,.28) 79%,rgba(1,6,10,.70)) !important;
+}
+body.home-page .zoco-area-teaser.zoco-area-showcase::after {
+  content:""; display:block;
+  position:absolute; inset:auto auto 0 0; width:min(50%,680px);
+  height:clamp(160px,28vw,320px); z-index:0; pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(2,8,12,.22),rgba(3,8,13,.5) 80%,transparent),
+    url("/assets/brand/zoco-desktop-industrial-clear.avif") left bottom/auto 140% no-repeat;
+  opacity:.17; mask-image:linear-gradient(to top,black,transparent 100%);
+}
+body.home-page .zoco-area-showcase__body {
+  position:relative;z-index:1;
+  width:min(1440px,calc(100% - clamp(2rem,6vw,6rem))) !important;
+  grid-template-columns:minmax(0,1.03fr) minmax(0,.97fr) !important;
+  gap:clamp(1.2rem,3vw,3.2rem) !important;
+  padding:clamp(2.4rem,4.25vw,4.5rem) 0 clamp(1.25rem,2.6vw,2.5rem) !important;
+}
+body.home-page .zoco-area-showcase__copy {
+  position:relative; z-index:1;
+  max-width:730px;
+  padding:clamp(.25rem,1vw,.8rem) !important;
+  border-radius:12px;
+  background:linear-gradient(110deg,rgba(3,10,15,.28),rgba(3,10,15,.08));
+  text-shadow:0 3px 16px rgba(0,0,0,.4);
+}
+body.home-page .zoco-area-showcase__copy .kicker {color:#ff9954 !important;margin-bottom:.9rem !important}
+body.home-page .zoco-area-showcase__copy h2 {
+  font-size:clamp(3.1rem,5.2vw,6.1rem) !important;
+  line-height:.96 !important;
+  margin:0 0 1.1rem !important;
+  text-shadow:0 6px 24px #000b !important;
+}
+body.home-page .zoco-area-showcase__copy h2 span {
+  color:#ff882b !important;
+  background:linear-gradient(180deg,#ffbd56,#ff8024 56%,#f45a17 100%) !important;
+  background-clip:text !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+}
+body.home-page .zoco-area-showcase__copy>p:not(.kicker) {
+  font-size:clamp(.98rem,1.12vw,1.13rem) !important;
+  color:#e7edf1 !important;
+  line-height:1.64 !important; max-width:610px;
+  margin:0 0 1.2rem !important;
+}
+body.home-page .zoco-area-showcase__copy .button {
+  display:inline-flex !important;
+  gap:.85rem; align-items:center;justify-content:center !important;
+  min-height:56px; padding:.85rem 1.55rem !important;
+  border:1px solid #ffaf63 !important; border-radius:12px !important;
+  background:linear-gradient(110deg,#ff9b31,#ff6219) !important;
+  color:#fff !important; text-shadow:0 1px 3px #0005 !important;
+  box-shadow:0 9px 27px rgba(255,104,25,.24),inset 0 1px 0 #ffffff67 !important;
+}
+body.home-page .zoco-area-showcase__copy .button .zoco-area-showcase__cta-arrow {
+  font-weight:800; font-size:1.5rem; line-height:1; margin-left:.05rem;
+}
+body.home-page .zoco-area-showcase__map {
+  z-index:1; isolation:isolate; padding:.4rem;
+  border-radius:14px;
+  background:radial-gradient(ellipse at center,rgba(5,13,20,.45),rgba(7,16,22,.10) 66%,transparent 78%) !important;
+  filter:drop-shadow(0 18px 23px rgba(0,0,0,.6)) !important;
+}
+body.home-page .zoco-area-showcase__map svg {height:auto; max-height:465px}
+body.home-page .zoco-area-showcase__map .county {
+  stroke-width:2.6 !important;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  vector-effect:non-scaling-stroke;
+}
+body.home-page .zoco-area-showcase__map .county-sussex {
+  stroke:#ff923c !important;filter:drop-shadow(0 0 8px rgba(255,123,42,.48));
+}
+body.home-page .zoco-area-showcase__map .county-passaic {stroke:#eaf1f9 !important;filter:drop-shadow(0 0 5px rgba(212,230,246,.25))}
+body.home-page .zoco-area-showcase__map .county-label {
+  font-size:clamp(24px,2vw,27px);
+  stroke:#09131b;stroke-width:4px;
+  fill:white;paint-order:stroke;
+}
+body.home-page .zoco-area-showcase__footer {
+  position:relative;z-index:2;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  border-top:1px solid rgba(255,126,40,.67) !important;
+  background:linear-gradient(90deg,rgba(2,8,13,.96),rgba(4,10,15,.94)) !important;
+  padding:.7rem max(1rem,calc((100% - 1190px)/2)) !important;
+}
+body.home-page .zoco-area-showcase__county {
+  align-items:center;gap:1.05rem;
+  padding:1.05rem 1.35rem !important;
+}
+body.home-page .zoco-area-showcase__county + .zoco-area-showcase__county {
+  border-left:1px solid rgba(255,255,255,.22) !important;
+}
+body.home-page .zoco-area-showcase__county strong {font-size:clamp(1.05rem,1.35vw,1.35rem) !important}
+body.home-page .zoco-area-showcase__county small {
+  color:#d0d9df !important;
+  font-size:.88rem !important;line-height:1.5 !important;
+}
+body.home-page .zoco-area-showcase__county .county-pin-icon {box-shadow:0 0 0 1px #ff92351c,0 0 15px #ff80261c}
+@media(max-width:900px){
+  body.home-page .zoco-area-teaser.zoco-area-showcase {
+    background-image:
+      radial-gradient(ellipse at 90% 5%,rgba(255,149,48,.14),transparent 32%),
+      linear-gradient(180deg,rgba(2,8,13,.80),rgba(3,10,15,.83) 43%,rgba(3,10,15,.73) 72%,rgba(2,7,12,.9)),
+      url("/assets/brand/zoco-service-area-sunset.jpg"),
+      url("/assets/brand/zoco-desktop-industrial-clear.avif") !important;
+    background-size:cover,cover,auto 100%,cover !important;
+    background-position:center,center,60% center,center !important;
+  }
+  body.home-page .zoco-area-showcase__body {
+    grid-template-columns:1fr !important;
+    gap:.6rem !important; width:calc(100% - 1.65rem) !important;
+    padding:1.9rem 0 .7rem !important;
+  }
+  body.home-page .zoco-area-showcase__copy {
+    max-width:none; padding:.3rem .08rem !important;
+    background:none !important;
+  }
+  body.home-page .zoco-area-showcase__copy h2 {
+    font-size:clamp(2.5rem,9.8vw,4.85rem) !important;
+    letter-spacing:0 !important;line-height:.97 !important;
+    margin:0 0 .85rem !important;
+  }
+  body.home-page .zoco-area-showcase__copy>p:not(.kicker) {
+    font-size:clamp(.91rem,2.7vw,1.04rem) !important;line-height:1.6 !important;
+    margin:0 0 1rem !important;
+  }
+  body.home-page .zoco-area-showcase__copy .button {width:100% !important;min-height:53px}
+  body.home-page .zoco-area-showcase__map {
+    width:100% !important;max-width:590px;margin:0 auto;
+    padding:0 !important; background:rgba(3,9,14,.08) !important;
+    filter:drop-shadow(0 10px 14px #0009) !important;
+  }
+  body.home-page .zoco-area-showcase__map svg {max-height:360px;object-fit:contain}
+  body.home-page .zoco-area-showcase__footer {grid-template-columns:1fr !important;padding:.25rem .9rem !important}
+  body.home-page .zoco-area-showcase__county {padding:.8rem .3rem !important}
+  body.home-page .zoco-area-showcase__county + .zoco-area-showcase__county {
+    border-left:0 !important;border-top:1px solid rgba(255,255,255,.18);
+  }
+  body.home-page .zoco-area-teaser.zoco-area-showcase::after {opacity:.10;height:170px}
+}
+@media(max-width:620px){
+  body.home-page .zoco-area-showcase__body {width:calc(100% - 1.4rem) !important;padding:1.65rem 0 .5rem !important}
+  body.home-page .zoco-area-showcase__copy .kicker {
+    margin-bottom:.55rem !important;font-size:.7rem !important;
+  }
+  body.home-page .zoco-area-showcase__copy h2 {
+    font-size:clamp(2.2rem,10.75vw,4.2rem) !important;
+    line-height:.98 !important;
+  }
+  body.home-page .zoco-area-showcase__copy>p:not(.kicker) {font-size:.92rem !important;line-height:1.57 !important}
+  body.home-page .zoco-area-showcase__map svg {max-height:320px}
+  body.home-page .zoco-area-showcase__map .county-label {font-size:24px !important}
+  body.home-page .zoco-area-showcase__footer {padding:.2rem .8rem !important}
+  body.home-page .zoco-area-showcase__county {gap:.75rem !important}
+  body.home-page .zoco-area-showcase__county .county-pin-icon {
+    flex:0 0 38px !important;width:38px !important;height:38px !important;
+  }
+  body.home-page .zoco-area-showcase__county strong {font-size:1.04rem !important}
+  body.home-page .zoco-area-showcase__county small {font-size:.81rem !important}
+}
+@media(prefers-reduced-motion:reduce){
+  body.home-page .zoco-area-showcase__county {transition:none !important}
+}
