@@ -124,8 +124,8 @@ body:not(.home-page) .seo-page{
   background-size:cover!important;
   background-position:center!important;
 }
-/* The production mobile image is a 1080x1920 photographic illustration
-   adapted from ZoCo's original detailed pipe/water background.
+/* The production mobile image is the original photographic industrial
+   background matching the accepted website preview, not the earlier reinterpretation.
    It is NOT the mockup screenshot (which contains baked-in UI).
    When the high-res photo has not yet been uploaded, the existing SVG
    appears underneath as a safe fallback rather than a broken background.
@@ -139,7 +139,7 @@ body:not(.home-page) .seo-page{
         rgba(3,8,13,.31) 30%,
         rgba(3,8,13,.49) 62%,
         rgba(3,8,13,.64) 100%),
-      url("/assets/brand/zoco-industrial-mobile-photo.webp"),
+      url("/assets/brand/zoco-mobile-industrial-hero-photo.avif"),
       url("/assets/brand/zoco-mobile-industrial.svg")!important;
     background-size:100% 100%,cover,cover!important;
     background-position:center,center top,center top!important;
