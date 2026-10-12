@@ -239,8 +239,8 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before{
   /* Desktop keeps the slim stacked rows, but within a narrower centered rail.
      Mobile full-bleed rows use their own breakpoint below. */
   body.home-page .hero .zoco-hero-pathways {
-    width:min(820px, calc(100% - 2.5rem))!important;
-    max-width:820px!important;
+    width:min(640px, calc(100% - 2.5rem))!important;
+    max-width:640px!important;
     min-width:0!important;
     margin-inline:auto!important;
     padding-bottom:0!important;
