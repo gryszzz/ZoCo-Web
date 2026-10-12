@@ -1,0 +1,246 @@
+/*
+ * ZoCo Direct Connections — luminous beveled glass finish (v2)
+ * Brings the actual tiles closer to the design study: visible curved glass
+ * reflections, brilliant edge highlights, deeper black/navy interiors and
+ * shaped copper/blue light. Scoped to this widget only.
+ */
+body.home-page .hero .quick-connect {
+  border:2px solid transparent!important;
+  border-radius:clamp(22px,2.5vw,29px)!important;
+  background:
+    radial-gradient(ellipse at 2% 5%,rgba(241,133,66,.14),transparent 40%) padding-box,
+    linear-gradient(110deg,rgba(4,12,21,.93),rgba(5,21,35,.90) 72%,rgba(4,18,29,.90)) padding-box,
+    linear-gradient(112deg,#f6a76f 0%,rgba(142,181,197,.70) 41%,#5fcafd 87%,#f59c65 100%) border-box!important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,233,213,.26),
+    inset 0 -1px 0 rgba(93,199,246,.22),
+    0 0 19px rgba(92,189,235,.12),
+    0 0 21px rgba(243,128,60,.11),
+    0 24px 45px rgba(0,4,11,.49)!important;
+}
+body.home-page .hero .quick-connect::before{
+  background:
+    linear-gradient(151deg,rgba(255,255,255,.11),transparent 24%),
+    radial-gradient(ellipse at 90% -12%,rgba(69,177,229,.15),transparent 54%),
+    linear-gradient(180deg,rgba(255,255,255,.04),transparent 35%)!important;
+  opacity:1!important;
+}
+body.home-page .hero .quick-connect::after {
+  height:3px!important;left:4%!important;right:4%!important;
+  background:linear-gradient(90deg,transparent,#ffa267 23%,#ffe0bf 42%,#5bc8ff 75%,transparent)!important;
+  box-shadow:0 0 15px rgba(255,145,69,.38),0 0 15px rgba(67,187,241,.32)!important;
+}
+body.home-page .hero .zoco-contact-dock-heading{
+  position:relative;z-index:2;
+  border-bottom:1px solid rgba(181,213,230,.34)!important;
+  color:#ffbb8e!important;
+  text-shadow:0 0 11px rgba(250,138,72,.28)!important;
+}
+body.home-page .hero .zoco-contact-dock-heading span:last-child{
+  color:#b7d5e6!important;
+}
+
+/* Each tile is individually layered, not a flat dark background.
+   First and last background layers are clipped independently so the
+   orange-to-cyan border is genuinely luminous even without hovering. */
+body.home-page .hero .quick-connect a.quick-tile,
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(odd),
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(-n+2){
+  overflow:hidden!important;
+  isolation:isolate;
+  border:2px solid transparent!important;
+  border-radius:18px!important;
+  background:
+    url("/assets/brand/direct-connections-glass-wave.svg") center / 100% 100% no-repeat padding-box,
+    radial-gradient(ellipse at 3% 0%,rgba(182,234,251,.23),transparent 42%) padding-box,
+    radial-gradient(ellipse at 96% 93%,rgba(25,122,181,.22),transparent 55%) padding-box,
+    linear-gradient(122deg,#081521 0%,#061421 44%,#07273c 100%) padding-box,
+    linear-gradient(124deg,#ffad79 0%,#bdd8e7 16%,rgba(60,119,151,.58) 45%,#3fc5ff 83%,#89dffd 100%) border-box!important;
+  box-shadow:
+    inset 0 1px 0 rgba(244,252,255,.31),
+    inset 0 -2px 5px rgba(88,199,249,.30),
+    0 1px 0 rgba(245,169,111,.34),
+    0 0 16px rgba(64,172,231,.11),
+    0 10px 19px rgba(0,4,10,.38)!important;
+  -webkit-backdrop-filter:blur(19px) saturate(170%)!important;
+  backdrop-filter:blur(19px) saturate(170%)!important;
+  transform:translateY(0)!important;
+  transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease,filter .28s ease!important;
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(4n+1),
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(4n+4){
+  border:2px solid transparent!important;
+  background:
+    url("/assets/brand/direct-connections-glass-wave.svg") center / 100% 100% no-repeat padding-box,
+    radial-gradient(ellipse at 4% 0%,rgba(237,197,160,.18),transparent 45%) padding-box,
+    radial-gradient(ellipse at 98% 92%,rgba(55,154,203,.22),transparent 55%) padding-box,
+    linear-gradient(124deg,#0a1521 0%,#081524 47%,#092c41 100%) padding-box,
+    linear-gradient(120deg,#ffab69 0%,#d59d79 19%,rgba(104,158,179,.50) 56%,#5dcaff 83%,#ffa363 100%) border-box!important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,245,228,.34),
+    inset 0 -2px 6px rgba(251,153,77,.30),
+    0 1px 0 rgba(240,137,72,.42),
+    0 0 17px rgba(245,125,59,.13),
+    0 10px 19px rgba(0,4,10,.39)!important;
+}
+/* The moving upper reflection and lower refraction remain decorative and
+   never cover text, icons or the clickable surface. */
+body.home-page .hero .quick-connect a.quick-tile::before{
+  z-index:0!important;
+  inset:0!important;
+  left:0!important;top:0!important;
+  width:100%!important;height:100%!important;
+  transform:none!important;
+  border-radius:inherit;
+  background:
+    linear-gradient(149deg,rgba(245,252,255,.16),rgba(249,252,255,.035) 19%,transparent 29%),
+    linear-gradient(108deg,transparent 18%,rgba(237,250,255,.10) 22%,transparent 30%),
+    radial-gradient(ellipse 40% 16% at 16% 99%,rgba(255,149,77,.27),transparent 100%)!important;
+  opacity:1!important;
+  transition:opacity .27s ease,filter .27s ease!important;
+}
+body.home-page .hero .quick-connect a.quick-tile::after{
+  z-index:0!important;
+  inset:0!important;
+  background:
+    radial-gradient(220px circle at var(--zoco-pointer-x,70%) var(--zoco-pointer-y,15%),rgba(112,211,251,.34),transparent 70%),
+    linear-gradient(120deg,transparent 35%,rgba(237,250,255,.11) 47%,transparent 60%)!important;
+  opacity:0!important;
+  transition:opacity .30s ease!important;
+}
+
+/* Strong glass icon lenses: light on the rim, dark in the core. */
+body.home-page .hero .quick-connect .quick-icon,
+body.home-page .hero .quick-connect .quick-logo-mark{
+  border:2px solid rgba(141,214,247,.60)!important;
+  border-radius:50%!important;
+  background-color:rgba(3,24,39,.88)!important;
+  box-shadow:
+    inset 0 2px 2px rgba(232,252,255,.33),
+    inset 0 -3px 6px rgba(2,12,25,.74),
+    0 0 0 4px rgba(84,183,219,.11),
+    0 0 14px rgba(80,187,238,.20),
+    0 5px 11px rgba(0,8,21,.47)!important;
+}
+body.home-page .hero .quick-connect .quick-icon{
+  background:
+    radial-gradient(circle at 28% 12%,rgba(197,243,255,.22),transparent 42%),
+    linear-gradient(144deg,rgba(11,53,77,.86),rgba(3,19,33,.94))!important;
+}
+body.home-page .hero .quick-connect .quick-logo-mark{
+  border-color:rgba(255,170,106,.82)!important;
+  background-image:url("/assets/brand/zoco-mascot-mark.png")!important;
+  background-position:center!important;
+  background-size:contain!important;
+  background-repeat:no-repeat!important;
+  box-shadow:
+    inset 0 1px 1px rgba(255,241,220,.28),
+    0 0 0 4px rgba(244,142,82,.11),
+    0 0 16px rgba(251,136,70,.28),
+    0 5px 13px rgba(0,8,21,.49)!important;
+}
+body.home-page .hero .quick-connect .quick-icon svg{
+  filter:drop-shadow(0 0 7px rgba(255,151,89,.46))!important;
+}
+/* Orange neon-chip arrow, also on mobile where the earlier layer removed it. */
+body.home-page .hero .quick-connect a.quick-tile>i{
+  display:grid!important;
+  place-items:center!important;
+  width:30px!important;height:30px!important;
+  border:1px solid rgba(245,169,112,.53)!important;
+  border-radius:50%!important;
+  background:radial-gradient(circle at 38% 27%,rgba(238,142,83,.24),rgba(3,18,34,.52))!important;
+  color:#ffb078!important;
+  text-shadow:0 0 11px rgba(255,117,56,.60)!important;
+  box-shadow:0 0 15px rgba(251,120,54,.19),inset 0 1px 0 rgba(255,241,217,.16)!important;
+}
+body.home-page .hero .quick-connect .quick-copy small{
+  color:#ffb389!important;
+  text-shadow:0 0 9px rgba(247,128,67,.22)!important;
+}
+body.home-page .hero .quick-connect .quick-copy strong{
+  color:#f8fbff!important;
+  text-shadow:0 1px 10px rgba(1,4,12,.55)!important;
+}
+@media(hover:hover) and (pointer:fine){
+  body.home-page .hero .quick-connect a.quick-tile:hover,
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(4n+1):hover,
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(4n+4):hover{
+    transform:translateY(-3px)!important;
+    filter:brightness(1.13)!important;
+    box-shadow:
+      inset 0 1px 0 rgba(245,254,255,.40),
+      inset 0 -2px 7px rgba(87,191,244,.46),
+      0 14px 24px rgba(0,5,15,.44),
+      0 0 20px rgba(46,181,242,.26)!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:hover::after{opacity:1!important}
+  body.home-page .hero .quick-connect a.quick-tile:hover::before{filter:brightness(1.4)}
+  body.home-page .hero .quick-connect a.quick-tile:hover>i{
+    transform:translate(2px,-2px)!important;
+    background:radial-gradient(circle at 30% 20%,rgba(250,173,110,.38),rgba(12,29,43,.78))!important;
+    box-shadow:0 0 19px rgba(250,132,63,.35)!important;
+  }
+}
+body.home-page .hero .quick-connect a.quick-tile:active{
+  transform:scale(.986)!important;
+  filter:brightness(1.12)!important;
+}
+body.home-page .hero .quick-connect a.quick-tile:focus-visible{
+  outline:3px solid #c2efff!important;
+  outline-offset:3px!important;
+}
+@media(max-width:660px){
+  body.home-page .hero .quick-connect{
+    border-radius:20px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile,
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(odd),
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(-n+2){
+    min-height:84px!important;
+    grid-template-columns:35px minmax(0,1fr) 19px!important;
+    gap:5px!important;
+    padding:9px 6px!important;
+    border-radius:14px!important;
+  }
+  body.home-page .hero .quick-connect .quick-logo-mark,
+  body.home-page .hero .quick-connect .quick-icon{
+    width:35px!important;height:35px!important;min-width:35px!important;max-width:35px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile>i{
+    width:19px!important;height:25px!important;
+    border-radius:12px!important;
+    font-size:.93rem!important;
+  }
+  body.home-page .hero .quick-connect .quick-copy strong{
+    font-size:clamp(.68rem,3vw,.86rem)!important;
+  }
+}
+@media(max-width:365px){
+  body.home-page .hero .quick-connect a.quick-tile,
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(odd),
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(-n+2){
+    grid-template-columns:29px minmax(0,1fr) 12px!important;
+    gap:4px!important;
+    padding:8px 5px!important;
+  }
+  body.home-page .hero .quick-connect .quick-logo-mark,
+  body.home-page .hero .quick-connect .quick-icon{
+    width:29px!important;height:29px!important;min-width:29px!important;max-width:29px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile>i{
+    width:12px!important;height:21px!important;
+    border:none!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    font-size:.8rem!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  body.home-page .hero .quick-connect a.quick-tile,
+  body.home-page .hero .quick-connect a.quick-tile::before,
+  body.home-page .hero .quick-connect a.quick-tile::after,
+  body.home-page .hero .quick-connect a.quick-tile>i{transition:none!important}
+  body.home-page .hero .quick-connect a.quick-tile:hover,
+  body.home-page .hero .quick-connect a.quick-tile:active{transform:none!important}
+}

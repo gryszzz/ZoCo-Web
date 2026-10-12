@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" preserveAspectRatio="none" aria-hidden="true">
+<defs>
+<linearGradient id="rim" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ff8d46" stop-opacity=".92"/><stop offset=".44" stop-color="#f8d4bd" stop-opacity=".22"/><stop offset=".78" stop-color="#51c9fb" stop-opacity=".86"/><stop offset="1" stop-color="#7fe2ff" stop-opacity=".95"/></linearGradient>
+<linearGradient id="wave" x1="0" y1="0" x2="1" y2=".3"><stop stop-color="#f49b60" stop-opacity=".24"/><stop offset=".40" stop-color="#ffac76" stop-opacity=".06"/><stop offset=".76" stop-color="#45c9fc" stop-opacity=".11"/><stop offset="1" stop-color="#70d9fb" stop-opacity=".28"/></linearGradient>
+<linearGradient id="sheen" x1=".1" y1="0" x2=".9" y2="1"><stop stop-color="white" stop-opacity=".15"/><stop offset=".45" stop-color="white" stop-opacity=".025"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+<radialGradient id="warm"><stop stop-color="#ff8b3c" stop-opacity=".48"/><stop offset="1" stop-color="#ff8b3c" stop-opacity="0"/></radialGradient>
+<radialGradient id="cool"><stop stop-color="#3bbffc" stop-opacity=".50"/><stop offset="1" stop-color="#3bbffc" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="56" cy="322" rx="255" ry="55" fill="url(#warm)"/>
+<ellipse cx="842" cy="311" rx="295" ry="66" fill="url(#cool)"/>
+<path d="M0 288 C170 191 239 275 402 287 C577 302 651 281 742 227 C809 186 855 160 900 155 L900 330 L0 330Z" fill="url(#wave)"/>
+<path d="M0 295 C158 218 278 272 430 295 C623 320 733 245 900 158" fill="none" stroke="url(#rim)" stroke-width="2.2" opacity=".8"/>
+<path d="M2 17 C225 -2 601 6 897 10" stroke="url(#rim)" stroke-width="2.8" opacity=".74" fill="none"/>
+<path d="M0 0 H460 L235 240 H0Z" fill="url(#sheen)" opacity=".40"/>
+<path d="M745 0 H897 V120 C854 96 792 41 745 0Z" fill="#83d8ff" opacity=".035"/>
+</svg>
