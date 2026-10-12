@@ -56,7 +56,9 @@
   <link rel="stylesheet" href="/homepage-flow-refine-20261012.css?v=1" />
   <link rel="stylesheet" href="/desktop-header-nav-20261012.css?v=1" />
   <link rel="stylesheet" href="/homepage-lower-flow-20261012.css?v=1" />
-  <link rel="stylesheet" href="/hero-water-actions-20261012.css?v=72" />
+  <link rel="stylesheet" href="/hero-water-actions-20261012.css?v=73" />
+  <link rel="stylesheet" href="/mobile-nav-glass-20261012.css?v=1" />
+  <script src="/mobile-nav-glass-20261012.js?v=1" defer></script>
   <script src="/hero-glass-water-surface-20261012.js?v=1" defer></script>
   <script src="/hero-liquid-visibility-20261012.js?v=1" defer></script>
   <script type="application/ld+json">
@@ -260,9 +262,13 @@
         </div>
       </a>
 
-      <button class="menu-btn" aria-label="Open navigation menu" aria-expanded="false">Menu +</button>
+      <button class="menu-btn" aria-label="Open navigation menu" aria-controls="site-mobile-nav" aria-expanded="false">Menu</button>
 
-      <nav class="nav-links" aria-label="Primary navigation">
+      <nav class="nav-links" id="site-mobile-nav" aria-label="Primary navigation">
+        <div class="zoco-mobile-nav-intro" aria-hidden="true">
+          <strong>ZOCO / LOCAL SERVICE</strong>
+          <span>Explore services, coverage and reviews</span>
+        </div>
         <a href="#drain">Drain Services</a>
         <a href="#handyman">Home Maintenance</a>
         <a href="/expert-tips/?v=88">Expert Tips</a>
@@ -270,6 +276,10 @@
         <a href="#offers">Coupons</a>
         <a href="#reviews">Google Reviews</a>
         <a href="#contact">Contact ZoCo</a>
+        <div class="zoco-mobile-nav-actions">
+          <a href="tel:+19738289723">Call Henry</a>
+          <a href="sms:+19738289723">Text Estimate</a>
+        </div>
       </nav>
 
       <a class="header-call" href="tel:+19738289723">
@@ -920,7 +930,7 @@
 
     <div class="page copyright footer-bottom"><span>© ZoCo Drain &amp; Sewer LLC · Design by <a class="footer-credit" href="https://www.instagram.com/exponetlabs/" target="_blank" rel="noopener">Exponet Labs</a></span></div>
   </footer>
-<script src="script.js?v=20"></script>
+<script src="script.js?v=21"></script>
 
   <script>
     (() => {
