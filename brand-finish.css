@@ -149,7 +149,7 @@ body{background:#0b1014!important}
 .home-page #drain .kicker{color:#cc5812!important}
 .home-page #drain .service-console{border:0!important;background:transparent!important}
 .home-page #drain .service-tabs{
-  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
   display:grid!important;gap:.75rem!important;
 }
 .home-page #drain .service-tab{
@@ -233,7 +233,7 @@ body{background:#0b1014!important}
   .hero h1{font-size:clamp(2.55rem,7.3vw,4.6rem)!important}
   .hero .hero-actions{justify-content:center!important}
   .hero .quick-connect{width:100%!important;margin:1rem auto 0!important}
-  .home-page #drain .service-tabs{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .home-page #drain .service-tabs{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
 @media(max-width:620px){
   .site-header .header-inner{min-height:65px!important}
