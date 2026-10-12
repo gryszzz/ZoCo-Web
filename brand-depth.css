@@ -64,7 +64,7 @@ body{
 .home-page .service-console{overflow:visible!important;background:transparent!important;border:0!important}
 .home-page .service-tabs{
   display:grid!important;
-  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
   gap:clamp(.55rem,1vw,1rem)!important;
   background:none!important;
   padding:0!important;
@@ -371,7 +371,7 @@ body{
 .zoco-owner-social a:hover{color:#fff}
 .zoco-owner-social a:focus-visible{outline:3px solid #ffa85a;outline-offset:4px}
 @media(max-width:1100px){
- .home-page .service-tabs{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+ .home-page .service-tabs{grid-template-columns:repeat(2,minmax(0,1fr))!important}
  .home-page .service-tab{min-height:230px!important}
 }
 @media(max-width:900px){
@@ -395,7 +395,6 @@ body{
  .home-page .service-tab > span{width:29px;height:29px;font-size:.62rem;margin-bottom:.5rem}
  .home-page .service-tab .zoco-tab-detail{font-size:.7rem}
  .home-page .service-tab .zoco-tab-action{font-size:.57rem;margin-top:.5rem}
- .home-page .service-tab:last-child{grid-column:span 2;min-height:176px!important}
  .home-page .service-display{padding:1.1rem!important}
  .home-page .service-display h3{font-size:2.2rem!important;margin:.8rem 0!important}
  .home-page .display-footer{align-items:flex-start}
