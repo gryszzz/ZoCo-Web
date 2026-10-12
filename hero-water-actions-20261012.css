@@ -346,3 +346,162 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before {animation-
   body.home-page .hero .zoco-hero-pathways__card:hover,
   body.home-page .hero .zoco-hero-pathways__card:hover .zoco-hero-pathways__arrow {transform:none!important}
 }
+
+
+/* Border-water refinement: buoyant beads rise along both sides while other
+   droplets skim the top/bottom edges. The center remains translucent glass. */
+body.home-page .hero .zoco-hero-pathways__card::after {
+  position:absolute;
+  inset:0;
+  padding:11px;
+  border-radius:inherit;
+  pointer-events:none;
+  z-index:2;
+  background-image:
+    radial-gradient(ellipse at center,#f0ffff 0%,rgba(14,199,255,.91) 38%,rgba(11,97,220,.33) 62%,transparent 82%),
+    radial-gradient(ellipse at center,rgba(208,253,255,.98) 0%,rgba(52,215,255,.83) 38%,rgba(11,97,220,.33) 62%,transparent 82%),
+    radial-gradient(ellipse at center,rgba(208,253,255,.98) 0%,rgba(14,199,255,.91) 38%,rgba(11,97,220,.33) 62%,transparent 82%),
+    radial-gradient(ellipse at center,#f0ffff 0%,rgba(52,215,255,.83) 38%,rgba(11,97,220,.33) 62%,transparent 82%),
+    radial-gradient(ellipse at center,rgba(208,253,255,.98) 0%,rgba(14,199,255,.91) 38%,rgba(11,97,220,.33) 62%,transparent 82%),
+    radial-gradient(ellipse at center,rgba(208,253,255,.98) 0%,rgba(52,215,255,.83) 38%,rgba(11,97,220,.33) 62%,transparent 82%),
+    radial-gradient(ellipse at center,#f0ffff 0%,rgba(14,199,255,.91) 38%,rgba(11,97,220,.33) 62%,transparent 82%),
+    radial-gradient(ellipse at center,rgba(208,253,255,.98) 0%,rgba(52,215,255,.83) 38%,rgba(11,97,220,.33) 62%,transparent 82%),
+    radial-gradient(ellipse at center,rgba(208,253,255,.98) 0%,rgba(14,199,255,.91) 38%,rgba(11,97,220,.33) 62%,transparent 82%),
+    radial-gradient(ellipse at center,#f0ffff 0%,rgba(52,215,255,.83) 38%,rgba(11,97,220,.33) 62%,transparent 82%),
+    radial-gradient(ellipse at center,rgba(208,253,255,.98) 0%,rgba(14,199,255,.91) 38%,rgba(11,97,220,.33) 62%,transparent 82%),
+    radial-gradient(ellipse at center,rgba(208,253,255,.98) 0%,rgba(52,215,255,.83) 38%,rgba(11,97,220,.33) 62%,transparent 82%),
+    linear-gradient(180deg,transparent,rgba(35,204,255,.34) 49%,rgba(169,248,255,.75) 90%,transparent),
+    linear-gradient(180deg,transparent,rgba(35,204,255,.24) 49%,rgba(169,248,255,.75) 90%,transparent),
+    linear-gradient(180deg,transparent,rgba(35,204,255,.34) 49%,rgba(169,248,255,.75) 90%,transparent),
+    linear-gradient(180deg,transparent,rgba(35,204,255,.24) 49%,rgba(169,248,255,.75) 90%,transparent);
+  background-size:
+    8px 15px,
+    6px 11px,
+    9px 17px,
+    5px 10px,
+    9px 15px,
+    7px 12px,
+    6px 11px,
+    8px 15px,
+    13px 7px,
+    9px 6px,
+    11px 6px,
+    8px 7px,
+    2px 30px,
+    2px 38px,
+    1.5px 21px,
+    2px 26px;
+  background-position:
+    0% 112%,
+    1% 157%,
+    0% 184%,
+    2% 131%,
+    100% 139%,
+    99% 178%,
+    100% 117%,
+    98% 165%,
+    120% 0%,
+    -25% 1%,
+    -15% 100%,
+    125% 99%,
+    0% 147%,
+    100% 122%,
+    1% 173%,
+    99% 186%;
+  background-repeat:no-repeat;
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  mask-composite:exclude;
+  opacity:.82;
+  filter:drop-shadow(0 0 3px rgba(28,209,255,.66));
+  animation:zoco-zero-g-water-beads 6.9s linear infinite;
+}
+@keyframes zoco-zero-g-water-beads {
+  0% {
+    background-position:
+      0% 112%,
+    1% 157%,
+    0% 184%,
+    2% 131%,
+    100% 139%,
+    99% 178%,
+    100% 117%,
+    98% 165%,
+    120% 0%,
+    -25% 1%,
+    -15% 100%,
+    125% 99%,
+    0% 147%,
+    100% 122%,
+    1% 173%,
+    99% 186%;
+    opacity:.52;
+  }
+  18% {opacity:.9}
+  76% {opacity:.9}
+  100% {
+    background-position:
+      0% -23%,
+    1% -56%,
+    0% -15%,
+    2% -69%,
+    100% -40%,
+    99% -20%,
+    100% -72%,
+    98% -46%,
+    -25% 0%,
+    122% 1%,
+    115% 100%,
+    -20% 99%,
+    0% -53%,
+    100% -73%,
+    1% -24%,
+    99% -30%;
+    opacity:.52;
+  }
+}
+/* Keep the luminous currents traveling in the outline, and speed up the
+   floating beads on hover/focus without taking any space from the text. */
+@media(hover:hover) and (pointer:fine) {
+  body.home-page .hero .zoco-hero-pathways__card:hover::after {
+    animation-duration:4.4s;
+    filter:drop-shadow(0 0 5px rgba(73,229,255,.8));
+  }
+}
+body.home-page .hero .zoco-hero-pathways__card:focus-visible::after {
+  animation-duration:4.4s;
+}
+@media(max-width:660px) {
+  body.home-page .hero .zoco-hero-pathways__card::after {
+    padding:10px;
+    animation-duration:8.1s;
+    opacity:.72;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  body.home-page .hero .zoco-hero-pathways__card::after,
+  body.home-page .hero .zoco-hero-pathways__card:hover::after,
+  body.home-page .hero .zoco-hero-pathways__card:focus-visible::after {
+    animation:none!important;
+    background-position:
+      0% 4%,
+      1% 60%,
+      0% 98%,
+      2% 4%,
+      100% 60%,
+      99% 98%,
+      100% 4%,
+      98% 60%,
+      120% 98%,
+      -25% 4%,
+      -15% 60%,
+      125% 98%,
+      0% 4%,
+      100% 60%,
+      1% 98%,
+      99% 4%;
+    filter:none;
+    opacity:.5;
+  }
+}
