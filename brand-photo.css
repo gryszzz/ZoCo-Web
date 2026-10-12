@@ -124,23 +124,22 @@ body:not(.home-page) .seo-page{
   background-size:cover!important;
   background-position:center!important;
 }
-/* The industrial image is one continuous surface over the ENTIRE mobile
-   hero, from the mascot through headline, CTAs and quick links.
-   Previously the photo used "100% auto": it ended after a short top strip.
-   On narrow screens the background is stretched as ambient artwork to
-   preserve both the left-side pipes and right-side water without a seam. */
+/* Portrait-specific scalable pipe + water illustration. The previous
+   3.7KB landscape image was stretched 100% x 100% on iPhone, causing blur.
+   The 960 x 1800 SVG renders at full device resolution while "cover"
+   preserves its aspect ratio across screen sizes. */
 @media(max-width:900px){
   body.home-page .hero-shell{
-    background-color:#071016!important;
+    background-color:#08131a!important;
     background-image:
       linear-gradient(180deg,
-        rgba(3,7,11,.13) 0%,
-        rgba(3,7,11,.26) 24%,
-        rgba(3,7,11,.46) 53%,
-        rgba(3,7,11,.59) 100%),
-      var(--zoco-photo-hero)!important;
-    background-size:100% 100%,100% 100%!important;
-    background-position:center,center!important;
+        rgba(2,7,11,.10) 0%,
+        rgba(2,7,11,.25) 34%,
+        rgba(2,7,11,.45) 67%,
+        rgba(2,7,11,.52) 100%),
+      url("/assets/brand/zoco-mobile-industrial.svg")!important;
+    background-size:100% 100%,cover!important;
+    background-position:center,center top!important;
     background-repeat:no-repeat!important;
   }
   body.home-page .hero-shell::before{
@@ -148,10 +147,7 @@ body:not(.home-page) .seo-page{
     opacity:0!important;
   }
   body.home-page .hero-shell::after{
-    background:linear-gradient(180deg,
-      rgba(3,7,11,.02),
-      rgba(3,7,11,.09) 45%,
-      rgba(3,7,11,.28) 100%)!important;
+    background:linear-gradient(180deg,transparent 12%,rgba(2,8,12,.10) 45%,rgba(2,8,12,.26) 100%)!important;
     pointer-events:none!important;
   }
   body.home-page #drain,
@@ -167,14 +163,7 @@ body:not(.home-page) .seo-page{
 }
 @media(max-width:620px){
   body.home-page .hero-shell{
-    background-image:
-      linear-gradient(180deg,
-        rgba(3,7,11,.12) 0%,
-        rgba(3,7,11,.25) 24%,
-        rgba(3,7,11,.47) 55%,
-        rgba(3,7,11,.62) 100%),
-      var(--zoco-photo-hero)!important;
-    background-size:100% 100%,100% 100%!important;
-    background-position:center,center!important;
+    background-size:100% 100%,cover!important;
+    background-position:center,center top!important;
   }
 }
