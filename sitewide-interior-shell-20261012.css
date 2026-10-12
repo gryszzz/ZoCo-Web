@@ -59,6 +59,7 @@ body.zoco-interior-page {background:#070e14;color:#eef3f6}
 .zoco-interior-header .zoco-interior-header__mobile[open] summary::after {content:" −"}
 .zoco-interior-header .zoco-interior-header__mobile nav {
   position:absolute;right:.7rem;top:calc(100% - 2px);
+  max-height:min(70dvh,600px);overflow-y:auto;overscroll-behavior:contain;
   display:flex;flex-direction:column;align-items:stretch;gap:0;
   width:min(370px,calc(100vw - 1.4rem));
   background:#091118;border:1px solid rgba(255,144,58,.65);
