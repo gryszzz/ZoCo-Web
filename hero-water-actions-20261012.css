@@ -3,7 +3,7 @@
    Progressive enhancement: static blue borders remain if mask or motion is absent. */
 body.home-page .hero .zoco-hero-pathways{
   /* Do not create a separate painted panel over ZoCo's photographic hero. */
-  border-top:1px solid rgba(255,148,57,.58)!important;
+  border-top:0!important;
   border-bottom:2px solid rgba(255,116,29,.48)!important;
   background:transparent!important;
   box-shadow:none!important;
@@ -159,4 +159,190 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible{
   }
   body.home-page .hero .zoco-hero-pathways__card::before{background-position:52% 50%}
   body.home-page .hero .zoco-hero-pathways__card::after{opacity:.4;background-position:5% 83%,94% 55%,49% 25%,82% 65%,5.5% 77%,94.5% 49%,49% 19%,82% 59%}
+}
+
+/* October refinement — airy translucent glass, corner drops, usable mobile sizing.
+   The new treatment remains scoped ONLY to the 3 hero shortcut cards. */
+body.home-page .hero .zoco-hero-pathways {
+  border-top:0!important; /* remove the orange divider above the shortcuts */
+  background:transparent!important;
+  padding-top:clamp(.65rem,1vw,.95rem)!important;
+  padding-bottom:clamp(.9rem,1.5vw,1.3rem)!important;
+  gap:clamp(.67rem,1.25vw,1rem)!important;
+}
+
+body.home-page .hero .zoco-hero-pathways__card {
+  min-height:122px;
+  padding:clamp(.95rem,1.42vw,1.22rem)!important;
+  gap:clamp(.7rem,1.2vw,1.1rem)!important;
+  border-radius:19px!important;
+  /* Keep the original photo visible, with only enough tint to aid legibility. */
+  background:rgba(3,15,26,.34)!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  box-shadow:0 0 0 1px rgba(50,172,240,.15),0 0 11px rgba(0,161,238,.29),0 9px 22px rgba(0,0,0,.26)!important;
+  transition:transform .22s ease,box-shadow .22s ease,background-color .22s ease,border-color .22s ease;
+}
+
+/* Sharper water current with pale highlights traveling AROUND the outline,
+   not an opaque animation across the content. */
+body.home-page .hero .zoco-hero-pathways__card::before {
+  padding:2.3px;
+  opacity:.98;
+  background-size:330% 100%;
+  animation:zoco-water-current 6.2s linear infinite;
+}
+
+/* Small droplets gather at the upper corners and on the arrow-side edge.
+   Keep the middle of the card free of effects. */
+body.home-page .hero .zoco-hero-pathways__card::after {
+  background-image:
+    radial-gradient(ellipse at center,#e2ffff 0%,rgba(23,210,255,.86) 31%,transparent 72%),
+    radial-gradient(ellipse at center,#d8fbff 0%,rgba(21,189,255,.76) 37%,transparent 76%),
+    radial-gradient(ellipse at center,#c9fbff 0%,rgba(33,193,255,.72) 35%,transparent 73%),
+    radial-gradient(ellipse at center,#efffff 0%,rgba(11,188,251,.78) 33%,transparent 76%),
+    linear-gradient(180deg,transparent 4%,rgba(9,165,250,.13) 27%,rgba(133,240,255,.54) 84%,transparent),
+    linear-gradient(180deg,transparent 4%,rgba(14,169,255,.12) 27%,rgba(117,226,255,.45) 84%,transparent),
+    linear-gradient(180deg,transparent 4%,rgba(21,177,244,.14) 27%,rgba(145,239,255,.42) 84%,transparent),
+    linear-gradient(180deg,transparent 4%,rgba(5,177,250,.13) 27%,rgba(123,229,255,.4) 84%,transparent);
+  background-size:8px 15px,7px 13px,7px 12px,6px 11px,2px 30px,2px 24px,2px 21px,2px 24px;
+  background-position:3% -25px,96% -95px,99% -148px,7% -178px,
+    3% -34px,96% -111px,99% -169px,7% -198px;
+  background-repeat:no-repeat;
+  opacity:.82;
+  animation:zoco-water-corner-drips 7.1s linear infinite;
+}
+@keyframes zoco-water-corner-drips {
+  0% {
+    background-position:3% -25px,96% -95px,99% -148px,7% -178px,
+      3% -34px,96% -111px,99% -169px,7% -198px;
+    opacity:.1;
+  }
+  13%{opacity:.86}
+  83%{opacity:.86}
+  100% {
+    background-position:3% 125%,96% 118%,99% 134%,7% 129%,
+      3% 132%,96% 125%,99% 141%,7% 135%;
+    opacity:.1;
+  }
+}
+
+body.home-page .hero .zoco-hero-pathways__icon {
+  flex:0 0 56px;
+  width:56px;height:56px;
+  border-radius:15px!important;
+  background:rgba(3,15,26,.19)!important;
+  box-shadow:0 0 0 1px rgba(35,174,241,.31),0 0 15px rgba(6,197,255,.29)!important;
+}
+body.home-page .hero .zoco-hero-pathways__icon svg {
+  width:26px;height:26px;
+}
+body.home-page .hero .zoco-hero-pathways__icon::before {
+  animation-duration:3.7s;
+}
+body.home-page .hero .zoco-hero-pathways__content {
+  gap:.22rem;
+}
+body.home-page .hero .zoco-hero-pathways__content strong {
+  font-size:clamp(1rem,1.28vw,1.28rem)!important;
+  line-height:1.15!important;
+  text-shadow:0 2px 8px rgba(0,0,0,.65);
+}
+body.home-page .hero .zoco-hero-pathways__description {
+  font-size:clamp(.77rem,.94vw,.9rem)!important;
+  line-height:1.33;
+  text-shadow:0 2px 6px rgba(0,0,0,.58);
+}
+body.home-page .hero .zoco-hero-pathways__arrow {
+  flex:0 0 26px;
+  font-size:1.5rem!important;
+  filter:drop-shadow(0 0 4px rgba(20,217,255,.33));
+}
+
+@media (hover:hover) and (pointer:fine) {
+  body.home-page .hero .zoco-hero-pathways__card:hover {
+    transform:translateY(-3px) scale(1.007);
+    background:rgba(3,15,26,.28)!important;
+    border-color:#b8faff!important;
+    box-shadow:0 0 0 1px rgba(125,233,255,.37),0 0 25px rgba(3,190,255,.53),0 15px 28px rgba(0,0,0,.36)!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__card:hover::before {animation-duration:4.1s}
+  body.home-page .hero .zoco-hero-pathways__card:hover::after {animation-duration:4.9s}
+  body.home-page .hero .zoco-hero-pathways__card:hover .zoco-hero-pathways__icon {
+    box-shadow:0 0 0 1px rgba(97,230,255,.5),0 0 23px rgba(8,205,255,.55)!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__card:hover .zoco-hero-pathways__arrow {
+    transform:translate(4px,-3px);
+  }
+}
+
+body.home-page .hero .zoco-hero-pathways__card:active {
+  transform:scale(.991);
+  background:rgba(3,17,29,.27)!important;
+  border-color:#d7fbff!important;
+  box-shadow:0 0 0 1px rgba(151,246,255,.42),0 0 28px rgba(2,213,255,.65)!important;
+}
+body.home-page .hero .zoco-hero-pathways__card:focus-visible {
+  outline:3px solid #c6f9ff!important;
+  outline-offset:3px;
+}
+body.home-page .hero .zoco-hero-pathways__card:focus-visible::before {animation-duration:4.1s}
+
+@media(max-width:1020px) and (min-width:661px){
+  body.home-page .hero .zoco-hero-pathways__card {min-height:115px;padding:.86rem!important}
+  body.home-page .hero .zoco-hero-pathways__icon {flex-basis:46px;width:46px;height:46px}
+  body.home-page .hero .zoco-hero-pathways__content strong {font-size:1.02rem!important}
+  body.home-page .hero .zoco-hero-pathways__description {font-size:.76rem!important}
+}
+@media(max-width:660px) {
+  body.home-page .hero .zoco-hero-pathways {
+    gap:.65rem!important;
+    padding:.68rem .85rem 1rem!important;
+    border-top:0!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__card {
+    min-height:94px!important;
+    padding:.78rem .92rem!important;
+    gap:.74rem!important;
+    border-radius:16px!important;
+    background:rgba(3,15,26,.35)!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__card::before {padding:2px;animation-duration:7.1s}
+  body.home-page .hero .zoco-hero-pathways__card::after {opacity:.7;animation-duration:8.5s}
+  body.home-page .hero .zoco-hero-pathways__icon {
+    flex:0 0 48px;width:48px;height:48px;
+    border-radius:13px!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__icon svg {width:24px;height:24px}
+  body.home-page .hero .zoco-hero-pathways__content strong {
+    font-size:clamp(.96rem,4.25vw,1.13rem)!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__description {font-size:clamp(.72rem,3.2vw,.83rem)!important}
+  body.home-page .hero .zoco-hero-pathways__kicker {font-size:.62rem!important}
+  body.home-page .hero .zoco-hero-pathways__arrow {flex:0 0 23px;font-size:1.35rem!important}
+  body.home-page .hero .zoco-hero-pathways__card:active {background:rgba(3,15,26,.27)!important}
+}
+@media(max-width:365px) {
+  body.home-page .hero .zoco-hero-pathways__card {padding:.7rem!important;gap:.48rem!important}
+  body.home-page .hero .zoco-hero-pathways__icon {flex-basis:42px;width:42px;height:42px}
+  body.home-page .hero .zoco-hero-pathways__content strong {font-size:.95rem!important}
+  body.home-page .hero .zoco-hero-pathways__description {font-size:.7rem!important}
+}
+
+/* Accessibility and power usage: motion never required to read the card. */
+@media(prefers-reduced-motion:reduce) {
+  body.home-page .hero .zoco-hero-pathways__card,
+  body.home-page .hero .zoco-hero-pathways__arrow,
+  body.home-page .hero .zoco-hero-pathways__icon {transition:none!important}
+  body.home-page .hero .zoco-hero-pathways__card::before,
+  body.home-page .hero .zoco-hero-pathways__card::after,
+  body.home-page .hero .zoco-hero-pathways__icon,
+  body.home-page .hero .zoco-hero-pathways__icon::before {animation:none!important}
+  body.home-page .hero .zoco-hero-pathways__card::after{
+    opacity:.35;
+    background-position:3% 84%,96% 56%,99% 29%,7% 62%,
+      3% 91%,96% 63%,99% 35%,7% 69%;
+  }
+  body.home-page .hero .zoco-hero-pathways__card:hover,
+  body.home-page .hero .zoco-hero-pathways__card:hover .zoco-hero-pathways__arrow {transform:none!important}
 }
