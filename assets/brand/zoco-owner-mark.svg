@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 88" role="img" aria-label="ZOCO wordmark">
+  <defs>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2=".25">
+      <stop offset="0" stop-color="#FF9E55"/>
+      <stop offset=".43" stop-color="#F7BA88"/>
+      <stop offset=".68" stop-color="#8ECFE8"/>
+      <stop offset="1" stop-color="#43BDF2"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#253847"/>
+      <stop offset=".55" stop-color="#071926"/>
+      <stop offset="1" stop-color="#0A3046"/>
+    </linearGradient>
+    <linearGradient id="letters" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DBF4FF"/>
+    </linearGradient>
+  </defs>
+  <rect x="3.5" y="3.5" width="153" height="81" rx="21" fill="url(#glass)" stroke="url(#edge)" stroke-width="5"/>
+  <path d="M18 13H141" stroke="#E4F6FF" stroke-opacity=".25" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="80" y="56" text-anchor="middle" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="46" font-weight="900" letter-spacing="-3" fill="url(#letters)">ZOCO</text>
+  <path d="M29 68H77" stroke="#FF9B58" stroke-width="4" stroke-linecap="round"/>
+  <path d="M83 68H131" stroke="#49C1F6" stroke-width="4" stroke-linecap="round"/>
+</svg>
