@@ -124,17 +124,35 @@ body:not(.home-page) .seo-page{
   background-size:cover!important;
   background-position:center!important;
 }
-/* iPhone crop fix: keep the pipes/water visible at the top, and fill below
-   with the companion panel instead of cropping to the dark center. */
+/* The industrial image is one continuous surface over the ENTIRE mobile
+   hero, from the mascot through headline, CTAs and quick links.
+   Previously the photo used "100% auto": it ended after a short top strip.
+   On narrow screens the background is stretched as ambient artwork to
+   preserve both the left-side pipes and right-side water without a seam. */
 @media(max-width:900px){
   body.home-page .hero-shell{
+    background-color:#071016!important;
     background-image:
-      linear-gradient(180deg,rgba(4,8,12,.18),rgba(4,8,12,.36) 30%,rgba(4,8,12,.65) 80%),
-      var(--zoco-photo-hero),
-      var(--zoco-photo-panel)!important;
-    background-size:100% 100%,100% auto,cover!important;
-    background-position:center top,center top,center top!important;
+      linear-gradient(180deg,
+        rgba(3,7,11,.13) 0%,
+        rgba(3,7,11,.26) 24%,
+        rgba(3,7,11,.46) 53%,
+        rgba(3,7,11,.59) 100%),
+      var(--zoco-photo-hero)!important;
+    background-size:100% 100%,100% 100%!important;
+    background-position:center,center!important;
     background-repeat:no-repeat!important;
+  }
+  body.home-page .hero-shell::before{
+    background:none!important;
+    opacity:0!important;
+  }
+  body.home-page .hero-shell::after{
+    background:linear-gradient(180deg,
+      rgba(3,7,11,.02),
+      rgba(3,7,11,.09) 45%,
+      rgba(3,7,11,.28) 100%)!important;
+    pointer-events:none!important;
   }
   body.home-page #drain,
   body.home-page .handyman-section,
@@ -150,8 +168,13 @@ body:not(.home-page) .seo-page{
 @media(max-width:620px){
   body.home-page .hero-shell{
     background-image:
-      linear-gradient(180deg,rgba(3,7,11,.09),rgba(3,7,11,.39) 36%,rgba(3,7,11,.67) 82%),
-      var(--zoco-photo-hero),
-      var(--zoco-photo-panel)!important;
+      linear-gradient(180deg,
+        rgba(3,7,11,.12) 0%,
+        rgba(3,7,11,.25) 24%,
+        rgba(3,7,11,.47) 55%,
+        rgba(3,7,11,.62) 100%),
+      var(--zoco-photo-hero)!important;
+    background-size:100% 100%,100% 100%!important;
+    background-position:center,center!important;
   }
 }
