@@ -209,9 +209,22 @@ body.zoco-services-hub-page{
   gap:clamp(.75rem,1.35vw,1.1rem);
 }
 .zoco-services-hub-page .zoco-hub-task {
+  display:block;
+  color:#f6f8fa !important;
+  transition:transform .18s ease,border-color .18s ease;
   border:1px solid rgba(215,225,230,.2);border-radius:12px;
   overflow:hidden;
   background:linear-gradient(145deg,#19252b,#0c151b);
+}
+.zoco-services-hub-page .zoco-hub-task:hover {
+  border-color:#ffb17b;
+  transform:translateY(-3px);
+}
+.zoco-services-hub-page .zoco-hub-task__more {
+  display:block;margin-top:.8rem;padding-top:.6rem;
+  border-top:1px solid rgba(255,156,86,.3);
+  color:#ffb67f !important;font-size:.68rem;
+  letter-spacing:.045em;text-transform:uppercase;font-weight:850;
 }
 .zoco-services-hub-page .zoco-hub-task img {
   display:block;width:100%;height:145px;object-fit:cover;
