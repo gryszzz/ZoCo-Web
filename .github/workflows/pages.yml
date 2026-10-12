@@ -33,7 +33,13 @@ jobs:
           python -m pip install --disable-pip-version-check --quiet Pillow
           python - <<'PY'
           from PIL import Image
-          src = Image.open("zoco-logo-v2.webp").convert("RGBA")
+          # Single source of truth for ZoCo's colorful dog-and-drain brand.
+          src = Image.open("assets/brand/zoco-mascot-mark.png").convert("RGBA")
+          src.save("zoco-logo-v2.webp", "WEBP", quality=90)
+          src.save("logo.webp", "WEBP", quality=90)
+          src.resize((1024, 1024), Image.Resampling.LANCZOS).save(
+              "zoco-business-profile-logo-1024.png", "PNG", optimize=True,
+          )
           resample = Image.Resampling.LANCZOS
           src.resize((16, 16), resample).save("favicon-16x16.png", "PNG", optimize=True)
           src.resize((32, 32), resample).save("favicon-32x32.png", "PNG", optimize=True)
@@ -56,6 +62,7 @@ jobs:
           y = (630 - mark.height) // 2
           canvas.paste(mark, (x, y), mark)
           canvas.save("social-preview-v2.png", "PNG", optimize=True)
+          canvas.save("zoco-share-logo-v4.png", "PNG", optimize=True)
           PY
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
