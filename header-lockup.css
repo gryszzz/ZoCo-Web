@@ -1,0 +1,132 @@
+/*
+ * ZoCo horizontal header lockup — 2026-10-12
+ *
+ * Existing mascot + existing real-word brand copy, not a distorted logo.
+ * A compact, landscape/longways identity in the navigation on all screens.
+ * Scoped exclusively to the site header; hero and interior logos unchanged.
+ */
+.site-header .header-inner .brand {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-self: start !important;
+  flex: 0 0 auto !important;
+  gap: .65rem !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: 260px;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+.site-header .header-inner .brand .brand-logo {
+  display: block !important;
+  box-sizing: border-box !important;
+  width: 67px !important;
+  height: 65px !important;
+  flex: 0 0 67px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  background-image: url("/assets/brand/zoco-mascot-hero.webp") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,.55));
+}
+.site-header .header-inner .brand .brand-copy {
+  display: flex !important;
+  flex: 0 0 auto !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  gap: 0 !important;
+  width: auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.05 !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+}
+.site-header .header-inner .brand .brand-copy strong {
+  display: block !important;
+  margin: 0 !important;
+  font-family: Impact, "Arial Narrow", "Arial Black", system-ui, sans-serif !important;
+  font-size: 2rem !important;
+  font-weight: 900 !important;
+  line-height: .96 !important;
+  letter-spacing: .015em !important;
+  text-transform: uppercase !important;
+  color: #f5f6f7 !important;
+  background: linear-gradient(180deg,#fff 5%,#d4dce1 45%,#8d99a2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 1px rgba(0,0,0,.48));
+}
+.site-header .header-inner .brand .brand-copy span {
+  display: block !important;
+  margin: .36rem 0 0 !important;
+  padding: .22rem 0 0 !important;
+  border-top: 1px solid rgba(250,125,38,.68);
+  font-family: system-ui, sans-serif !important;
+  font-size: .57rem !important;
+  font-weight: 900 !important;
+  line-height: 1.05 !important;
+  letter-spacing: .085em !important;
+  text-transform: uppercase !important;
+  color: #ff9d56 !important;
+  white-space: nowrap !important;
+}
+.site-header .header-inner .brand:is(:hover,:focus-visible) .brand-copy strong {
+  background: linear-gradient(180deg,#fff 5%,#f1d5be 50%,#ef9659 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.site-header .header-inner .brand:focus-visible {
+  outline: 2px solid #ffae74;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+@media (min-width: 901px) and (max-width: 1240px) {
+  .site-header .header-inner .brand { gap: .42rem !important; }
+  .site-header .header-inner .brand .brand-logo {
+    width: 55px !important; height: 56px !important; flex-basis: 55px !important;
+  }
+  .site-header .header-inner .brand .brand-copy strong { font-size: 1.76rem !important; }
+  .site-header .header-inner .brand .brand-copy span { font-size: .49rem !important; }
+}
+@media (max-width: 900px) {
+  .site-header .header-inner { justify-content: space-between !important; gap: .55rem !important; }
+  .site-header .header-inner .brand { grid-column: 1 !important; gap: .53rem !important; max-width: calc(100% - 104px); }
+  .site-header .header-inner .brand .brand-logo {
+    width: 58px !important; height: 58px !important; flex-basis: 58px !important;
+  }
+  .site-header .header-inner .brand .brand-copy strong { font-size: 1.78rem !important; }
+  .site-header .header-inner .brand .brand-copy span { font-size: .5rem !important; }
+  .site-header .header-inner .menu-btn { grid-column: 3 !important; margin-left: auto !important; }
+}
+@media (max-width: 620px) {
+  .site-header .header-inner .brand { gap: .42rem !important; max-width: calc(100% - 98px); }
+  .site-header .header-inner .brand .brand-logo {
+    width: 53px !important; height: 54px !important; flex-basis: 53px !important;
+  }
+  .site-header .header-inner .brand .brand-copy strong { font-size: 1.55rem !important; }
+  .site-header .header-inner .brand .brand-copy span {
+    font-size: .445rem !important; letter-spacing: .065em !important;
+    margin-top: .24rem !important; padding-top: .2rem !important;
+  }
+}
+@media (max-width: 350px) {
+  .site-header .header-inner .brand { gap: .32rem !important; max-width: calc(100% - 92px); }
+  .site-header .header-inner .brand .brand-logo {
+    width: 43px !important; height: 47px !important; flex-basis: 43px !important;
+  }
+  .site-header .header-inner .brand .brand-copy strong { font-size: 1.3rem !important; }
+  .site-header .header-inner .brand .brand-copy span { font-size: .38rem !important; letter-spacing: .035em !important; }
+}
