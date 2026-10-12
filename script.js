@@ -71,11 +71,10 @@ document.querySelectorAll('[data-review-carousel]').forEach((carousel) => {
 });
 
 const services = {
-  drain: ['SERVICE / 01', 'Drain Cleaning', 'Clear buildup and restore flow in accessible drain and sewer lines.', '/assets/services/drain-cleaning.jpg', 'Powered drain snake clearing a pipe through a cleanout.'],
-  snaking: ['SERVICE / 02', 'Drain Snaking', 'Cable-based clearing for appropriate accessible drain lines and stubborn stoppages.', '/assets/services/drain-snaking.avif', 'Professional cable auger and steel drain snake entering a drain cleanout.'],
-  camera: ['SERVICE / 03', 'Camera Inspection', 'Use a drain camera to view accessible line conditions and locate visible trouble areas.', '/assets/services/camera-inspection.jpg', 'Technician feeding an inspection camera into a drain line while viewing the pipe interior.'],
-  maintenance: ['SERVICE / 04', 'Drain Maintenance', 'Routine care helps keep accessible drains clear and moving.', '/assets/services/drain-maintenance.jpg', 'Technician checking and maintaining residential under-sink drain piping.'],
-  dryer: ['SERVICE / 05', 'Dryer Vent Cleaning', 'Clean accessible dryer vent runs to help improve airflow and remove lint buildup.', '/assets/services/dryer-vent-cleaning.jpg', 'Rotary brush removing lint from a metal dryer vent duct.']
+  snaking: ['SERVICE / 01', 'Drain Snaking', 'Cable-based clearing for appropriate accessible drain lines and stubborn stoppages.', '/assets/services/drain-snaking.avif', 'Professional cable auger and steel drain snake entering a drain cleanout.'],
+  camera: ['SERVICE / 02', 'Camera Inspection', 'Use a drain camera to view accessible line conditions and locate visible trouble areas.', '/assets/services/camera-inspection.jpg', 'Technician feeding an inspection camera into a drain line while viewing the pipe interior.'],
+  maintenance: ['SERVICE / 03', 'Drain Maintenance', 'Routine care helps keep accessible drains clear and moving.', '/assets/services/drain-maintenance.jpg', 'Technician checking and maintaining residential under-sink drain piping.'],
+  dryer: ['SERVICE / 04', 'Dryer Vent Cleaning', 'Clean accessible dryer vent runs to help improve airflow and remove lint buildup.', '/assets/services/dryer-vent-cleaning.jpg', 'Rotary brush removing lint from a metal dryer vent duct.']
 };
 
 const serviceCode = document.getElementById('serviceCode');
@@ -84,7 +83,6 @@ const serviceDescription = document.getElementById('serviceDescription');
 const serviceImage = document.getElementById('serviceImage');
 const serviceLearn = document.getElementById('serviceLearn');
 const serviceRoutes = {
-  drain: '/drain-cleaning/',
   snaking: '/drain-snaking/',
   camera: '/camera-inspection/',
   maintenance: '/drain-maintenance/',
