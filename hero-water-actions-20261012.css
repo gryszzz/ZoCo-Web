@@ -17,7 +17,7 @@ body.home-page .hero .zoco-hero-pathways {
   max-width:100%!important;
   margin:0!important;
   gap:0!important;
-  padding:.35rem 0!important;
+  padding:.35rem 0 0!important;
 }
 body.home-page .hero .zoco-hero-pathways__card {
   box-sizing:border-box;
@@ -28,9 +28,9 @@ body.home-page .hero .zoco-hero-pathways__card {
   overflow:hidden;
   min-width:0;
   width:100%!important;
-  min-height:78px!important;
-  gap:clamp(.7rem,1.2vw,1rem)!important;
-  padding:.56rem clamp(.95rem,2.3vw,2rem)!important;
+  min-height:66px!important;
+  gap:clamp(.58rem,1vw,.85rem)!important;
+  padding:.34rem clamp(.95rem,2.3vw,2rem)!important;
   border-top:0!important;
   border-right:0!important;
   border-left:0!important;
@@ -236,21 +236,57 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before{
    rows and their separators continue spanning the full hero width.
    Do not center/alter the mobile layouts. */
 @media(min-width:661px) {
+  /* Keep the 3 rows centered and trim excessive desktop vertical height.
+     The final blue hairline directly meets the orange section divider. */
+  body.home-page .hero .zoco-hero-pathways {
+    padding-bottom:0!important;
+    row-gap:0!important;
+  }
   body.home-page .hero .zoco-hero-pathways__card {
     justify-content:center!important;
+    min-height:66px!important;
+    padding-block:.34rem!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__icon {
+    flex:0 0 40px!important;
+    width:40px!important;
+    height:40px!important;
+    border-radius:10px!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__icon svg {
+    width:20px!important;
+    height:20px!important;
   }
   body.home-page .hero .zoco-hero-pathways__content {
     flex:0 1 390px!important;
     width:390px!important;
     max-width:390px!important;
     min-width:0!important;
+    gap:.12rem!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__kicker{
+    font-size:clamp(.59rem,.68vw,.65rem)!important;
+    line-height:1.18!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__content strong {
+    font-size:clamp(.91rem,1.06vw,1.08rem)!important;
+    line-height:1.13!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__description {
+    font-size:clamp(.71rem,.82vw,.79rem)!important;
+    line-height:1.18!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__arrow {
+    flex-basis:20px!important;
+    width:20px!important;
+    font-size:1.14rem!important;
   }
 }
 @media(max-width:1020px) and (min-width:661px){
   body.home-page .hero .zoco-hero-pathways__card{
-    min-height:76px!important;
-    padding:.56rem 1.25rem!important;
-    gap:.8rem!important;
+    min-height:66px!important;
+    padding:.34rem 1.25rem!important;
+    gap:.7rem!important;
   }
   body.home-page .hero .zoco-hero-pathways__icon{flex-basis:40px;width:40px;height:40px}
   body.home-page .hero .zoco-hero-pathways__icon svg{width:21px;height:21px}
