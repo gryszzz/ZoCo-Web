@@ -156,6 +156,16 @@ body.home-page .hero .quick-connect .quick-logo-mark{
 body.home-page .hero .quick-connect .quick-icon svg{
   width:21px!important;height:21px!important;
 }
+/* Copper-orange treatment applies to the symbols, not their dark glass wells. */
+body.home-page .hero .quick-connect a.quick-tile[href^="mailto:"] .quick-icon svg,
+body.home-page .hero .quick-connect a.quick-tile[href*="instagram.com"] .quick-icon svg {
+  stroke:#f0a16a!important;
+  fill:none!important;
+}
+body.home-page .hero .quick-connect a.quick-tile[href*="facebook.com"] .quick-icon svg {
+  stroke:none!important;
+  fill:#f0a16a!important;
+}
 body.home-page .hero .quick-connect .quick-copy{
   min-width:0!important;
   overflow:hidden!important;
@@ -192,11 +202,12 @@ body.home-page .hero .quick-connect a.quick-tile:hover>i{
    distinct luminous inset icons, not simply another stack of contact cards. */
 body.home-page .hero .zoco-hero-pathways{
   gap:clamp(.48rem,.8vw,.65rem)!important;
-  padding-top:clamp(.45rem,1vw,.7rem)!important;
+  padding-top:clamp(.32rem,.65vw,.5rem)!important;
+  margin-top:-14px!important;
 }
 body.home-page .hero .zoco-water-deck-heading{
   display:flex;
-  justify-content:space-between;
+  justify-content:flex-start;
   align-items:center;
   gap:.6rem;
   font-size:.62rem;
@@ -208,13 +219,6 @@ body.home-page .hero .zoco-water-deck-heading{
   min-height:20px;
   padding:0 .26rem .05rem;
 }
-body.home-page .hero .zoco-water-deck-heading span:last-child{
-  color:#eead80;
-  font-size:.55rem;
-  letter-spacing:.105em;
-  font-weight:760;
-  text-align:right;
-}
 body.home-page .hero .zoco-hero-pathways__card{
   min-height:74px!important;
   padding:.52rem 1rem!important;
@@ -223,9 +227,7 @@ body.home-page .hero .zoco-hero-pathways__card{
   border:1px solid rgba(104,175,204,.42)!important;
   border-left:3px solid rgba(139,199,226,.72)!important;
   background:
-    repeating-radial-gradient(ellipse at 105% 145%,
-      transparent 0 26px,rgba(124,194,219,.11) 27px 28px,transparent 29px 55px),
-    radial-gradient(ellipse at 85% 47%,rgba(39,125,171,.33),transparent 55%),
+    radial-gradient(ellipse at 85% 47%,rgba(39,125,171,.28),transparent 55%),
     linear-gradient(112deg,rgba(3,15,26,.88) 0%,rgba(6,26,42,.78) 56%,rgba(7,41,62,.69) 100%)!important;
   box-shadow:
     inset 0 1px 0 rgba(184,229,243,.15),
@@ -234,8 +236,8 @@ body.home-page .hero .zoco-hero-pathways__card{
   -webkit-backdrop-filter:blur(12px) saturate(120%)!important;
   backdrop-filter:blur(12px) saturate(120%)!important;
   transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease,background-position .6s ease!important;
-  background-size:160% 160%,100% 100%,100% 100%!important;
-  background-position:100% 70%,center,center!important;
+  background-size:150% 150%,100% 100%!important;
+  background-position:100% 70%,center!important;
 }
 body.home-page .hero .zoco-hero-pathways__card::before{
   opacity:.5!important;
@@ -319,7 +321,7 @@ body.home-page .hero .zoco-hero-pathways__arrow{
     transform:translateY(-2px)!important;
     border-color:rgba(138,216,236,.78)!important;
     border-left-color:#efae78!important;
-    background-position:45% 15%,center,center!important;
+    background-position:45% 15%,center!important;
     box-shadow:inset 0 1px 0 rgba(220,245,251,.23),
       0 0 17px rgba(65,163,199,.17),
       0 13px 26px rgba(0,0,0,.3)!important;
@@ -378,16 +380,14 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible{
   }
   body.home-page .hero .zoco-hero-pathways{
     gap:.46rem!important;
-    padding-top:.47rem!important;
+    padding-top:.33rem!important;
+    margin-top:-10px!important;
   }
   body.home-page .hero .zoco-water-deck-heading{
     padding:0 .32rem;
     min-height:17px;
     font-size:.56rem;
     letter-spacing:.13em;
-  }
-  body.home-page .hero .zoco-water-deck-heading span:last-child{
-    font-size:.5rem;letter-spacing:.06em;
   }
   body.home-page .hero .zoco-hero-pathways__card{
     min-height:76px!important;
