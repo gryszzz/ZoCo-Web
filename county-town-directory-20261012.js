@@ -26,7 +26,7 @@
       towns.forEach((option) => option.setAttribute('aria-pressed', String(option === town)));
       const place = town.dataset.town;
       if (selection) selection.textContent = place;
-      if (callout) callout.textContent = \`Tell Henry you're in \${place}, \${county} and describe the work. He'll confirm availability.\`;
+      if (callout) callout.textContent = "Tell Henry you're in " + place + ", " + county + ". Describe the work so he can confirm availability.";
     });
   });
   updateList();
