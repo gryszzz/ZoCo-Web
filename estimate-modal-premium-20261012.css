@@ -1,0 +1,259 @@
+/* ZoCo estimate contact panel • October 2026
+   Scoped to the existing homepage dialog. Existing tel/sms/mailto and social links
+   remain native links; no form submission or implied instant response. */
+body.home-page .quick-contact-modal .quick-contact-backdrop{
+  background:rgba(2,7,12,.80)!important;
+  -webkit-backdrop-filter:blur(11px) saturate(.72)!important;
+  backdrop-filter:blur(11px) saturate(.72)!important;
+}
+body.home-page .quick-contact-modal .quick-contact-panel{
+  box-sizing:border-box;
+  isolation:isolate;
+  width:min(548px,calc(100vw - 32px))!important;
+  max-width:548px!important;
+  max-height:min(780px,calc(100dvh - 38px))!important;
+  overflow-y:auto!important;
+  overscroll-behavior:contain;
+  padding:27px!important;
+  border:1px solid rgba(252,125,49,.60)!important;
+  border-radius:27px!important;
+  background:
+    radial-gradient(ellipse at 94% 4%,rgba(255,126,52,.18),transparent 35%),
+    radial-gradient(ellipse at 4% 83%,rgba(42,144,189,.16),transparent 48%),
+    linear-gradient(145deg,#101d26 0%,#08121a 52%,#080e14 100%)!important;
+  box-shadow:0 36px 110px rgba(0,0,0,.82),0 0 42px rgba(255,103,27,.11),inset 0 1px 0 rgba(255,255,255,.075)!important;
+  color:#f5f8fa;
+  scrollbar-color:rgba(255,132,66,.5) transparent;
+}
+body.home-page .quick-contact-modal .quick-contact-panel:before{
+  content:"";position:absolute;inset:0 0 auto;
+  height:4px;border-radius:27px 27px 0 0;pointer-events:none;
+  background:linear-gradient(90deg,#ff8d35 0%,#fa5715 43%,rgba(46,153,208,.6) 100%);
+}
+body.home-page .quick-contact-modal .quick-contact-panel:after{
+  content:"";position:absolute;right:-42px;top:55px;width:175px;height:175px;
+  border:1px solid rgba(94,160,197,.08);border-radius:50%;pointer-events:none;z-index:-1;
+  box-shadow:0 0 0 29px rgba(92,167,203,.025),0 0 0 59px rgba(92,167,203,.018);
+}
+body.home-page .quick-contact-modal .quick-contact-panel > *{position:relative;z-index:1}
+body.home-page .quick-contact-modal .quick-contact-panel:before,
+body.home-page .quick-contact-modal .quick-contact-panel:after{z-index:0}
+body.home-page .quick-contact-modal .quick-contact-close{
+  z-index:3;top:22px;right:22px;
+  display:grid;place-items:center;
+  width:39px;height:39px;
+  background:rgba(255,255,255,.065);
+  border:1px solid rgba(222,232,238,.25);
+  border-radius:13px;
+  color:#f4f7f9;font-size:24px;line-height:1;
+  transition:background .18s,border-color .18s,transform .18s;
+}
+body.home-page .quick-contact-modal .quick-contact-close:hover{
+  background:rgba(255,131,69,.18);border-color:rgba(255,140,75,.75);transform:rotate(90deg);
+}
+body.home-page .quick-contact-topline{
+  display:flex;align-items:center;gap:10px;
+  min-height:40px;padding-right:46px;
+}
+body.home-page .quick-contact-mark{
+  display:grid;place-items:center;flex:none;
+  width:40px;height:40px;border-radius:12px;
+  color:#0b1014;background:linear-gradient(142deg,#ffc27a,#ff7b2c 70%,#e95215);
+  box-shadow:inset 0 1px rgba(255,255,255,.45),0 5px 22px rgba(247,104,35,.18);
+  font-size:24px;font-weight:1000;font-style:italic;letter-spacing:-.14em;padding-right:3px;
+}
+body.home-page .quick-contact-brand{display:flex;flex-direction:column;gap:1px;min-width:0}
+body.home-page .quick-contact-brand strong{font-size:14px;font-weight:950;letter-spacing:.16em;line-height:1.05}
+body.home-page .quick-contact-brand small{font-size:9px;font-weight:800;letter-spacing:.14em;color:#88b2c9}
+body.home-page .quick-contact-intro{margin-top:24px}
+body.home-page .quick-contact-modal .quick-contact-kicker{
+  margin:0 0 7px;color:#ff9d5e;
+  font-size:10px;font-weight:900;letter-spacing:.22em;
+}
+body.home-page .quick-contact-modal .quick-contact-panel h2{
+  margin:0;max-width:445px;
+  font-size:clamp(29px,4.7vw,39px)!important;
+  line-height:1.07;letter-spacing:-.052em;
+  color:#fff;text-wrap:balance;
+}
+body.home-page .quick-contact-modal #quickContactDescription{
+  margin:12px 0 0;max-width:455px;
+  color:#b9c8d0;font-size:14px;line-height:1.55;
+}
+body.home-page .quick-contact-help{
+  display:flex;align-items:center;gap:11px;
+  margin:20px 0 13px;padding:11px 13px;
+  border:1px solid rgba(92,158,191,.25);border-radius:13px;
+  background:rgba(23,53,70,.48);
+  color:#c8d8e1;font-size:12px;line-height:1.36;
+}
+body.home-page .quick-contact-help svg{flex:none;width:18px;height:18px;stroke:#ff9d59}
+body.home-page .quick-contact-help strong{color:#f3f8fb}
+body.home-page .quick-contact-modal .quick-contact-actions{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:11px!important;
+  margin:0;
+}
+body.home-page .quick-contact-modal .quick-contact-actions a.quick-contact-main-action{
+  display:flex;align-items:center;gap:10px;
+  box-sizing:border-box;min-width:0;min-height:105px;
+  flex-direction:row;justify-content:flex-start;
+  padding:16px 13px!important;
+  border-radius:17px!important;
+  font-size:inherit;font-weight:inherit;text-decoration:none;
+  transition:transform .18s,border-color .18s,box-shadow .18s,background .18s;
+}
+body.home-page .quick-contact-modal .quick-contact-actions a.quick-contact-text-action{
+  color:#160f0a!important;
+  border:1px solid #ffa96b!important;
+  background:linear-gradient(118deg,#ffb268 0%,#ff852d 49%,#f16019 100%)!important;
+  box-shadow:0 9px 23px rgba(242,96,23,.20),inset 0 1px 0 rgba(255,255,255,.45);
+}
+body.home-page .quick-contact-modal .quick-contact-actions a.quick-contact-call-action{
+  color:#f4f8fb!important;
+  border:1px solid rgba(104,169,203,.45)!important;
+  background:linear-gradient(135deg,rgba(32,61,80,.88),rgba(12,29,42,.95))!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.07);
+}
+body.home-page .quick-contact-action-icon{
+  display:grid;place-items:center;flex:none;
+  width:37px;height:37px;border-radius:12px;
+  background:rgba(13,23,30,.12);
+  border:1px solid rgba(7,22,31,.16);
+}
+body.home-page .quick-contact-call-action .quick-contact-action-icon{
+  color:#ffab6d;background:rgba(255,131,65,.10);border-color:rgba(255,141,68,.27);
+}
+body.home-page .quick-contact-action-icon svg{width:21px;height:21px}
+body.home-page .quick-contact-action-copy{
+  display:flex;flex-direction:column;align-items:flex-start;gap:4px;
+  min-width:0;flex:1;
+}
+body.home-page .quick-contact-action-copy small{
+  font-size:9px;font-weight:900;letter-spacing:.11em;line-height:1.18;opacity:.8;
+}
+body.home-page .quick-contact-action-copy strong{
+  display:block;margin:0;font-size:19px;font-weight:950;letter-spacing:-.035em;
+  line-height:1.08;opacity:1;
+}
+body.home-page .quick-contact-action-copy em{
+  display:block;min-width:0;font-size:11px;font-weight:650;font-style:normal;
+  line-height:1.3;opacity:.85;
+}
+body.home-page .quick-contact-arrow{align-self:flex-start;flex:none;font-size:19px;font-weight:600;opacity:.72}
+body.home-page .quick-contact-modal a:hover.quick-contact-main-action{
+  transform:translateY(-2px);
+  box-shadow:0 13px 30px rgba(255,113,40,.25);
+}
+body.home-page .quick-contact-divider{
+  display:flex;align-items:center;gap:12px;
+  margin:20px 0 11px;color:#93a9b8;
+  font-size:10px;font-weight:900;letter-spacing:.17em;
+}
+body.home-page .quick-contact-divider:after{
+  content:"";height:1px;flex:1;
+  background:linear-gradient(90deg,rgba(123,164,183,.33),transparent);
+}
+body.home-page .quick-contact-secondary{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;
+}
+body.home-page .quick-contact-secondary a{
+  display:flex;align-items:center;gap:9px;min-width:0;
+  padding:12px;border-radius:13px;
+  border:1px solid rgba(130,163,183,.23);
+  background:rgba(255,255,255,.035);
+  color:#e6eef3;text-decoration:none;
+  transition:border-color .18s,background .18s;
+}
+body.home-page .quick-contact-secondary a:hover{
+  background:rgba(40,95,123,.24);border-color:rgba(255,144,77,.58);
+}
+body.home-page .quick-contact-secondary svg{width:19px;height:19px;flex:none;stroke:#ff9d5e}
+body.home-page .quick-contact-secondary span{display:flex;flex-direction:column;min-width:0;gap:3px}
+body.home-page .quick-contact-secondary strong{
+  color:#f4f8fa;font-size:12px;line-height:1.1;letter-spacing:-.01em;
+}
+body.home-page .quick-contact-secondary small{
+  display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  color:#98afbd;font-size:10px;line-height:1.3;
+}
+body.home-page .quick-contact-social{
+  display:flex;align-items:center;flex-wrap:wrap;
+  gap:9px;margin-top:16px;padding-top:14px;
+  border-top:1px solid rgba(141,177,198,.18);
+}
+body.home-page .quick-contact-social-label{
+  margin-right:auto;flex:1;
+  color:#8da8ba;font-size:10px;font-weight:900;letter-spacing:.16em;
+}
+body.home-page .quick-contact-social a{
+  display:inline-flex;align-items:center;gap:6px;padding:6px 10px;
+  border-radius:999px;background:rgba(255,255,255,.035);
+  border:1px solid rgba(140,177,196,.17);
+  color:#e3ebf1;text-decoration:none;
+  font-size:11px;font-weight:800;
+  transition:background .18s,border-color .18s;
+}
+body.home-page .quick-contact-social a:hover{
+  background:rgba(255,136,66,.13);border-color:rgba(255,138,65,.5);
+}
+body.home-page .quick-contact-social svg{width:16px;height:16px;color:#ff9954}
+body.home-page .quick-contact-modal .quick-contact-footnote{
+  margin:14px 0 0!important;color:#7f9baa!important;
+  font-size:10px!important;line-height:1.4!important;
+  text-align:center;letter-spacing:.02em;
+}
+body.home-page .quick-contact-modal a:focus-visible,
+body.home-page .quick-contact-close:focus-visible{
+  outline:3px solid #ffd2ad!important;outline-offset:3px;
+}
+@media(max-width:620px){
+  body.home-page .quick-contact-modal{
+    display:flex!important;align-items:center!important;justify-content:center!important;
+    padding:12px!important;
+  }
+  body.home-page .quick-contact-modal .quick-contact-panel{
+    width:min(460px,calc(100vw - 24px))!important;
+    max-width:none!important;
+    max-height:calc(100dvh - 24px)!important;
+    padding:20px!important;border-radius:23px!important;
+  }
+  body.home-page .quick-contact-modal .quick-contact-close{
+    top:17px;right:17px;width:36px;height:36px;
+  }
+  body.home-page .quick-contact-intro{margin-top:17px}
+  body.home-page .quick-contact-modal .quick-contact-panel h2{
+    font-size:clamp(27px,7.7vw,36px)!important;
+  }
+  body.home-page .quick-contact-modal #quickContactDescription{
+    margin-top:8px;font-size:12px;line-height:1.4;
+  }
+  body.home-page .quick-contact-help{
+    margin:13px 0 10px;padding:10px 11px;font-size:11px;
+  }
+  body.home-page .quick-contact-modal .quick-contact-actions{
+    grid-template-columns:1fr!important;gap:8px!important;
+  }
+  body.home-page .quick-contact-modal .quick-contact-actions a.quick-contact-main-action{
+    min-height:72px!important;padding:11px 12px!important;border-radius:14px!important;
+  }
+  body.home-page .quick-contact-action-copy strong{font-size:18px}
+  body.home-page .quick-contact-divider{margin:15px 0 10px}
+  body.home-page .quick-contact-secondary a{padding:10px 9px}
+  body.home-page .quick-contact-social{margin-top:12px;padding-top:12px}
+}
+@media(max-width:350px){
+  body.home-page .quick-contact-modal .quick-contact-panel{padding:16px!important}
+  body.home-page .quick-contact-secondary{grid-template-columns:1fr}
+  body.home-page .quick-contact-social-label{flex-basis:100%}
+}
+@media(max-height:700px) and (max-width:620px){
+  body.home-page .quick-contact-modal .quick-contact-panel{max-height:calc(100dvh - 16px)!important}
+  body.home-page .quick-contact-intro{margin-top:13px}
+  body.home-page .quick-contact-help{margin-block:10px 8px}
+}
+@media(prefers-reduced-motion:reduce){
+  body.home-page .quick-contact-modal .quick-contact-panel a,
+  body.home-page .quick-contact-modal .quick-contact-close{transition:none!important}
+}
