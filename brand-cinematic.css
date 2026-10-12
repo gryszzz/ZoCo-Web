@@ -30,7 +30,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #ffa95c!important;outline
   box-shadow:0 10px 30px rgba(0,0,0,.35),0 1px 8px rgba(255,110,20,.12)!important;
 }
 .brand-logo,.logo-image{
-  background-image:url("/zoco-business-profile-logo-1024.png")!important;
+  background-image:url("/assets/brand/zoco-mascot-mark.png")!important;
   background-position:center!important;
   background-repeat:no-repeat!important;
   background-size:contain!important;
@@ -153,7 +153,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #ffa95c!important;outline
   height:auto!important;
   aspect-ratio:1!important;
   margin:-.4rem auto -1.3rem!important;
-  background:url("/zoco-business-profile-logo-1024.png") center/contain no-repeat!important;
+  background:url("/assets/brand/zoco-mascot-mark.png") center/contain no-repeat!important;
   mix-blend-mode:normal!important;
   mask-image:none!important;
   -webkit-mask-image:none!important;
@@ -433,7 +433,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #ffa95c!important;outline
 .site-footer-contact:before{
   content:"";position:absolute;top:0;left:0;
   display:block;width:128px;height:104px;
-  background:url("/zoco-business-profile-logo-1024.png") top left/contain no-repeat;
+  background:url("/assets/brand/zoco-mascot-mark.png") top left/contain no-repeat;
 }
 .site-footer-nav h2{color:#ff9650!important}
 .site-footer-nav a:hover{color:#ffab68!important}
@@ -687,3 +687,168 @@ a:focus-visible,button:focus-visible{outline:3px solid #ffa95c!important;outline
 /* Blend the current logo's black canvas into the photographic hero rather than
    displaying it as a stark, square black business card. */
 .hero .hero-card-dogs{mix-blend-mode:screen!important}
+
+
+/* Cinematic depth pass (October 2026)
+   The hero illustration is drawn in SVG: sharp on Retina screens, lightweight,
+   and vehicle-free. Keep the existing verified reviews and site copy intact. */
+.hero-shell{
+  background-color:#090f14!important;
+  background-image:
+    linear-gradient(90deg,rgba(4,8,11,.14) 0%,rgba(5,9,12,.17) 41%,rgba(4,10,15,.26) 100%),
+    url("/assets/brand/zoco-industrial-hero.svg")!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-position:center 50%!important;
+}
+.hero-shell::before{background:none!important;opacity:0!important}
+.hero-shell::after{
+  background:
+    radial-gradient(ellipse at 24% 43%,rgba(255,109,19,.11),transparent 50%),
+    linear-gradient(180deg,transparent 74%,rgba(5,8,10,.32) 100%)!important;
+  pointer-events:none;
+}
+.hero .hero-card{
+  position:relative;
+  background:transparent!important;
+}
+.hero .hero-card-dogs{
+  /* Preserve alpha and edge detail: avoid screen-blending washed-out logos. */
+  mix-blend-mode:normal!important;
+  background-color:transparent!important;
+  image-rendering:auto!important;
+  filter:drop-shadow(0 17px 24px rgba(0,0,0,.55)) drop-shadow(0 0 9px rgba(244,114,28,.16))!important;
+}
+.hero .hero-copyblock h1{
+  text-shadow:0 3px 12px rgba(0,0,0,.64),0 1px 1px #15191e!important;
+}
+.hero .hero-text{text-shadow:0 1px 9px rgba(0,0,0,.66)}
+.hero-bottomline{
+  background:linear-gradient(95deg,#10191edc,#171d23ef,#081016ef)!important;
+  border-top:1px solid rgba(255,122,35,.72)!important;
+  border-bottom:2px solid rgba(255,123,35,.45)!important;
+  box-shadow:0 12px 26px rgba(0,0,0,.24);
+}
+.hero-bottomline>div{border-right-color:rgba(243,172,119,.21)!important}
+.home-page #drain{
+  position:relative;
+  isolation:isolate;
+  background:
+    radial-gradient(ellipse at 18% -10%,rgba(251,92,11,.12),transparent 49%),
+    radial-gradient(ellipse at 98% 92%,rgba(8,155,208,.11),transparent 51%),
+    linear-gradient(150deg,#0d1115,#10171d 58%,#0b0f13)!important;
+  border-bottom:1px solid rgba(255,121,31,.36);
+}
+.home-page #drain:after{
+  content:"";
+  position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:url("/assets/brand/zoco-industrial-hero.svg");
+  background-size:cover;background-position:center 70%;
+  opacity:.11;
+}
+.home-page #drain .section-bar{position:relative}
+.home-page #drain .section-bar h2{
+  color:#f6f8fa!important;
+  text-shadow:0 3px 12px #0009;
+}
+.service-tab{
+  border-color:#56616a!important;
+  background:#131920!important;
+  box-shadow:0 8px 20px #0007!important;
+}
+.service-tab:before{opacity:.99!important;filter:saturate(1.1) contrast(1.12)!important}
+.service-tab:after{
+  background:linear-gradient(180deg,#070b0c00 20%,#0d141ae8 60%,#0b1217 100%)!important;
+}
+.service-tab.active,.service-tab:hover{
+  border-color:#ff963f!important;
+  box-shadow:0 0 0 1px rgba(255,139,35,.35),0 9px 30px rgba(255,100,10,.13)!important;
+}
+.service-display{
+  border:1px solid rgba(255,143,58,.53)!important;
+  box-shadow:0 16px 42px rgba(0,0,0,.26),inset 0 1px rgba(255,255,255,.05);
+}
+.home-page .handyman-section{
+  background:
+    radial-gradient(ellipse at 90% 12%,rgba(255,130,43,.12),transparent 47%),
+    linear-gradient(135deg,#141d23 0%,#0b1115 70%,#1a1714 100%)!important;
+}
+.reviews-section{
+  isolation:isolate;
+  background:
+    radial-gradient(ellipse at 14% 42%,rgba(255,103,13,.11),transparent 51%),
+    radial-gradient(ellipse at 96% 12%,rgba(0,133,182,.1),transparent 43%),
+    linear-gradient(120deg,#0b1115,#14191d 55%,#0b1118)!important;
+}
+.reviews-section:before{
+  content:"";
+  position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:url("/assets/brand/zoco-industrial-hero.svg");
+  background-size:cover;background-position:center;
+  opacity:.15;
+}
+.google-review-card{
+  border-color:rgba(255,158,73,.29)!important;
+  background:linear-gradient(145deg,rgba(33,39,44,.93),rgba(13,18,23,.98))!important;
+  box-shadow:0 12px 24px #0005,inset 0 1px rgba(255,255,255,.07)!important;
+}
+.google-review-card q{color:#f7f8fa!important}
+.google-stars{color:#ffbd43!important}
+.zoco-area-teaser{
+  background:
+    linear-gradient(90deg,rgba(5,11,16,.92),rgba(8,14,19,.84)),
+    url("/assets/brand/zoco-industrial-hero.svg") center/cover no-repeat!important;
+  border-block:2px solid rgba(255,124,30,.46)!important;
+}
+.zoco-county{
+  backdrop-filter:blur(9px);
+  -webkit-backdrop-filter:blur(9px);
+  box-shadow:0 12px 35px #0006,inset 0 1px rgba(255,255,255,.09)!important;
+}
+.contact-section{
+  background:
+    radial-gradient(ellipse at 10% 40%,rgba(253,93,11,.15),transparent 48%),
+    linear-gradient(100deg,#151d22,#0b1015 68%)!important;
+}
+.site-footer{
+  background:
+    radial-gradient(ellipse at 90% 20%,rgba(246,109,24,.1),transparent 45%),
+    linear-gradient(165deg,#0a0f13,#07090c)!important;
+}
+@media(min-width:901px){
+  .hero-main{min-height:570px!important;gap:clamp(1rem,2.5vw,3.5rem)!important}
+  .hero .hero-card-dogs{width:min(100%,530px)!important}
+  .hero h1{line-height:1.02!important}
+  .service-tab{min-height:234px}
+}
+@media(max-width:900px){
+  .hero-shell{
+    background-position:36% 50%!important;
+    background-image:
+      linear-gradient(180deg,rgba(3,8,12,.25),rgba(6,12,17,.4) 70%,rgba(5,10,14,.73)),
+      url("/assets/brand/zoco-industrial-hero.svg")!important
+  }
+}
+@media(max-width:620px){
+  .hero-shell{background-position:35% 50%!important}
+  .hero-shell::after{
+    background:
+      radial-gradient(circle at 50% 16%,rgba(255,116,33,.15),transparent 33%),
+      linear-gradient(180deg,rgba(6,9,12,.16),rgba(5,10,16,.22) 72%,rgba(5,10,16,.58))!important;
+  }
+  .hero .hero-card-dogs{
+    width:min(60vw,250px)!important;
+    max-width:250px!important;
+    filter:drop-shadow(0 10px 17px rgba(0,0,0,.6))!important;
+  }
+  .hero .hero-copyblock h1{
+    font-size:clamp(2.2rem,9.1vw,3.45rem)!important;
+    max-width:100%;
+  }
+  .home-page #drain:after{opacity:.08}
+  .service-tab{min-height:172px}
+  .hero-bottomline>div{border-right:0!important}
+}
+
+/* Hi-DPI hero source: 1024px real mascot artwork, not an enlarged 128px icon. */
+.hero .hero-card-dogs{background-image:url("/assets/brand/zoco-mascot-hero.webp")!important;background-repeat:no-repeat!important;background-position:center!important;background-size:contain!important}

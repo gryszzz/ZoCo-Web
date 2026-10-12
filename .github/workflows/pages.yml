@@ -34,9 +34,10 @@ jobs:
           python - <<'PY'
           from PIL import Image
           # Single source of truth for ZoCo's colorful dog-and-drain brand.
-          src = Image.open("assets/brand/zoco-mascot-mark.png").convert("RGBA")
-          src.save("zoco-logo-v2.webp", "WEBP", quality=90)
-          src.save("logo.webp", "WEBP", quality=90)
+          # Start from the 1024px original transparent asset; never upscale a 128px thumbnail.
+          src = Image.open("assets/brand/zoco-mascot-hero.webp").convert("RGBA")
+          src.save("zoco-logo-v2.webp", "WEBP", quality=88, method=4)
+          src.save("logo.webp", "WEBP", quality=88, method=4)
           src.resize((1024, 1024), Image.Resampling.LANCZOS).save(
               "zoco-business-profile-logo-1024.png", "PNG", optimize=True,
           )

@@ -267,3 +267,203 @@ body{background:#0b1014!important}
 @media(prefers-reduced-motion:reduce){
   .home-page #drain .service-tab{transition:none!important}
 }
+
+/*
+ * ZOCO 2.2 — HiDPI mascot and cinematic industrial surfaces.
+ * Must be last: this file supersedes theme.css and brand-cinematic.css.
+ * The photos/illustration decorate only; real reviews, HIC, business details,
+ * town lists, services, and functioning links stay unchanged.
+ */
+.site-header .brand-logo,
+.logo-image,.quick-logo-mark,.card-link-logo,.social-icon.social-logo{
+  background-image:url("/assets/brand/zoco-mascot-mark.png")!important;
+  background-repeat:no-repeat!important;background-position:center!important;
+  background-size:contain!important;background-color:transparent!important;
+  mix-blend-mode:normal!important;
+}
+.site-header .brand-logo{
+  image-rendering:auto!important;
+  width:77px!important;height:64px!important;flex:0 0 77px!important;
+}
+.hero .hero-card-dogs{
+  background-image:url("/assets/brand/zoco-mascot-hero.webp")!important;
+  background-position:center!important;background-size:contain!important;
+  background-repeat:no-repeat!important;mix-blend-mode:normal!important;
+  image-rendering:auto!important;
+  filter:drop-shadow(0 14px 22px rgba(0,0,0,.67))
+         drop-shadow(0 0 11px rgba(251,115,35,.24))!important;
+}
+.hero .hero-shell{
+  background-color:#090f14!important;
+  background-image:
+    linear-gradient(90deg,rgba(3,7,10,.12),rgba(5,10,15,.27) 55%,rgba(3,9,14,.28)),
+    url("/assets/brand/zoco-industrial-hero.svg")!important;
+  background-size:cover!important;background-position:center center!important;
+  background-repeat:no-repeat!important;
+  box-shadow:0 16px 39px rgba(0,0,0,.35)!important;
+}
+.hero .hero-shell::before{
+  opacity:0!important;display:none!important;
+}
+.hero .hero-shell::after{
+  display:block!important;position:absolute;inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at 27% 39%,rgba(247,108,22,.14),transparent 48%),
+    radial-gradient(ellipse at 89% 69%,rgba(19,170,229,.10),transparent 45%),
+    linear-gradient(180deg,transparent 75%,rgba(2,7,12,.25))!important;
+}
+.hero .hero-copyblock{position:relative;z-index:2}
+.hero .hero-eyebrow,.hero h1,.hero .hero-text{
+  text-shadow:0 2px 14px rgba(0,0,0,.63)!important;
+}
+.hero .hero-actions .button{box-shadow:0 7px 19px rgba(0,0,0,.27),inset 0 1px rgba(255,255,255,.15)!important}
+.hero .hero-actions .button-primary{box-shadow:0 8px 25px rgba(227,79,10,.31),inset 0 1px rgba(255,255,255,.27)!important}
+.hero .hero-bottomline{
+  background:linear-gradient(95deg,#0b1319,#192128,#0b1217)!important;
+  border-top:1px solid rgba(255,146,68,.65)!important;
+  border-bottom:2px solid rgba(255,99,15,.58)!important;
+  box-shadow:0 12px 28px #0006!important;
+}
+.hero .hero-bottomline>div{border-color:rgba(255,149,83,.2)!important}
+
+/* Dark, readable service cards match the selected orange industrial reference. */
+.home-page #drain{
+  isolation:isolate;
+  background:
+    radial-gradient(ellipse at 4% 6%,rgba(234,100,13,.17),transparent 45%),
+    radial-gradient(ellipse at 93% 89%,rgba(6,145,199,.1),transparent 39%),
+    linear-gradient(145deg,#0b1014,#141c21 55%,#090d11)!important;
+  color:#f5f7f8!important;
+  border-bottom:2px solid rgba(255,124,30,.42)!important;
+}
+.home-page #drain:after{
+  content:"";display:block;position:absolute;inset:0;
+  background:url("/assets/brand/zoco-industrial-hero.svg") center/cover no-repeat;
+  opacity:.10!important;z-index:0;pointer-events:none;
+}
+.home-page #drain .section-bar,
+.home-page #drain .service-console{position:relative;z-index:1}
+.home-page #drain .section-bar h2{
+  color:#f6f8f9!important;text-shadow:0 4px 17px #0009!important;
+}
+.home-page #drain .section-bar>p{color:#c0cbd0!important}
+.home-page #drain .kicker{color:#ff9949!important}
+.home-page #drain .service-tab{
+  color:#fff!important;
+  background:linear-gradient(155deg,#1e252b,#10161b)!important;
+  border:1px solid #48545d!important;
+  box-shadow:0 11px 25px #0008!important;
+}
+.home-page #drain .service-tab::before{opacity:.93!important;filter:saturate(1.1) contrast(1.08)!important}
+.home-page #drain .service-tab::after{
+  background:linear-gradient(180deg,rgba(2,6,10,0) 12%,rgba(6,10,14,.19) 26%,rgba(7,13,17,.97) 66%)!important;
+}
+.home-page #drain .service-tab strong{
+  color:#f9fafb!important;
+  text-shadow:0 2px 7px #000!important;
+}
+.home-page #drain .service-tab span{
+  background:rgba(10,16,20,.93)!important;
+  color:#ff994d!important;border-color:#ff8f31!important;
+}
+.home-page #drain .service-tab.active,.home-page #drain .service-tab:hover{
+  border-color:#ff9748!important;
+  box-shadow:0 0 0 1px rgba(255,137,41,.38),0 14px 34px #0008!important;
+}
+.home-page #drain .service-display{
+  border-color:rgba(255,137,48,.46)!important;
+  box-shadow:0 16px 38px #0006!important;
+}
+.home-page #drain .service-display h3{color:#fff!important}
+.home-page #drain .service-display p{color:#c4ced4!important}
+/* Review section: keep the actual Google review copy; add depth behind it. */
+.reviews-section{
+  position:relative;isolation:isolate;
+  background:
+    radial-gradient(ellipse at 15% 13%,rgba(255,92,16,.16),transparent 42%),
+    linear-gradient(110deg,rgba(11,17,22,.95),rgba(9,13,19,.96))!important;
+  border-top:2px solid rgba(255,126,48,.5)!important;
+  border-bottom:2px solid rgba(255,126,48,.38)!important;
+}
+.reviews-section::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:url("/assets/brand/zoco-industrial-hero.svg") center 58%/cover no-repeat;
+  opacity:.15;
+}
+.reviews-section>.page{position:relative;z-index:1}
+.google-review-card{
+  background:linear-gradient(165deg,rgba(38,47,53,.96),rgba(10,16,20,.98))!important;
+  border-color:rgba(226,142,81,.35)!important;
+  box-shadow:0 8px 25px #0008,inset 0 1px rgba(255,255,255,.07)!important;
+}
+.zoco-area-teaser{
+  background:
+    radial-gradient(ellipse at 90% 80%,rgba(29,121,164,.15),transparent 48%),
+    linear-gradient(100deg,rgba(11,16,19,.94),rgba(12,20,26,.83)),
+    url("/assets/brand/zoco-industrial-hero.svg") center/cover no-repeat!important;
+  border-block:2px solid rgba(255,124,31,.49)!important;
+}
+.zoco-area-copy h2{color:#f2f5f8!important;text-shadow:0 3px 13px #0008!important}
+.zoco-area-copy h2 span{color:#ff8b3b!important}
+.zoco-area-copy p{color:#c6d0d5!important}
+.zoco-county{
+  border-color:rgba(255,141,49,.42)!important;
+  box-shadow:0 16px 30px rgba(0,0,0,.36),inset 0 1px rgba(255,255,255,.07)!important;
+}
+.site-footer-contact::before{
+  background-image:url("/assets/brand/zoco-mascot-mark.png")!important;
+  background-size:contain!important;
+}
+.site-footer{
+  background:
+    radial-gradient(ellipse at 90% 0%,rgba(248,111,20,.12),transparent 40%),
+    linear-gradient(145deg,#0b1015,#07090b)!important;
+}
+.contact-section{
+  background:radial-gradient(ellipse at 95% 18%,rgba(255,96,24,.13),transparent 52%),
+    linear-gradient(105deg,#182229,#0a0f13 76%)!important;
+}
+/* Keep the model artwork below the readable copy and CTAs on small screens. */
+@media(max-width:950px){
+ .hero .hero-shell{
+   background-position:35% center!important;
+   background-image:
+     linear-gradient(180deg,rgba(3,8,12,.3),rgba(5,10,14,.42) 65%,rgba(5,11,17,.75)),
+     url("/assets/brand/zoco-industrial-hero.svg")!important;
+ }
+}
+@media(max-width:620px){
+ .site-header .brand-logo{
+   width:62px!important;height:61px!important;flex:0 0 62px!important;
+ }
+ .hero .hero-card-dogs{
+   width:min(56vw,220px)!important;max-width:220px!important;
+   height:auto!important;
+   filter:drop-shadow(0 8px 14px #000a)!important;
+ }
+ .hero .hero-shell{background-position:28% center!important}
+ .hero .hero-shell::after{
+   background:
+     radial-gradient(ellipse at 50% 12%,rgba(255,117,25,.15),transparent 38%),
+     linear-gradient(180deg,rgba(5,9,12,.14),rgba(3,8,12,.64))!important;
+ }
+ .home-page #drain .service-tab{
+   min-height:170px!important;
+   background:#121a1f!important;
+ }
+ .home-page #drain .service-tab strong{font-size:1.06rem!important}
+}
+
+/* Keep the water outflow visible on narrow screens rather than cropping it off-screen. */
+@media(max-width:620px){
+ .hero .hero-shell{
+   background-position: left center, center center, 88% center!important;
+   background-size:auto,auto,auto 100%!important;
+ }
+ .hero .hero-shell::after{
+   background:radial-gradient(ellipse at 8% 28%,rgba(255,124,37,.2),transparent 45%),
+     radial-gradient(ellipse at 98% 45%,rgba(12,158,221,.11),transparent 38%),
+     linear-gradient(180deg,rgba(4,9,12,.1),rgba(3,8,12,.75))!important;
+ }
+}
