@@ -1,16 +1,13 @@
-# ZoCo service-area county boundary provenance
+# ZoCo county outline source and accuracy
 
-This site illustrates Sussex and Passaic County outlines for general service-area orientation. It does **not** establish legal boundary lines, contractor service guarantees, parcel extents or travel eligibility. Visitors should contact Henry to confirm service.
+The homepage uses **U.S. Census Bureau 2026 TIGERweb State_County county geometry**, January 1, 2026 vintage, to depict Sussex County (GEOID `34037`) and Passaic County (GEOID `34031`).
 
-## Geometry source and processing
+- Official source: https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/11
+- Query: `GEOID IN ('34031','34037')`; WGS 84 GeoJSON geometry.
+- Coordinates were projected locally for screen display with `x=longitude*cos(41.1°)`, `y=-latitude`, preserving a uniform x/y drawing scale.
+- Original source polygon rings: Sussex 2623 vertices, Passaic 6025 vertices.
+- Geometry simplified with a **0.58-screen-pixel** Ramer–Douglas–Peucker tolerance to 96 vertices (Sussex) and 159 vertices (Passaic); output fixed SVG viewBox `610 × 490`.
+- Both visual pins are verified to fall inside their corresponding polygon but **do not mark the business address**.
+- The county paths themselves link to local service pages. Town mentions are examples, **not guarantees of individual job eligibility**.
 
-- Source GeoJSON: https://github.com/Camreyn/civicresultmaps/blob/main/data/nj-counties.geojson
-- New Jersey geographic boundary reference: https://maps.nj.gov/arcgis/rest/services/Framework/Government_Boundaries/MapServer/1
-- Selected the `GEOID` features `34037` (Sussex) and `34031` (Passaic).
-- Original polygons contained 2,623 (Sussex) and 6,025 (Passaic) vertices.
-- Used geographic coordinates projected to an equirectangular local display using `x = (lon - minLon) * cos(41.1°)`, `y = maxLat - lat`.
-- Uniform display scale (827.6467494528383), chart canvas `610 × 490`, x/y padding about 29/23 px.
-- Simplified with Ramer–Douglas–Peucker at 0.7 rendered pixels, resulting in 84 Sussex and 139 Passaic vertices; closed SVG shapes.
-- Pin and label locations are presentation coordinates within their associated counties; do not represent addresses or business headquarters.
-
-The map is rendered from fixed local SVG paths with no live GIS dependency.
+These generalized visual boundaries are for orientation only; they are not parcel-level or legally surveyed boundaries. Call or text ZoCo to confirm travel and availability.
