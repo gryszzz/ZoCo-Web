@@ -1,0 +1,552 @@
+/*
+ * ZoCo Depth & Utility System — 2026-10
+ * Additive layer after brand-cinematic.css.
+ * Preserve authentic reviews, current copy, county routes, access and CTAs.
+ * Visual treatment: textured industrial steel, orange task lighting,
+ * restrained blue pipe/water energy. No vehicles.
+ */
+:root{
+  --zoco-depth-ink:#070b10;
+  --zoco-depth-metal:#111b22;
+  --zoco-depth-edge:rgba(255,130,48,.35);
+  --zoco-depth-glow:#ff7d27;
+  --zoco-depth-text:#e9eff2;
+}
+body{
+  background:
+    radial-gradient(ellipse at 14% 10%,rgba(255,104,26,.10),transparent 28%),
+    radial-gradient(ellipse at 90% 38%,rgba(19,156,223,.07),transparent 33%),
+    linear-gradient(180deg,#070b10,#101820 50%,#080d11)!important;
+}
+.home-page .hero-shell{
+  background:
+    linear-gradient(95deg,rgba(5,9,12,.37),rgba(5,12,17,.33) 55%,rgba(5,8,12,.23)),
+    url("/assets/brand/zoco-industrial-hero.svg") center / cover no-repeat!important;
+  border-bottom:2px solid rgba(255,120,31,.67)!important;
+  box-shadow:inset 0 -28px 50px rgba(2,5,8,.50),0 16px 34px #0009!important;
+}
+.home-page .hero-shell::after{
+  background:
+    radial-gradient(ellipse at 18% 37%,rgba(255,112,23,.16),transparent 45%),
+    radial-gradient(ellipse at 84% 51%,rgba(24,160,229,.14),transparent 41%),
+    linear-gradient(180deg,transparent 68%,rgba(3,7,10,.45))!important;
+  pointer-events:none;
+}
+.home-page .hero-main{position:relative;z-index:1}
+.home-page .hero-card-dogs{background-size:contain!important}
+.home-page .hero-copyblock .hero-actions a{letter-spacing:.02em}
+.home-page .hero-bottomline{
+  background:linear-gradient(100deg,#111a20,#171f27,#0b151c)!important;
+  box-shadow:0 10px 23px #000a!important;
+}
+/* Feature sections share physical texture, but alternate lighting. */
+.home-page #drain{
+  position:relative;isolation:isolate;
+  background:
+    radial-gradient(ellipse at 17% 2%,rgba(255,101,24,.20),transparent 48%),
+    linear-gradient(135deg,#101820 0%,#0b1219 49%,#15212a 100%)!important;
+  border-block:1px solid var(--zoco-depth-edge);
+}
+.home-page #drain::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:url("/assets/brand/zoco-industrial-panel.svg") center / cover no-repeat!important;
+  opacity:.29!important;
+}
+.home-page #drain::before{
+  background:linear-gradient(90deg,transparent,#fe8529 42%,#ffd08e 50%,#fb7418 58%,transparent)!important;
+  box-shadow:0 0 20px rgba(255,104,24,.4)!important;
+  height:2px!important;
+}
+.home-page #drain .section-bar{margin-bottom:1.65rem}
+.home-page #drain .section-bar h2{font-size:clamp(2.15rem,4.3vw,4.4rem)!important}
+.home-page #drain .section-bar>p{color:#c9d4da!important;max-width:650px}
+/* Five clear, actionable selectors, not a jumble of feature boxes. */
+.home-page .service-console{overflow:visible!important;background:transparent!important;border:0!important}
+.home-page .service-tabs{
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  gap:clamp(.55rem,1vw,1rem)!important;
+  background:none!important;
+  padding:0!important;
+  border:0!important;
+}
+.home-page .service-tab{
+  display:flex!important;
+  flex-direction:column;
+  justify-content:flex-end!important;
+  align-items:flex-start!important;
+  text-align:left!important;
+  isolation:isolate;position:relative;
+  min-width:0;min-height:260px!important;
+  padding:1rem!important;
+  background:#111920!important;
+  border:1px solid rgba(183,205,215,.27)!important;
+  border-radius:14px!important;
+  box-shadow:0 14px 28px #0007!important;
+  overflow:hidden;
+  cursor:pointer;
+}
+.home-page .service-tab::before{
+  content:"";inset:0 0 31%;z-index:-1;position:absolute;
+  background-size:cover;background-position:center;
+  opacity:.94!important;
+  filter:contrast(1.1) saturate(.9)!important;
+}
+.home-page .service-tab[data-service="drain"]::before{
+  background-image:linear-gradient(180deg,transparent 50%,#0d151c),url("/assets/services/drain-cleaning.jpg")
+}
+.home-page .service-tab[data-service="snaking"]::before{
+  background-image:linear-gradient(180deg,transparent 50%,#0d151c),url("/assets/services/drain-cleaning.jpg");
+  background-position:43% center
+}
+.home-page .service-tab[data-service="camera"]::before{
+  background-image:linear-gradient(180deg,transparent 50%,#0d151c),url("/assets/services/camera-inspection.jpg")
+}
+.home-page .service-tab[data-service="maintenance"]::before{
+  background-image:linear-gradient(180deg,transparent 50%,#0d151c),url("/assets/services/drain-maintenance.jpg")
+}
+.home-page .service-tab[data-service="dryer"]::before{
+  background-image:linear-gradient(180deg,transparent 50%,#0d151c),url("/assets/services/dryer-vent-cleaning.jpg")
+}
+.home-page .service-tab::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,transparent 17%,rgba(7,13,18,.26) 39%,rgba(7,13,18,.96) 65%,#0a1219)!important;
+}
+.home-page .service-tab > span{
+  display:grid!important;place-items:center;
+  width:35px;height:35px;
+  border:1px solid rgba(255,140,50,.84);border-radius:8px;
+  color:#ffad70!important;
+  background:rgba(5,10,14,.89)!important;
+  box-shadow:0 4px 11px rgba(0,0,0,.4);
+  margin-bottom:.8rem;
+  font:800 .72rem/1 system-ui,sans-serif;
+}
+.home-page .service-tab strong{
+  min-height:0!important;
+  font-family:Impact,"Arial Narrow",system-ui,sans-serif!important;
+  font-weight:800;letter-spacing:.028em;
+  font-size:clamp(1.08rem,1.62vw,1.55rem)!important;
+  line-height:1.12!important;
+  color:#f8fafb!important;
+  text-shadow:0 2px 9px #000c;
+}
+.home-page .service-tab .zoco-tab-detail{
+  display:block;
+  margin-top:.45rem;
+  font-style:normal;font-size:.77rem;line-height:1.35;
+  color:#bfcbd4!important;letter-spacing:0;
+}
+.home-page .service-tab .zoco-tab-action{
+  display:block;align-self:stretch;
+  margin-top:.8rem;padding-top:.6rem;
+  border-top:1px solid rgba(255,154,66,.24);
+  color:#ffaf6c!important;
+  font-size:.62rem;font-weight:900;letter-spacing:.14em;
+}
+.home-page .service-tab:is(:hover,:focus-visible,.active){
+  border-color:#ffa055!important;
+  background:#101922!important;
+  box-shadow:0 0 0 1px rgba(255,148,56,.24),0 17px 38px #000a,0 0 18px rgba(255,93,14,.12)!important;
+}
+.home-page .service-tab.active > span{background:#ff7d27!important;color:#10161c!important}
+.home-page .service-tab.active .zoco-tab-action{color:#fff2e8!important}
+.home-page .service-display{
+  display:grid;
+  background:
+    radial-gradient(ellipse at 82% 22%,rgba(17,167,227,.11),transparent 43%),
+    linear-gradient(133deg,#17232c,#0a1219 74%)!important;
+  border:1px solid rgba(255,132,38,.38)!important;
+  border-radius:15px!important;
+  box-shadow:0 22px 36px #0008,inset 0 1px rgba(255,255,255,.07)!important;
+  margin-top:1rem!important;
+}
+.home-page .service-display .display-topline{
+  color:#ffaf70!important;border-bottom:1px solid #ffffff19;padding-bottom:.65rem;
+}
+.home-page .service-display h3{
+  font-family:Impact,"Arial Narrow",system-ui,sans-serif;
+  letter-spacing:.015em!important;
+  font-size:clamp(2.35rem,4vw,3.8rem)!important;
+}
+.home-page .service-display .service-copy p{color:#d1d9df!important;line-height:1.7}
+.home-page .service-art{border-radius:11px;border:1px solid rgba(174,191,201,.24)}
+.home-page .display-footer{
+  align-items:center;flex-wrap:wrap;
+  padding-top:1.2rem;
+  border-color:rgba(255,140,57,.25)!important;
+}
+.home-page .display-footer a{color:#ffae6b!important}
+.home-page .zoco-service-learn{
+  border:1px solid rgba(255,132,46,.5);padding:.65rem .9rem;border-radius:8px;
+  text-decoration:none;
+}
+/* Home maintenance stays within the site's existing explicitly limited scope. */
+.home-page .handyman-section{
+  position:relative;isolation:isolate;overflow:hidden;
+  background:
+    radial-gradient(ellipse at 9% 8%,rgba(255,118,25,.14),transparent 36%),
+    radial-gradient(ellipse at 91% 72%,rgba(22,165,224,.11),transparent 39%),
+    linear-gradient(135deg,#121c23,#0b1218 68%,#172025)!important;
+  border-block:1px solid rgba(255,132,46,.33)!important;
+}
+.home-page .handyman-section::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:url("/assets/brand/zoco-industrial-panel.svg") 80% center / cover no-repeat;
+  opacity:.20;
+}
+.home-page .handyman-section .kicker{color:#ffaa6c!important}
+.home-page .handyman-section .section-bar{margin-bottom:1.5rem}
+.home-page .handyman-section .section-bar h2{
+  font-family:Impact,"Arial Narrow",sans-serif!important;
+  font-size:clamp(2.1rem,4vw,3.9rem)!important;
+  line-height:1.08!important;
+  text-transform:uppercase
+}
+.home-page .handyman-section .section-bar >p{color:#c3cdd3!important}
+.home-page .handyman-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:1rem!important;
+  border:0!important
+}
+.home-page .scope-card{
+  position:relative;
+  display:flex;flex-direction:column;
+  min-width:0;
+  background:linear-gradient(145deg,#1b2730,#0b1319)!important;
+  border:1px solid rgba(193,211,223,.21)!important;
+  border-radius:13px!important;
+  padding:1rem!important;
+  overflow:hidden;
+  box-shadow:0 12px 27px #0006,inset 0 1px #ffffff09;
+  transition:transform .18s,border-color .18s;
+}
+.home-page .scope-card:hover{transform:translateY(-3px);border-color:#ff8f3a!important}
+.home-page .scope-card-image{
+  display:block;width:calc(100% + 2rem)!important;height:clamp(140px,16vw,202px)!important;
+  margin:-1rem -1rem 1rem!important;
+  object-fit:cover;object-position:center;
+  border-bottom:1px solid #ffffff27!important;
+  filter:contrast(1.06) saturate(.86);
+}
+.home-page .scope-card>span{
+  display:inline-flex;align-items:center;align-self:flex-start;
+  padding:.34rem .6rem;margin-bottom:.6rem;
+  border:1px solid rgba(255,139,53,.45);border-radius:7px;
+  background:#171c20;color:#ffae70!important;
+  font:900 .65rem/1.2 system-ui,sans-serif;letter-spacing:.12em!important;
+}
+.home-page .scope-card h3{
+  font-family:Impact,"Arial Narrow",system-ui,sans-serif;
+  font-size:clamp(1.35rem,2vw,1.75rem)!important;
+  line-height:1.1;letter-spacing:.02em;
+  text-transform:uppercase;margin:.15rem 0 .6rem!important
+}
+.home-page .scope-card p{
+  color:#cad5dd!important;font-size:.9rem!important;line-height:1.55;
+  margin:0 0 .7rem!important;
+}
+.home-page .scope-card p:last-child{margin-bottom:0!important}
+.home-page .scope-note{
+  background:linear-gradient(110deg,#121d25,#0d141a)!important;
+  border:1px solid rgba(255,149,68,.35)!important;
+  border-left:4px solid #ff8529!important;
+  border-radius:10px;
+  color:#edf1f4!important;
+  box-shadow:0 8px 22px #0005
+}
+.home-page .scope-note strong{color:#ffb16d!important}
+.home-page .scope-note p{color:#cbd4d9!important;line-height:1.65}
+.zoco-maintenance-cta{
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  margin-top:1rem;padding:1.2rem 1.5rem;
+  border-radius:12px;
+  border:1px solid rgba(255,143,52,.28);
+  background:linear-gradient(110deg,#1d2a32,#101922 73%);
+}
+.zoco-maintenance-cta p{color:#c7d4de!important;max-width:590px;margin:0;font-size:.88rem;line-height:1.55}
+.zoco-maintenance-cta .button{white-space:nowrap}
+/* Reviews, geography, contact, offers and footer remain visually connected. */
+.home-page #offers{
+  background:
+    linear-gradient(160deg,rgba(9,14,20,.86),rgba(13,21,28,.93)),
+    url("/assets/brand/zoco-industrial-panel.svg") center / cover no-repeat;
+}
+.home-page .reviews-section{
+  background:
+    radial-gradient(ellipse at 16% 20%,rgba(255,115,31,.16),transparent 42%),
+    linear-gradient(160deg,#121d25,#0a1117 55%,#151d24)!important;
+}
+.home-page .reviews-section::before{
+  background-image:url("/assets/brand/zoco-industrial-panel.svg")!important;
+  opacity:.24!important;
+}
+.home-page .zoco-area-teaser{
+  background:
+    linear-gradient(110deg,rgba(7,12,16,.87),rgba(10,17,23,.8)),
+    url("/assets/brand/zoco-industrial-panel.svg") center/cover no-repeat!important;
+}
+.home-page .zoco-county{
+  border-color:rgba(255,151,63,.43)!important;
+  background:linear-gradient(140deg,rgba(35,39,40,.95),rgba(12,22,28,.95))!important;
+}
+.home-page #contact,
+.home-page .contact-section{
+  background:
+    linear-gradient(115deg,rgba(11,16,21,.94),rgba(11,20,26,.85)),
+    url("/assets/brand/zoco-industrial-panel.svg") center/cover no-repeat!important;
+}
+.home-page .site-footer{
+  background:
+    linear-gradient(115deg,rgba(4,8,11,.96),rgba(7,13,18,.93)),
+    url("/assets/brand/zoco-industrial-panel.svg") center/cover no-repeat!important;
+}
+.home-page .site-footer-contact::before{
+  background-image:url("/assets/brand/zoco-mascot-hero.webp")!important;
+}
+/* Henry's restored on-page personal card; independent of the hero masthead. */
+.zoco-owner-section{
+  position:relative;isolation:isolate;overflow:hidden;
+  padding:clamp(2.7rem,6vw,5rem) 0;
+  border-block:1px solid rgba(255,124,40,.48);
+  background:
+    radial-gradient(ellipse at 18% 31%,rgba(255,104,24,.16),transparent 44%),
+    linear-gradient(115deg,#18212a,#091017 74%)!important;
+}
+.zoco-owner-section::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:url("/assets/brand/zoco-industrial-panel.svg") center / cover no-repeat;
+  opacity:.25;pointer-events:none;
+}
+.zoco-owner-heading{max-width:1100px;margin:0 auto 1.3rem}
+.zoco-owner-heading .kicker{color:#ffac6e!important}
+.zoco-owner-heading h2{
+  font:900 clamp(2rem,3.7vw,3.6rem)/1.02 Impact,"Arial Narrow",system-ui,sans-serif;
+  margin:.35rem 0;color:#f4f7f9;text-transform:uppercase;letter-spacing:.012em
+}
+.zoco-owner-heading>p{color:#c4cfd7;max-width:730px}
+.zoco-owner-card{
+  display:grid;grid-template-columns:minmax(230px,.85fr) minmax(0,1.15fr);
+  max-width:1100px;margin:auto;
+  overflow:hidden;border-radius:17px;
+  border:1px solid rgba(255,147,64,.48);
+  background:linear-gradient(122deg,#1c2831ee,#0c151ced 70%);
+  box-shadow:0 20px 55px #0009,inset 0 1px #ffffff13
+}
+.zoco-owner-art{
+  display:grid;place-items:center;
+  min-height:310px;padding:1.2rem;
+  background:
+    radial-gradient(circle at 48% 45%,rgba(255,108,17,.24),transparent 55%),
+    linear-gradient(155deg,rgba(20,27,32,.7),rgba(6,10,14,.5));
+  border-right:1px solid rgba(255,136,50,.2)
+}
+.zoco-owner-art img{display:block;width:min(100%,365px);height:auto;filter:drop-shadow(0 14px 21px #0007)}
+.zoco-owner-details{
+  padding:clamp(1.35rem,3vw,2.5rem);
+  display:flex;flex-direction:column;justify-content:center;
+}
+.zoco-owner-label{font-size:.67rem;letter-spacing:.2em;font-weight:900;color:#ffb174;text-transform:uppercase}
+.zoco-owner-details h3{
+  margin:.6rem 0 .25rem;
+  font:900 clamp(2.05rem,4vw,3.55rem)/1 Impact,"Arial Narrow",sans-serif;
+  color:#fff;text-transform:uppercase
+}
+.zoco-owner-company{color:#ffc49b;font-weight:900;font-size:.84rem;letter-spacing:.065em;text-transform:uppercase}
+.zoco-owner-location{color:#c5d1d9;font-size:.9rem;margin:.85rem 0 .4rem}
+.zoco-owner-hic{color:#a9b6bf;font-size:.76rem;margin:.15rem 0 1.3rem}
+.zoco-owner-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem}
+.zoco-owner-actions a{
+  display:flex;justify-content:center;align-items:center;text-align:center;
+  min-height:46px;padding:.7rem .5rem;
+  border-radius:9px;text-decoration:none;
+  color:#f8fafb;font-size:.85rem;font-weight:850;
+  border:1px solid rgba(255,139,50,.47);background:#202127;
+}
+.zoco-owner-actions a:first-child{background:linear-gradient(135deg,#ff8b22,#e24c0b);border-color:#ff9c54}
+.zoco-owner-actions a:hover{filter:brightness(1.12)}
+.zoco-owner-social{display:flex;flex-wrap:wrap;gap:1.1rem;margin-top:1.15rem}
+.zoco-owner-social a{color:#ffb77c;text-decoration:underline;text-underline-offset:4px;font-size:.81rem;font-weight:750}
+.zoco-owner-social a:hover{color:#fff}
+.zoco-owner-social a:focus-visible{outline:3px solid #ffa85a;outline-offset:4px}
+@media(max-width:1100px){
+ .home-page .service-tabs{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+ .home-page .service-tab{min-height:230px!important}
+}
+@media(max-width:900px){
+ .home-page .handyman-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .zoco-maintenance-cta{flex-direction:column;align-items:flex-start}
+ .zoco-owner-card{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)}
+}
+@media(max-width:620px){
+ .home-page .hero-shell{
+   background-image:linear-gradient(180deg,rgba(5,10,14,.19),rgba(5,10,14,.44) 70%,rgba(5,9,13,.70)),
+     url("/assets/brand/zoco-industrial-hero.svg")!important;
+   background-position:37% 50%!important;
+ }
+ .home-page #drain{padding-block:3.1rem!important}
+ .home-page #drain .section-bar{margin-bottom:1.2rem}
+ .home-page .service-tabs{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.7rem!important}
+ .home-page .service-tab{
+   min-height:204px!important;padding:.7rem!important;border-radius:11px!important
+ }
+ .home-page .service-tab strong{font-size:1.13rem!important}
+ .home-page .service-tab > span{width:29px;height:29px;font-size:.62rem;margin-bottom:.5rem}
+ .home-page .service-tab .zoco-tab-detail{font-size:.7rem}
+ .home-page .service-tab .zoco-tab-action{font-size:.57rem;margin-top:.5rem}
+ .home-page .service-tab:last-child{grid-column:span 2;min-height:176px!important}
+ .home-page .service-display{padding:1.1rem!important}
+ .home-page .service-display h3{font-size:2.2rem!important;margin:.8rem 0!important}
+ .home-page .display-footer{align-items:flex-start}
+ .home-page .handyman-grid{grid-template-columns:1fr!important;gap:.85rem!important}
+ .home-page .scope-card{padding:.9rem!important;min-height:0!important}
+ .home-page .scope-card-image{
+   width:calc(100% + 1.8rem)!important;margin:-.9rem -.9rem .85rem!important;
+   height:156px!important
+ }
+ .home-page .scope-card h3{font-size:1.48rem!important}
+ .home-page .scope-note{display:block!important}
+ .home-page .scope-note strong{display:block;margin-bottom:.5rem}
+ .zoco-owner-card{grid-template-columns:1fr}
+ .zoco-owner-art{min-height:210px;padding:.8rem;border-right:0;border-bottom:1px solid rgba(255,136,50,.24)}
+ .zoco-owner-art img{width:min(100%,245px)}
+ .zoco-owner-details{padding:1.35rem 1rem}
+ .zoco-owner-actions{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .zoco-owner-actions a{font-size:.8rem}
+ .zoco-owner-social{gap:1rem}
+}
+@media(prefers-reduced-motion:reduce){
+ .home-page .scope-card{transition:none!important}
+ .home-page .scope-card:hover{transform:none!important}
+}
+
+
+/* Dedicated service catalog and home-maintenance detail pages. */
+.seo-page.zoco-service-catalog,
+.seo-page.zoco-maintenance-page{
+  position:relative;
+  max-width:1150px!important;
+  min-height:70vh;
+  margin:auto;
+  color:#e8f0f4!important;
+  background:
+    radial-gradient(ellipse at 90% 3%,rgba(255,111,30,.13),transparent 40%),
+    linear-gradient(170deg,rgba(18,28,36,.95),rgba(8,13,18,.96)),
+    url("/assets/brand/zoco-industrial-panel.svg") center / cover no-repeat!important;
+  padding:clamp(2rem,5vw,5.5rem)!important;
+  border-inline:1px solid rgba(255,141,56,.13);
+  box-shadow:0 16px 45px #0008;
+}
+.seo-page.zoco-service-catalog>p,
+.seo-page.zoco-maintenance-page>p,
+.seo-page.zoco-maintenance-page section>p,
+.seo-page.zoco-maintenance-page section>div>p{color:#c8d3d9!important;line-height:1.75}
+.seo-page.zoco-service-catalog h1,
+.seo-page.zoco-maintenance-page h1{
+  font-family:Impact,"Arial Narrow",system-ui,sans-serif;
+  font-size:clamp(2.9rem,6vw,5.3rem)!important;
+  text-transform:uppercase;
+  letter-spacing:.012em;
+  text-shadow:0 2px 10px #000a;
+}
+.seo-page.zoco-service-catalog h2,
+.seo-page.zoco-maintenance-page h2{
+  font-family:Impact,"Arial Narrow",system-ui,sans-serif;
+  font-size:clamp(1.7rem,3vw,2.7rem)!important;
+  color:#f8fafc!important;
+  text-transform:uppercase;letter-spacing:.012em
+}
+.seo-page.zoco-maintenance-page h3{color:#f7f9fb!important}
+.seo-page.zoco-service-catalog a,
+.seo-page.zoco-maintenance-page a{color:#ffb07b}
+.seo-page.zoco-service-catalog a:is(:hover,:focus-visible),
+.seo-page.zoco-maintenance-page a:is(:hover,:focus-visible){color:#fff}
+.seo-page .zoco-catalog-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:1rem!important;
+  margin:2rem 0 2.5rem!important;
+  border:0!important;
+}
+.seo-page .zoco-catalog-grid a{
+  display:block;overflow:hidden;min-width:0;
+  padding:0 1rem 1.35rem!important;
+  min-height:246px;
+  border:1px solid rgba(255,137,52,.34)!important;
+  border-radius:12px!important;
+  background:linear-gradient(145deg,#202a32,#0d151c)!important;
+  box-shadow:0 12px 26px #0007;
+  color:#d3dfe5!important;text-decoration:none;
+  font-size:.86rem;line-height:1.6;
+  transition:border-color .18s,transform .18s;
+}
+.seo-page .zoco-catalog-grid a::before{
+  content:"";
+  display:block;
+  height:139px;
+  margin:0 -1rem 1rem;
+  border-bottom:1px solid rgba(255,149,73,.25);
+  background:
+    linear-gradient(0deg,rgba(7,15,21,.5),transparent 72%),
+    url("/assets/services/drain-cleaning.jpg") center/cover no-repeat;
+}
+.seo-page .zoco-catalog-grid a:nth-child(2)::before{background-image:linear-gradient(0deg,rgba(7,15,21,.5),transparent 72%),url("/assets/services/drain-cleaning.jpg")}
+.seo-page .zoco-catalog-grid a:nth-child(3)::before{background-image:linear-gradient(0deg,rgba(7,15,21,.5),transparent 72%),url("/assets/services/camera-inspection.jpg")}
+.seo-page .zoco-catalog-grid a:nth-child(4)::before{background-image:linear-gradient(0deg,rgba(7,15,21,.5),transparent 72%),url("/assets/services/drain-maintenance.jpg")}
+.seo-page .zoco-catalog-grid a:nth-child(5)::before{background-image:linear-gradient(0deg,rgba(7,15,21,.5),transparent 72%),url("/assets/services/dryer-vent-cleaning.jpg")}
+.seo-page .zoco-catalog-grid a:nth-child(6)::before{background-image:linear-gradient(0deg,rgba(7,15,21,.5),transparent 72%),url("/assets/handyman/ordinary-maintenance.jpg")}
+.seo-page .zoco-catalog-grid strong{
+  display:block!important;
+  margin:0 0 .4rem;
+  font:900 1.36rem/1.13 Impact,"Arial Narrow",sans-serif;
+  letter-spacing:.015em;text-transform:uppercase;
+  color:#f8fbfc!important;
+}
+.seo-page .zoco-catalog-grid a:hover{transform:translateY(-2px);border-color:#ffa566!important}
+.zoco-maintenance-catalog{margin:2.6rem 0!important}
+.zoco-maintenance-options{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.5rem 0 1rem
+}
+.zoco-maintenance-options article{
+  overflow:hidden;border-radius:12px;
+  background:linear-gradient(150deg,#1e2b34,#101920);
+  border:1px solid rgba(255,141,51,.32);
+  box-shadow:0 12px 27px #0006
+}
+.zoco-maintenance-options article img{display:block;width:100%;height:160px;object-fit:cover;filter:saturate(.87) contrast(1.08)}
+.zoco-maintenance-options article>div{padding:1.05rem}
+.zoco-maintenance-options article span{font-size:.66rem;letter-spacing:.12em;font-weight:900;color:#ffae70}
+.zoco-maintenance-options article h3{
+  font:900 1.55rem/1.16 Impact,"Arial Narrow",sans-serif!important;
+  text-transform:uppercase;margin:.45rem 0!important
+}
+.zoco-maintenance-options article p{color:#cbd5db!important;font-size:.88rem;line-height:1.6;margin:0}
+.zoco-maintenance-page .zoco-maintenance-disclaimer{
+  border-left:3px solid #ff8832;
+  background:rgba(250,123,35,.07);
+  padding:.95rem 1.1rem;color:#ccd8e0!important
+}
+.zoco-maintenance-request{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1.4rem;padding:1rem 1.2rem;margin-top:1.3rem;
+  border:1px solid rgba(255,148,59,.38);border-radius:10px;
+  background:linear-gradient(110deg,#1d2b35,#0c151b)
+}
+.zoco-maintenance-request span{color:#d1dde3;line-height:1.65}
+.zoco-maintenance-request span strong{color:#fff}
+.zoco-maintenance-request a{flex:0 0 auto;color:#fff!important}
+@media(max-width:900px){
+ .seo-page .zoco-catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .zoco-maintenance-options{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .zoco-maintenance-request{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:620px){
+ .seo-page.zoco-service-catalog,.seo-page.zoco-maintenance-page{padding:2rem 1.1rem!important}
+ .seo-page .zoco-catalog-grid{grid-template-columns:1fr!important}
+ .seo-page .zoco-catalog-grid a{min-height:0}
+ .seo-page .zoco-catalog-grid a::before{height:135px}
+ .zoco-maintenance-options{grid-template-columns:1fr}
+ .zoco-maintenance-options article img{height:155px}
+ .zoco-maintenance-request a{width:100%;white-space:normal}
+}

@@ -39,6 +39,7 @@
   <link rel="stylesheet" href="styles.css?v=13" />
   <link rel="stylesheet" href="theme.css?v=106" />
   <link rel="stylesheet" href="/brand-cinematic.css?v=4" />
+  <link rel="stylesheet" href="/brand-depth.css?v=1" />
   <link rel="stylesheet" href="/brand-finish.css?v=2" />
   <script type="application/ld+json">
   {
@@ -307,9 +308,9 @@
             </div>
 
             <div class="quick-connect" aria-label="Quick links">
-              <a class="quick-tile quick-logo" href="https://dot.cards/zoco" target="_blank" rel="noopener" aria-label="Open ZoCo digital business card">
+              <a class="quick-tile quick-logo" href="#owner-card" aria-label="Meet Henry and view his ZoCo personal contact card">
                 <span class="logo-image quick-logo-mark" aria-hidden="true"></span>
-                <span class="quick-copy"><small>QUICK TAP</small><strong>Business Card</strong></span>
+                <span class="quick-copy"><small>MEET THE OWNER</small><strong>Henry’s Contact Card</strong></span>
                 <i>↗</i>
               </a>
 
@@ -339,7 +340,7 @@
             </div>
           </div>
 
-          <aside class="hero-card" aria-label="ZoCo business card">
+          <aside class="hero-card" aria-label="ZoCo mascot logo">
             <div class="hero-card-top">
               <span>HIGHLAND LAKES, NJ</span>
               <span class="hero-card-mark">OWNER OPERATED</span>
@@ -415,14 +416,14 @@
 
       <div class="service-console reveal">
         <div class="service-tabs" role="tablist" aria-label="Drain services">
-          <button class="service-tab active" type="button" data-service="drain" role="tab" aria-selected="true"><span>01</span><strong>Drain Cleaning</strong></button>
-          <button class="service-tab" type="button" data-service="snaking" role="tab" aria-selected="false"><span>02</span><strong>Drain Snaking</strong></button>
-          <button class="service-tab" type="button" data-service="camera" role="tab" aria-selected="false"><span>03</span><strong>Camera Inspection</strong></button>
-          <button class="service-tab" type="button" data-service="maintenance" role="tab" aria-selected="false"><span>04</span><strong>Drain Maintenance</strong></button>
-          <button class="service-tab" type="button" data-service="dryer" role="tab" aria-selected="false"><span>05</span><strong>Dryer Vent Cleaning</strong></button>
+          <button class="service-tab active" type="button" data-service="drain" role="tab" aria-selected="true" aria-controls="zoco-service-panel"><span>01</span><strong>Drain Cleaning</strong><em class="zoco-tab-detail">Clogs and slow drains</em><b class="zoco-tab-action" aria-hidden="true">SELECT SERVICE ↗</b></button>
+          <button class="service-tab" type="button" data-service="snaking" role="tab" aria-selected="false" aria-controls="zoco-service-panel"><span>02</span><strong>Drain Snaking</strong><em class="zoco-tab-detail">Cable clearing</em><b class="zoco-tab-action" aria-hidden="true">SELECT SERVICE ↗</b></button>
+          <button class="service-tab" type="button" data-service="camera" role="tab" aria-selected="false" aria-controls="zoco-service-panel"><span>03</span><strong>Camera Inspection</strong><em class="zoco-tab-detail">Inspect accessible lines</em><b class="zoco-tab-action" aria-hidden="true">SELECT SERVICE ↗</b></button>
+          <button class="service-tab" type="button" data-service="maintenance" role="tab" aria-selected="false" aria-controls="zoco-service-panel"><span>04</span><strong>Drain Maintenance</strong><em class="zoco-tab-detail">Routine drain care</em><b class="zoco-tab-action" aria-hidden="true">SELECT SERVICE ↗</b></button>
+          <button class="service-tab" type="button" data-service="dryer" role="tab" aria-selected="false" aria-controls="zoco-service-panel"><span>05</span><strong>Dryer Vent Cleaning</strong><em class="zoco-tab-detail">Lint and airflow</em><b class="zoco-tab-action" aria-hidden="true">SELECT SERVICE ↗</b></button>
         </div>
 
-        <div class="service-display" data-service="drain" aria-live="polite">
+        <div class="service-display" id="zoco-service-panel" data-service="drain" role="tabpanel" aria-live="polite">
           <div class="display-topline">
             <span id="serviceCode">SERVICE / 01</span>
             <span class="status-dot">AVAILABLE</span>
@@ -447,10 +448,10 @@
       <div class="page section">
         <div class="section-bar light-mode reveal">
           <div>
-            <p class="kicker">HANDYMAN / HOME MAINTENANCE</p>
-            <h2>Small jobs around the home.</h2>
+            <p class="kicker">HOME MAINTENANCE / PRACTICAL LOCAL HELP</p>
+            <h2>Small work. Serious attention.</h2>
           </div>
-          <p>Non-structural and ordinary-maintenance work only. Scope is confirmed before scheduling.</p>
+          <p>Home upkeep, hardware, finishes and minor non-structural tasks. Henry confirms the job scope and availability before scheduling.</p>
         </div>
 
         <div class="handyman-grid">
@@ -495,6 +496,43 @@
         <div class="scope-note reveal">
           <strong>Scope note</strong>
           <p>ZoCo limits handyman work to non-structural or ordinary-maintenance tasks that do not require a separate licensed trade or permit. If a requested job falls outside that scope, it is not offered through the handyman side.</p>
+        </div>
+        <div class="zoco-maintenance-cta reveal">
+          <p>Have a small home maintenance task? Describe what needs attention and Henry can confirm whether it is within ZoCo's offered scope.</p>
+          <a class="button button-secondary" href="sms:+19738289723">Text Henry about maintenance ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="zoco-owner-section" id="owner-card" aria-labelledby="zoco-owner-title">
+      <div class="page">
+        <div class="zoco-owner-heading reveal">
+          <p class="kicker">YOUR LOCAL POINT OF CONTACT</p>
+          <h2 id="zoco-owner-title">Meet the owner behind ZoCo.</h2>
+          <p>Direct communication, clear scheduling, and a local business based in Highland Lakes, NJ.</p>
+        </div>
+        <div class="zoco-owner-card reveal">
+          <div class="zoco-owner-art">
+            <img src="/assets/brand/zoco-mascot-hero.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="ZoCo's two black-and-white dog mascots with orange bandanas, drain snake equipment and blue water" />
+          </div>
+          <div class="zoco-owner-details">
+            <span class="zoco-owner-label">Owner-operated · Highland Lakes, NJ</span>
+            <h3>Henry Nowinski</h3>
+            <span class="zoco-owner-company">ZoCo Drain &amp; Sewer LLC</span>
+            <p class="zoco-owner-location">Serving Sussex and Passaic counties · Call or text 973-828-9723</p>
+            <p class="zoco-owner-hic">NJ Home Improvement Contractor Registration #13VH14301500</p>
+            <div class="zoco-owner-actions">
+              <a href="tel:+19738289723">Call Henry ↗</a>
+              <a href="sms:+19738289723">Text for estimate ↗</a>
+              <a href="mailto:zoco.drain@gmail.com">Send an email ↗</a>
+              <a href="https://dot.cards/zoco" target="_blank" rel="noopener noreferrer">Personal digital card ↗</a>
+            </div>
+            <div class="zoco-owner-social">
+              <a href="https://www.instagram.com/zoco_drains/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+              <a href="https://www.facebook.com/share/1E54mnJZsT/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+              <a href="/service-area/">Service area ↗</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -762,6 +800,7 @@
           <h2>Explore</h2>
           <a href="/">Home</a>
           <a href="/#drain">Drain Services</a>
+          <a href="/#owner-card">Meet Henry / Owner Card</a>
           <a href="/home-maintenance/">Home Maintenance</a>
           <a href="/expert-tips/">Expert Tips</a>
           <a href="/service-area/">Service Area</a>
