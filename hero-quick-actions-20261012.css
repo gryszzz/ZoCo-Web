@@ -1,0 +1,140 @@
+/* ZoCo homepage: three useful hero shortcuts in place of duplicate info badges.
+   Each complete card is a real link; mobile-first tap targets and reduced motion. */
+body.home-page .hero .zoco-hero-pathways {
+  position:relative; isolation:isolate;
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(.55rem,1.35vw,.9rem);
+  width:100%; max-width:none;
+  padding:clamp(.75rem,1.5vw,1.25rem) max(1rem,calc((100% - 1300px)/2)) !important;
+  margin:0 !important;
+  border-top:1px solid rgba(255,148,57,.58) !important;
+  border-bottom:2px solid rgba(255,116,29,.48) !important;
+  background:linear-gradient(100deg,#0a1116,#111b23 50%,#081118) !important;
+  box-shadow:0 12px 29px rgba(0,0,0,.27);
+}
+body.home-page .hero .zoco-hero-pathways__card {
+  box-sizing:border-box;
+  position:relative;
+  display:flex; flex-direction:row; align-items:center;
+  min-width:0; min-height:109px;
+  gap:clamp(.65rem,1.4vw,1rem);
+  padding:clamp(.85rem,1.5vw,1.2rem) clamp(.75rem,1.3vw,1.18rem) !important;
+  border:1px solid rgba(255,153,76,.36) !important;
+  border-radius:14px !important;
+  background:
+    radial-gradient(circle at 93% 8%,rgba(255,118,35,.09),transparent 48%),
+    linear-gradient(145deg,#172229,#0b141b 90%) !important;
+  text-decoration:none !important;
+  color:#f8fafc !important;
+  box-shadow:0 7px 18px rgba(0,0,0,.26),inset 0 1px 0 rgba(255,255,255,.06) !important;
+  -webkit-tap-highlight-color:rgba(255,145,48,.18);
+  transition:transform .18s ease,border-color .18s ease,background .18s ease,box-shadow .18s ease;
+}
+body.home-page .hero .zoco-hero-pathways__card:hover {
+  transform:translateY(-3px);
+  border-color:rgba(255,166,98,.93) !important;
+  box-shadow:0 11px 27px rgba(0,0,0,.38),0 0 0 1px rgba(255,137,44,.18) !important;
+}
+body.home-page .hero .zoco-hero-pathways__card:focus-visible {
+  outline:3px solid #ffbd84 !important;
+  outline-offset:3px;
+}
+body.home-page .hero .zoco-hero-pathways__card:active {
+  transform:translateY(0);
+  background:linear-gradient(145deg,#252c32,#101920) !important;
+}
+body.home-page .hero .zoco-hero-pathways__icon {
+  box-sizing:border-box;
+  flex:0 0 49px; width:49px;height:49px;
+  display:grid;place-items:center;
+  color:#ff994f !important;
+  border:1px solid rgba(255,146,64,.49) !important;
+  border-radius:13px !important;
+  background:rgba(8,15,21,.92) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
+}
+body.home-page .hero .zoco-hero-pathways__icon svg {
+  width:24px; height:24px;
+  stroke:currentColor;
+}
+body.home-page .hero .zoco-hero-pathways__content {
+  display:flex;flex-direction:column;align-items:flex-start;
+  flex:1 1 auto;min-width:0;gap:.23rem;
+}
+body.home-page .hero .zoco-hero-pathways__kicker {
+  color:#ffa663 !important;
+  font-size:clamp(.61rem,.77vw,.72rem) !important;
+  letter-spacing:.12em !important;
+  font-weight:850 !important;
+  line-height:1.3;
+}
+body.home-page .hero .zoco-hero-pathways__content strong {
+  color:#f7f9fa !important;
+  font-size:clamp(.94rem,1.16vw,1.14rem) !important;
+  font-weight:850 !important;
+  line-height:1.18 !important;
+  letter-spacing:.003em !important;
+}
+body.home-page .hero .zoco-hero-pathways__description {
+  color:#c0ced6 !important;
+  font-size:clamp(.7rem,.89vw,.82rem) !important;
+  line-height:1.3;letter-spacing:0 !important;
+}
+body.home-page .hero .zoco-hero-pathways__arrow {
+  display:grid;place-items:center;
+  flex:0 0 26px;
+  width:26px;height:26px;
+  color:#ffb274 !important;
+  font-size:1.35rem !important;font-weight:550 !important;
+  line-height:1 !important;
+  transition:transform .18s ease;
+}
+body.home-page .hero .zoco-hero-pathways__card:hover .zoco-hero-pathways__arrow {
+  transform:translate(2px,-2px);
+}
+@media(max-width:1020px) and (min-width:661px) {
+  body.home-page .hero .zoco-hero-pathways {gap:.6rem;}
+  body.home-page .hero .zoco-hero-pathways__card {padding:.8rem !important;gap:.58rem;}
+  body.home-page .hero .zoco-hero-pathways__icon {flex-basis:40px;width:40px;height:40px;}
+  body.home-page .hero .zoco-hero-pathways__icon svg {width:21px;height:21px;}
+  body.home-page .hero .zoco-hero-pathways__arrow {flex-basis:18px;width:18px;}
+  body.home-page .hero .zoco-hero-pathways__description {font-size:.7rem !important;}
+}
+@media(max-width:660px) {
+  body.home-page .hero .zoco-hero-pathways {
+    grid-template-columns:minmax(0,1fr) !important;
+    gap:.5rem !important;
+    padding:.66rem .85rem .8rem !important;
+  }
+  body.home-page .hero .zoco-hero-pathways__card {
+    min-height:76px !important;
+    padding:.62rem .82rem !important;
+    gap:.72rem !important;
+    border-radius:11px !important;
+  }
+  body.home-page .hero .zoco-hero-pathways__icon {
+    flex-basis:42px;width:42px;height:42px;
+    border-radius:10px !important;
+  }
+  body.home-page .hero .zoco-hero-pathways__icon svg {width:22px;height:22px;}
+  body.home-page .hero .zoco-hero-pathways__content {gap:.14rem;}
+  body.home-page .hero .zoco-hero-pathways__kicker {
+    font-size:.62rem !important;
+    letter-spacing:.10em !important;
+  }
+  body.home-page .hero .zoco-hero-pathways__content strong {font-size:1rem !important;}
+  body.home-page .hero .zoco-hero-pathways__description {font-size:.73rem !important;}
+  body.home-page .hero .zoco-hero-pathways__arrow {flex-basis:22px;width:22px;}
+}
+@media(max-width:365px) {
+  body.home-page .hero .zoco-hero-pathways__card {gap:.48rem !important;padding:.58rem !important;}
+  body.home-page .hero .zoco-hero-pathways__icon {flex-basis:36px;width:36px;height:36px;}
+  body.home-page .hero .zoco-hero-pathways__icon svg {width:20px;height:20px;}
+  body.home-page .hero .zoco-hero-pathways__description {font-size:.69rem !important;}
+}
+@media(prefers-reduced-motion:reduce) {
+  body.home-page .hero .zoco-hero-pathways__card,
+  body.home-page .hero .zoco-hero-pathways__arrow {transition:none !important;}
+  body.home-page .hero .zoco-hero-pathways__card:hover,
+  body.home-page .hero .zoco-hero-pathways__card:hover .zoco-hero-pathways__arrow {transform:none !important;}
+}
