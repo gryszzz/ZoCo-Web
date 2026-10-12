@@ -231,6 +231,21 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before{
   opacity:1;
   animation-duration:6.4s;
 }
+
+/* Center the content GROUP on desktop/tablet while the liquid-glass
+   rows and their separators continue spanning the full hero width.
+   Do not center/alter the mobile layouts. */
+@media(min-width:661px) {
+  body.home-page .hero .zoco-hero-pathways__card {
+    justify-content:center!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__content {
+    flex:0 1 390px!important;
+    width:390px!important;
+    max-width:390px!important;
+    min-width:0!important;
+  }
+}
 @media(max-width:1020px) and (min-width:661px){
   body.home-page .hero .zoco-hero-pathways__card{
     min-height:76px!important;
