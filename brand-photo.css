@@ -1,0 +1,157 @@
+/*
+ * ZoCo Photo-Industrial Backgrounds — background-only release.
+ * Uses actual generated image assets, not painted CSS-only approximations.
+ * Preserve all HTML, copy, logo, services, reviews, cards and contact routes.
+ */
+:root{
+  --zoco-photo-hero:url("/assets/brand/zoco-photo-industrial-hero.avif");
+  --zoco-photo-panel:url("/assets/brand/zoco-photo-industrial-panel.avif");
+}
+body.home-page{
+  background-color:#080d12!important;
+}
+/* Dark steel, real pipe detail and blue water at either edge. */
+body.home-page .hero-shell{
+  background-color:#091119!important;
+  background-image:
+    linear-gradient(102deg,rgba(3,8,12,.34),rgba(3,8,12,.18) 46%,rgba(3,8,12,.32)),
+    var(--zoco-photo-hero)!important;
+  background-size:cover,cover!important;
+  background-position:center,center!important;
+  background-repeat:no-repeat!important;
+}
+/* The old hero's faint SVG grid remains suppressed; new photo is on the shell itself. */
+body.home-page .hero-shell::before{
+  background:none!important;
+  opacity:0!important;
+}
+body.home-page .hero-shell::after{
+  background:linear-gradient(180deg,rgba(2,5,8,.03) 0%,rgba(2,5,8,.06) 74%,rgba(2,5,8,.38))!important;
+}
+body.home-page .hero-main,
+body.home-page .hero-card,
+body.home-page .hero-copyblock{
+  position:relative;z-index:1;
+}
+/* Bright amber separators with a photographic metal/blueprint background under services. */
+body.home-page #drain{
+  background-color:#0b141a!important;
+  background-image:
+    linear-gradient(115deg,rgba(5,11,16,.79),rgba(6,10,15,.69) 52%,rgba(5,11,16,.76)),
+    var(--zoco-photo-panel)!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-position:center!important;
+}
+body.home-page #drain::after{background-image:none!important;opacity:0!important}
+/* Home maintenance remains visually distinct, but shares the steel/utility aesthetic. */
+body.home-page .handyman-section{
+  background-color:#101820!important;
+  background-image:
+    linear-gradient(115deg,rgba(8,15,19,.76),rgba(8,12,17,.77)),
+    var(--zoco-photo-panel)!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-position:center 36%!important;
+}
+body.home-page .handyman-section::before{background-image:none!important}
+/* Owner card's images, layout and content remain unchanged. */
+body.home-page .zoco-owner-section{
+  background-color:#0d151b!important;
+  background-image:
+    linear-gradient(110deg,rgba(6,12,16,.72),rgba(5,11,17,.79)),
+    var(--zoco-photo-panel)!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-position:center!important;
+}
+body.home-page .zoco-owner-section::before{background-image:none!important}
+body.home-page #offers{
+  background-color:#10171d!important;
+  background-image:
+    linear-gradient(160deg,rgba(5,10,14,.85),rgba(7,14,18,.73)),
+    var(--zoco-photo-panel)!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-position:center!important;
+}
+/* Reviews and geo receive recognizable side pipes and orange highlights. */
+body.home-page .reviews-section{
+  background-color:#0c131a!important;
+  background-image:
+    linear-gradient(98deg,rgba(6,10,14,.68),rgba(6,9,14,.77)),
+    var(--zoco-photo-panel)!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-position:center 50%!important;
+}
+body.home-page .reviews-section::before{background-image:none!important;opacity:0!important}
+body.home-page .zoco-area-teaser{
+  background-color:#07121a!important;
+  background-image:
+    linear-gradient(100deg,rgba(5,10,15,.77),rgba(4,9,14,.64)),
+    var(--zoco-photo-hero)!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-position:center!important;
+}
+body.home-page #contact,
+body.home-page .contact-section{
+  background-color:#0c151a!important;
+  background-image:
+    linear-gradient(110deg,rgba(7,11,15,.83),rgba(6,13,19,.79)),
+    var(--zoco-photo-panel)!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-position:center!important;
+}
+body.home-page .site-footer{
+  background-color:#070c10!important;
+  background-image:
+    linear-gradient(110deg,rgba(2,6,9,.91),rgba(3,8,12,.86)),
+    var(--zoco-photo-panel)!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-position:center 60%!important;
+}
+/* Other existing pages also get the real industrial texture behind their content. */
+body:not(.home-page) .seo-page{
+  background-color:#0b1218!important;
+  background-image:
+    linear-gradient(110deg,rgba(8,13,18,.90),rgba(9,15,21,.81)),
+    var(--zoco-photo-panel)!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-position:center!important;
+}
+/* iPhone crop fix: keep the pipes/water visible at the top, and fill below
+   with the companion panel instead of cropping to the dark center. */
+@media(max-width:900px){
+  body.home-page .hero-shell{
+    background-image:
+      linear-gradient(180deg,rgba(4,8,12,.18),rgba(4,8,12,.36) 30%,rgba(4,8,12,.65) 80%),
+      var(--zoco-photo-hero),
+      var(--zoco-photo-panel)!important;
+    background-size:100% 100%,100% auto,cover!important;
+    background-position:center top,center top,center top!important;
+    background-repeat:no-repeat!important;
+  }
+  body.home-page #drain,
+  body.home-page .handyman-section,
+  body.home-page .reviews-section,
+  body.home-page .zoco-area-teaser,
+  body.home-page .zoco-owner-section,
+  body.home-page #contact,
+  body.home-page .contact-section,
+  body.home-page .site-footer{
+    background-position:center!important;
+  }
+}
+@media(max-width:620px){
+  body.home-page .hero-shell{
+    background-image:
+      linear-gradient(180deg,rgba(3,7,11,.09),rgba(3,7,11,.39) 36%,rgba(3,7,11,.67) 82%),
+      var(--zoco-photo-hero),
+      var(--zoco-photo-panel)!important;
+  }
+}
