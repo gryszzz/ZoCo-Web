@@ -338,8 +338,8 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before{
     max-width:100%!important;
     min-width:0!important;
     margin:0!important;
-    gap:0!important;
-    padding:.3rem 0 0!important;
+    gap:.36rem!important;
+    padding:.3rem .48rem 0!important;
     border-top:0!important;
     border-bottom:1px solid rgba(238,130,48,.43)!important;
   }
@@ -348,11 +348,8 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before{
     min-width:0!important;
     min-height:70px!important;
     margin:0!important;
-    border-top:0!important;
-    border-left:0!important;
-    border-right:0!important;
-    border-bottom:1px solid rgba(111,166,195,.43)!important;
-    border-radius:0!important;
+    border:1px solid rgba(111,166,195,.43)!important;
+    border-radius:18px!important;
     box-shadow:none!important;
     padding:.4rem 1rem!important;
     gap:.66rem!important;
@@ -364,12 +361,12 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before{
     border-top:1px solid rgba(111,166,195,.43)!important;
   }
   body.home-page .hero .zoco-hero-pathways__card::before {
-    border-radius:0!important;
+    border-radius:inherit!important;
     padding:1px;
     opacity:.58;
   }
   body.home-page .hero .zoco-hero-pathways__card::after {
-    border-radius:0!important;
+    border-radius:inherit!important;
     padding:5px;
     opacity:.36;
     animation-duration:9.6s;
@@ -378,7 +375,7 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before{
     flex:0 0 36px!important;
     width:36px!important;
     height:36px!important;
-    border-radius:9px!important;
+    border-radius:12px!important;
     border-color:rgba(100,157,188,.4)!important;
   }
   body.home-page .hero .zoco-hero-pathways__icon svg{width:19px!important;height:19px!important}
