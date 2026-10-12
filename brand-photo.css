@@ -124,30 +124,30 @@ body:not(.home-page) .seo-page{
   background-size:cover!important;
   background-position:center!important;
 }
-/* Portrait-specific scalable pipe + water illustration. The previous
-   3.7KB landscape image was stretched 100% x 100% on iPhone, causing blur.
-   The 960 x 1800 SVG renders at full device resolution while "cover"
-   preserves its aspect ratio across screen sizes. */
+/* The production mobile image is a 1080x1920 photographic illustration
+   adapted from ZoCo's original detailed pipe/water background.
+   It is NOT the mockup screenshot (which contains baked-in UI).
+   When the high-res photo has not yet been uploaded, the existing SVG
+   appears underneath as a safe fallback rather than a broken background.
+   Never stretch a landscape asset to 100% x 100% on a phone. */
 @media(max-width:900px){
   body.home-page .hero-shell{
-    background-color:#08131a!important;
+    background-color:#07131c!important;
     background-image:
       linear-gradient(180deg,
-        rgba(2,7,11,.10) 0%,
-        rgba(2,7,11,.25) 34%,
-        rgba(2,7,11,.45) 67%,
-        rgba(2,7,11,.52) 100%),
+        rgba(3,8,13,.23) 0%,
+        rgba(3,8,13,.31) 30%,
+        rgba(3,8,13,.49) 62%,
+        rgba(3,8,13,.64) 100%),
+      url("/assets/brand/zoco-industrial-mobile-photo.webp"),
       url("/assets/brand/zoco-mobile-industrial.svg")!important;
-    background-size:100% 100%,cover!important;
-    background-position:center,center top!important;
+    background-size:100% 100%,cover,cover!important;
+    background-position:center,center top,center top!important;
     background-repeat:no-repeat!important;
   }
-  body.home-page .hero-shell::before{
-    background:none!important;
-    opacity:0!important;
-  }
+  body.home-page .hero-shell::before{background:none!important;opacity:0!important}
   body.home-page .hero-shell::after{
-    background:linear-gradient(180deg,transparent 12%,rgba(2,8,12,.10) 45%,rgba(2,8,12,.26) 100%)!important;
+    background:linear-gradient(180deg,rgba(3,8,13,.03),rgba(3,8,13,.09) 42%,rgba(3,8,13,.3))!important;
     pointer-events:none!important;
   }
   body.home-page #drain,
@@ -157,13 +157,11 @@ body:not(.home-page) .seo-page{
   body.home-page .zoco-owner-section,
   body.home-page #contact,
   body.home-page .contact-section,
-  body.home-page .site-footer{
-    background-position:center!important;
-  }
+  body.home-page .site-footer{background-position:center!important}
 }
 @media(max-width:620px){
   body.home-page .hero-shell{
-    background-size:100% 100%,cover!important;
-    background-position:center,center top!important;
+    background-size:100% 100%,cover,cover!important;
+    background-position:center,center top,center top!important;
   }
 }
