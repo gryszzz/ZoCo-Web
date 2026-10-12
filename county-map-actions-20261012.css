@@ -1,0 +1,193 @@
+/* ZoCo accurate county map actions + mobile industrial depth | 2026-10-12
+   Maps: simplified U.S. Census 2026 GEOID 34037 and 34031 polygons.
+   No new scripts, tracking, external runtime data or animations. */
+
+/* Primary action + direct contact: two distinct real navigation targets. */
+body.home-page .zoco-area-showcase__actions {
+  display:flex; align-items:stretch; justify-content:flex-start;
+  gap:.7rem; flex-wrap:wrap; margin-top:1.1rem;
+}
+body.home-page .zoco-area-showcase__copy .zoco-area-showcase__actions .button {
+  width:auto; min-height:51px; margin:0 !important;
+  display:inline-flex !important; align-items:center; justify-content:center;
+  text-align:center; gap:.8rem; padding:.75rem 1.25rem !important;
+  font-size:clamp(.78rem,1vw,.94rem); text-decoration:none !important;
+  line-height:1.2; white-space:normal;
+}
+body.home-page .zoco-area-showcase__copy .zoco-area-showcase__actions .button-primary {
+  flex:0 1 auto;
+}
+body.home-page .zoco-area-showcase__copy .zoco-area-showcase__actions .zoco-area-showcase__text-button {
+  background:rgba(7,16,23,.88) !important;
+  color:#ffe5d0 !important;
+  border:1px solid rgba(255,159,90,.75) !important;
+  box-shadow:0 8px 19px rgba(0,0,0,.26),inset 0 1px 0 rgba(255,255,255,.11) !important;
+  backdrop-filter:blur(5px);
+  font-weight:800;
+}
+body.home-page .zoco-area-showcase__copy .zoco-area-showcase__actions .zoco-area-showcase__text-button:hover {
+  background:rgba(34,28,25,.95) !important;
+  border-color:#ffc08c !important;
+}
+body.home-page .zoco-area-showcase__actions .button:focus-visible {
+  outline:3px solid #fff3df !important; outline-offset:3px;
+}
+body.home-page .zoco-area-showcase__actions .zoco-area-showcase__cta-arrow {
+  font-size:1.35rem; line-height:1;
+}
+
+/* Geographic paths are links; stroke, pin and label react as one target.
+   Text and pins remain clickable because all three live within the SVG <a>. */
+body.home-page .zoco-area-showcase__map .zoco-county-geo-link {
+  cursor:pointer; -webkit-tap-highlight-color:rgba(255,154,58,.35);
+}
+body.home-page .zoco-area-showcase__map .zoco-county-geo-link .county {
+  transition:filter .18s ease,stroke .18s ease,stroke-width .18s ease;
+}
+body.home-page .zoco-area-showcase__map .zoco-county-geo-link:hover .county,
+body.home-page .zoco-area-showcase__map .zoco-county-geo-link:focus-visible .county {
+  stroke:#ffbf80 !important;
+  stroke-width:3.7px !important;
+  filter:drop-shadow(0 0 12px rgba(255,132,37,.66)) !important;
+}
+body.home-page .zoco-area-showcase__map .zoco-county-geo-link:focus-visible {
+  outline:3px solid #ffc58f; outline-offset:2px;
+}
+body.home-page .zoco-area-showcase__map .zoco-county-geo-link:active .county {
+  filter:brightness(1.2) drop-shadow(0 0 12px rgba(255,139,46,.56)) !important;
+}
+body.home-page .zoco-area-showcase__map .county-label {pointer-events:all}
+body.home-page .zoco-map-tap-hint {
+  position:relative; margin:.25rem auto .1rem !important;
+  color:#e9edf0; text-align:center;
+  font-size:.78rem; font-weight:650; letter-spacing:.03em;
+  text-shadow:0 2px 8px #000;
+}
+body.home-page .zoco-map-tap-hint span {color:#ffad69}
+
+/* The footer is two large, truly clickable county actions, not static copy. */
+body.home-page .zoco-area-showcase__footer .zoco-area-showcase__county {
+  position:relative;
+  display:flex; align-items:center; min-height:108px;
+  text-decoration:none !important;
+  gap:1rem; transition:background .2s ease;
+  -webkit-tap-highlight-color:rgba(255,150,54,.2);
+}
+body.home-page .zoco-area-showcase__footer .zoco-area-showcase__county:hover {
+  background:rgba(255,123,35,.10) !important;
+  transform:none !important;
+}
+body.home-page .zoco-area-showcase__footer .zoco-area-showcase__county:focus-visible {
+  outline:2px solid #ffb77c !important; outline-offset:-3px;
+  background:rgba(255,145,50,.12) !important;
+}
+body.home-page .zoco-area-showcase__footer .zoco-area-showcase__county:active {
+  background:rgba(255,124,38,.16) !important;
+}
+body.home-page .zoco-area-showcase__footer .zoco-area-county-copy {
+  display:flex; flex-direction:column;
+  align-items:flex-start; gap:.28rem; min-width:0;
+  flex:1 1 auto;
+}
+body.home-page .zoco-area-showcase__footer .zoco-area-county-copy strong {margin-bottom:0}
+body.home-page .zoco-area-showcase__footer .zoco-area-county-copy small {
+  display:block; color:#d0d9df; line-height:1.42;
+}
+body.home-page .zoco-area-showcase__footer .zoco-area-county-action {
+  display:inline-flex; gap:.48rem; align-items:center;
+  color:#ffac6f !important; font-size:.66rem; line-height:1.25;
+  letter-spacing:.075em; font-weight:850;
+  text-transform:uppercase; margin-top:.34rem;
+  border-bottom:1px solid rgba(255,155,85,.48); padding-bottom:.14rem;
+}
+body.home-page .zoco-area-showcase__footer .zoco-area-county-arrow {
+  flex:0 0 30px; display:grid; place-items:center;
+  width:30px; height:30px; border:1px solid rgba(255,148,59,.47);
+  border-radius:8px; color:#ffbb83 !important; font-size:1.2rem;
+  transition:transform .18s ease,border-color .18s ease;
+}
+body.home-page .zoco-area-showcase__footer .zoco-area-showcase__county:hover .zoco-area-county-arrow {
+  transform:translate(2px,-2px); border-color:#ffae71;
+}
+body.home-page .zoco-area-showcase__footer .county-pin-icon {
+  display:grid; place-items:center;
+  flex:0 0 47px; width:47px; height:47px;
+  border-radius:50%; color:#ff8c3c;
+  border:1.5px solid rgba(255,126,32,.85);
+  background:rgba(7,13,19,.85);
+}
+body.home-page .zoco-area-showcase__footer .county-pin-icon::before {display:none !important;content:none !important}
+body.home-page .zoco-area-showcase__footer .county-pin-icon svg {
+  display:block; width:25px; height:25px; color:#ff8d3b;
+  fill:none; stroke:currentColor;
+}
+
+/* Brighter photograph visible behind the four mobile service cards,
+   with sufficient dark overlay for readable white headings. */
+@media(max-width:620px) {
+  body.home-page #drain.page.section {
+    background-color:#0b1820 !important;
+    background-image:
+      radial-gradient(ellipse at 85% 3%,rgba(255,143,54,.23),transparent 41%),
+      radial-gradient(ellipse at 12% 98%,rgba(255,107,26,.12),transparent 48%),
+      linear-gradient(180deg,rgba(5,12,18,.52),rgba(5,12,18,.59) 47%,rgba(5,13,19,.75) 80%,rgba(3,8,14,.89)),
+      url("/assets/brand/zoco-mobile-industrial-hero-photo.avif"),
+      url("/assets/brand/zoco-desktop-industrial-clear.avif") !important;
+    background-size:cover,cover,cover,cover,cover !important;
+    background-position:center,center,center,center 39%,center !important;
+    background-repeat:no-repeat !important;
+    border-color:rgba(255,143,49,.48) !important;
+    background-attachment:scroll !important;
+  }
+  body.home-page #drain .section-bar>p {color:#eff3f7 !important;line-height:1.5}
+  body.home-page #drain a.service-tab {
+    box-shadow:0 11px 22px rgba(0,0,0,.42),
+               inset 0 1px 0 rgba(255,255,255,.10) !important;
+    border-color:rgba(255,157,74,.59) !important;
+  }
+  body.home-page #drain a.service-tab:focus-visible {
+    outline:3px solid #ffb879 !important; outline-offset:2px;
+  }
+  body.home-page .zoco-area-showcase__actions {
+    flex-direction:column; align-items:stretch; gap:.58rem;
+  }
+  body.home-page .zoco-area-showcase__copy .zoco-area-showcase__actions .button {
+    width:100% !important; min-height:51px !important;
+  }
+  body.home-page .zoco-area-showcase__copy .zoco-area-showcase__actions .zoco-area-showcase__text-button {
+    background:rgba(7,16,23,.90) !important;
+  }
+  body.home-page .zoco-area-showcase__map svg {
+    max-height:345px !important;
+    touch-action:manipulation;
+  }
+  body.home-page .zoco-map-tap-hint {
+    font-size:.7rem !important; margin:.08rem auto .35rem !important;
+  }
+  body.home-page .zoco-area-showcase__footer .zoco-area-showcase__county {
+    min-height:107px; gap:.75rem !important;
+    padding:.85rem .32rem !important;
+  }
+  body.home-page .zoco-area-showcase__footer .zoco-area-county-copy small {
+    font-size:.81rem !important;
+  }
+  body.home-page .zoco-area-showcase__footer .zoco-area-county-arrow {
+    flex-basis:27px; width:27px; height:27px;
+  }
+}
+@media(max-width:350px) {
+  body.home-page .zoco-area-showcase__footer .zoco-area-county-arrow {display:none}
+  body.home-page .zoco-area-showcase__footer .county-pin-icon {
+    flex-basis:37px; width:37px; height:37px;
+  }
+  body.home-page .zoco-area-showcase__footer .zoco-area-county-action {
+    font-size:.59rem;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  body.home-page .zoco-area-showcase__map .zoco-county-geo-link .county,
+  body.home-page .zoco-area-showcase__footer .zoco-area-showcase__county,
+  body.home-page .zoco-area-showcase__footer .zoco-area-county-arrow {
+    transition:none !important;
+  }
+}
