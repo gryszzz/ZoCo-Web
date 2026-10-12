@@ -306,60 +306,62 @@ body.home-page .hero .quick-connect a.quick-tile:focus-visible {
   }
 }
 
-/* Henry's Card: use the clear, purpose-built ZoCo Z monogram instead
-   of cropping the old busy mascot image. Only the owner card is affected. */
+/* Henry's Card: readable full ZOCO wordmark rather than tiny full-mascot art.
+   The short, wider badge fits beside its label without changing the other tiles. */
 body.home-page .hero .quick-connect a.quick-tile.quick-logo {
-  grid-template-columns:48px minmax(0,1fr) 28px!important;
-  gap:11px!important;
+  grid-template-columns:80px minmax(0,1fr) 28px!important;
+  gap:10px!important;
 }
 body.home-page .hero .quick-connect a.quick-tile.quick-logo > img.quick-owner-icon {
   position:relative!important;
   z-index:1!important;
   display:block!important;
   box-sizing:border-box!important;
-  width:48px!important;
-  height:48px!important;
-  min-width:48px!important;
-  max-width:48px!important;
-  aspect-ratio:1!important;
+  width:80px!important;
+  height:44px!important;
+  min-width:80px!important;
+  max-width:80px!important;
+  aspect-ratio:20 / 11!important;
   padding:0!important;
   border:0!important;
-  border-radius:50%!important;
-  background:none!important;
+  border-radius:12px!important;
+  background:transparent!important;
   background-image:none!important;
   object-fit:contain!important;
-  box-shadow:0 5px 11px rgba(0,6,16,.27)!important;
+  box-shadow:0 5px 12px rgba(0,6,16,.22)!important;
   filter:none!important;
-  transition:transform .22s ease,filter .22s ease!important;
+  transition:transform .2s ease,filter .2s ease!important;
 }
 @media(hover:hover) and (pointer:fine) {
   body.home-page .hero .quick-connect a.quick-tile.quick-logo:hover > img.quick-owner-icon {
-    transform:scale(1.06)!important;
-    filter:brightness(1.08)!important;
+    transform:scale(1.04)!important;
+    filter:brightness(1.1)!important;
   }
 }
 @media(max-width:660px) {
   body.home-page .hero .quick-connect a.quick-tile.quick-logo {
-    grid-template-columns:39px minmax(0,1fr) 18px!important;
-    gap:6px!important;
+    grid-template-columns:60px minmax(0,1fr) 18px!important;
+    gap:5px!important;
   }
   body.home-page .hero .quick-connect a.quick-tile.quick-logo > img.quick-owner-icon {
-    width:39px!important;
-    height:39px!important;
-    min-width:39px!important;
-    max-width:39px!important;
+    width:60px!important;
+    height:33px!important;
+    min-width:60px!important;
+    max-width:60px!important;
+    border-radius:9px!important;
   }
 }
 @media(max-width:375px) {
   body.home-page .hero .quick-connect a.quick-tile.quick-logo {
-    grid-template-columns:32px minmax(0,1fr) 12px!important;
+    grid-template-columns:48px minmax(0,1fr) 12px!important;
     gap:4px!important;
   }
   body.home-page .hero .quick-connect a.quick-tile.quick-logo > img.quick-owner-icon {
-    width:32px!important;
-    height:32px!important;
-    min-width:32px!important;
-    max-width:32px!important;
+    width:48px!important;
+    height:26.4px!important;
+    min-width:48px!important;
+    max-width:48px!important;
+    border-radius:7px!important;
   }
 }
 @media(prefers-reduced-motion:reduce) {
