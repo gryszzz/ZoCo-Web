@@ -1,0 +1,191 @@
+/* ZoCo continuous visual-flow pass — desktop geometry + unique section photography.
+   This stylesheet deliberately loads after prior homepage theme overrides. */
+@media(min-width:1024px){
+  /* The logo can occupy the true left corner instead of the narrow content rail. */
+  body.home-page .site-header .header-inner{
+    width:calc(100% - 2.25rem) !important;
+    max-width:none !important;
+    margin-inline:auto !important;
+    padding-inline:0 !important;
+  }
+  body.home-page .site-header .header-inner .brand{margin-left:0 !important}
+  body.home-page .hero .hero-actions{
+    display:flex !important;
+    gap:clamp(1.15rem,1.8vw,2rem) !important;
+    width:min(100%,690px) !important;
+    max-width:690px !important;
+    flex-wrap:wrap;
+    justify-content:flex-start !important;
+    margin:1.5rem 0 1.1rem !important;
+  }
+  body.home-page .hero .hero-actions .button{
+    display:inline-flex !important;
+    min-width:225px !important;
+    min-height:55px;
+    flex:1 1 225px !important;
+    align-items:center;justify-content:center;
+    text-align:center;white-space:normal;
+  }
+  body.home-page .hero .hero-copyblock{
+    padding-right:clamp(1.7rem,3vw,3.1rem) !important;
+  }
+  body.home-page .hero .hero-main{
+    gap:clamp(1.4rem,3vw,3.6rem) !important;
+  }
+  body.home-page .hero .zoco-hero-pathways{
+    column-gap:clamp(.9rem,1.35vw,1.35rem) !important;
+  }
+}
+@media(min-width:1440px){
+  body.home-page .site-header .header-inner{width:calc(100% - 2.5rem) !important;}
+}
+
+/* Make buttons behave as buttons when a popup—not a URL—is the target. */
+body.home-page .hero button.zoco-hero-pathways__card{
+  font:inherit !important; text-align:left !important;
+  cursor:pointer !important;
+  appearance:none;
+}
+
+/* Contact modal is shared by the floating Contact Us and Request Estimate
+   triggers, preserving focus return, Escape, backdrop closing and tab trapping. */
+body.home-page .quick-contact-panel {
+  overflow-y:auto;
+  max-height:min(690px,calc(100dvh - 48px)) !important;
+  overscroll-behavior:contain;
+}
+body.home-page .quick-contact-actions {
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.65rem !important;
+}
+body.home-page .quick-contact-actions a {
+  min-width:0; overflow-wrap:anywhere;
+  min-height:67px;
+}
+body.home-page .quick-contact-modal[hidden] {display:none !important}
+
+/* Distinct photos across each section, tied together by dark edge-fades.
+   Hero keeps the existing original ZoCo branded industrial art.
+   Drain has service-pipe photography, reviews steel/blue image, area sunset,
+   maintenance its own woodworking photo, owner uses its own artwork. */
+body.home-page #drain.page.section {
+  position:relative;isolation:isolate;
+  background-color:#091319 !important;
+  background-image:
+    linear-gradient(180deg,rgba(3,9,13,.84) 0%,rgba(8,18,23,.84) 16%,rgba(6,14,20,.79) 61%,rgba(3,8,13,.94) 100%),
+    radial-gradient(ellipse at 85% 22%,rgba(255,135,44,.14),transparent 45%),
+    url("/assets/services/drain-cleaning.jpg") !important;
+  background-position:center,center,center 48% !important;
+  background-size:cover !important; background-repeat:no-repeat !important;
+  border-top:1px solid rgba(255,125,44,.46) !important;
+  border-bottom:1px solid rgba(255,135,42,.27) !important;
+}
+body.home-page #drain.page.section::after {
+  z-index:0 !important;
+  content:""; position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,rgba(4,11,16,.48),transparent 33%,rgba(4,12,17,.36)) !important;
+}
+body.home-page #drain.page.section>.section-bar,
+body.home-page #drain.page.section>.service-console{position:relative;z-index:1}
+body.home-page #drain .section-bar>p {color:#e1e9ee !important}
+
+/* More deliberate backdrop contrast: reviews read as cool blue-black.
+   The Google Map is still interactive and Google reviews remain unchanged. */
+body.home-page .reviews-section{
+  position:relative; isolation:isolate;
+  background-color:#08131b !important;
+  background-image:
+    linear-gradient(180deg,rgba(4,12,20,.94),rgba(7,17,25,.84) 30%,rgba(6,13,20,.91) 86%,rgba(2,8,14,.98)),
+    radial-gradient(ellipse at 17% 15%,rgba(48,100,130,.16),transparent 42%),
+    url("/assets/brand/zoco-photo-industrial-panel.avif") !important;
+  background-size:cover !important;
+  background-position:center,center,center 58% !important;
+  background-repeat:no-repeat !important;
+  border-block:1px solid rgba(255,131,45,.3) !important;
+}
+body.home-page .reviews-section::before{
+  pointer-events:none !important;
+  background-image:linear-gradient(180deg,rgba(0,0,0,.12),transparent 38%,rgba(0,0,0,.26)) !important;
+  background-size:cover !important; opacity:.72 !important;
+}
+
+/* Geographic coverage keeps its own sunset; cross-section edge darkening
+   prevents an abrupt hard photographic seam. */
+body.home-page .zoco-area-teaser.zoco-area-showcase {
+  border-top:1px solid rgba(255,144,54,.5) !important;
+  border-bottom:1px solid rgba(255,142,54,.3) !important;
+}
+
+/* Small non-structural home work: distinct workshop/trim photography. */
+body.home-page .handyman-section{
+  position:relative; isolation:isolate;
+  background-color:#121a20 !important;
+  background-image:
+    linear-gradient(180deg,rgba(8,15,21,.94),rgba(14,24,29,.83) 22%,rgba(10,19,24,.84) 73%,rgba(5,12,18,.96)),
+    radial-gradient(ellipse at 92% 5%,rgba(239,146,65,.11),transparent 40%),
+    url("/assets/handyman/carpentry.jpg") !important;
+  background-size:cover !important;
+  background-position:center,center,center 37% !important;
+  background-repeat:no-repeat !important;
+  border-top:1px solid rgba(255,153,83,.24) !important;
+}
+body.home-page .handyman-section::before{
+  background:linear-gradient(90deg,rgba(5,11,15,.25),transparent 45%,rgba(6,12,16,.31)) !important;
+}
+
+/* Calmer finish after richly illustrated service sections. */
+body.home-page .zoco-owner-section{
+  background-color:#0c131a !important;
+  background-image:
+    radial-gradient(ellipse at 92% 21%,rgba(255,121,33,.11),transparent 41%),
+    linear-gradient(180deg,#0a131b,#121b23 55%,#081118) !important;
+}
+body.home-page #offers.page.section {
+  background:
+    linear-gradient(180deg,#081118,#101a22 55%,#0b141b) !important;
+}
+body.home-page #contact.page.section {
+  background:
+    linear-gradient(180deg,#0b141b,#111a21 58%,#080e14) !important;
+}
+@media(min-width:1024px){
+  body.home-page #drain.page.section,
+  body.home-page .handyman-section>.page.section,
+  body.home-page .reviews-section>.page.section{
+    padding-block:clamp(3.5rem,4.75vw,5.25rem) !important;
+  }
+  body.home-page .section-bar{gap:clamp(1.5rem,3.2vw,3rem) !important}
+  body.home-page #drain .service-tabs{gap:clamp(.75rem,1.25vw,1.15rem) !important}
+}
+@media(max-width:620px){
+  /* Mobile keeps the same visual difference without weakening text contrast. */
+  body.home-page #drain.page.section{
+    background-image:
+      linear-gradient(180deg,rgba(3,10,17,.80),rgba(7,15,22,.76) 44%,rgba(3,9,15,.9)),
+      radial-gradient(ellipse at 84% 5%,rgba(255,136,48,.16),transparent 49%),
+      url("/assets/services/drain-cleaning.jpg") !important;
+    background-position:center,center,center center !important;
+    background-size:cover !important;
+  }
+  body.home-page .reviews-section {
+    background-image:
+      linear-gradient(180deg,rgba(5,12,20,.92),rgba(9,20,29,.87) 46%,rgba(4,12,19,.97)),
+      url("/assets/brand/zoco-photo-industrial-panel.avif") !important;
+    background-size:cover !important;
+    background-position:center,center center !important;
+  }
+  body.home-page .handyman-section{
+    background-image:
+      linear-gradient(180deg,rgba(7,14,20,.92),rgba(12,19,24,.85) 47%,rgba(5,12,17,.96)),
+      url("/assets/handyman/carpentry.jpg") !important;
+    background-size:cover !important;
+    background-position:center,center 46% !important;
+  }
+  body.home-page .quick-contact-panel {
+    max-height:calc(100dvh - 40px) !important;
+  }
+  body.home-page .quick-contact-actions {grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+}
+@media(prefers-reduced-motion:reduce){
+  body.home-page .hero .hero-actions .button {transition:none !important}
+}
