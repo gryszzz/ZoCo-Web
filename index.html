@@ -47,6 +47,7 @@
   <link rel="stylesheet" href="/owner-card-polish.css?v=1" />
   <link rel="stylesheet" href="/site-polish.css?v=1" />
   <link rel="stylesheet" href="/header-lockup.css?v=3" />
+  <link rel="stylesheet" href="/area-reviews-20261012.css?v=1" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -687,28 +688,40 @@
       </div>
     </section>
 
-    <section class="zoco-area-teaser" aria-labelledby="zoco-area-title">
-      <div class="zoco-area-inner">
-        <div class="zoco-area-copy">
-          <p class="kicker">LOCAL SERVICE AREA</p>
-          <h2 id="zoco-area-title">Proudly serving <span>Sussex &amp; Passaic.</span></h2>
-          <p>ZoCo Drain &amp; Sewer LLC is based in Highland Lakes, NJ. Call or text your town and drain issue so Henry can confirm the available service and schedule.</p>
-          <a class="button button-primary" href="/service-area/">See our service area ↗</a>
+    <section class="zoco-area-teaser zoco-area-showcase" aria-labelledby="zoco-area-title">
+      <div class="zoco-area-showcase__body">
+        <div class="zoco-area-showcase__copy">
+          <p class="kicker">SERVICE AREA</p>
+          <h2 id="zoco-area-title">Proudly serving <span>Sussex County &amp; Passaic County</span></h2>
+          <p>ZoCo Drain &amp; Sewer LLC provides drain cleaning, camera inspections, dryer vent cleaning, and small home maintenance throughout Sussex and Passaic counties, including Highland Lakes, NJ and nearby communities. Contact Henry to confirm service availability.</p>
+          <a class="button button-primary" href="/service-area/">VIEW SERVICE AREA <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="zoco-county-cards" aria-label="County service areas">
-          <a class="zoco-county" href="/sussex-county-drain-cleaning/">
-            <small>SERVICE COUNTY / 01</small>
-            <strong>Sussex County</strong>
-            <span>Highland Lakes, Vernon, Hamburg, Sparta, Newton and nearby communities. Confirm availability directly.</span>
-            <i>Explore Sussex services ↗</i>
-          </a>
-          <a class="zoco-county" href="/passaic-county-drain-cleaning/">
-            <small>SERVICE COUNTY / 02</small>
-            <strong>Passaic County</strong>
-            <span>Ringwood, West Milford, Wanaque, Wayne and other communities subject to scheduling and job scope.</span>
-            <i>Explore Passaic services ↗</i>
-          </a>
+        <div class="zoco-area-showcase__map">
+          <svg viewBox="0 0 610 490" role="img" aria-labelledby="zoco-county-map-title zoco-county-map-desc">
+            <title id="zoco-county-map-title">Sussex County and Passaic County service areas</title>
+            <desc id="zoco-county-map-desc">Simplified geographic county outlines of Sussex and Passaic counties in northern New Jersey. Contact ZoCo to confirm availability in your town.</desc>
+            <defs>
+              <linearGradient id="zocoSussexFill" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#a52f0a" stop-opacity=".91"/><stop offset="100%" stop-color="#541908" stop-opacity=".92"/></linearGradient>
+              <linearGradient id="zocoPassaicFill" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#37434c" stop-opacity=".92"/><stop offset="100%" stop-color="#121b24" stop-opacity=".91"/></linearGradient>
+            </defs>
+            <path class="county county-sussex" d="M205 44 L416 166 L241 352 L243 369 L232 388 L195 406 L182 389 L159 396 L31 251 L15 256 L23 239 L71 203 L99 154 L96 143 L113 107 L143 81 L141 73 L156 69 L168 53 Z"/>
+            <path class="county county-passaic" d="M328 258 L416 166 L514 220 L476 312 L506 341 L541 344 L541 339 L560 353 L555 372 L567 389 L567 416 L582 437 L574 437 L569 467 L481 415 L475 406 L479 398 L465 382 L471 371 L472 346 L460 342 L459 324 L403 317 L383 303 L375 312 L376 297 L363 284 L329 295 L338 274 L338 266 Z"/>
+            <g transform="translate(205 171)"><path class="county-pin" d="M0 -21 C-26 -21 -25 4 0 26 C25 4 26 -21 0 -21 Z"/><circle class="county-pin-center" cy="-9" r="7"/></g>
+            <text class="county-label" x="205" y="243">SUSSEX</text><text class="county-label" x="205" y="273">COUNTY</text>
+            <g transform="translate(450 273)"><path class="county-pin" d="M0 -21 C-26 -21 -25 4 0 26 C25 4 26 -21 0 -21 Z"/><circle class="county-pin-center" cy="-9" r="7"/></g>
+            <text class="county-label" x="445" y="338">PASSAIC</text><text class="county-label" x="445" y="368">COUNTY</text>
+          </svg>
         </div>
+      </div>
+      <div class="zoco-area-showcase__footer" aria-label="Explore ZoCo service counties">
+        <a class="zoco-area-showcase__county" href="/sussex-county-drain-cleaning/">
+          <span class="county-pin-icon" aria-hidden="true"></span>
+          <span><strong>Sussex County</strong><small>Highland Lakes, Vernon, Hamburg, Sparta, Newton and surrounding communities.</small></span>
+        </a>
+        <a class="zoco-area-showcase__county" href="/passaic-county-drain-cleaning/">
+          <span class="county-pin-icon" aria-hidden="true"></span>
+          <span><strong>Passaic County</strong><small>Ringwood, West Milford, Wanaque, Wayne and surrounding communities.</small></span>
+        </a>
       </div>
     </section>
 
