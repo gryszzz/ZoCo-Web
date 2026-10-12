@@ -44,6 +44,7 @@
   <link rel="stylesheet" href="/brand-finish.css?v=2" />
   <link rel="stylesheet" href="/site-polish.css?v=1" />
   <link rel="stylesheet" href="/header-lockup.css?v=3" />
+  <link rel="stylesheet" href="/county-town-directory-20261012.css?v=1" />
   <style>
     .seo-page{max-width:900px;margin:0 auto;padding:110px 22px 70px}
     .seo-page h1{font-size:clamp(2.2rem,7vw,4.7rem);line-height:.95;margin:.2em 0}
@@ -96,23 +97,93 @@
   }
   </script>
 </head>
-<body>
-  <main class="seo-page">
-    <p class="seo-kicker">ZoCo Drain &amp; Sewer LLC · Sussex + Passaic County, NJ</p>
-    <h1>Drain Cleaning in Sussex County, NJ</h1>
-    <p>Owner-operated drain cleaning, drain snaking and camera inspection for residential customers in Sussex County, NJ. ZoCo is based in Highland Lakes.</p>
-    <div class="seo-actions">
-      <a class="button button-primary" href="tel:+19738289723">Call 973-828-9723</a>
-      <a class="button button-secondary" href="sms:+19738289723">Text for an estimate</a>
-    </div>
-    <section><h2>Based in Highland Lakes, serving Sussex County.</h2><p>ZoCo Drain &amp; Sewer LLC is owner operated in Highland Lakes, New Jersey. For customers in Sussex County, ZoCo provides drain cleaning and related services for appropriate accessible residential lines.</p><p>If a sink, tub, shower or drain line is slow or backed up, call or text with the symptoms and property location. For recurring issues, a camera inspection may help clarify visible line conditions before deciding on next steps.</p></section><section><h2>Direct contact with the owner.</h2><p>There is no call-center handoff. Use 973-828-9723 to discuss the issue, location and availability directly.</p></section>
-    <section><h2>Common questions</h2><h3>Do you serve all of Sussex County?</h3><p>ZoCo serves Sussex County, with availability depending on the job and schedule. Call or text the property location to confirm current service availability.</p>
+<body class="zoco-county-directory-page">
+  <header class="zoco-county-topbar">
+    <a class="zoco-county-topbar__brand" href="/" aria-label="ZoCo homepage"><img src="/assets/brand/zoco-header-horizontal.webp" alt="ZoCo Drain & Sewer LLC" width="255" height="85" /></a>
+    <nav aria-label="County page links">
+      <a href="/">Home</a>
+      <a href="/services/">All Services</a>
+      <a class="zoco-county-topbar__contact" href="sms:+19738289723">Text Henry ↗</a>
+    </nav>
+  </header>
+  <main class="seo-page zoco-county-page__main">
+    <nav class="zoco-county-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/service-area/">Service area</a><span aria-hidden="true">/</span><span>Sussex County</span></nav>
+    <section class="zoco-county-hero">
+      <p class="seo-kicker">ZOCO DRAIN &amp; SEWER LLC / SUSSEX COUNTY, NJ</p>
+      <h1>Drain Cleaning in <span>Sussex County, NJ</span></h1>
+      <p>Owner-operated drain cleaning, drain snaking, camera inspections and related services in Sussex County. Browse the county’s 24 municipalities below, then ask Henry about your location and scheduling availability.</p>
+      <div class="seo-actions">
+        <a class="button button-primary" href="sms:+19738289723">Text Henry about your town ↗</a>
+        <a class="button button-secondary" href="tel:+19738289723">Call 973-828-9723</a>
+        <a class="button button-secondary" href="/services/">Explore services ↗</a>
+      </div>
+    </section>
+    <section class="zoco-town-directory" id="town-directory" data-town-directory data-county="Sussex County" aria-labelledby="town-directory-title">
+      <div class="zoco-town-directory__top">
+        <div>
+          <p class="zoco-town-directory__eyebrow">TOWN DIRECTORY / SUSSEX COUNTY</p>
+          <h2 id="town-directory-title">Explore all 24 municipalities.</h2>
+          <p>These are the official municipalities within Sussex County. Select your town, then contact Henry to confirm whether he can take your job.</p>
+        </div>
+        <label class="zoco-town-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg>
+          <input data-town-search type="search" autocomplete="off" aria-label="Search Sussex County towns" placeholder="Find your town..." />
+        </label>
+      </div>
+      <div class="zoco-town-directory__list" aria-label="Sussex County municipalities">
+          <button type="button" data-town-option data-town="Andover Borough" aria-pressed="false"><span>Andover Borough</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Andover Township" aria-pressed="false"><span>Andover Township</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Branchville Borough" aria-pressed="false"><span>Branchville Borough</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Byram Township" aria-pressed="false"><span>Byram Township</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Frankford Township" aria-pressed="false"><span>Frankford Township</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Franklin Borough" aria-pressed="false"><span>Franklin Borough</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Fredon Township" aria-pressed="false"><span>Fredon Township</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Green Township" aria-pressed="false"><span>Green Township</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Hamburg Borough" aria-pressed="false"><span>Hamburg Borough</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Hampton Township" aria-pressed="false"><span>Hampton Township</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Hardyston Township" aria-pressed="false"><span>Hardyston Township</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Hopatcong Borough" aria-pressed="false"><span>Hopatcong Borough</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Lafayette Township" aria-pressed="false"><span>Lafayette Township</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Montague Township" aria-pressed="false"><span>Montague Township</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Town of Newton" aria-pressed="false"><span>Town of Newton</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Ogdensburg Borough" aria-pressed="false"><span>Ogdensburg Borough</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Sandyston Township" aria-pressed="false"><span>Sandyston Township</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Sparta Township" aria-pressed="false"><span>Sparta Township</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Stanhope Borough" aria-pressed="false"><span>Stanhope Borough</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Stillwater Township" aria-pressed="false"><span>Stillwater Township</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Sussex Borough" aria-pressed="false"><span>Sussex Borough</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Vernon Township" aria-pressed="false"><span>Vernon Township</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Walpack Township" aria-pressed="false"><span>Walpack Township</span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-town-option data-town="Wantage Township" aria-pressed="false"><span>Wantage Township</span><span aria-hidden="true">↗</span></button>
+      </div>
+      <p class="zoco-town-directory__empty" data-town-empty hidden>No matching municipality. Try another spelling or contact Henry with your neighborhood name.</p>
+      <div class="zoco-town-contact" id="town-contact">
+        <div class="zoco-town-contact__copy" role="status" aria-live="polite">
+          <strong>Town: <span data-town-selection>Select a town above</span></strong>
+          <p data-town-callout>Tell Henry the property town, issue and requested work. Every location is confirmed before scheduling.</p>
+        </div>
+        <div class="zoco-town-contact__actions">
+          <a href="sms:+19738289723">Text Henry ↗</a>
+          <a href="tel:+19738289723">Call Henry ↗</a>
+        </div>
+      </div>
+      <p class="zoco-town-directory__note">Highland Lakes is a community in Vernon Township, where ZoCo is based. Nearby place names such as McAfee, Glenwood and Stockholm are communities rather than separate municipalities. Listing a municipality does not guarantee service at a specific address. Source: <a href="https://www.sussex.nj.us/275/Participating-Jurisdictions" target="_blank" rel="noopener">official Sussex County municipality directory ↗</a>.</p>
+    </section>
+    <div class="zoco-county-details">
+      <section><h2>Based in Highland Lakes, serving Sussex County.</h2><p>ZoCo Drain &amp; Sewer LLC is owner operated in Highland Lakes, New Jersey. For customers in Sussex County, ZoCo provides drain cleaning and related services for appropriate accessible residential lines.</p><p>If a sink, tub, shower or drain line is slow or backed up, call or text with the symptoms and property location. For recurring issues, a camera inspection may help clarify visible line conditions before deciding on next steps.</p></section>
+      <div>
+        <section><h2>Direct contact with the owner.</h2><p>There is no call-center handoff. Use 973-828-9723 to discuss the issue, location and availability directly.</p></section>
+        <section><h2>Common questions</h2><h3>Do you serve all of Sussex County?</h3><p>ZoCo serves Sussex County, with availability depending on the job and schedule. Call or text the property location to confirm current service availability.</p>
 <h3>What drain services are available?</h3><p>ZoCo currently lists drain cleaning, drain snaking information, camera inspection and drain maintenance among its drain-related services.</p></section>
+      </div>
+    </div>
     <nav class="seo-links" aria-label="Related pages">
+      <a href="/service-area/">Both counties</a>
+      <a href="/passaic-county-drain-cleaning/">Passaic County towns</a>
       <a href="/services/">All services</a>
       <a href="/drain-cleaning/">Drain cleaning</a>
       <a href="/camera-inspection/">Camera inspection</a>
-      <a href="/">ZoCo home</a>
+      <a href="/">ZoCo homepage</a>
     </nav>
   </main>
 <footer class="site-footer sitewide-footer">
@@ -168,5 +239,6 @@
     </div>
     <div class="page copyright footer-bottom"><span>© ZoCo Drain &amp; Sewer LLC · Design by <a class="footer-credit" href="https://www.instagram.com/exponetlabs/" target="_blank" rel="noopener">Exponet Labs</a></span></div>
   </footer>
+<script src="/county-town-directory-20261012.js?v=1" defer></script>
 </body>
 </html>
