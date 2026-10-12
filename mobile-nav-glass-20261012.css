@@ -1,6 +1,10 @@
 /* ZoCo mobile navigation — shared between homepage and inner pages.
    Industrial navy glass, warm copper highlights, compact hierarchy,
    accessible touch targets, clean menu open/close transitions. */
+/* Mobile-only menu framing never appears in the desktop nav. */
+body.home-page .site-header .zoco-mobile-nav-intro,
+body.home-page .site-header .zoco-mobile-nav-actions{display:none!important}
+
 @media(max-width:1170px){
   body.zoco-menu-open{overflow:hidden}
   body.zoco-menu-open::before{
