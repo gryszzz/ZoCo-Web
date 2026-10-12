@@ -1,95 +1,104 @@
 /*
- * ZoCo official FLAT / LANDSCAPE header mark.
- * Replaces the old circular mascot + separate text with the actual,
- * user-selected integrated 3:1 dogs / chrome lettering / drain artwork.
- * Keep all other branding, navigation, actions, and hero unchanged.
+ * Official ZoCo horizontal header logo, 2026-10-12.
+ * Use the actual wide logo artwork — not a circular mascot with text next to it.
+ * Other logo usage (hero, owner card, footer, icons) stays unchanged.
  */
-.site-header .header-inner .brand {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  justify-self: start !important;
-  grid-column: 1 !important;
-  gap: 0 !important;
-  width: auto !important;
-  min-width: 0 !important;
-  max-width: 210px !important;
-  padding: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  flex: 0 0 auto !important;
-  text-decoration: none !important;
+.site-header .header-inner .brand{
+  display:inline-flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-self:start!important;
+  flex:0 0 auto!important;
+  width:auto!important;
+  max-width:100%!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  gap:0!important;
+  border:0!important;
+  background:none!important;
+  text-decoration:none!important;
 }
-.site-header .header-inner .brand .brand-copy {
-  display: none !important;
+.site-header .header-inner .brand .brand-copy{
+  display:none!important;
 }
-.site-header .header-inner .brand .brand-logo {
-  display: block !important;
-  box-sizing: border-box !important;
-  width: 207px !important;
-  height: 69px !important;
-  flex: 0 0 207px !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  overflow: visible !important;
-  background: url("/assets/brand/zoco-header-horizontal.png") center / contain no-repeat transparent !important;
-  box-shadow: none !important;
-  filter: drop-shadow(0 3px 5px rgba(0,0,0,.52));
-  opacity: 1 !important;
-  -webkit-mask-image: none !important;
-  mask-image: none !important;
+/* A single complete, unwarped 3:1 logo image replaces the separate
+   old rounded mascot and textual wordmark. */
+.site-header .header-inner .brand .brand-logo{
+  display:block!important;
+  box-sizing:border-box!important;
+  position:static!important;
+  flex:0 0 248px!important;
+  width:248px!important;
+  height:80px!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  overflow:visible!important;
+  background-color:transparent!important;
+  background-image:url("/assets/brand/zoco-header-horizontal.webp")!important;
+  background-repeat:no-repeat!important;
+  background-position:left center!important;
+  background-size:contain!important;
+  box-shadow:none!important;
+  filter:drop-shadow(0 2px 3px rgba(0,0,0,.55));
+  -webkit-mask-image:none!important;
+  mask-image:none!important;
+  image-rendering:auto!important;
 }
-.site-header .header-inner .brand:focus-visible {
-  outline: 2px solid #ffad70;
-  outline-offset: 3px;
-  border-radius: 4px;
+.site-header .header-inner .brand:focus-visible{
+  outline:2px solid #ffb07b!important;
+  outline-offset:4px;
+  border-radius:4px!important;
 }
-@media (min-width: 901px) {
-  .site-header .header-inner {
-    column-gap: clamp(.55rem,1.2vw,1.15rem) !important;
+.site-header .header-inner{min-height:86px!important;}
+@media(min-width:901px) and (max-width:1240px){
+  .site-header .header-inner .brand .brand-logo{
+    width:190px!important;height:69px!important;flex-basis:190px!important;
   }
 }
-@media (min-width:901px) and (max-width:1240px) {
-  .site-header .header-inner .brand { max-width: 180px !important; }
-  .site-header .header-inner .brand .brand-logo {
-    width: 180px !important;
-    height: 60px !important;
-    flex-basis: 180px !important;
+@media(max-width:900px){
+  .site-header .header-inner{
+    min-height:80px!important;
+    height:80px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:.5rem!important;
   }
+  .site-header .header-inner .brand{
+    grid-column:1!important;
+    max-width:calc(100% - 100px)!important;
+  }
+  .site-header .header-inner .brand .brand-logo{
+    width:min(58vw,235px)!important;
+    height:73px!important;
+    flex:0 0 min(58vw,235px)!important;
+  }
+  .site-header .header-inner .menu-btn{
+    grid-column:3!important;
+    flex-shrink:0!important;
+    margin-left:auto!important;
+  }
+  .site-header .nav-links{top:80px!important;}
 }
-@media (max-width:900px) {
-  .site-header .header-inner {
-    justify-content: space-between !important;
-    gap: .4rem !important;
+@media(max-width:620px){
+  .site-header .header-inner{height:74px!important;min-height:74px!important;}
+  .site-header .header-inner .brand .brand-logo{
+    width:min(54vw,205px)!important;
+    height:66px!important;
+    flex:0 0 min(54vw,205px)!important;
   }
-  .site-header .header-inner .brand { max-width: 177px !important; }
-  .site-header .header-inner .brand .brand-logo {
-    width: 177px !important;
-    height: 59px !important;
-    flex-basis: 177px !important;
-  }
-  .site-header .header-inner .menu-btn {
-    margin-left: auto !important;
-    grid-column: 3 !important;
-  }
+  .site-header .nav-links{top:74px!important;}
 }
-@media (max-width:370px) {
-  .site-header .header-inner .brand { max-width: 150px !important; }
-  .site-header .header-inner .brand .brand-logo {
-    width: 150px !important;
-    height: 50px !important;
-    flex-basis: 150px !important;
+@media(max-width:350px){
+  .site-header .header-inner{height:69px!important;min-height:69px!important;}
+  .site-header .header-inner .brand .brand-logo{
+    width:min(52vw,174px)!important;
+    height:58px!important;
+    flex:0 0 min(52vw,174px)!important;
   }
-}
-@media (max-width:330px) {
-  .site-header .header-inner .brand { max-width: 138px !important; }
-  .site-header .header-inner .brand .brand-logo {
-    width: 138px !important;
-    height: 46px !important;
-    flex-basis: 138px !important;
-  }
+  .site-header .nav-links{top:69px!important;}
 }
