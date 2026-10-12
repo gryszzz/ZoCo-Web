@@ -1,0 +1,147 @@
+/* ZoCo's hero conversion cards: animated moving-water outlines + live icon ripples.
+   Exclusive to the three homepage shortcut cards; no baked text imagery.
+   Progressive enhancement: static blue borders remain if mask or motion is absent. */
+body.home-page .hero .zoco-hero-pathways{
+  border-top:1px solid rgba(35,181,255,.55)!important;
+  border-bottom:2px solid rgba(30,182,255,.56)!important;
+  background:
+    radial-gradient(ellipse at 50% 110%,rgba(1,105,211,.12),transparent 73%),
+    linear-gradient(100deg,#070f19,#0a1520 47%,#060f19)!important;
+  box-shadow:0 0 18px rgba(0,157,243,.12),0 12px 28px #0008!important;
+}
+body.home-page .hero .zoco-hero-pathways__card{
+  overflow:hidden;isolation:isolate;
+  border:1px solid rgba(61,198,255,.78)!important;
+  background:
+    radial-gradient(ellipse at 12% 10%,rgba(5,82,139,.16),transparent 49%),
+    linear-gradient(125deg,#111e2b 0%,#081421 56%,#071420 100%)!important;
+  box-shadow:
+    inset 0 0 0 1px rgba(56,166,250,.14),
+    inset 0 0 22px rgba(0,129,233,.08),
+    0 0 11px rgba(0,176,245,.3),
+    0 10px 23px #0006!important;
+}
+body.home-page .hero .zoco-hero-pathways__card::before{
+  content:"";pointer-events:none;
+  position:absolute;inset:0;
+  padding:2px;
+  border-radius:inherit;
+  background:
+    linear-gradient(101deg,
+      #0877dc 0%,#00c8ff 8%,#e4ffff 11%,#0b9ce9 17%,
+      #0478d7 26%,#23e5ff 34%,#e4ffff 37%,#0269e5 44%,
+      #00bcff 55%,#eaffff 58%,#0c7cd9 66%,#00d4ff 80%,#ecffff 83%,#0475d7 92%);
+  background-size:360% 100%;
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  mask-composite:exclude;
+  animation:zoco-water-current 8s linear infinite;
+  z-index:3;
+}
+body.home-page .hero .zoco-hero-pathways__card::after{
+  content:"";pointer-events:none;
+  position:absolute;inset:0;border-radius:inherit;
+  background:
+    radial-gradient(circle at 5% 7%,rgba(166,246,255,.58) 0 2px,transparent 4px),
+    radial-gradient(circle at 75% 95%,rgba(0,190,255,.62) 0 2px,transparent 4px),
+    radial-gradient(circle at 97% 22%,rgba(119,231,255,.5) 0 1.5px,transparent 3px),
+    radial-gradient(ellipse at 38% 102%,rgba(0,164,255,.19),transparent 34%),
+    repeating-radial-gradient(ellipse at 45% 107%,transparent 0 16px,rgba(0,130,255,.13) 18px,transparent 21px,transparent 43px);
+  background-size:190px 94px,260px 75px,300px 125px,100% 100%,100% 90px;
+  background-repeat:repeat,repeat,repeat,no-repeat,no-repeat;
+  opacity:.48;
+  animation:zoco-water-surface 9s ease-in-out infinite alternate;
+  z-index:0;
+}
+body.home-page .hero .zoco-hero-pathways__card>*{
+  position:relative;z-index:1;
+}
+body.home-page .hero .zoco-hero-pathways__icon{
+  overflow:hidden;
+  border:1.5px solid #24d2ff!important;
+  border-radius:13px!important;
+  color:#56e3ff!important;
+  background:linear-gradient(140deg,#04121d,#071624)!important;
+  box-shadow:
+    0 0 0 1px rgba(23,126,236,.35),
+    0 0 13px rgba(0,175,251,.34),
+    inset 0 0 10px rgba(0,157,245,.14)!important;
+  animation:zoco-water-icon-float 4.8s ease-in-out infinite;
+}
+body.home-page .hero .zoco-hero-pathways__icon::before{
+  content:"";position:absolute;inset:-32%;
+  border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,transparent 23%,rgba(7,205,255,.16) 32%,transparent 42%,rgba(14,142,244,.11) 54%,transparent 66%);
+  transform:scale(.85);
+  animation:zoco-water-icon-ripple 4.8s ease-out infinite;
+}
+body.home-page .hero .zoco-hero-pathways__icon svg{
+  position:relative;z-index:1;
+  color:#53e5ff!important;
+  filter:drop-shadow(0 0 5px rgba(33,207,255,.75));
+}
+body.home-page .hero .zoco-hero-pathways__kicker{
+  color:#45d9ff!important;
+  text-shadow:0 0 11px rgba(8,199,255,.22);
+}
+body.home-page .hero .zoco-hero-pathways__arrow{
+  color:#6be4ff!important;
+  text-shadow:0 0 8px rgba(36,203,255,.43);
+}
+body.home-page .hero .zoco-hero-pathways__description{
+  color:#cfdee8!important;
+}
+body.home-page .hero .zoco-hero-pathways__card:hover,
+body.home-page .hero .zoco-hero-pathways__card:focus-visible{
+  border-color:#b6f8ff!important;
+  box-shadow:
+    0 0 0 1px rgba(115,231,255,.39),
+    0 0 24px rgba(0,200,255,.55),
+    inset 0 0 28px rgba(5,143,238,.15),
+    0 14px 28px #0008!important;
+}
+body.home-page .hero .zoco-hero-pathways__card:active{
+  background:linear-gradient(135deg,#0e3044,#071929)!important;
+}
+body.home-page .hero .zoco-hero-pathways__card:focus-visible{
+  outline:3px solid #adf5ff!important;
+  outline-offset:3px!important;
+}
+@keyframes zoco-water-current {
+  from{background-position:0% 50%}
+  to{background-position:360% 50%}
+}
+@keyframes zoco-water-surface {
+  from{background-position:0 0,0 0,0 0,50% 0,center bottom;opacity:.34}
+  to{background-position:48px 0,-30px 0,36px 0,52% 6%,center top;opacity:.6}
+}
+@keyframes zoco-water-icon-ripple {
+  from{transform:scale(.62);opacity:.06}
+  55%{opacity:.62}
+  to{transform:scale(1.4);opacity:0}
+}
+@keyframes zoco-water-icon-float {
+  0%,100%{filter:brightness(1) saturate(1)}
+  50%{filter:brightness(1.19) saturate(1.12)}
+}
+@media(max-width:660px){
+  body.home-page .hero .zoco-hero-pathways__card::before{padding:1.5px}
+  body.home-page .hero .zoco-hero-pathways__icon{
+    border-radius:10px!important;
+    box-shadow:0 0 9px rgba(0,182,247,.29),inset 0 0 7px rgba(0,163,247,.15)!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__card{
+    box-shadow:0 0 8px rgba(0,153,234,.25),0 8px 20px #0007!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  body.home-page .hero .zoco-hero-pathways__card::before,
+  body.home-page .hero .zoco-hero-pathways__card::after,
+  body.home-page .hero .zoco-hero-pathways__icon,
+  body.home-page .hero .zoco-hero-pathways__icon::before{
+    animation:none!important;
+  }
+  body.home-page .hero .zoco-hero-pathways__card::before{background-position:52% 50%}
+  body.home-page .hero .zoco-hero-pathways__card::after{opacity:.27}
+}
