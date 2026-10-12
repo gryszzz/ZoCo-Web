@@ -454,3 +454,16 @@ body{background:#0b1014!important}
  }
  .home-page #drain .service-tab strong{font-size:1.06rem!important}
 }
+
+/* Keep the water outflow visible on narrow screens rather than cropping it off-screen. */
+@media(max-width:620px){
+ .hero .hero-shell{
+   background-position: left center, center center, 88% center!important;
+   background-size:auto,auto,auto 100%!important;
+ }
+ .hero .hero-shell::after{
+   background:radial-gradient(ellipse at 8% 28%,rgba(255,124,37,.2),transparent 45%),
+     radial-gradient(ellipse at 98% 45%,rgba(12,158,221,.11),transparent 38%),
+     linear-gradient(180deg,rgba(4,9,12,.1),rgba(3,8,12,.75))!important;
+ }
+}
