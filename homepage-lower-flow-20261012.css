@@ -1,0 +1,195 @@
+/* ZoCo: unified lower-homepage art direction, without repeating the hero/drain
+   photo in every section. Keep original owner photo, coupons and contact links. */
+body.home-page .zoco-owner-section,
+body.home-page #offers.page.section,
+body.home-page #contact.page.section,
+body.home-page .contact-section,
+body.home-page .sitewide-footer {position:relative;isolation:isolate;}
+body.home-page .zoco-owner-section{
+  padding-top:clamp(2.8rem,4.6vw,5rem)!important;
+  padding-bottom:clamp(2.7rem,4.6vw,4.7rem)!important;
+  background:
+    radial-gradient(ellipse at 82% 22%,rgba(255,119,44,.12),transparent 43%),
+    radial-gradient(ellipse at 11% 75%,rgba(34,116,153,.17),transparent 54%),
+    linear-gradient(180deg,#0d1921 0%,#111e27 35%,#09151d 100%)!important;
+  border-top:1px solid rgba(255,137,58,.2)!important;
+  border-bottom:0!important;
+}
+body.home-page .zoco-owner-section::before{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(90deg,transparent 95%,rgba(196,228,240,.028) 96%),
+    linear-gradient(transparent 95%,rgba(196,228,240,.025) 96%)!important;
+  background-size:100px 100px!important;opacity:.27!important;
+  pointer-events:none;z-index:0;
+}
+body.home-page .zoco-owner-section>.page{position:relative;z-index:1}
+body.home-page .zoco-owner-section .zoco-owner-heading{margin-bottom:1.5rem!important}
+body.home-page .zoco-owner-section .zoco-owner-heading h2{
+  text-shadow:0 5px 19px #0008;
+}
+body.home-page .zoco-owner-section .zoco-owner-card{
+  border-color:rgba(255,150,69,.53)!important;
+  box-shadow:0 18px 53px #0009,0 0 0 1px #ff993210!important;
+}
+body.home-page .zoco-owner-section .zoco-owner-art {
+  background:
+    radial-gradient(ellipse at 50% 44%,rgba(255,140,42,.22),transparent 54%),
+    radial-gradient(ellipse at 85% 86%,rgba(43,137,178,.12),transparent 50%),
+    linear-gradient(143deg,#192a34,#08141b)!important;
+}
+body.home-page #offers.page.section{
+  padding-block:clamp(2.8rem,4vw,4.6rem)!important;
+  background:transparent!important;
+  border:0!important;
+}
+body.home-page #offers.page.section::before{
+  content:"";position:absolute;left:50%;top:0;bottom:0;
+  width:100vw;transform:translateX(-50%);
+  z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 84% 20%,rgba(255,120,37,.13),transparent 44%),
+    linear-gradient(180deg,rgba(9,21,29,.99),rgba(12,21,27,.94) 42%,rgba(7,18,24,.97)),
+    url("/assets/brand/zoco-photo-industrial-panel.avif") center 52%/cover no-repeat!important;
+  background-size:cover!important;
+}
+body.home-page #offers .section-bar {margin-bottom:1.25rem!important}
+body.home-page #offers .offer-card{
+  border:1px solid rgba(255,147,63,.4)!important;
+  border-radius:13px!important;
+  background:linear-gradient(140deg,rgba(25,37,45,.97),rgba(9,19,26,.98))!important;
+  box-shadow:0 12px 30px #0005,inset 0 1px 0 #ffffff12!important;
+}
+body.home-page #offers .offer-card.inverse{
+  background:linear-gradient(145deg,rgba(55,39,25,.95),rgba(22,24,26,.99))!important;
+  border-color:rgba(255,175,92,.68)!important;
+}
+body.home-page #offers .offer-card .offer-value{
+  color:#ff9d50!important;text-shadow:0 3px 14px #0009;
+}
+body.home-page #offers .offer-card.inverse .offer-value{color:#ffbc75!important}
+body.home-page #offers .offer-card a{
+  display:inline-flex;align-items:center;min-height:43px;
+  font-weight:850;text-decoration:none!important;
+  color:#ffbb82!important;
+}
+body.home-page #offers .offer-terms {
+  border-top:1px solid rgba(255,156,74,.25);
+  color:#b9c7d1!important;margin-top:1.2rem!important;
+  line-height:1.6!important;
+}
+body.home-page #contact.page.section{
+  padding-block:clamp(2.8rem,4.4vw,5rem)!important;
+  background:transparent!important;
+  border:0!important;
+}
+body.home-page #contact.page.section::before{
+  content:"";position:absolute;top:0;bottom:0;left:50%;
+  transform:translateX(-50%);width:100vw;
+  z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 12% 8%,rgba(53,112,136,.14),transparent 44%),
+    radial-gradient(ellipse at 88% 84%,rgba(250,116,42,.09),transparent 47%),
+    linear-gradient(180deg,#071218,#0d1920 48%,#071119)!important;
+}
+body.home-page #contact .connect-panel{
+  background:linear-gradient(145deg,rgba(14,27,36,.95),rgba(7,15,23,.97))!important;
+  border:1px solid rgba(255,142,64,.34)!important;
+  border-radius:16px!important;
+  padding:clamp(1.2rem,2.6vw,2.4rem)!important;
+  box-shadow:0 15px 40px #0006!important;
+}
+body.home-page #contact .social-grid{
+  gap:clamp(.65rem,1.15vw,1rem)!important;
+}
+body.home-page #contact .social-link{
+  border:1px solid rgba(255,155,77,.3)!important;
+  border-radius:11px!important;
+  background:linear-gradient(132deg,rgba(25,38,47,.96),rgba(8,16,23,.97))!important;
+  box-shadow:0 7px 17px #0004!important;
+  transition:border-color .2s ease,transform .2s ease;
+}
+body.home-page #contact .social-link:hover{
+  transform:translateY(-2px);
+  border-color:rgba(255,175,102,.8)!important;
+}
+body.home-page #contact .social-link:focus-visible,
+body.home-page #offers .offer-card a:focus-visible{
+  outline:3px solid #ffb37b!important;outline-offset:2px;
+}
+body.home-page .contact-section{
+  border-top:1px solid rgba(255,134,52,.28)!important;
+  border-bottom:0!important;
+  background:
+    radial-gradient(ellipse at 90% 20%,rgba(255,134,54,.085),transparent 40%),
+    linear-gradient(180deg,#071119,#0b1820 44%,#060f17)!important;
+}
+body.home-page .contact-section .contact-grid{
+  padding-block:clamp(2.5rem,4.1vw,4rem)!important;
+  align-items:center;gap:clamp(1rem,3vw,3rem);
+}
+body.home-page .contact-section .contact-grid h2{
+  color:#fff!important;text-shadow:0 4px 16px #0007;
+}
+body.home-page .contact-section .contact-grid p{
+  color:#c6d3dc!important;
+  font-size:.91rem!important;line-height:1.55;
+}
+body.home-page .contact-section .contact-actions{
+  display:flex;flex-wrap:wrap;
+  gap:.85rem!important;
+}
+body.home-page .contact-section .contact-actions .button{
+  display:inline-flex;justify-content:center;align-items:center;
+  text-align:center;min-width:174px;min-height:49px;
+  border-radius:10px!important;
+}
+body.home-page .contact-section .contact-actions .button-invert{
+  background:linear-gradient(110deg,#ff9431,#f2651a)!important;
+  color:#fff!important;border:1px solid #ffac68!important;
+  box-shadow:0 9px 24px rgba(255,102,33,.17)!important;
+}
+body.home-page .contact-section .contact-actions .button-outline-dark{
+  background:rgba(12,24,33,.9)!important;
+  color:#f6e8dc!important;border:1px solid rgba(255,156,78,.64)!important;
+}
+body.home-page .site-footer.sitewide-footer{
+  background:linear-gradient(180deg,#060f17 0%,#070e14 45%,#040a10 100%)!important;
+  border-top:1px solid rgba(255,143,59,.26)!important;
+  box-shadow:none!important;
+}
+body.home-page .site-footer.sitewide-footer::before{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 85% 100%,rgba(255,118,29,.055),transparent 37%)!important;
+}
+body.home-page .site-footer.sitewide-footer>.page,
+body.home-page .site-footer.sitewide-footer>.footer-bottom {
+  position:relative;z-index:1;
+}
+body.home-page .site-footer.sitewide-footer .site-footer-nav h2 {color:#ffab72!important}
+body.home-page .site-footer.sitewide-footer .site-footer-nav a,
+body.home-page .site-footer.sitewide-footer .site-footer-contact a{
+  transition:color .16s ease;
+}
+@media(min-width:1050px){
+  body.home-page #offers .offers-grid{gap:clamp(.85rem,1.4vw,1.3rem)!important;}
+  body.home-page #contact .social-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
+@media(max-width:620px){
+  body.home-page .zoco-owner-section{padding-block:2.35rem!important}
+  body.home-page #offers.page.section,
+  body.home-page #contact.page.section {padding-block:2.25rem!important}
+  body.home-page #contact .connect-panel{padding:1.15rem!important}
+  body.home-page #contact .social-link{min-width:0}
+  body.home-page #contact .social-copy{min-width:0;overflow-wrap:anywhere}
+  body.home-page .contact-section .contact-grid{padding-block:2.35rem!important}
+  body.home-page .contact-section .contact-actions{flex-direction:column;align-items:stretch}
+  body.home-page .contact-section .contact-actions .button{width:100%;min-width:0}
+}
+@media(prefers-reduced-motion:reduce){
+  body.home-page #contact .social-link,
+  body.home-page .site-footer.sitewide-footer .site-footer-nav a,
+  body.home-page .site-footer.sitewide-footer .site-footer-contact a {transition:none!important}
+  body.home-page #contact .social-link:hover{transform:none!important}
+}
