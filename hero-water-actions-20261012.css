@@ -10,9 +10,14 @@ body.home-page .hero .zoco-hero-pathways {
   border-top:0!important;
   border-bottom:1px solid rgba(238,130,48,.43)!important;
   box-shadow:none!important;
-  gap:clamp(.62rem,1.15vw,.9rem)!important;
-  padding-top:clamp(.6rem,1vw,.9rem)!important;
-  padding-bottom:clamp(.85rem,1.25vw,1.15rem)!important;
+  /* Match the mobile full-width stacked rows on desktop too. */
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr)!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  gap:0!important;
+  padding:.35rem 0!important;
 }
 body.home-page .hero .zoco-hero-pathways__card {
   box-sizing:border-box;
@@ -22,24 +27,28 @@ body.home-page .hero .zoco-hero-pathways__card {
   align-items:center;
   overflow:hidden;
   min-width:0;
-  min-height:98px!important;
-  gap:clamp(.7rem,1.1vw,.91rem)!important;
-  padding:clamp(.72rem,1.15vw,1rem)!important;
-  border:1px solid rgba(78,143,185,.51)!important;
-  border-radius:17px!important;
+  width:100%!important;
+  min-height:78px!important;
+  gap:clamp(.7rem,1.2vw,1rem)!important;
+  padding:.56rem clamp(.95rem,2.3vw,2rem)!important;
+  border-top:0!important;
+  border-right:0!important;
+  border-left:0!important;
+  border-bottom:1px solid rgba(111,166,195,.45)!important;
+  border-radius:0!important;
   /* Keep ZoCo's real industrial photo visible, like glass over dark water. */
   background:rgba(6,19,34,.43)!important;
   backdrop-filter:blur(9px) saturate(112%)!important;
   -webkit-backdrop-filter:blur(9px) saturate(112%)!important;
   color:#f7fafc!important;
-  box-shadow:
-    inset 0 1px 0 rgba(202,237,250,.08),
-    0 0 12px rgba(24,96,147,.13),
-    0 9px 23px rgba(0,0,0,.3)!important;
+  box-shadow:inset 0 1px 0 rgba(202,237,250,.07)!important;
   transform:none;
   transition:transform .22s ease,background-color .22s ease,
     border-color .22s ease,box-shadow .22s ease;
   -webkit-tap-highlight-color:rgba(88,173,221,.21);
+}
+body.home-page .hero .zoco-hero-pathways__card:first-child{
+  border-top:1px solid rgba(111,166,195,.45)!important;
 }
 
 /* Flowing reflected light along the narrow perimeter only. */
@@ -48,7 +57,7 @@ body.home-page .hero .zoco-hero-pathways__card::after {
   content:"";
   position:absolute;
   inset:0;
-  border-radius:inherit;
+  border-radius:0;
   pointer-events:none;
   -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
   -webkit-mask-composite:xor;
@@ -224,12 +233,13 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before{
 }
 @media(max-width:1020px) and (min-width:661px){
   body.home-page .hero .zoco-hero-pathways__card{
-    min-height:101px!important;padding:.79rem!important;gap:.56rem!important;
+    min-height:76px!important;
+    padding:.56rem 1.25rem!important;
+    gap:.8rem!important;
   }
-  body.home-page .hero .zoco-hero-pathways__icon{flex-basis:41px;width:41px;height:41px}
+  body.home-page .hero .zoco-hero-pathways__icon{flex-basis:40px;width:40px;height:40px}
   body.home-page .hero .zoco-hero-pathways__icon svg{width:21px;height:21px}
-  body.home-page .hero .zoco-hero-pathways__content strong{font-size:.98rem!important}
-  body.home-page .hero .zoco-hero-pathways__description{font-size:.73rem!important}
+  body.home-page .hero .zoco-hero-pathways__content strong{font-size:1.07rem!important}
 }
 @media(max-width:660px){
   /* One uninterrupted, full-width action rail. The blue hairlines between
@@ -344,4 +354,125 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before{
   body.home-page .hero .zoco-hero-pathways__card:hover .zoco-hero-pathways__arrow{
     transform:none!important;
   }
+}
+
+
+/* Volumetric water UNDER the labels, not just on the outer edges.
+   Droplets are created only on the three cards, are pointer-transparent,
+   and run at staggered rates; a water ripple appears on interaction. */
+body.home-page .hero .zoco-hero-pathways__card>.zoco-water-glass-surface{
+  position:absolute!important;
+  z-index:0!important;
+  inset:0;
+  display:block;
+  overflow:hidden;
+  border-radius:inherit;
+  pointer-events:none!important;
+  background:
+    radial-gradient(circle at var(--water-x,80%) var(--water-y,50%),
+      rgba(91,173,207,.13),transparent 30%),
+    linear-gradient(110deg,transparent 15%,rgba(146,210,230,.045) 48%,transparent 79%);
+}
+body.home-page .hero .zoco-water-glass-surface::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(110deg,
+    transparent 24%,rgba(169,218,235,.065) 48%,transparent 68%);
+  background-size:220% 100%;
+  animation:zoco-glass-caustic 11s ease-in-out infinite alternate;
+}
+body.home-page .hero .zoco-water-bead{
+  --water-size:7px;
+  position:absolute;
+  display:block;
+  left:var(--water-left,55%);
+  top:var(--water-top,12%);
+  width:var(--water-size);
+  height:calc(var(--water-size) * 1.24);
+  border-radius:48% 52% 53% 47% / 39% 39% 61% 61%;
+  background:linear-gradient(130deg,rgba(222,247,252,.8),
+    rgba(96,184,222,.55) 38%,rgba(29,98,154,.07) 90%);
+  box-shadow:inset 1px 1px 1px rgba(233,250,255,.54),
+    inset -1px -2px 2px rgba(11,56,93,.16),
+    0 0 4px rgba(96,189,225,.13);
+  transform:translate3d(0,-16px,0) scale(.7);
+  opacity:0;
+  animation:zoco-glass-bead-fall var(--water-duration,7s) linear
+    var(--water-delay,0s) infinite;
+  pointer-events:none;
+}
+body.home-page .hero .zoco-water-bead::after{
+  content:"";
+  position:absolute;bottom:76%;left:50%;width:1px;
+  height:calc(var(--water-size) * 1.7);
+  transform:translateX(-50%);
+  background:linear-gradient(180deg,transparent,rgba(146,219,243,.23),transparent);
+}
+body.home-page .hero .zoco-water-bead[data-direction="up"]{
+  border-radius:50%;
+  animation-name:zoco-glass-bead-rise;
+}
+body.home-page .hero .zoco-water-impact{
+  position:absolute;
+  pointer-events:none;
+  z-index:0;
+  left:var(--water-touch-x);
+  top:var(--water-touch-y);
+  width:22px;height:22px;
+  border:1px solid rgba(177,226,242,.55);
+  border-radius:50%;
+  box-shadow:0 0 12px rgba(80,169,206,.15);
+  transform:translate(-50%,-50%) scale(.4);
+  opacity:0;
+  animation:zoco-glass-tap-ripple .74s ease-out forwards;
+}
+body.home-page .hero .zoco-water-impact::after{
+  content:"";position:absolute;inset:5px;
+  border:1px solid rgba(148,207,228,.28);border-radius:50%;
+}
+body.home-page .hero .zoco-hero-pathways__card.zoco-water-interacted
+  >.zoco-water-glass-surface{
+  background:
+    radial-gradient(circle at var(--water-x,80%) var(--water-y,50%),
+      rgba(94,182,220,.21),transparent 35%),
+    linear-gradient(110deg,transparent 15%,rgba(151,211,230,.065) 48%,transparent 79%);
+}
+@keyframes zoco-glass-caustic{
+  from{background-position:0% 50%;opacity:.48}
+  to{background-position:100% 50%;opacity:.85}
+}
+@keyframes zoco-glass-bead-fall{
+  0%{opacity:0;transform:translate3d(0,-20px,0) scale(.58)}
+  22%{opacity:.48}
+  72%{opacity:.51;transform:translate3d(var(--water-drift,4px),27px,0) scale(.96)}
+  100%{opacity:0;transform:translate3d(var(--water-drift,4px),61px,0) scale(1.08)}
+}
+@keyframes zoco-glass-bead-rise{
+  0%{opacity:0;transform:translate3d(0,35px,0) scale(.6)}
+  23%{opacity:.34}
+  75%{opacity:.4;transform:translate3d(var(--water-drift,-3px),-9px,0) scale(.92)}
+  100%{opacity:0;transform:translate3d(var(--water-drift,-3px),-31px,0) scale(.67)}
+}
+@keyframes zoco-glass-tap-ripple{
+  0%{opacity:.66;transform:translate(-50%,-50%) scale(.45)}
+  70%{opacity:.26}
+  100%{opacity:0;transform:translate(-50%,-50%) scale(5.6)}
+}
+@media(max-width:660px){
+  body.home-page .hero .zoco-water-bead{
+    opacity:0;
+  }
+  body.home-page .hero .zoco-water-glass-surface::before{
+    animation-duration:12.5s;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  body.home-page .hero .zoco-water-glass-surface::before,
+  body.home-page .hero .zoco-water-bead,
+  body.home-page .hero .zoco-water-impact{
+    animation:none!important;
+  }
+  body.home-page .hero .zoco-water-bead{opacity:.15!important;transform:none!important}
+  body.home-page .hero .zoco-water-impact{display:none!important}
 }
