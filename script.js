@@ -70,48 +70,6 @@ document.querySelectorAll('[data-review-carousel]').forEach((carousel) => {
   updateCarousel();
 });
 
-const services = {
-  snaking: ['SERVICE / 01', 'Drain Snaking', 'Cable-based clearing for appropriate accessible drain lines and stubborn stoppages.', '/assets/services/drain-snaking.avif', 'Professional cable auger and steel drain snake entering a drain cleanout.'],
-  camera: ['SERVICE / 02', 'Camera Inspection', 'Use a drain camera to view accessible line conditions and locate visible trouble areas.', '/assets/services/camera-inspection.jpg', 'Technician feeding an inspection camera into a drain line while viewing the pipe interior.'],
-  maintenance: ['SERVICE / 03', 'Drain Maintenance', 'Routine care helps keep accessible drains clear and moving.', '/assets/services/drain-maintenance.jpg', 'Technician checking and maintaining residential under-sink drain piping.'],
-  dryer: ['SERVICE / 04', 'Dryer Vent Cleaning', 'Clean accessible dryer vent runs to help improve airflow and remove lint buildup.', '/assets/services/dryer-vent-cleaning.jpg', 'Rotary brush removing lint from a metal dryer vent duct.']
-};
-
-const serviceCode = document.getElementById('serviceCode');
-const serviceTitle = document.getElementById('serviceTitle');
-const serviceDescription = document.getElementById('serviceDescription');
-const serviceImage = document.getElementById('serviceImage');
-const serviceLearn = document.getElementById('serviceLearn');
-const serviceRoutes = {
-  snaking: '/drain-snaking/',
-  camera: '/camera-inspection/',
-  maintenance: '/drain-maintenance/',
-  dryer: '/dryer-vent-cleaning/'
-};
-const serviceDisplay = document.querySelector('.service-display');
-
-document.querySelectorAll('.service-tab').forEach((button) => {
-  button.addEventListener('click', () => {
-    const item = services[button.dataset.service];
-    if (!item) return;
-
-    document.querySelectorAll('.service-tab').forEach((tab) => {
-      tab.classList.remove('active');
-      tab.setAttribute('aria-selected', 'false');
-    });
-
-    button.classList.add('active');
-    button.setAttribute('aria-selected', 'true');
-    serviceCode.textContent = item[0];
-    serviceTitle.textContent = item[1];
-    serviceDescription.textContent = item[2];
-    serviceImage.alt = item[4];
-    serviceImage.src = item[3];
-    if (serviceLearn) serviceLearn.href = serviceRoutes[button.dataset.service] || '/services/';
-    serviceDisplay.dataset.service = button.dataset.service;
-  });
-});
-
 const sections = [...document.querySelectorAll('main section[id]')];
 const navItems = [...document.querySelectorAll('.nav-links a[href^="#"]')];
 
