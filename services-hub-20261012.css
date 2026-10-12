@@ -1,0 +1,320 @@
+/* ZoCo dedicated service catalog: complete drain + home-maintenance directory.
+   Scoped so individual SEO/detail pages and the homepage remain unchanged. */
+body.zoco-services-hub-page{
+  margin:0; background:#080f15; color:#f4f7f9;
+}
+.zoco-services-hub-page *, .zoco-services-hub-page *::before,
+.zoco-services-hub-page *::after {box-sizing:border-box}
+.zoco-services-hub-page a {text-decoration:none;}
+.zoco-services-hub-page a:focus-visible{
+  outline:3px solid #ffb87c !important;outline-offset:3px !important;
+}
+.zoco-services-hub-page .zoco-hub-container{
+  width:min(1280px,calc(100% - clamp(2rem,6vw,6rem)));
+  margin-inline:auto;
+}
+.zoco-services-hub-page .zoco-hub-topbar {
+  position:relative; z-index:15;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1.25rem;
+  padding:.55rem clamp(1.1rem,2vw,2rem);
+  min-height:93px;background:#070c11;
+  border-bottom:1px solid rgba(255,137,54,.52);
+}
+.zoco-services-hub-page .zoco-hub-topbar__logo {display:block;flex:0 0 auto}
+.zoco-services-hub-page .zoco-hub-topbar__logo img{
+  display:block;width:clamp(183px,19.6vw,275px);height:72px;
+  object-fit:contain;object-position:left center;
+}
+.zoco-services-hub-page .zoco-hub-topbar nav {
+  display:flex;align-items:center;justify-content:flex-end;
+  gap:clamp(.85rem,2.1vw,2.1rem);flex-wrap:wrap;
+}
+.zoco-services-hub-page .zoco-hub-topbar nav a {
+  color:#e8edf1;font-size:.88rem;font-weight:800;white-space:nowrap;
+  transition:color .18s ease;
+}
+.zoco-services-hub-page .zoco-hub-topbar nav a:hover{color:#ffb07a}
+.zoco-services-hub-page .zoco-hub-topbar nav .zoco-hub-topbar__call{
+  border:1px solid #ff9851;border-radius:9px;
+  padding:.78rem 1.05rem;color:#fff;
+  background:linear-gradient(110deg,#e97523,#fd5419);
+}
+.zoco-services-hub-page .zoco-hub-kicker{
+  font-size:clamp(.69rem,.85vw,.79rem)!important;
+  text-transform:uppercase;letter-spacing:.2em!important;
+  color:#ffa669 !important;font-weight:850;line-height:1.4;
+  margin:0 0 .8rem !important;
+}
+.zoco-services-hub-page .zoco-hub-button{
+  display:inline-flex;align-items:center;justify-content:space-between;
+  gap:.9rem;min-height:52px;
+  padding:.88rem 1.2rem;
+  color:#fff !important;font-size:.89rem;font-weight:850;line-height:1.3;
+  border-radius:10px;border:1px solid #ffad76;
+  text-align:center;
+  transition:transform .18s ease,filter .18s ease;
+}
+.zoco-services-hub-page .zoco-hub-button:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.zoco-services-hub-page .zoco-hub-button--primary {
+  background:linear-gradient(110deg,#ff9d36,#ff5a1b);
+  box-shadow:0 10px 25px rgba(248,106,37,.21);
+}
+.zoco-services-hub-page .zoco-hub-button--outline {
+  background:rgba(9,18,24,.82);
+  border-color:rgba(255,155,82,.69);color:#ffe8d7 !important;
+}
+.zoco-services-hub-page .zoco-hub-hero{
+  position:relative;
+  padding:clamp(3.8rem,7vw,7.5rem) 0 clamp(3.6rem,6vw,6.5rem);
+  background:
+    linear-gradient(95deg,rgba(3,10,15,.94),rgba(8,17,22,.76) 54%,rgba(5,12,18,.85)),
+    url("/assets/brand/zoco-photo-industrial-hero.avif") center 42%/cover no-repeat;
+  border-bottom:1px solid rgba(255,127,36,.39);
+}
+.zoco-services-hub-page .zoco-hub-hero__layout{
+  display:grid;grid-template-columns:minmax(0,1.17fr) minmax(310px,.83fr);
+  align-items:center;gap:clamp(2rem,5vw,6rem);
+}
+.zoco-services-hub-page .zoco-hub-hero h1 {
+  max-width:800px;color:#fff !important;
+  font-family:Impact,"Arial Narrow",sans-serif;
+  font-size:clamp(3.15rem,6.5vw,7.7rem)!important;
+  font-weight:900;letter-spacing:.013em;line-height:.97!important;
+  text-transform:uppercase;
+  margin:0 0 1.2rem !important;
+  text-shadow:0 4px 23px rgba(0,0,0,.6);
+}
+.zoco-services-hub-page .zoco-hub-hero h1 span {
+  color:#ff9239;
+  background:linear-gradient(180deg,#ffb65c,#ff7723 67%,#f15921);
+  background-clip:text;-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.zoco-services-hub-page .zoco-hub-hero__copy>p:not(.zoco-hub-kicker){
+  color:#e1e9ed !important;
+  font-size:clamp(1.05rem,1.3vw,1.2rem)!important;
+  line-height:1.65;max-width:670px;
+  margin:0 0 1.3rem !important;
+}
+.zoco-services-hub-page .zoco-hub-hero__actions{
+  display:flex;flex-wrap:wrap;gap:.78rem;margin-top:1.5rem;
+}
+.zoco-services-hub-page .zoco-hub-hero__index {
+  background:linear-gradient(155deg,rgba(20,34,43,.93),rgba(6,13,20,.96));
+  border:1px solid rgba(255,150,80,.4);border-radius:15px;
+  padding:clamp(1rem,2vw,1.65rem);
+  box-shadow:0 22px 45px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.09);
+}
+.zoco-services-hub-page .zoco-hub-hero__index>p:first-child {
+  color:#ffb07a;font-weight:850;font-size:.78rem;
+  letter-spacing:.18em;margin:0 0 .85rem;
+}
+.zoco-services-hub-page .zoco-hub-hero__index>a {
+  display:grid;grid-template-columns:28px 1fr 25px;
+  align-items:center;gap:.75rem;
+  min-height:70px;padding:.75rem .4rem;
+  border-top:1px solid rgba(255,255,255,.15);
+  color:#fff;
+}
+.zoco-services-hub-page .zoco-hub-hero__index>a>span:first-child{color:#ff9554;font-weight:800}
+.zoco-services-hub-page .zoco-hub-hero__index>a>span:last-child{color:#ffb582;font-size:1.4rem}
+.zoco-services-hub-page .zoco-hub-hero__index>a strong{font-size:1.12rem;font-weight:800}
+.zoco-services-hub-page .zoco-hub-hero__index>a:hover{background:rgba(255,139,51,.08)}
+.zoco-services-hub-page .zoco-hub-hero__area {
+  margin:.65rem 0 0 !important;
+  color:#c6d2d9;font-size:.86rem;line-height:1.5;
+}
+.zoco-services-hub-page .zoco-hub-drain {
+  background:
+    linear-gradient(180deg,#071219 0%,rgba(8,18,25,.93) 35%,#081118 100%),
+    url("/assets/services/drain-cleaning.jpg") center/cover no-repeat;
+  padding:clamp(3.2rem,6vw,6rem) 0;
+  border-bottom:1px solid rgba(255,145,61,.26);
+}
+.zoco-services-hub-page .zoco-hub-section-head{
+  display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);
+  gap:clamp(1rem,4vw,4rem);align-items:end;
+  margin-bottom:clamp(1.3rem,3vw,2.5rem);
+}
+.zoco-services-hub-page .zoco-hub-section-head h2,
+.zoco-services-hub-page .zoco-hub-final h2{
+  font-family:Impact,"Arial Narrow",sans-serif;
+  text-transform:uppercase;letter-spacing:.015em;
+  color:#fbfcfd !important;font-size:clamp(2.45rem,4.1vw,4.4rem)!important;
+  line-height:1.04!important;margin:0 !important;
+}
+.zoco-services-hub-page .zoco-hub-section-head>p {
+  margin:0;color:#d6e0e6;font-size:1rem;line-height:1.6;
+}
+.zoco-services-hub-page .zoco-hub-services-grid{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(.85rem,1.4vw,1.15rem);
+}
+.zoco-services-hub-page .zoco-hub-service{
+  position:relative;display:flex;flex-direction:column;
+  border:1px solid rgba(255,144,70,.39);
+  background:linear-gradient(150deg,#1b2730,#0a131b);
+  border-radius:14px;overflow:hidden;
+  box-shadow:0 10px 26px rgba(0,0,0,.27);
+  color:#fff !important;
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+.zoco-services-hub-page .zoco-hub-service:hover {
+  transform:translateY(-4px);
+  border-color:#ffac75;
+  box-shadow:0 17px 36px rgba(0,0,0,.4);
+}
+.zoco-services-hub-page .zoco-hub-service__media{
+  display:block;position:relative;aspect-ratio:1.75;overflow:hidden;
+}
+.zoco-services-hub-page .zoco-hub-service__media::after {
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg,rgba(5,11,17,.28),transparent 70%);
+}
+.zoco-services-hub-page .zoco-hub-service__media img{
+  display:block;width:100%;height:100%;object-fit:cover;
+  filter:contrast(1.06) saturate(.82);
+}
+.zoco-services-hub-page .zoco-hub-service__body{
+  display:flex;flex-direction:column;gap:.58rem;
+  padding:clamp(1rem,1.5vw,1.35rem);flex:1;
+}
+.zoco-services-hub-page .zoco-hub-service__eyebrow{
+  font-size:.69rem;letter-spacing:.12em;font-weight:850;
+  color:#ffaf76;
+}
+.zoco-services-hub-page .zoco-hub-service__body>strong{
+  font:900 clamp(1.6rem,2.15vw,2.35rem)/1.02 Impact,"Arial Narrow",sans-serif;
+  text-transform:uppercase;letter-spacing:.012em;color:#fff;
+}
+.zoco-services-hub-page .zoco-hub-service__description{
+  flex:1;color:#cfdae1;font-size:.91rem;line-height:1.55;
+}
+.zoco-services-hub-page .zoco-hub-service__more{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:.8rem;color:#ffb380;font-size:.78rem;text-transform:uppercase;
+  font-weight:850;letter-spacing:.05em;border-top:1px solid rgba(255,154,83,.34);
+  padding-top:.82rem;margin-top:.3rem;
+}
+.zoco-services-hub-page .zoco-hub-maintenance{
+  background:
+    linear-gradient(180deg,rgba(7,15,20,.97),rgba(14,24,28,.86) 45%,rgba(7,14,20,.98)),
+    url("/assets/handyman/carpentry.jpg") center 48%/cover no-repeat;
+  padding:clamp(3.2rem,6vw,6rem) 0;
+  border-bottom:1px solid rgba(255,149,78,.35);
+}
+.zoco-services-hub-page .zoco-hub-maintenance-grid{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(.75rem,1.35vw,1.1rem);
+}
+.zoco-services-hub-page .zoco-hub-task {
+  border:1px solid rgba(215,225,230,.2);border-radius:12px;
+  overflow:hidden;
+  background:linear-gradient(145deg,#19252b,#0c151b);
+}
+.zoco-services-hub-page .zoco-hub-task img {
+  display:block;width:100%;height:145px;object-fit:cover;
+  filter:contrast(1.07) saturate(.78);
+}
+.zoco-services-hub-page .zoco-hub-task>div{padding:1rem 1.1rem 1.15rem}
+.zoco-services-hub-page .zoco-hub-task__num{
+  font-size:.73rem;color:#ffad78;font-weight:850;
+}
+.zoco-services-hub-page .zoco-hub-task h3 {
+  font:900 clamp(1.35rem,1.8vw,1.9rem)/1.15 Impact,"Arial Narrow",sans-serif;
+  text-transform:uppercase;color:#fff;margin:.4rem 0 !important;
+}
+.zoco-services-hub-page .zoco-hub-task p {
+  font-size:.91rem;line-height:1.55;color:#d3dee4;margin:0;
+}
+.zoco-services-hub-page .zoco-hub-maintenance__footer{
+  display:flex;gap:1rem;align-items:center;
+  justify-content:space-between;
+  border:1px solid rgba(255,160,96,.3);border-radius:12px;
+  margin-top:1.15rem;padding:1.15rem 1.25rem;
+  background:rgba(10,18,23,.8);
+}
+.zoco-services-hub-page .zoco-hub-maintenance__footer p{
+  color:#dbe3e8;font-size:.93rem;line-height:1.55;
+  max-width:690px;margin:0;
+}
+.zoco-services-hub-page .zoco-hub-final{
+  background:
+    radial-gradient(ellipse at 90% 1%,rgba(255,130,51,.13),transparent 37%),
+    linear-gradient(130deg,#08131a,#16212a 55%,#081118);
+  padding:clamp(3.5rem,6vw,6.25rem) 0;
+}
+.zoco-services-hub-page .zoco-hub-final__inner {
+  display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);
+  gap:3rem;align-items:center;
+}
+.zoco-services-hub-page .zoco-hub-final h2{margin-bottom:1rem !important}
+.zoco-services-hub-page .zoco-hub-final p:not(.zoco-hub-kicker){
+  margin:.6rem 0 0;max-width:680px;
+  color:#d7e0e5;line-height:1.6;
+}
+.zoco-services-hub-page .zoco-hub-final__actions{
+  display:flex;flex-direction:column;gap:.72rem;
+}
+.zoco-services-hub-page .zoco-hub-region {
+  display:flex;align-items:center;justify-content:space-between;
+  color:#ffb07a !important;font-size:.85rem;font-weight:800;
+  padding:.8rem .25rem;
+}
+.zoco-services-hub-page .zoco-hub-region:hover{text-decoration:underline}
+.zoco-services-hub-page .site-footer {border-top:1px solid rgba(255,129,47,.4)}
+@media(max-width:960px){
+  .zoco-services-hub-page .zoco-hub-hero__layout{grid-template-columns:minmax(0,1fr);}
+  .zoco-services-hub-page .zoco-hub-hero__index {max-width:620px;}
+  .zoco-services-hub-page .zoco-hub-services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .zoco-services-hub-page .zoco-hub-section-head{grid-template-columns:minmax(0,1fr);}
+  .zoco-services-hub-page .zoco-hub-final__inner{grid-template-columns:minmax(0,1fr);}
+}
+@media(max-width:660px) {
+  .zoco-services-hub-page .zoco-hub-container{width:calc(100% - 1.7rem)}
+  .zoco-services-hub-page .zoco-hub-topbar {gap:.3rem;min-height:79px;padding:.35rem .65rem}
+  .zoco-services-hub-page .zoco-hub-topbar__logo img{
+    width:min(48vw,180px);height:65px;
+  }
+  .zoco-services-hub-page .zoco-hub-topbar nav{gap:.48rem}
+  .zoco-services-hub-page .zoco-hub-topbar nav>a:not(.zoco-hub-topbar__call){display:none}
+  .zoco-services-hub-page .zoco-hub-topbar nav .zoco-hub-topbar__call{
+    padding:.72rem .7rem;font-size:.79rem;
+  }
+  .zoco-services-hub-page .zoco-hub-hero{padding:2.7rem 0 3rem}
+  .zoco-services-hub-page .zoco-hub-hero h1{font-size:clamp(2.75rem,11vw,4.4rem)!important}
+  .zoco-services-hub-page .zoco-hub-hero__copy>p:not(.zoco-hub-kicker){font-size:.98rem!important}
+  .zoco-services-hub-page .zoco-hub-hero__actions{
+    flex-direction:column;align-items:stretch;
+  }
+  .zoco-services-hub-page .zoco-hub-hero__actions .zoco-hub-button{width:100%}
+  .zoco-services-hub-page .zoco-hub-hero__index>a{min-height:61px;}
+  .zoco-services-hub-page .zoco-hub-drain,
+  .zoco-services-hub-page .zoco-hub-maintenance {padding:2.9rem 0}
+  .zoco-services-hub-page .zoco-hub-services-grid{grid-template-columns:1fr;gap:.8rem}
+  .zoco-services-hub-page .zoco-hub-service__media{aspect-ratio:2.25}
+  .zoco-services-hub-page .zoco-hub-service__body>strong{font-size:1.75rem}
+  .zoco-services-hub-page .zoco-hub-maintenance-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;
+  }
+  .zoco-services-hub-page .zoco-hub-task img{height:87px}
+  .zoco-services-hub-page .zoco-hub-task>div{padding:.78rem}
+  .zoco-services-hub-page .zoco-hub-task h3{font-size:1.18rem}
+  .zoco-services-hub-page .zoco-hub-task p{font-size:.78rem;line-height:1.42}
+  .zoco-services-hub-page .zoco-hub-maintenance__footer {
+    flex-direction:column;align-items:stretch;padding:1rem;
+  }
+  .zoco-services-hub-page .zoco-hub-final{padding:3rem 0}
+}
+@media(max-width:355px){
+  .zoco-services-hub-page .zoco-hub-maintenance-grid{grid-template-columns:1fr}
+  .zoco-services-hub-page .zoco-hub-task img{height:128px}
+}
+@media(prefers-reduced-motion:reduce){
+  .zoco-services-hub-page .zoco-hub-button,
+  .zoco-services-hub-page .zoco-hub-service,
+  .zoco-services-hub-page .zoco-hub-topbar nav a {transition:none !important;}
+  .zoco-services-hub-page .zoco-hub-button:hover,
+  .zoco-services-hub-page .zoco-hub-service:hover {transform:none !important;}
+}
