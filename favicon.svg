@@ -1,5 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="96" fill="#080909"/>
-  <circle cx="256" cy="256" r="194" fill="#000000" stroke="#f5f5f2" stroke-width="12"/>
-  <text x="256" y="286" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="116" font-weight="800" letter-spacing="-8" fill="#f5f5f2">ZOCO</text>
+<defs>
+ <linearGradient id="metal" x2=".8" y2="1"><stop stop-color="#ffffff"/><stop offset=".35" stop-color="#d5dfe5"/><stop offset=".7" stop-color="#788891"/><stop offset="1" stop-color="#eaf0f2"/></linearGradient>
+ <linearGradient id="orange" x2="1" y2="1"><stop stop-color="#ffaa45"/><stop offset=".5" stop-color="#ff7422"/><stop offset="1" stop-color="#d54208"/></linearGradient>
+</defs>
+<rect width="512" height="512" rx="108" fill="#0b1014"/>
+<circle cx="256" cy="256" r="195" fill="#101920" stroke="url(#orange)" stroke-width="23"/>
+<circle cx="256" cy="256" r="173" fill="none" stroke="#9fa9b0" stroke-width="7" opacity=".65"/>
+<path d="M130 161h244v62L225 335h149v55H129v-62l148-112H130z" fill="url(#metal)" stroke="#fa731f" stroke-width="10" stroke-linejoin="round"/>
 </svg>
