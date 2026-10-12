@@ -286,6 +286,18 @@ body.home-page .hero .zoco-hero-pathways__card:focus-visible::before{
     font-size:1.14rem!important;
   }
 }
+/* In the two-column hero, visually align the compact action rail below
+   Call/Text and social links instead of centering it under the entire hero.
+   Tested at 951–1920px. The existing centered single-column and mobile
+   layouts stay untouched. */
+@media(min-width:951px) {
+  body.home-page .hero .zoco-hero-pathways {
+    width:min(520px, calc(50% - 2rem))!important;
+    max-width:520px!important;
+    margin-inline:auto!important;
+    transform:translateX(min(300px, 23vw))!important;
+  }
+}
 @media(max-width:1020px) and (min-width:661px){
   body.home-page .hero .zoco-hero-pathways__card{
     min-height:66px!important;
