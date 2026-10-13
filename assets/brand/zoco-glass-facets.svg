@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 350" preserveAspectRatio="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="copper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD4B3" stop-opacity=".26"/>
+      <stop offset=".50" stop-color="#EA894C" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#B75F2E" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1=".4" x2="1" y2="1">
+      <stop offset="0" stop-color="#67D7FF" stop-opacity="0"/>
+      <stop offset=".55" stop-color="#46B6EC" stop-opacity=".10"/>
+      <stop offset="1" stop-color="#67D7FF" stop-opacity=".29"/>
+    </linearGradient>
+    <radialGradient id="warmLight"><stop offset="0" stop-color="#FFAB76" stop-opacity=".19"/><stop offset="1" stop-color="#FFAB76" stop-opacity="0"/></radialGradient>
+    <radialGradient id="coolLight"><stop offset="0" stop-color="#47C9FF" stop-opacity=".25"/><stop offset="1" stop-color="#47C9FF" stop-opacity="0"/></radialGradient>
+  </defs>
+  <!-- Corner-only polished glass facets. No lines/waves behind the content. -->
+  <path d="M0 0H275L163 111L0 178Z" fill="url(#copper)"/>
+  <path d="M0 0H123L0 140Z" fill="#FFF1D6" opacity=".075"/>
+  <path d="M720 350H404L563 202L720 134Z" fill="url(#blue)"/>
+  <path d="M720 350H591L720 235Z" fill="#8CE7FF" opacity=".08"/>
+  <ellipse cx="0" cy="0" rx="310" ry="175" fill="url(#warmLight)"/>
+  <ellipse cx="715" cy="347" rx="345" ry="220" fill="url(#coolLight)"/>
+  <circle cx="694" cy="323" r="3" fill="#D0F4FF" opacity=".25"/>
+  <circle cx="680" cy="311" r="1.4" fill="#91DFFF" opacity=".31"/>
+  <circle cx="20" cy="15" r="2" fill="#FFE6D0" opacity=".23"/>
+</svg>
