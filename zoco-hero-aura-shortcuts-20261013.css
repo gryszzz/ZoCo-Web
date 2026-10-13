@@ -18,25 +18,26 @@ body.home-page .hero .hero-card > .zoco-hero-aura {
   position: absolute !important;
   top: 50%;
   left: 50%;
-  width: min(118%, 620px);
-  height: min(96%, 490px);
+  width: min(128%, 660px);
+  height: min(112%, 540px);
   transform: translate(-50%, -50%);
   z-index: 0 !important;
-  border: 0;
+  border: 0 !important;
+  border-radius: 0 !important;
   pointer-events: none !important;
+  /* Warm industrial light on the left, cool reflected waterlight on the
+     right. Diffused light fields only: no circle or neon outline. */
   background:
-    radial-gradient(ellipse 55% 60% at 33% 44%,
-      rgba(255, 143, 64, .56) 0%,
-      rgba(241, 98, 31, .32) 33%,
-      rgba(218, 76, 22, .07) 65%, transparent 89%),
-    radial-gradient(ellipse 51% 63% at 73% 55%,
-      rgba(66, 179, 230, .39) 0%,
-      rgba(23, 123, 190, .23) 39%,
-      rgba(8, 74, 127, .05) 71%, transparent 91%),
-    radial-gradient(ellipse 52% 54% at 51% 49%,
-      rgba(255, 226, 186, .13), transparent 83%);
-  filter: blur(24px);
-  opacity: .96;
+    radial-gradient(ellipse 66% 71% at 22% 48%,
+      rgba(255, 142, 48, .78) 0%,
+      rgba(249, 100, 25, .46) 30%,
+      rgba(208, 73, 20, .15) 62%, transparent 90%),
+    radial-gradient(ellipse 65% 73% at 79% 52%,
+      rgba(44, 176, 250, .70) 0%,
+      rgba(23, 127, 224, .44) 32%,
+      rgba(10, 91, 174, .16) 63%, transparent 90%);
+  filter: blur(23px);
+  opacity: 1;
 }
 
 body.home-page .hero .hero-card-dogs {
@@ -44,22 +45,22 @@ body.home-page .hero .hero-card-dogs {
   z-index: 1 !important;
   filter:
     drop-shadow(0 16px 26px rgba(0, 0, 0, .48))
-    drop-shadow(-8px 0 19px rgba(255, 124, 48, .13))
-    drop-shadow(9px 0 19px rgba(55, 163, 217, .12)) !important;
+    drop-shadow(-12px 2px 26px rgba(255, 126, 39, .20))
+    drop-shadow(12px 2px 26px rgba(38, 155, 224, .17)) !important;
 }
 
 @media (max-width: 950px) {
   body.home-page .hero .hero-card > .zoco-hero-aura {
-    width: min(90vw, 420px);
-    height: min(72vw, 345px);
-    filter: blur(22px);
-    opacity: .98;
+    width: min(112vw, 475px);
+    height: min(85vw, 390px);
+    filter: blur(23px);
+    opacity: 1;
   }
 }
 @media (max-width: 620px) {
   body.home-page .hero .hero-card > .zoco-hero-aura {
-    width: min(92vw, 330px);
-    height: min(74vw, 285px);
+    width: min(116vw, 430px);
+    height: min(94vw, 355px);
     filter: blur(21px);
     opacity: 1;
   }
