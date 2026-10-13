@@ -1,0 +1,185 @@
+/*
+ * ZoCo Direct Connections / Explore-glass alignment (2026-10-12).
+ * Replaces sharp prism wedges introduced in v1 with the calmer,
+ * deep-water blue glass used by Explore ZoCo.
+ * All four links, 2x2 responsive layout and labels are unchanged.
+ */
+body.home-page .hero .quick-connect{
+  isolation:isolate!important;
+  overflow:hidden!important;
+  border:1.5px solid transparent!important;
+  border-radius:22px!important;
+  background:
+    radial-gradient(ellipse at 3% 2%,rgba(244,146,89,.13),transparent 38%) padding-box,
+    radial-gradient(ellipse at 92% 100%,rgba(44,151,204,.22),transparent 54%) padding-box,
+    linear-gradient(132deg,rgba(7,22,35,.92),rgba(5,22,35,.96) 60%,rgba(4,30,47,.94)) padding-box,
+    linear-gradient(121deg,rgba(254,163,106,.66),rgba(88,155,187,.49) 47%,rgba(74,191,241,.82)) border-box!important;
+  box-shadow:
+    inset 0 1px 0 rgba(239,248,255,.17),
+    0 14px 31px rgba(0,5,14,.38),
+    0 0 15px rgba(65,166,214,.09)!important;
+  -webkit-backdrop-filter:blur(17px) saturate(130%)!important;
+  backdrop-filter:blur(17px) saturate(130%)!important;
+}
+/* Same soft top sheen as the Explore tiles; no broad crossing lines. */
+body.home-page .hero .quick-connect::before{
+  content:""!important;
+  z-index:0!important;
+  inset:0!important;
+  pointer-events:none!important;
+  background:
+    linear-gradient(147deg,rgba(224,245,255,.067),transparent 24%),
+    radial-gradient(ellipse at 98% 97%,rgba(74,187,231,.11),transparent 56%)!important;
+}
+body.home-page .hero .quick-connect::after{
+  content:""!important;
+  z-index:2!important;
+  top:0!important;
+  left:10%!important;
+  right:10%!important;
+  width:auto!important;
+  height:2px!important;
+  pointer-events:none!important;
+  background:linear-gradient(90deg,transparent,rgba(250,167,111,.58) 25%,rgba(127,200,233,.45) 61%,transparent)!important;
+  box-shadow:0 0 8px rgba(105,181,217,.18)!important;
+}
+body.home-page .hero .quick-connect .zoco-contact-dock-heading{
+  z-index:2!important;
+  position:relative!important;
+  border-bottom:1px solid rgba(143,188,207,.29)!important;
+  color:#ffb786!important;
+  text-shadow:none!important;
+}
+body.home-page .hero .quick-connect .zoco-contact-dock-heading span:last-child{
+  color:#a9cce1!important;
+}
+
+/* Retain the underlying spacious navy center. Water glass lives behind
+   the content, away from the text, not as sharp opaque polygons. */
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n){
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:hidden!important;
+  z-index:1!important;
+  border:1.5px solid transparent!important;
+  border-radius:16px!important;
+  background:
+    url("/assets/brand/zoco-contact-water-glass.svg") center / 100% 100% no-repeat padding-box,
+    radial-gradient(ellipse at 100% 104%,rgba(29,146,204,.26),transparent 47%) padding-box,
+    radial-gradient(ellipse at 4% 0%,rgba(87,170,206,.14),transparent 48%) padding-box,
+    linear-gradient(128deg,#071e30 0%,#06192a 53%,#07334e 100%) padding-box,
+    linear-gradient(133deg,rgba(117,205,240,.79),rgba(73,155,195,.52) 48%,rgba(65,191,245,.92)) border-box!important;
+  box-shadow:
+    inset 0 1px 0 rgba(190,237,255,.21),
+    inset 0 -2px 0 rgba(72,187,232,.26),
+    0 6px 17px rgba(0,6,17,.27),
+    0 0 12px rgba(49,159,214,.075)!important;
+  transition:transform .23s ease,border-color .23s ease,box-shadow .23s ease,filter .23s ease!important;
+}
+/* Uniform restrained cyan rims, rather than alternating orange rectangles. */
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(2n+1),
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(4n+1),
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(4n+4){
+  border:1.5px solid transparent!important;
+  background:
+    url("/assets/brand/zoco-contact-water-glass.svg") center / 100% 100% no-repeat padding-box,
+    radial-gradient(ellipse at 100% 104%,rgba(29,146,204,.26),transparent 47%) padding-box,
+    radial-gradient(ellipse at 4% 0%,rgba(87,170,206,.14),transparent 48%) padding-box,
+    linear-gradient(128deg,#071e30 0%,#06192a 53%,#07334e 100%) padding-box,
+    linear-gradient(133deg,rgba(117,205,240,.79),rgba(73,155,195,.52) 48%,rgba(65,191,245,.92)) border-box!important;
+  box-shadow:
+    inset 0 1px 0 rgba(190,237,255,.21),
+    inset 0 -2px 0 rgba(72,187,232,.26),
+    0 6px 17px rgba(0,6,17,.27),
+    0 0 12px rgba(49,159,214,.075)!important;
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n)::before{
+  content:""!important;
+  position:absolute!important;
+  z-index:0!important;
+  inset:0!important;
+  width:100%!important;height:100%!important;
+  top:0!important;left:0!important;
+  pointer-events:none!important;
+  transform:none!important;
+  border-radius:inherit!important;
+  opacity:1!important;
+  background:
+    linear-gradient(180deg,rgba(163,228,254,.12),transparent 23%),
+    radial-gradient(ellipse at 0% 0%,rgba(135,211,243,.10),transparent 53%)!important;
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n)::after{
+  content:""!important;
+  position:absolute!important;
+  z-index:0!important;
+  inset:0!important;
+  pointer-events:none!important;
+  background:radial-gradient(180px circle at var(--zoco-pointer-x,70%) var(--zoco-pointer-y,36%),rgba(115,211,247,.22),transparent 78%)!important;
+  opacity:0!important;
+  transition:opacity .2s ease!important;
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .quick-icon{
+  z-index:1!important;
+  border-color:rgba(103,197,239,.66)!important;
+  background:
+    radial-gradient(circle at 25% 14%,rgba(178,228,250,.24),transparent 51%),
+    linear-gradient(135deg,rgba(17,71,99,.92),rgba(4,24,40,.96))!important;
+  box-shadow:
+    inset 0 1px 0 rgba(216,243,253,.28),
+    inset 0 -2px 7px rgba(2,11,24,.42),
+    0 0 0 3px rgba(70,169,214,.10),
+    0 5px 11px rgba(1,9,19,.28)!important;
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > i{
+  z-index:1!important;
+  border:1px solid rgba(104,190,232,.53)!important;
+  background:rgba(9,46,70,.47)!important;
+  color:#e0f6ff!important;
+  box-shadow:inset 0 1px 0 rgba(180,231,255,.14)!important;
+  text-shadow:none!important;
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .quick-copy{
+  position:relative!important;
+  z-index:1!important;
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) .quick-copy small{
+  color:#ffb484!important;
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) .quick-copy strong{
+  color:#f8fcff!important;
+  text-shadow:0 1px 6px rgba(0,9,19,.42)!important;
+}
+@media(hover:hover) and (pointer:fine){
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n):hover{
+    transform:translateY(-2px)!important;
+    filter:brightness(1.09)!important;
+    box-shadow:
+      inset 0 1px 0 rgba(222,251,255,.35),
+      inset 0 -2px 0 rgba(88,206,251,.37),
+      0 10px 22px rgba(0,5,17,.37),
+      0 0 16px rgba(47,178,237,.17)!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n):hover::after{opacity:1!important}
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n):focus-visible{
+  outline:3px solid #d6f4ff!important;
+  outline-offset:3px!important;
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n):active{
+  transform:scale(.989)!important;
+}
+@media(max-width:660px){
+  body.home-page .hero .quick-connect{border-radius:21px!important}
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n){
+    border-radius:15px!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n){
+    transition:none!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n):hover,
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n):active{
+    transform:none!important;
+  }
+}
