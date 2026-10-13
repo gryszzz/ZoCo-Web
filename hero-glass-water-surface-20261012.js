@@ -1,8 +1,9 @@
-/* ZoCo quick-action liquid glass: decorative only, desktop and mobile.
-   Keeps all three original card links/buttons and scroll gestures intact. */
+/* ZoCo hero liquid glass: animated water beads in Explore ZoCo and Direct Connections.
+   Decorative only; existing card links/buttons and scroll gestures stay intact. */
 (() => {
-  const cards = [...document.querySelectorAll('body.home-page .hero .zoco-hero-pathways__card')];
-  if (cards.length !== 3) return;
+  const pathwayCards = [...document.querySelectorAll('body.home-page .hero .zoco-hero-pathways__card')];
+  const contactCards = [...document.querySelectorAll('body.home-page .hero .quick-connect a.quick-tile')];
+  if (!pathwayCards.length && !contactCards.length) return;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
 
@@ -19,11 +20,25 @@
     { x: 77, y: 19, size: 6, drift: -4, duration: 8.6, delay: -1.7, up: true }
   ];
 
-  const addSurface = (card, index) => {
+  // Fewer independent beads in the smaller Direct Connections tiles,
+  // with distinct starting positions and staggered phases on every card.
+  const contactDrops = [
+    { x: 13, y: 13, size: 7, drift: 3, duration: 7.4, delay: -2.6 },
+    { x: 35, y: 28, size: 5, drift: -4, duration: 9.1, delay: -4.3, up: true },
+    { x: 61, y: 7, size: 6, drift: 4, duration: 8.5, delay: -6.1 },
+    { x: 87, y: 23, size: 8, drift: -3, duration: 10.2, delay: -1.8 },
+    { x: 74, y: 45, size: 5, drift: 3, duration: 7.9, delay: -5.4, up: true },
+    { x: 22, y: 52, size: 6, drift: -4, duration: 8.8, delay: -3.8, up: true }
+  ];
+
+  const addSurface = (card, index, isContact = false) => {
     const surface = document.createElement('span');
-    surface.className = 'zoco-water-glass-surface';
+    surface.className = isContact
+      ? 'zoco-water-glass-surface zoco-contact-motion-surface'
+      : 'zoco-water-glass-surface';
     surface.setAttribute('aria-hidden', 'true');
-    for (const [number, spec] of drops.entries()) {
+    const beadSpecs = isContact ? contactDrops : drops;
+    for (const [number, spec] of beadSpecs.entries()) {
       const bead = document.createElement('span');
       bead.className = 'zoco-water-bead';
       if (spec.up) bead.dataset.direction = 'up';
@@ -78,5 +93,19 @@
     card.addEventListener('pointercancel', () => card.classList.remove('zoco-water-interacted'), { passive: true });
   };
 
-  cards.forEach(addSurface);
+  pathwayCards.forEach((card, index) => addSurface(card, index));
+  contactCards.forEach((card, index) => addSurface(card, index + 3, true));
+
+  // Small moving highlights and droplets only paint while visible.
+  // Without IntersectionObserver, their CSS animations run normally.
+  if ('IntersectionObserver' in window && contactCards.length) {
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        entry.target.classList.toggle('zoco-contact-motion-visible', entry.isIntersecting);
+      }
+    }, { threshold: 0.02 });
+    contactCards.forEach((card) => observer.observe(card));
+  } else {
+    contactCards.forEach((card) => card.classList.add('zoco-contact-motion-visible'));
+  }
 })();
