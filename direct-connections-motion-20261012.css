@@ -1,0 +1,87 @@
+/* ZoCo Direct Connections live water glass motion.
+   Reuses Explore ZoCo's animated beads/caustic & pointer ripple.
+   Motion is decorative and never moves the card, links, icons or labels. */
+
+/* A transparent composited surface above the static navy SVG, under content. */
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .zoco-contact-motion-surface{
+  position:absolute!important;
+  display:block!important;
+  z-index:0!important;
+  inset:0!important;
+  overflow:hidden!important;
+  border-radius:inherit!important;
+  pointer-events:none!important;
+  background:
+    radial-gradient(circle at var(--water-x,82%) var(--water-y,60%),rgba(101,196,237,.12),transparent 38%),
+    linear-gradient(125deg,transparent 16%,rgba(142,217,247,.028) 55%,transparent 88%)!important;
+  -webkit-transform:translateZ(0);
+  transform:translateZ(0);
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .zoco-contact-motion-surface::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(110deg,transparent 22%,rgba(151,221,255,.10) 48%,transparent 77%)!important;
+  background-size:220% 100%!important;
+  animation:zoco-glass-caustic 11.5s ease-in-out infinite alternate!important;
+  opacity:.57!important;
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(2) > .zoco-contact-motion-surface::before,
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(4) > .zoco-contact-motion-surface::before{
+  animation-delay:-4.7s!important;
+  animation-duration:13.7s!important;
+}
+/* The shared keyframes already animate vertical water drops.
+   Keep them visible on phones, but faint enough to avoid the typography. */
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .zoco-contact-motion-surface .zoco-water-bead{
+  filter:saturate(.85)!important;
+  opacity:0;
+  animation-name:zoco-glass-bead-fall;
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .zoco-contact-motion-surface .zoco-water-bead[data-direction="up"]{
+  animation-name:zoco-glass-bead-rise;
+}
+/* Stop all compositor animations when their card leaves the viewport. */
+body.home-page .hero .quick-connect a.quick-tile:not(.zoco-contact-motion-visible) > .zoco-contact-motion-surface::before,
+body.home-page .hero .quick-connect a.quick-tile:not(.zoco-contact-motion-visible) > .zoco-contact-motion-surface .zoco-water-bead{
+  animation-play-state:paused!important;
+}
+body.home-page .hero .quick-connect a.quick-tile.zoco-contact-motion-visible > .zoco-contact-motion-surface::before,
+body.home-page .hero .quick-connect a.quick-tile.zoco-contact-motion-visible > .zoco-contact-motion-surface .zoco-water-bead{
+  animation-play-state:running!important;
+}
+/* Provide actual touch feedback inside the glass, without navigation delays. */
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .zoco-contact-motion-surface .zoco-water-impact{
+  border-color:rgba(156,223,251,.53)!important;
+  box-shadow:0 0 12px rgba(96,193,230,.16)!important;
+}
+/* Other content always remains above the decorative surface. */
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .quick-icon,
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .quick-copy,
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > i {
+  position:relative!important;
+  z-index:1!important;
+}
+@media(max-width:660px) {
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .zoco-contact-motion-surface::before{
+    animation-duration:14s!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .zoco-contact-motion-surface .zoco-water-bead{
+    filter:saturate(.76)!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .zoco-contact-motion-surface::before,
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .zoco-contact-motion-surface .zoco-water-bead,
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .zoco-contact-motion-surface .zoco-water-impact{
+    animation:none!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .zoco-contact-motion-surface .zoco-water-bead{
+    opacity:.15!important;
+    transform:none!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .zoco-contact-motion-surface .zoco-water-impact{
+    display:none!important;
+  }
+}
