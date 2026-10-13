@@ -7,29 +7,64 @@ body.home-page .hero .hero-card {
   isolation: isolate;
 }
 
-/* A diffused atmosphere BEHIND the logo rather than a luminous outline.
-   The existing mascot artwork is kept unmodified. */
+/* The earlier ::before glow was easy to lose among legacy hero layers.
+   Use a dedicated transparent layer BEHIND the original logo, not a ring. */
 body.home-page .hero .hero-card::before {
-  content: "";
+  display: none !important;
+}
+
+body.home-page .hero .hero-card > .zoco-hero-aura {
   display: block !important;
-  position: absolute;
-  inset: 4% -2%;
-  z-index: 0;
-  border: 0 !important;
-  border-radius: 48%;
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  width: min(118%, 620px);
+  height: min(96%, 490px);
+  transform: translate(-50%, -50%);
+  z-index: 0 !important;
+  border: 0;
+  pointer-events: none !important;
   background:
-    radial-gradient(ellipse at 36% 42%, rgba(255, 128, 49, .32) 0%, rgba(237, 105, 40, .15) 35%, transparent 71%),
-    radial-gradient(ellipse at 71% 61%, rgba(30, 143, 203, .18) 0%, rgba(26, 100, 158, .09) 38%, transparent 73%),
-    radial-gradient(ellipse at 50% 45%, rgba(245, 236, 219, .07), transparent 65%);
-  filter: blur(39px);
-  opacity: .88;
-  pointer-events: none;
+    radial-gradient(ellipse 55% 60% at 33% 44%,
+      rgba(255, 143, 64, .56) 0%,
+      rgba(241, 98, 31, .32) 33%,
+      rgba(218, 76, 22, .07) 65%, transparent 89%),
+    radial-gradient(ellipse 51% 63% at 73% 55%,
+      rgba(66, 179, 230, .39) 0%,
+      rgba(23, 123, 190, .23) 39%,
+      rgba(8, 74, 127, .05) 71%, transparent 91%),
+    radial-gradient(ellipse 52% 54% at 51% 49%,
+      rgba(255, 226, 186, .13), transparent 83%);
+  filter: blur(24px);
+  opacity: .96;
 }
 
 body.home-page .hero .hero-card-dogs {
   position: relative !important;
   z-index: 1 !important;
+  filter:
+    drop-shadow(0 16px 26px rgba(0, 0, 0, .48))
+    drop-shadow(-8px 0 19px rgba(255, 124, 48, .13))
+    drop-shadow(9px 0 19px rgba(55, 163, 217, .12)) !important;
 }
+
+@media (max-width: 950px) {
+  body.home-page .hero .hero-card > .zoco-hero-aura {
+    width: min(90vw, 420px);
+    height: min(72vw, 345px);
+    filter: blur(22px);
+    opacity: .98;
+  }
+}
+@media (max-width: 620px) {
+  body.home-page .hero .hero-card > .zoco-hero-aura {
+    width: min(92vw, 330px);
+    height: min(74vw, 285px);
+    filter: blur(21px);
+    opacity: 1;
+  }
+}
+
 
 /* Polished smoked-glass shortcuts: restrained warmth, not LED signage.
    Existing anchor and modal button functionality is unchanged. */
