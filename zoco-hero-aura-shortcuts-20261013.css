@@ -147,3 +147,167 @@ body.home-page .floating-quick-action:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   body.home-page .floating-quick-action { transition: none !important; }
 }
+
+/* Contractor-style side tabs: mobile rail placed beside the hero logo.
+   Keep keyboard/touch access, original Google link and working contact modal. */
+body.home-page .floating-quick-actions {
+  top: clamp(210px, 30svh, 340px) !important;
+  bottom: auto !important;
+  right: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+  align-items: flex-end !important;
+  gap: 8px !important;
+  transform: none !important;
+  z-index: 120 !important;
+}
+
+body.home-page .floating-quick-action {
+  width: 144px !important;
+  min-width: 144px !important;
+  max-width: 144px !important;
+  min-height: 56px !important;
+  height: 56px !important;
+  padding: 8px 13px 8px 15px !important;
+  gap: 10px !important;
+  justify-content: flex-start !important;
+  overflow: hidden !important;
+  border-right: 0 !important;
+  border-radius: 15px 0 0 15px !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  text-align: left;
+}
+
+body.home-page .floating-review-action {
+  background: linear-gradient(115deg, rgba(29, 41, 54, .97), rgba(8, 17, 27, .98)) !important;
+  border-color: rgba(138, 175, 200, .58) !important;
+}
+
+body.home-page .floating-contact-action {
+  background: linear-gradient(115deg, rgba(36, 34, 32, .97), rgba(13, 17, 24, .98)) !important;
+  border-color: rgba(245, 156, 90, .55) !important;
+}
+
+body.home-page .floating-quick-action::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  width: 3px;
+  border-radius: 0 4px 4px 0;
+  background: #f38d43;
+  pointer-events: none;
+}
+
+body.home-page .floating-review-action::after {
+  background: linear-gradient(180deg, #4285f4 0 25%, #ea4335 25% 50%, #fbbc05 50% 75%, #34a853 75%);
+}
+
+body.home-page .floating-quick-action .floating-action-icon {
+  flex: 0 0 25px !important;
+  width: 25px !important;
+  height: 25px !important;
+}
+
+body.home-page .floating-quick-action .zoco-google-g {
+  display: block;
+  width: 24px !important;
+  height: 24px !important;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,.24));
+  stroke: none !important;
+}
+
+body.home-page .floating-quick-action .floating-tab-label,
+body.home-page .floating-quick-action > span:last-child {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  position: relative !important;
+  z-index: 1;
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  clip: auto !important;
+  clip-path: none !important;
+  overflow: visible !important;
+  white-space: normal !important;
+  line-height: 1.1;
+  gap: 3px;
+}
+
+body.home-page .floating-quick-action .floating-tab-label small {
+  display: block;
+  color: #abb9c4;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+body.home-page .floating-quick-action .floating-tab-label strong {
+  display: block;
+  color: #f6f8fb;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .005em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.home-page .floating-quick-action:hover {
+    transform: translateX(-5px) !important;
+  }
+}
+
+@media (max-width: 950px) {
+  body.home-page .floating-quick-actions {
+    top: clamp(210px, 29svh, 282px) !important;
+  }
+}
+
+@media (max-width: 620px) {
+  body.home-page .floating-quick-actions {
+    top: clamp(200px, 29svh, 262px) !important;
+    right: 0 !important;
+    bottom: auto !important;
+    transform: none !important;
+    gap: 7px !important;
+  }
+  body.home-page .floating-quick-action {
+    width: 86px !important;
+    min-width: 86px !important;
+    max-width: 86px !important;
+    height: 66px !important;
+    min-height: 66px !important;
+    padding: 7px 6px 6px 7px !important;
+    flex-direction: column;
+    justify-content: center !important;
+    gap: 4px !important;
+    border-radius: 14px 0 0 14px !important;
+    text-align: center !important;
+  }
+  body.home-page .floating-quick-action .floating-action-icon {
+    flex: 0 0 24px !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  body.home-page .floating-quick-action .floating-tab-label {
+    align-items: center;
+    gap: 1px;
+  }
+  body.home-page .floating-quick-action .floating-tab-label small {
+    font-size: 9px;
+  }
+  body.home-page .floating-quick-action .floating-tab-label strong {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 350px) {
+  body.home-page .floating-quick-action {
+    width: 76px !important;
+    min-width: 76px !important;
+    max-width: 76px !important;
+  }
+}
