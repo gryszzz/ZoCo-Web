@@ -177,3 +177,18 @@
     transition:none!important;
   }
 }
+
+/* Henry's Card now uses a simple outlined ID-card glyph, matching the
+   circular icon wells and restrained copper symbols of the other links.
+   Avoid any old ZOCO wordmark/logo display rules for this first tile. */
+body.home-page .hero .quick-connect a.quick-tile[href="#owner-card"] .quick-card-icon {
+  color:#f0a16a!important;
+  border-color:rgba(137,202,227,.45)!important;
+}
+body.home-page .hero .quick-connect a.quick-tile[href="#owner-card"] .quick-card-icon svg {
+  fill:none!important;
+  stroke:#f0a16a!important;
+  stroke-width:1.8px!important;
+  stroke-linecap:round!important;
+  stroke-linejoin:round!important;
+}
