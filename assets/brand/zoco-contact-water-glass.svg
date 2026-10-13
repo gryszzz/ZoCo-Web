@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" preserveAspectRatio="none" aria-hidden="true">
+  <defs>
+    <radialGradient id="drop" cx="28%" cy="21%" r="73%">
+      <stop offset="0" stop-color="#e6faff" stop-opacity=".24"/>
+      <stop offset=".27" stop-color="#94d5f0" stop-opacity=".13"/>
+      <stop offset=".61" stop-color="#2984bd" stop-opacity=".14"/>
+      <stop offset=".90" stop-color="#05263c" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#9bddf8" stop-opacity=".17"/>
+    </radialGradient>
+    <linearGradient id="bottom" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#60d3fb" stop-opacity="0"/>
+      <stop offset=".74" stop-color="#52c8f9" stop-opacity=".03"/>
+      <stop offset="1" stop-color="#4ec8ff" stop-opacity=".18"/>
+    </linearGradient>
+    <radialGradient id="haze">
+      <stop offset="0" stop-color="#52c5fa" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#52c5fa" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="715" cy="338" rx="330" ry="192" fill="url(#haze)"/>
+  <path d="M450 340Q652 300 760 156V340Z" fill="url(#bottom)"/>
+  <g fill="url(#drop)">
+    <circle cx="122" cy="29" r="14"/>
+    <circle cx="594" cy="83" r="10"/>
+    <circle cx="687" cy="231" r="15"/>
+    <circle cx="430" cy="284" r="9"/>
+    <circle cx="300" cy="172" r="12"/>
+    <circle cx="739" cy="29" r="8"/>
+  </g>
+  <g fill="#d9f5ff" opacity=".16">
+    <circle cx="117" cy="23" r="3"/>
+    <circle cx="591" cy="79" r="2.3"/>
+    <circle cx="682" cy="223" r="3.1"/>
+    <circle cx="297" cy="167" r="2.5"/>
+  </g>
+</svg>
