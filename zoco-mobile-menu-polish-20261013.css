@@ -85,12 +85,12 @@
   body.home-page .site-header .nav-links > a {
     box-sizing: border-box !important;
     display: grid !important;
-    grid-template-columns: 26px minmax(0, 1fr) 18px !important;
+    grid-template-columns: 26px minmax(0, 1fr) !important;
     align-items: center !important;
     justify-content: stretch !important;
-    gap: 7px !important;
+    gap: 9px !important;
     counter-increment: zoco-menu-item;
-    min-height: 42px !important;
+    min-height: 43px !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 7px 10px !important;
@@ -99,7 +99,7 @@
     border-radius: 9px !important;
     background: transparent !important;
     color: #f0f5f8 !important;
-    font-size: 13px !important;
+    font-size: 14px !important;
     font-weight: 740 !important;
     line-height: 1.25 !important;
     letter-spacing: .002em !important;
@@ -121,25 +121,10 @@
     letter-spacing: .04em !important;
     text-align: left !important;
   }
+  /* No repetitive down/outbound arrows: a two-column link is clearer. */
   body.home-page .site-header .nav-links > a::after {
-    display: block !important;
-    position: static !important;
-    width: 18px !important;
-    height: auto !important;
-    background: none !important;
-    color: #9dc2d5 !important;
-    font-size: 16px !important;
-    line-height: 1 !important;
-    font-weight: 600 !important;
-    text-align: center !important;
-    opacity: .85 !important;
-  }
-  body.home-page .site-header .nav-links > a[href^="#"]::after {
-    content: "↓" !important;
-    color: #eaa77b !important;
-  }
-  body.home-page .site-header .nav-links > a:not([href^="#"])::after {
-    content: "↗" !important;
+    content: none !important;
+    display: none !important;
   }
   body.home-page .site-header .nav-links > a:nth-of-type(5) {
     margin-top: 7px !important;
@@ -188,25 +173,44 @@
     color: #f0f8fd !important;
   }
 
+  /* A balanced, compact menu control instead of the oversized X Close pill. */
   body.home-page .site-header .menu-btn,
   body.home-page .site-header .menu-btn[aria-expanded="true"] {
-    min-width: 104px !important;
-    min-height: 43px !important;
+    box-sizing: border-box !important;
+    min-width: 91px !important;
+    min-height: 42px !important;
     padding: 9px 12px !important;
     gap: 9px !important;
-    border-radius: 12px !important;
+    border: 1px solid rgba(224, 144, 88, .52) !important;
+    border-radius: 11px !important;
+    background: linear-gradient(145deg, rgba(23, 37, 47, .96), rgba(7, 17, 27, .99)) !important;
+    color: #f4f6f8 !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .07),
+      0 5px 13px rgba(0, 0, 0, .2) !important;
     font-size: 13px !important;
-    letter-spacing: .02em !important;
-    border-color: rgba(140, 176, 193, .5) !important;
-    background: linear-gradient(140deg, rgba(22, 43, 56, .95), rgba(8, 21, 31, .99)) !important;
-  }
-  body.home-page .site-header .menu-btn[aria-expanded="true"] {
-    border-color: rgba(244, 157, 95, .71) !important;
+    font-weight: 750 !important;
+    letter-spacing: .025em !important;
+    line-height: 1 !important;
+    white-space: nowrap;
   }
   body.home-page .site-header .menu-btn::before {
-    flex-basis: 16px !important;
+    content: "" !important;
+    display: block !important;
+    flex: 0 0 16px !important;
     width: 16px !important;
     height: 16px !important;
+    background:
+      linear-gradient(#eda97d, #eda97d) center 3px / 16px 2px no-repeat,
+      linear-gradient(#eda97d, #eda97d) center 8px / 12px 2px no-repeat,
+      linear-gradient(#eda97d, #eda97d) center 13px / 16px 2px no-repeat !important;
+  }
+  body.home-page .site-header .menu-btn[aria-expanded="true"] {
+    border-color: rgba(130, 188, 212, .59) !important;
+  }
+  body.home-page .site-header .menu-btn[aria-expanded="true"]::before {
+    background:
+      linear-gradient(45deg, transparent 43%, #bcdce9 43%, #bcdce9 55%, transparent 55%) center / 16px 16px no-repeat,
+      linear-gradient(-45deg, transparent 43%, #bcdce9 43%, #bcdce9 55%, transparent 55%) center / 16px 16px no-repeat !important;
   }
 }
 
