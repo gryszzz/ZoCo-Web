@@ -192,3 +192,133 @@ body.home-page .hero .quick-connect a.quick-tile[href="#owner-card"] .quick-card
   stroke-linecap:round!important;
   stroke-linejoin:round!important;
 }
+
+
+/* Final quiet-glass polish — coordinates all four tiles without changing the
+   2×2 layout, contact destinations, or the wave-free background. */
+body.home-page .hero .quick-connect {
+  column-gap:9px!important;
+  row-gap:9px!important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,239,219,.14),
+    0 14px 28px rgba(0,6,15,.30)!important;
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) {
+  border:1px solid rgba(132,189,213,.50)!important;
+  border-radius:16px!important;
+  background:
+    radial-gradient(ellipse at 3% -10%,rgba(255,174,118,.12),transparent 47%),
+    radial-gradient(ellipse at 100% 110%,rgba(48,171,222,.18),transparent 56%),
+    linear-gradient(145deg,rgba(31,58,71,.81),rgba(8,27,41,.95) 55%,rgba(10,40,57,.96))!important;
+  box-shadow:
+    inset 0 1px 0 rgba(247,252,255,.16),
+    inset 0 -1px 0 rgba(52,174,218,.15),
+    0 5px 14px rgba(0,7,16,.21)!important;
+  transition:transform .2s ease,filter .2s ease,box-shadow .2s ease,border-color .2s ease!important;
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(2n+1) {
+  border-color:rgba(240,171,123,.58)!important;
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n)::before {
+  opacity:.8!important;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.025) 17%,transparent 38%),
+    linear-gradient(180deg,rgba(255,255,255,.035),transparent 26%)!important;
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) .quick-icon {
+  box-shadow:
+    inset 0 1px 0 rgba(222,250,255,.24),
+    inset 0 -2px 6px rgba(0,14,27,.38),
+    0 0 0 3px rgba(65,160,206,.055),
+    0 3px 10px rgba(0,7,18,.26)!important;
+}
+body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > i {
+  transition:transform .2s ease,border-color .2s ease,background .2s ease!important;
+}
+@media(hover:hover) and (pointer:fine) {
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n):hover {
+    transform:translateY(-2px)!important;
+    filter:brightness(1.08)!important;
+    border-color:rgba(160,218,240,.85)!important;
+    box-shadow:
+      inset 0 1px 0 rgba(247,253,255,.23),
+      0 9px 18px rgba(0,6,17,.32),
+      0 0 13px rgba(69,174,216,.11)!important;
+  }
+}
+@media(max-width:660px) {
+  body.home-page .hero .quick-connect {
+    gap:8px!important;
+    padding:0 8px 9px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) {
+    grid-template-columns:minmax(0,1fr) 25px!important;
+    grid-template-rows:34px auto!important;
+    min-height:91px!important;
+    row-gap:4px!important;
+    padding:9px 10px 10px!important;
+    border-radius:14px!important;
+    align-content:center!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .quick-icon{
+    width:33px!important;
+    height:33px!important;
+    min-width:33px!important;
+    max-width:33px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .quick-icon svg{
+    width:19px!important;
+    height:19px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > i {
+    width:23px!important;
+    height:23px!important;
+    background:rgba(9,31,48,.48)!important;
+    border-color:rgba(242,169,119,.36)!important;
+    font-size:.99rem!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .quick-copy {
+    gap:3px!important;
+    justify-content:center!important;
+    align-self:end!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) .quick-copy small {
+    font-size:clamp(.52rem,2.15vw,.64rem)!important;
+    line-height:1.1!important;
+    letter-spacing:.065em!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) .quick-copy strong {
+    font-size:clamp(.78rem,3.15vw,.92rem)!important;
+    line-height:1.18!important;
+    letter-spacing:-.026em!important;
+  }
+}
+@media(max-width:375px) {
+  body.home-page .hero .quick-connect{gap:7px!important;padding-inline:7px!important}
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) {
+    grid-template-columns:minmax(0,1fr) 23px!important;
+    grid-template-rows:32px auto!important;
+    min-height:88px!important;
+    padding:8px 9px 9px!important;
+    row-gap:4px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > .quick-icon {
+    width:31px!important;height:31px!important;
+    min-width:31px!important;max-width:31px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) .quick-copy small{
+    font-size:clamp(.50rem,2.15vw,.60rem)!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) .quick-copy strong {
+    font-size:clamp(.73rem,3.25vw,.86rem)!important;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n),
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n) > i {
+    transition:none!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(n):hover {
+    transform:none!important;
+  }
+}
