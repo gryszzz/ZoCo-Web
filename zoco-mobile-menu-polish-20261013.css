@@ -22,7 +22,7 @@
     max-height: calc(100dvh - 104px) !important;
     padding: 12px !important;
     margin: 0 !important;
-    gap: 2px !important;
+    gap: 0 !important;
     overflow-x: hidden !important;
     overflow-y: auto !important;
     border: 1px solid rgba(143, 171, 190, .35) !important;
@@ -128,12 +128,6 @@
     content: none !important;
     display: none !important;
   }
-  body.home-page .site-header .nav-links > a:nth-of-type(5) {
-    margin-top: 6px !important;
-    border-top: 1px solid rgba(151, 180, 200, .24) !important;
-    border-radius: 0 !important;
-    padding-top: 10px !important;
-  }
   body.home-page .site-header .nav-links > a:hover,
   body.home-page .site-header .nav-links > a.active,
   body.home-page .site-header .nav-links > a:focus-visible {
@@ -146,9 +140,9 @@
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 8px !important;
-    margin-top: 8px !important;
-    padding: 12px 1px 1px !important;
-    border-top: 1px solid rgba(142, 171, 189, .23) !important;
+    margin-top: 10px !important;
+    padding: 0 1px 1px !important;
+    border: 0 !important;
   }
   body.home-page .site-header .nav-links .zoco-mobile-nav-actions > a {
     display: flex !important;
