@@ -1,0 +1,179 @@
+/* ZoCo Direct Connections layout harmony, 2026-10-12.
+   Responsive layout polish only: same four working destinations,
+   same brand colors, same wave-free glass treatment.
+   On narrow screens all four cards have an icon/arrow header and a
+   separate full-width text line; no badge/text collision. */
+
+@media (min-width:661px) {
+  body.home-page .hero .quick-connect a.quick-tile.quick-logo {
+    grid-template-columns:72px minmax(0,1fr) 28px!important;
+    gap:10px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile.quick-logo > img.quick-owner-icon {
+    width:72px!important;
+    height:39.6px!important;
+    min-width:72px!important;
+    max-width:72px!important;
+  }
+}
+@media (max-width:660px) {
+  body.home-page .hero .quick-connect {
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:9px!important;
+    padding:0 8px 10px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile,
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(odd),
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(-n+2),
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(4n+1),
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(4n+4),
+  body.home-page .hero .quick-connect a.quick-tile.quick-logo {
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) 26px!important;
+    grid-template-rows:38px auto!important;
+    align-items:start!important;
+    align-content:center!important;
+    column-gap:6px!important;
+    row-gap:7px!important;
+    min-width:0!important;
+    min-height:108px!important;
+    box-sizing:border-box!important;
+    padding:10px 11px 11px!important;
+    border-radius:15px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile > .quick-icon,
+  body.home-page .hero .quick-connect a.quick-tile > img.quick-owner-icon {
+    grid-column:1!important;
+    grid-row:1!important;
+    align-self:center!important;
+    justify-self:start!important;
+    position:relative!important;
+    z-index:1!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile > .quick-icon {
+    width:36px!important;
+    height:36px!important;
+    min-width:36px!important;
+    max-width:36px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile > .quick-icon svg {
+    width:20px!important;
+    height:20px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile.quick-logo > img.quick-owner-icon {
+    width:66px!important;
+    height:36.3px!important;
+    min-width:66px!important;
+    max-width:66px!important;
+    border-radius:10px!important;
+    box-shadow:0 3px 11px rgba(0,8,17,.26)!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile > i {
+    grid-column:2!important;
+    grid-row:1!important;
+    align-self:center!important;
+    justify-self:end!important;
+    display:grid!important;
+    place-items:center!important;
+    width:25px!important;
+    height:25px!important;
+    border-radius:50%!important;
+    border:1px solid rgba(245,165,109,.35)!important;
+    background:rgba(13,34,50,.54)!important;
+    color:#ffba90!important;
+    box-shadow:inset 0 1px 0 rgba(255,236,220,.09)!important;
+    font-size:1.03rem!important;
+    line-height:1!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile > .quick-copy {
+    grid-column:1/-1!important;
+    grid-row:2!important;
+    align-self:end!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    justify-content:flex-end!important;
+    gap:3px!important;
+    min-width:0!important;
+    max-width:100%!important;
+    width:100%!important;
+    overflow:visible!important;
+    position:relative!important;
+    z-index:1!important;
+  }
+  body.home-page .hero .quick-connect .quick-copy small {
+    display:block!important;
+    margin:0!important;
+    color:#f7b78e!important;
+    font-size:clamp(.54rem,2.15vw,.65rem)!important;
+    font-weight:860!important;
+    line-height:1.12!important;
+    letter-spacing:.085em!important;
+    white-space:nowrap!important;
+    overflow:visible!important;
+  }
+  body.home-page .hero .quick-connect .quick-copy strong {
+    display:block!important;
+    margin:0!important;
+    color:#f8fbfd!important;
+    font-size:clamp(.78rem,3.15vw,.94rem)!important;
+    font-weight:840!important;
+    line-height:1.12!important;
+    letter-spacing:-.025em!important;
+    white-space:nowrap!important;
+    overflow:visible!important;
+    overflow-wrap:normal!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile.quick-logo .quick-copy strong {
+    font-size:clamp(.83rem,3.35vw,.99rem)!important;
+  }
+}
+@media(max-width:375px){
+  body.home-page .hero .quick-connect{
+    gap:7px!important;
+    padding-inline:7px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile,
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(odd),
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(-n+2),
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(4n+1),
+  body.home-page .hero .quick-connect a.quick-tile:nth-of-type(4n+4),
+  body.home-page .hero .quick-connect a.quick-tile.quick-logo{
+    grid-template-columns:minmax(0,1fr) 23px!important;
+    grid-template-rows:35px auto!important;
+    row-gap:6px!important;
+    min-height:102px!important;
+    padding:9px 9px 10px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile.quick-logo > img.quick-owner-icon{
+    width:60px!important;
+    height:33px!important;
+    min-width:60px!important;
+    max-width:60px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile > .quick-icon{
+    width:33px!important;
+    height:33px!important;
+    min-width:33px!important;
+    max-width:33px!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile > i {
+    width:23px!important;
+    height:23px!important;
+  }
+  body.home-page .hero .quick-connect .quick-copy small{
+    font-size:clamp(.51rem,2.15vw,.61rem)!important;
+    letter-spacing:.06em!important;
+  }
+  body.home-page .hero .quick-connect .quick-copy strong{
+    font-size:clamp(.72rem,3.28vw,.87rem)!important;
+  }
+  body.home-page .hero .quick-connect a.quick-tile.quick-logo .quick-copy strong{
+    font-size:clamp(.75rem,3.42vw,.9rem)!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  body.home-page .hero .quick-connect a.quick-tile.quick-logo > img.quick-owner-icon{
+    transition:none!important;
+  }
+}
