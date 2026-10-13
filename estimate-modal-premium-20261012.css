@@ -1,259 +1,415 @@
-/* ZoCo estimate contact panel • October 2026
-   Scoped to the existing homepage dialog. Existing tel/sms/mailto and social links
-   remain native links; no form submission or implied instant response. */
+/* ZoCo premium estimate panel v2 — focused, brand-consistent and mobile-first.
+   The contact links are native tel/sms/mailto URLs; no fake form or instant quote.
+   Overrides the historic .quick-contact-* rules without affecting homepage cards. */
+body.home-page .quick-contact-modal[hidden]{display:none!important}
+body.home-page .quick-contact-modal{
+  position:fixed!important;
+  inset:0!important;
+  z-index:1000!important;
+  box-sizing:border-box!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100vw!important;
+  height:100dvh!important;
+  margin:0!important;
+  padding:max(10px,env(safe-area-inset-top)) 12px max(10px,env(safe-area-inset-bottom))!important;
+}
 body.home-page .quick-contact-modal .quick-contact-backdrop{
-  background:rgba(2,7,12,.80)!important;
-  -webkit-backdrop-filter:blur(11px) saturate(.72)!important;
-  backdrop-filter:blur(11px) saturate(.72)!important;
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;height:100%!important;
+  border:none!important;
+  background:rgba(1,7,14,.82)!important;
+  -webkit-backdrop-filter:blur(12px) saturate(.73)!important;
+  backdrop-filter:blur(12px) saturate(.73)!important;
 }
 body.home-page .quick-contact-modal .quick-contact-panel{
-  box-sizing:border-box;
-  isolation:isolate;
-  width:min(548px,calc(100vw - 32px))!important;
-  max-width:548px!important;
-  max-height:min(780px,calc(100dvh - 38px))!important;
+  --zoco-orange:#f37828;
+  --zoco-cyan:#54bdea;
+  position:relative!important;
+  isolation:isolate!important;
+  z-index:2!important;
+  box-sizing:border-box!important;
+  width:min(506px,calc(100vw - 24px))!important;
+  max-width:506px!important;
+  min-height:0!important;
+  height:auto!important;
+  max-height:calc(100dvh - 24px)!important;
+  margin:0!important;
+  padding:clamp(18px,3.1vw,27px)!important;
+  overflow-x:hidden!important;
   overflow-y:auto!important;
   overscroll-behavior:contain;
-  padding:27px!important;
-  border:1px solid rgba(252,125,49,.60)!important;
-  border-radius:27px!important;
+  -webkit-overflow-scrolling:touch;
+  border:1px solid rgba(244,143,77,.54)!important;
+  border-radius:24px!important;
+  color:#f4f8fb!important;
   background:
-    radial-gradient(ellipse at 94% 4%,rgba(255,126,52,.18),transparent 35%),
-    radial-gradient(ellipse at 4% 83%,rgba(42,144,189,.16),transparent 48%),
-    linear-gradient(145deg,#101d26 0%,#08121a 52%,#080e14 100%)!important;
-  box-shadow:0 36px 110px rgba(0,0,0,.82),0 0 42px rgba(255,103,27,.11),inset 0 1px 0 rgba(255,255,255,.075)!important;
-  color:#f5f8fa;
-  scrollbar-color:rgba(255,132,66,.5) transparent;
+    radial-gradient(ellipse 80% 43% at 103% 0%,rgba(225,116,53,.14),transparent 79%),
+    radial-gradient(ellipse 95% 51% at -10% 100%,rgba(45,155,208,.13),transparent 78%),
+    linear-gradient(153deg,#111f29 0%,#081722 48%,#071019 100%)!important;
+  box-shadow:0 36px 90px rgba(0,0,0,.78),0 0 0 1px rgba(255,255,255,.035) inset,
+    0 0 28px rgba(243,113,31,.10)!important;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(95,171,210,.5) transparent;
 }
-body.home-page .quick-contact-modal .quick-contact-panel:before{
-  content:"";position:absolute;inset:0 0 auto;
-  height:4px;border-radius:27px 27px 0 0;pointer-events:none;
-  background:linear-gradient(90deg,#ff8d35 0%,#fa5715 43%,rgba(46,153,208,.6) 100%);
+body.home-page .quick-contact-modal .quick-contact-panel::before{
+  content:"";
+  position:absolute;top:0;left:0;right:0;height:3px;
+  border-radius:24px 24px 0 0;
+  pointer-events:none;z-index:0;
+  background:linear-gradient(90deg,#ffad6b,#f36c25 46%,#53bdea);
 }
-body.home-page .quick-contact-modal .quick-contact-panel:after{
-  content:"";position:absolute;right:-42px;top:55px;width:175px;height:175px;
-  border:1px solid rgba(94,160,197,.08);border-radius:50%;pointer-events:none;z-index:-1;
-  box-shadow:0 0 0 29px rgba(92,167,203,.025),0 0 0 59px rgba(92,167,203,.018);
+body.home-page .quick-contact-modal .quick-contact-panel::after{
+  content:"";
+  position:absolute;right:-135px;top:-120px;width:265px;height:265px;
+  border:1px solid rgba(124,205,241,.085);border-radius:50%;
+  box-shadow:0 0 0 42px rgba(90,163,205,.025),0 0 0 83px rgba(90,163,205,.016);
+  pointer-events:none;z-index:0;
 }
-body.home-page .quick-contact-modal .quick-contact-panel > *{position:relative;z-index:1}
-body.home-page .quick-contact-modal .quick-contact-panel:before,
-body.home-page .quick-contact-modal .quick-contact-panel:after{z-index:0}
-body.home-page .quick-contact-modal .quick-contact-close{
-  z-index:3;top:22px;right:22px;
-  display:grid;place-items:center;
-  width:39px;height:39px;
-  background:rgba(255,255,255,.065);
-  border:1px solid rgba(222,232,238,.25);
-  border-radius:13px;
-  color:#f4f7f9;font-size:24px;line-height:1;
+body.home-page .quick-contact-modal .quick-contact-panel > *{
+  position:relative;
+  z-index:1;
+}
+/* The close button is now an explicit flex item in the header row.
+   It can no longer float over the mark like the previous absolute button. */
+body.home-page .quick-contact-modal .quick-contact-topline{
+  position:relative!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:12px!important;
+  min-height:39px!important;
+  padding:0!important;
+  margin:0!important;
+}
+body.home-page .quick-contact-modal .quick-contact-brand{
+  display:flex!important;flex-direction:column;align-items:flex-start;
+  gap:4px;min-width:0;
+}
+body.home-page .quick-contact-modal .quick-contact-brand strong{
+  display:flex;align-items:center;gap:7px;
+  color:#fff;font-size:21px!important;line-height:1!important;
+  font-weight:950!important;letter-spacing:.13em!important;
+  text-shadow:0 1px 16px rgba(0,0,0,.45);
+}
+body.home-page .quick-contact-modal .quick-contact-brand-dot{
+  display:inline-block;width:6px;height:6px;flex:none;border-radius:50%;
+  background:#ff914e;box-shadow:0 0 11px rgba(250,120,51,.70);
+}
+body.home-page .quick-contact-modal .quick-contact-brand > span:last-child{
+  color:#96b6c9!important;
+  font-size:9px!important;font-weight:850!important;
+  letter-spacing:.14em!important;line-height:1.2;
+}
+body.home-page .quick-contact-modal .quick-contact-topline .quick-contact-close{
+  position:static!important;
+  inset:auto!important;
+  z-index:3!important;
+  display:grid!important;place-items:center!important;
+  flex:0 0 37px!important;
+  width:37px!important;height:37px!important;
+  margin:0!important;padding:8px!important;
+  border:1px solid rgba(170,195,207,.26)!important;
+  border-radius:12px!important;
+  background:rgba(255,255,255,.055)!important;
+  color:#e9f2f6!important;
+  font-size:16px!important;
+  line-height:1!important;
+  cursor:pointer;
   transition:background .18s,border-color .18s,transform .18s;
 }
-body.home-page .quick-contact-modal .quick-contact-close:hover{
-  background:rgba(255,131,69,.18);border-color:rgba(255,140,75,.75);transform:rotate(90deg);
+body.home-page .quick-contact-modal .quick-contact-topline .quick-contact-close svg{
+  display:block;width:19px;height:19px;
 }
-body.home-page .quick-contact-topline{
-  display:flex;align-items:center;gap:10px;
-  min-height:40px;padding-right:46px;
+body.home-page .quick-contact-modal .quick-contact-topline .quick-contact-close:hover{
+  transform:none!important;
+  border-color:rgba(249,158,94,.68)!important;
+  background:rgba(251,137,67,.15)!important;
 }
-body.home-page .quick-contact-mark{
-  display:grid;place-items:center;flex:none;
-  width:40px;height:40px;border-radius:12px;
-  color:#0b1014;background:linear-gradient(142deg,#ffc27a,#ff7b2c 70%,#e95215);
-  box-shadow:inset 0 1px rgba(255,255,255,.45),0 5px 22px rgba(247,104,35,.18);
-  font-size:24px;font-weight:1000;font-style:italic;letter-spacing:-.14em;padding-right:3px;
+body.home-page .quick-contact-modal .quick-contact-intro{
+  margin:21px 0 0!important;
 }
-body.home-page .quick-contact-brand{display:flex;flex-direction:column;gap:1px;min-width:0}
-body.home-page .quick-contact-brand strong{font-size:14px;font-weight:950;letter-spacing:.16em;line-height:1.05}
-body.home-page .quick-contact-brand small{font-size:9px;font-weight:800;letter-spacing:.14em;color:#88b2c9}
-body.home-page .quick-contact-intro{margin-top:24px}
 body.home-page .quick-contact-modal .quick-contact-kicker{
-  margin:0 0 7px;color:#ff9d5e;
-  font-size:10px;font-weight:900;letter-spacing:.22em;
+  display:flex;align-items:center;gap:8px;
+  margin:0 0 8px!important;
+  color:#ff9c65!important;
+  font-size:10px!important;font-weight:900!important;letter-spacing:.17em!important;
 }
-body.home-page .quick-contact-modal .quick-contact-panel h2{
-  margin:0;max-width:445px;
-  font-size:clamp(29px,4.7vw,39px)!important;
-  line-height:1.07;letter-spacing:-.052em;
-  color:#fff;text-wrap:balance;
+body.home-page .quick-contact-modal .quick-contact-kicker span{
+  display:block;width:5px;height:5px;flex:none;border-radius:50%;
+  background:#ff9d65;box-shadow:0 0 10px rgba(248,134,74,.4);
+}
+body.home-page .quick-contact-modal #quickContactTitle{
+  margin:0!important;
+  color:#fff!important;
+  max-width:450px!important;
+  font-size:clamp(29px,6vw,38px)!important;
+  font-weight:900!important;
+  letter-spacing:-.05em!important;
+  line-height:1.1!important;
+  text-wrap:balance;
 }
 body.home-page .quick-contact-modal #quickContactDescription{
-  margin:12px 0 0;max-width:455px;
-  color:#b9c8d0;font-size:14px;line-height:1.55;
+  margin:9px 0 0!important;
+  max-width:444px!important;
+  color:#b4c7d2!important;
+  font-size:13px!important;
+  line-height:1.48!important;
 }
-body.home-page .quick-contact-help{
-  display:flex;align-items:center;gap:11px;
-  margin:20px 0 13px;padding:11px 13px;
-  border:1px solid rgba(92,158,191,.25);border-radius:13px;
-  background:rgba(23,53,70,.48);
-  color:#c8d8e1;font-size:12px;line-height:1.36;
+body.home-page .quick-contact-modal .quick-contact-help{
+  display:flex!important;align-items:center!important;gap:11px!important;
+  margin:18px 0 14px!important;
+  padding:11px 12px!important;
+  border:1px solid rgba(91,168,210,.22)!important;
+  border-radius:13px!important;
+  background:linear-gradient(105deg,rgba(35,75,100,.43),rgba(17,46,65,.34))!important;
+  color:#bcd1dc!important;
+  font-size:11.5px!important;line-height:1.4!important;
 }
-body.home-page .quick-contact-help svg{flex:none;width:18px;height:18px;stroke:#ff9d59}
-body.home-page .quick-contact-help strong{color:#f3f8fb}
+body.home-page .quick-contact-modal .quick-contact-help-icon{
+  display:grid;place-items:center;flex:0 0 34px;
+  width:34px;height:34px;border-radius:10px;
+  background:rgba(251,146,73,.09);border:1px solid rgba(241,157,95,.19);
+}
+body.home-page .quick-contact-modal .quick-contact-help-icon svg{
+  width:19px;height:19px;stroke:#ff9e63;
+}
+body.home-page .quick-contact-modal .quick-contact-help strong{
+  color:#f0f6f8!important;font-weight:850;
+}
 body.home-page .quick-contact-modal .quick-contact-actions{
   display:grid!important;
-  grid-template-columns:repeat(2,minmax(0,1fr))!important;
-  gap:11px!important;
-  margin:0;
+  grid-template-columns:minmax(0,1fr)!important;
+  gap:9px!important;
+  margin:0!important;
 }
 body.home-page .quick-contact-modal .quick-contact-actions a.quick-contact-main-action{
-  display:flex;align-items:center;gap:10px;
-  box-sizing:border-box;min-width:0;min-height:105px;
-  flex-direction:row;justify-content:flex-start;
-  padding:16px 13px!important;
-  border-radius:17px!important;
-  font-size:inherit;font-weight:inherit;text-decoration:none;
-  transition:transform .18s,border-color .18s,box-shadow .18s,background .18s;
+  display:grid!important;
+  grid-template-columns:41px minmax(0,1fr) 22px!important;
+  align-items:center!important;
+  justify-items:stretch!important;
+  gap:12px!important;
+  box-sizing:border-box!important;
+  width:100%!important;
+  min-width:0!important;
+  min-height:76px!important;
+  margin:0!important;
+  padding:12px 14px!important;
+  border:1.5px solid transparent!important;
+  border-radius:16px!important;
+  text-decoration:none!important;
+  overflow:hidden!important;
+  transform:translateY(0);
+  transition:transform .18s,box-shadow .18s,filter .18s!important;
 }
 body.home-page .quick-contact-modal .quick-contact-actions a.quick-contact-text-action{
-  color:#160f0a!important;
-  border:1px solid #ffa96b!important;
-  background:linear-gradient(118deg,#ffb268 0%,#ff852d 49%,#f16019 100%)!important;
-  box-shadow:0 9px 23px rgba(242,96,23,.20),inset 0 1px 0 rgba(255,255,255,.45);
+  color:#181008!important;
+  background:
+    linear-gradient(143deg,rgba(255,247,222,.21),transparent 33%) padding-box,
+    linear-gradient(112deg,#ffab60 0%,#ff832e 51%,#ef6219 100%) padding-box,
+    linear-gradient(110deg,#ffe4b6,#ffb575,#ff8c3f) border-box!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.42),0 9px 22px rgba(235,99,27,.22)!important;
 }
 body.home-page .quick-contact-modal .quick-contact-actions a.quick-contact-call-action{
-  color:#f4f8fb!important;
-  border:1px solid rgba(104,169,203,.45)!important;
-  background:linear-gradient(135deg,rgba(32,61,80,.88),rgba(12,29,42,.95))!important;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.07);
+  color:#f4faff!important;
+  background:
+    linear-gradient(136deg,rgba(163,232,255,.14),transparent 42%) padding-box,
+    linear-gradient(125deg,rgba(24,65,93,.95),rgba(8,30,49,.98)) padding-box,
+    linear-gradient(117deg,rgba(104,194,237,.70),rgba(64,134,175,.40),rgba(95,195,243,.58)) border-box!important;
+  box-shadow:inset 0 1px 0 rgba(222,248,255,.13),0 8px 19px rgba(0,6,16,.27)!important;
 }
-body.home-page .quick-contact-action-icon{
-  display:grid;place-items:center;flex:none;
-  width:37px;height:37px;border-radius:12px;
-  background:rgba(13,23,30,.12);
-  border:1px solid rgba(7,22,31,.16);
+body.home-page .quick-contact-modal .quick-contact-actions .quick-contact-action-icon{
+  display:grid!important;place-items:center!important;
+  box-sizing:border-box!important;
+  width:41px!important;height:41px!important;
+  border:1px solid rgba(66,35,23,.18)!important;
+  border-radius:12px!important;
+  background:rgba(48,26,15,.12)!important;
+  color:inherit!important;
 }
-body.home-page .quick-contact-call-action .quick-contact-action-icon{
-  color:#ffab6d;background:rgba(255,131,65,.10);border-color:rgba(255,141,68,.27);
+body.home-page .quick-contact-modal .quick-contact-actions .quick-contact-call-action .quick-contact-action-icon{
+  border-color:rgba(124,201,235,.28)!important;
+  background:rgba(30,93,132,.27)!important;
+  color:#e1f7ff!important;
 }
-body.home-page .quick-contact-action-icon svg{width:21px;height:21px}
-body.home-page .quick-contact-action-copy{
-  display:flex;flex-direction:column;align-items:flex-start;gap:4px;
-  min-width:0;flex:1;
+body.home-page .quick-contact-modal .quick-contact-actions .quick-contact-action-icon svg{
+  display:block;width:22px!important;height:22px!important;
 }
-body.home-page .quick-contact-action-copy small{
-  font-size:9px;font-weight:900;letter-spacing:.11em;line-height:1.18;opacity:.8;
+body.home-page .quick-contact-modal .quick-contact-actions .quick-contact-action-copy{
+  display:flex!important;flex-direction:column;align-items:flex-start;
+  justify-content:center;gap:3px;min-width:0!important;
 }
-body.home-page .quick-contact-action-copy strong{
-  display:block;margin:0;font-size:19px;font-weight:950;letter-spacing:-.035em;
-  line-height:1.08;opacity:1;
+body.home-page .quick-contact-modal .quick-contact-actions .quick-contact-action-copy small{
+  display:block!important;
+  color:inherit!important;font-size:9px!important;font-weight:920!important;
+  letter-spacing:.11em!important;line-height:1.1!important;opacity:.79!important;
 }
-body.home-page .quick-contact-action-copy em{
-  display:block;min-width:0;font-size:11px;font-weight:650;font-style:normal;
-  line-height:1.3;opacity:.85;
+body.home-page .quick-contact-modal .quick-contact-actions .quick-contact-action-copy strong{
+  display:block!important;margin:0!important;
+  color:inherit!important;font-size:21px!important;font-weight:950!important;
+  line-height:1.05!important;letter-spacing:-.035em!important;opacity:1!important;
 }
-body.home-page .quick-contact-arrow{align-self:flex-start;flex:none;font-size:19px;font-weight:600;opacity:.72}
-body.home-page .quick-contact-modal a:hover.quick-contact-main-action{
-  transform:translateY(-2px);
-  box-shadow:0 13px 30px rgba(255,113,40,.25);
+body.home-page .quick-contact-modal .quick-contact-actions .quick-contact-action-copy em{
+  display:block!important;
+  color:inherit!important;font-size:11px!important;font-weight:650!important;
+  font-style:normal!important;line-height:1.15!important;opacity:.82!important;
 }
-body.home-page .quick-contact-divider{
-  display:flex;align-items:center;gap:12px;
-  margin:20px 0 11px;color:#93a9b8;
-  font-size:10px;font-weight:900;letter-spacing:.17em;
+body.home-page .quick-contact-modal .quick-contact-actions .quick-contact-arrow{
+  align-self:center!important;justify-self:end!important;
+  margin:0!important;
+  color:inherit!important;font-size:22px!important;line-height:1!important;
+  font-weight:650!important;opacity:.86!important;
 }
-body.home-page .quick-contact-divider:after{
+body.home-page .quick-contact-modal .quick-contact-actions a.quick-contact-main-action:hover{
+  transform:translateY(-2px)!important;
+  filter:brightness(1.055)!important;
+}
+body.home-page .quick-contact-modal .quick-contact-actions a.quick-contact-main-action:active{
+  transform:scale(.99)!important;
+}
+body.home-page .quick-contact-modal .quick-contact-more{
+  margin:17px 0 0!important;
+}
+body.home-page .quick-contact-modal .quick-contact-divider{
+  display:flex!important;
+  align-items:center!important;
+  gap:12px!important;
+  margin:0 0 10px!important;
+  padding:0!important;
+  color:#8ca9b9!important;
+  font-size:9px!important;font-weight:900!important;letter-spacing:.16em!important;
+}
+body.home-page .quick-contact-modal .quick-contact-divider::after{
   content:"";height:1px;flex:1;
-  background:linear-gradient(90deg,rgba(123,164,183,.33),transparent);
+  background:linear-gradient(90deg,rgba(157,191,206,.28),transparent);
 }
-body.home-page .quick-contact-secondary{
-  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;
+body.home-page .quick-contact-modal .quick-contact-secondary{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:9px!important;
 }
-body.home-page .quick-contact-secondary a{
-  display:flex;align-items:center;gap:9px;min-width:0;
-  padding:12px;border-radius:13px;
-  border:1px solid rgba(130,163,183,.23);
-  background:rgba(255,255,255,.035);
-  color:#e6eef3;text-decoration:none;
+body.home-page .quick-contact-modal .quick-contact-secondary a{
+  display:flex!important;align-items:center!important;gap:8px!important;
+  box-sizing:border-box!important;
+  min-width:0!important;
+  min-height:57px!important;
+  padding:10px!important;
+  border:1px solid rgba(129,168,192,.24)!important;
+  border-radius:12px!important;
+  background:rgba(36,71,92,.20)!important;
+  color:#f3f9fc!important;
+  text-decoration:none!important;
   transition:border-color .18s,background .18s;
 }
-body.home-page .quick-contact-secondary a:hover{
-  background:rgba(40,95,123,.24);border-color:rgba(255,144,77,.58);
+body.home-page .quick-contact-modal .quick-contact-secondary a:hover{
+  border-color:rgba(249,160,91,.56)!important;
+  background:rgba(47,87,113,.30)!important;
 }
-body.home-page .quick-contact-secondary svg{width:19px;height:19px;flex:none;stroke:#ff9d5e}
-body.home-page .quick-contact-secondary span{display:flex;flex-direction:column;min-width:0;gap:3px}
-body.home-page .quick-contact-secondary strong{
-  color:#f4f8fa;font-size:12px;line-height:1.1;letter-spacing:-.01em;
+body.home-page .quick-contact-modal .quick-contact-secondary svg{
+  display:block;flex:0 0 19px;width:19px!important;height:19px!important;
+  stroke:#ffab76!important;
 }
-body.home-page .quick-contact-secondary small{
-  display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
-  color:#98afbd;font-size:10px;line-height:1.3;
+body.home-page .quick-contact-modal .quick-contact-secondary span{
+  display:flex!important;flex-direction:column;gap:3px;min-width:0;
 }
-body.home-page .quick-contact-social{
-  display:flex;align-items:center;flex-wrap:wrap;
-  gap:9px;margin-top:16px;padding-top:14px;
-  border-top:1px solid rgba(141,177,198,.18);
+body.home-page .quick-contact-modal .quick-contact-secondary strong{
+  display:block!important;color:#f6f9fa!important;
+  font-size:12px!important;font-weight:820!important;line-height:1.12!important;
 }
-body.home-page .quick-contact-social-label{
-  margin-right:auto;flex:1;
-  color:#8da8ba;font-size:10px;font-weight:900;letter-spacing:.16em;
+body.home-page .quick-contact-modal .quick-contact-secondary small{
+  display:block!important;
+  font-size:10px!important;line-height:1.1!important;
+  color:#90afbe!important;
+  overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
 }
-body.home-page .quick-contact-social a{
-  display:inline-flex;align-items:center;gap:6px;padding:6px 10px;
-  border-radius:999px;background:rgba(255,255,255,.035);
-  border:1px solid rgba(140,177,196,.17);
-  color:#e3ebf1;text-decoration:none;
-  font-size:11px;font-weight:800;
-  transition:background .18s,border-color .18s;
+body.home-page .quick-contact-modal .quick-contact-social{
+  display:flex!important;align-items:center!important;
+  flex-wrap:wrap!important;gap:8px!important;
+  margin:15px 0 0!important;
+  padding:12px 0 0!important;
+  border-top:1px solid rgba(151,189,208,.16)!important;
 }
-body.home-page .quick-contact-social a:hover{
-  background:rgba(255,136,66,.13);border-color:rgba(255,138,65,.5);
+body.home-page .quick-contact-modal .quick-contact-social-label{
+  flex:1 1 auto!important;min-width:82px!important;
+  color:#94afbf!important;font-size:9px!important;font-weight:900!important;
+  letter-spacing:.15em!important;
 }
-body.home-page .quick-contact-social svg{width:16px;height:16px;color:#ff9954}
+body.home-page .quick-contact-modal .quick-contact-social a{
+  display:inline-flex!important;align-items:center!important;gap:6px!important;
+  padding:7px 10px!important;
+  border:1px solid rgba(146,189,208,.23)!important;
+  border-radius:999px!important;
+  background:rgba(24,54,75,.31)!important;
+  color:#ecf6fb!important;
+  font-size:11px!important;font-weight:800!important;
+  text-decoration:none!important;
+  transition:border-color .18s,background .18s;
+}
+body.home-page .quick-contact-modal .quick-contact-social a:hover{
+  border-color:rgba(255,170,109,.55)!important;
+  background:rgba(251,146,75,.12)!important;
+}
+body.home-page .quick-contact-modal .quick-contact-social svg{
+  display:block;width:16px!important;height:16px!important;
+  color:#ff9d62!important;stroke:#ff9d62!important;
+}
 body.home-page .quick-contact-modal .quick-contact-footnote{
-  margin:14px 0 0!important;color:#7f9baa!important;
-  font-size:10px!important;line-height:1.4!important;
-  text-align:center;letter-spacing:.02em;
+  margin:14px 0 0!important;
+  color:#7894a4!important;
+  font-size:10px!important;line-height:1.35!important;
+  text-align:center!important;letter-spacing:.015em!important;
 }
 body.home-page .quick-contact-modal a:focus-visible,
-body.home-page .quick-contact-close:focus-visible{
-  outline:3px solid #ffd2ad!important;outline-offset:3px;
+body.home-page .quick-contact-modal button:focus-visible{
+  outline:3px solid #fbc7a2!important;outline-offset:3px!important;
 }
 @media(max-width:620px){
-  body.home-page .quick-contact-modal{
-    display:flex!important;align-items:center!important;justify-content:center!important;
-    padding:12px!important;
-  }
   body.home-page .quick-contact-modal .quick-contact-panel{
-    width:min(460px,calc(100vw - 24px))!important;
-    max-width:none!important;
     max-height:calc(100dvh - 24px)!important;
-    padding:20px!important;border-radius:23px!important;
+    width:calc(100vw - 24px)!important;
+    max-width:460px!important;
+    padding:19px!important;
+    border-radius:22px!important;
   }
-  body.home-page .quick-contact-modal .quick-contact-close{
-    top:17px;right:17px;width:36px;height:36px;
-  }
-  body.home-page .quick-contact-intro{margin-top:17px}
-  body.home-page .quick-contact-modal .quick-contact-panel h2{
-    font-size:clamp(27px,7.7vw,36px)!important;
-  }
+  body.home-page .quick-contact-modal .quick-contact-intro{margin-top:17px!important}
+  body.home-page .quick-contact-modal #quickContactTitle{font-size:clamp(29px,7.5vw,35px)!important}
   body.home-page .quick-contact-modal #quickContactDescription{
-    margin-top:8px;font-size:12px;line-height:1.4;
+    font-size:12.5px!important;line-height:1.45!important;
   }
-  body.home-page .quick-contact-help{
-    margin:13px 0 10px;padding:10px 11px;font-size:11px;
-  }
-  body.home-page .quick-contact-modal .quick-contact-actions{
-    grid-template-columns:1fr!important;gap:8px!important;
+  body.home-page .quick-contact-modal .quick-contact-help{
+    margin:14px 0 12px!important;
   }
   body.home-page .quick-contact-modal .quick-contact-actions a.quick-contact-main-action{
-    min-height:72px!important;padding:11px 12px!important;border-radius:14px!important;
+    min-height:70px!important;padding:11px 12px!important;gap:10px!important;
   }
-  body.home-page .quick-contact-action-copy strong{font-size:18px}
-  body.home-page .quick-contact-divider{margin:15px 0 10px}
-  body.home-page .quick-contact-secondary a{padding:10px 9px}
-  body.home-page .quick-contact-social{margin-top:12px;padding-top:12px}
+  body.home-page .quick-contact-modal .quick-contact-actions .quick-contact-action-copy strong{
+    font-size:20px!important;
+  }
+  body.home-page .quick-contact-modal .quick-contact-more{margin-top:15px!important}
+  body.home-page .quick-contact-modal .quick-contact-secondary a{padding:9px!important}
+  body.home-page .quick-contact-modal .quick-contact-social{margin-top:13px!important}
 }
 @media(max-width:350px){
-  body.home-page .quick-contact-modal .quick-contact-panel{padding:16px!important}
-  body.home-page .quick-contact-secondary{grid-template-columns:1fr}
-  body.home-page .quick-contact-social-label{flex-basis:100%}
+  body.home-page .quick-contact-modal .quick-contact-panel{
+    padding:14px!important;
+  }
+  body.home-page .quick-contact-modal .quick-contact-social-label{flex-basis:100%!important}
+  body.home-page .quick-contact-modal .quick-contact-secondary{gap:6px!important}
+  body.home-page .quick-contact-modal .quick-contact-secondary a{padding:8px!important;gap:6px!important}
+  body.home-page .quick-contact-modal .quick-contact-secondary strong{font-size:11px!important}
 }
-@media(max-height:700px) and (max-width:620px){
-  body.home-page .quick-contact-modal .quick-contact-panel{max-height:calc(100dvh - 16px)!important}
-  body.home-page .quick-contact-intro{margin-top:13px}
-  body.home-page .quick-contact-help{margin-block:10px 8px}
+@media(max-height:650px){
+  body.home-page .quick-contact-modal .quick-contact-panel{
+    max-height:calc(100dvh - 14px)!important;
+  }
+  body.home-page .quick-contact-modal .quick-contact-intro{margin-top:12px!important}
+  body.home-page .quick-contact-modal .quick-contact-help{margin:10px 0 9px!important}
 }
 @media(prefers-reduced-motion:reduce){
   body.home-page .quick-contact-modal .quick-contact-panel a,
   body.home-page .quick-contact-modal .quick-contact-close{transition:none!important}
+  body.home-page .quick-contact-modal a:hover,
+  body.home-page .quick-contact-modal a:active{transform:none!important}
 }
